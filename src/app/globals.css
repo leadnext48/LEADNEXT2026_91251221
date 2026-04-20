@@ -1,0 +1,142 @@
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+}
+
+
+
+:root {
+  --dark-color: gray;
+  --subtle-color: rgb(208, 213, 213);
+  --main-color: rgb(249, 255, 255);
+}
+
+/* ===== 3D CONTAINER ===== */
+.container-3d {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+}
+
+/* ===== BOOK BASE ===== */
+.book {
+  position: relative;
+  height: 65vh;        
+  aspect-ratio: 3 / 4;    /* keeps 150x200 proportion */
+  transform-style: preserve-3d;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .container-3d {
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .book {
+    height: 45vh;          /* 👈 smaller on mobile */
+    max-height: 320px;     /* prevents oversized look */
+  }
+}
+
+.book > div {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transition: transform 2s;
+}
+
+.shadow {
+  position: absolute;
+  bottom: 0;
+  width: 105%;
+  box-shadow: 0 8px 16px 8px var(--dark-color);
+  transform: rotateY(-10deg);
+}
+
+.cover {
+  transform: scaleY(1.05) rotateY(-10deg);
+  border: 1px solid var(--dark-color);
+}
+
+.cover-end {
+  transform: translateX(6%) rotateY(-10deg);
+  border: 0.1px solid var(--dark-color);
+}
+
+.back {
+  width: 6%;
+  background-color: var(--subtle-color);
+}
+
+.page {
+  background: linear-gradient(
+    to right,
+    var(--subtle-color),
+    20%,
+    var(--main-color)
+  );
+  border: 1px solid var(--subtle-color);
+}
+
+.page.first { transform: translateX(1%) rotateY(-10deg); }
+.page.second { transform: translateX(2%) rotateY(-10deg); }
+.page.third { transform: translateX(3%) rotateY(-10deg); }
+.page.fourth { transform: translateX(4%) rotateY(-10deg); }
+.page.fifth { transform: translateX(5%) rotateY(-10deg); }
+
+.page.last {
+  transform: translateX(6%) rotateY(-10deg);
+  display: flex;
+  align-items: center;
+}
+
+/* ===== TEXT ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+
+
+
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
