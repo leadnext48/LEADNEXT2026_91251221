@@ -459,7 +459,7 @@ export default function WhyChooseLead() {
                   textTransform: 'uppercase', margin: 0, lineHeight: 0.92,
                   ...navyGrad,
                 }}>
-                  Excellence,<br />By Makec.
+                  Excellence,<br />By Make.
                 </h2>
               </div>
               <div className="wcl-row1">
