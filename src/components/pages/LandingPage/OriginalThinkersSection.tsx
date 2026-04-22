@@ -21,24 +21,60 @@ const MISSION_LOTTIE_PATH = "/Super Businessman Delivering Parcel.json";
 const CORE_LOTTIE_PATH    = "/Creative Idea.json";
 
 /* ─── Card data ────────────────────────────────────────────────────────── */
-const CARDS = [
+type CardItem =
+  | { type: "text"; text: string }
+  | { type: "bullets"; items: string[] };
+
+interface CardDef {
+  id: string;
+  lottiePath: string;
+  title: string;
+  content: CardItem[];
+}
+
+const CARDS: CardDef[] = [
   {
     id: "vision",
     lottiePath: VISION_LOTTIE_PATH,
-    title: "Vision",
-    body: "To cultivate independent thinkers who question assumptions, connect ideas across disciplines, and shape perspectives with intellectual integrity — building leaders the world hasn't seen yet.",
+    title: "Our Vision",
+    content: [
+      {
+        type: "text",
+        text: "To be a LEADER in management and technology education focusing on developing Leaders and Entrepreneurs.",
+      },
+    ],
   },
   {
     id: "mission",
     lottiePath: MISSION_LOTTIE_PATH,
-    title: "Mission",
-    body: "To design a learning environment that encourages exploration, disciplined inquiry, and practical engagement with complex real-world challenges every single day.",
+    title: "Our Mission",
+    content: [
+      {
+        type: "bullets",
+        items: [
+          "Contribute to and Enable: The development of individuals to enhance their competencies as Business Leaders and Entrepreneurs.",
+          "Create and Deliver: Teaching learning platforms and curricula which embrace innovation and deliver contemporary knowledge and skills.",
+          "Engage and Empower: Industry and societal stakeholders through outreach and extension activities.",
+          "Innovate and Execute: Region-specific research, industry and society-based solutions.",
+        ],
+      },
+    ],
   },
   {
     id: "core",
     lottiePath: CORE_LOTTIE_PATH,
-    title: "Core Values",
-    body: "We lead with integrity, think critically, and make decisions rooted in ethics. We build confidence through competence and grow leaders who create lasting impact in communities — values that outlive every classroom.",
+    title: "Values",
+    content: [
+      {
+        type: "bullets",
+        items: [
+          "Transparency",
+          "Fair Play",
+          "Ethics",
+          "Sustainability",
+        ],
+      },
+    ],
   },
 ];
 
@@ -62,12 +98,6 @@ export default function OriginalThinkersSection() {
   const imageGroupY    = useTransform(imageGroupRawY, y => y + 80);
   const imageOpacity   = useTransform(scrollYProgress, [0.05, 0.22, 0.34, 0.44, 0.56], [0, 1, 1, 0.4, 0]);
 
-  /*
-    Content panel rise.
-    End value: we measure the title's actual rendered height via a ref and
-    store it so the panel locks exactly below the title — never overlapping.
-    Fallback 280px covers most screens before measurement fires.
-  */
   const [titleHeight, setTitleHeight] = useState(280);
   useEffect(() => {
     const measure = () => {
@@ -78,11 +108,7 @@ export default function OriginalThinkersSection() {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  /* Content slides up from below viewport to its natural position (y:0).
-     paddingTop on the panel itself handles the title clearance.          */
-  const contentY = useTransform(scrollYProgress, [0.50, 0.68], [900, 0]);
-
-  /* Title subtle scale-down as images approach */
+  const contentY   = useTransform(scrollYProgress, [0.50, 0.68], [900, 0]);
   const titleScale = useTransform(scrollYProgress, [0, 0.12], [1, 0.92]);
 
   /* Lottie data */
@@ -114,20 +140,18 @@ export default function OriginalThinkersSection() {
           transform: scaleX(1) !important;
         }
 
-        /* ── Card grid ── */
+        /* ── Card grid — equal height rows via align-items stretch ── */
         .ot-cards-row {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: clamp(0.8rem, 1.6vw, 1.4rem);
+          align-items: stretch;   /* all cards same height */
         }
         @media (max-width: 900px) {
           .ot-cards-row { grid-template-columns: 1fr; }
         }
-        @media (max-width: 1100px) and (min-width: 901px) {
-          .ot-cards-row { grid-template-columns: repeat(3, 1fr); }
-        }
 
-        /* ── Lottie container — normalises all animations to same visual size ── */
+        /* ── Lottie container ── */
         .ot-lottie-wrap {
           width: 100%;
           aspect-ratio: 1;
@@ -139,31 +163,47 @@ export default function OriginalThinkersSection() {
           flex-shrink: 0;
         }
         .ot-lottie-wrap > div {
-          /*
-            This is the key fix for size mismatch.
-            Lottie renders its SVG at whatever internal viewBox the JSON defines.
-            Wrapping in a container with width/height 100% and using object-fit-like
-            scaling via transform ensures every animation fills the same box.
-          */
           width: 100% !important;
           height: 100% !important;
         }
+
+        /* ── Bullet list inside card ── */
+        .ot-bullet-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.62rem;
+        }
+        .ot-bullet-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.6rem;
+          line-height: 1.72;
+        }
+        .ot-bullet-dot {
+          flex-shrink: 0;
+          margin-top: 0.42em;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #0a2463;
+          opacity: 0.55;
+        }
       `}</style>
 
-      {/* 580vh — enough for all animation phases plus generous card viewing time */}
+      {/* 580vh — enough for all animation phases plus card viewing */}
       <div ref={stickyRef} className="relative h-[580vh]">
         <div className="sticky top-0" style={{ minHeight: "100vh" }}>
 
-          {/* ═══════════════════════════════════════
-              TITLE — measured via ref for overlap fix
-          ═══════════════════════════════════════ */}
+          {/* ═══ TITLE ═══ */}
           <motion.div
             ref={titleRef}
             style={{ scale: titleScale, transformOrigin: "top center" }}
             className="absolute top-0 left-0 right-0 z-30 bg-white"
           >
             <div className={`mx-auto ${CONTENT_WIDTH}`}>
-              {/* Eyebrow */}
               <div
                 className="flex items-center justify-center gap-3 pb-3"
                 style={{ paddingTop: "calc(64px + clamp(1.2rem, 2.5vh, 2rem))" }}
@@ -184,7 +224,6 @@ export default function OriginalThinkersSection() {
                 <span style={{ display: "inline-block", width: 20, height: 1.5, background: NAVY }} />
               </div>
 
-              {/* Main title */}
               <h2
                 className={`${cinzel.className} text-black font-semibold text-center leading-none pb-8`}
                 style={{
@@ -196,14 +235,11 @@ export default function OriginalThinkersSection() {
                 Original Thinkers
               </h2>
 
-              {/* Hairline */}
               <div style={{ height: 1, background: `linear-gradient(90deg,transparent,${NAVY}18,transparent)` }} />
             </div>
           </motion.div>
 
-          {/* ═══════════════════════════════════════
-              IMAGE GROUP
-          ═══════════════════════════════════════ */}
+          {/* ═══ IMAGE GROUP ═══ */}
           <div className="absolute inset-0 pointer-events-none z-40 overflow-hidden">
             <motion.div
               style={{ y: imageGroupY, opacity: imageOpacity }}
@@ -215,11 +251,7 @@ export default function OriginalThinkersSection() {
             </motion.div>
           </div>
 
-          {/* ═══════════════════════════════════════
-              CONTENT PANEL
-              y lands at exactly titleHeight so it never
-              slides behind the title's white background.
-          ═══════════════════════════════════════ */}
+          {/* ═══ CONTENT PANEL ═══ */}
           <motion.div
             style={{ y: contentY }}
             className="relative bg-white z-20"
@@ -229,7 +261,7 @@ export default function OriginalThinkersSection() {
               style={{ paddingTop: titleHeight + 24 }}
             >
 
-              {/* ── TOP STRIP: paragraph left + CTA right ── */}
+              {/* ── TOP STRIP ── */}
               <div
                 style={{
                   display: "grid",
@@ -287,14 +319,14 @@ export default function OriginalThinkersSection() {
                 </Link>
               </div>
 
-              {/* ── THREE CARDS — equal columns, full width ── */}
+              {/* ── THREE CARDS ── */}
               <div className="ot-cards-row">
                 {CARDS.map(card => (
                   <BigCard
                     key={card.id}
                     anim={lotties[card.id]}
                     title={card.title}
-                    body={card.body}
+                    content={card.content}
                     lottieScale={card.id === "mission" ? 1.35 : 1}
                     cinzel={cinzel}
                     playfair={playfair}
@@ -313,11 +345,16 @@ export default function OriginalThinkersSection() {
 
 /* ── Premium full-height card ─────────────────────────────────────────── */
 function BigCard({
-  anim, title, body, lottieScale = 1, cinzel, playfair,
+  anim,
+  title,
+  content,
+  lottieScale = 1,
+  cinzel,
+  playfair,
 }: {
   anim: any;
   title: string;
-  body: string;
+  content: CardItem[];
   lottieScale?: number;
   cinzel: { className: string };
   playfair: { className: string };
@@ -331,11 +368,16 @@ function BigCard({
         background: "#ffffff",
         borderRadius: 14,
         overflow: "hidden",
-        padding: "clamp(1.4rem,2.4vw,2rem)",
+        /* Uniform padding on all cards — Mission has the most content so this
+           size naturally accommodates it; the grid's align-items:stretch
+           stretches Vision and Values to the same height automatically.     */
+        padding: "clamp(1.6rem,2.6vw,2.2rem)",
         display: "flex",
         flexDirection: "column",
         gap: "clamp(0.9rem,1.8vw,1.3rem)",
         boxShadow: "0 2px 20px rgba(10,36,99,0.06)",
+        /* Ensure all cards share the same min-height derived from the tallest */
+        height: "100%",
       }}
     >
       {/* Top accent bar — slides in on hover */}
@@ -353,7 +395,7 @@ function BigCard({
         }}
       />
 
-      {/* Ghost number watermark */}
+      {/* Ghost letter watermark */}
       <span
         aria-hidden="true"
         className={cinzel.className}
@@ -373,7 +415,7 @@ function BigCard({
         {title[0]}
       </span>
 
-      {/* Lottie — normalised container + per-card visual scale */}
+      {/* Lottie */}
       <div className="ot-lottie-wrap">
         {anim
           ? <Lottie
@@ -414,19 +456,42 @@ function BigCard({
         {title}
       </p>
 
-      {/* Body */}
-      <p
-        className={playfair.className}
-        style={{
-          fontSize: "clamp(12.5px,0.92vw,15px)",
-          color: "#4a5568",
-          margin: 0,
-          lineHeight: 1.78,
-          flex: 1,
-        }}
-      >
-        {body}
-      </p>
+      {/* Content — plain text or bullet list */}
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+        {content.map((block, bi) =>
+          block.type === "text" ? (
+            <p
+              key={bi}
+              className={playfair.className}
+              style={{
+                fontSize: "clamp(12.5px,0.92vw,15px)",
+                color: "#4a5568",
+                margin: 0,
+                lineHeight: 1.78,
+              }}
+            >
+              {block.text}
+            </p>
+          ) : (
+            <ul key={bi} className="ot-bullet-list">
+              {block.items.map((item, ii) => (
+                <li key={ii} className="ot-bullet-item">
+                  <span className="ot-bullet-dot" />
+                  <span
+                    className={playfair.className}
+                    style={{
+                      fontSize: "clamp(12.5px,0.92vw,15px)",
+                      color: "#4a5568",
+                    }}
+                  >
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )
+        )}
+      </div>
     </div>
   );
 }

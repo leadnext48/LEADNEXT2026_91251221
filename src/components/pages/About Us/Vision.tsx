@@ -29,22 +29,41 @@ function useRepeatInView(
 }
 
 /* ─── Data ───────────────────────────────────────────────────────────────── */
-const pillars = [
+type PillarBody = string | string[];   // string = prose, string[] = bullet list
+
+interface Pillar {
+  label: string;
+  body: PillarBody;
+  img: string;
+  imgAlt: string;
+}
+
+const pillars: Pillar[] = [
   {
-    label: "Vision",
-    body: "To be a leading institution recognized for fostering intellectual curiosity, sustainable practices, and ethical leadership — creating an inclusive learning environment where every individual thrives and reaches their fullest potential.",
+    label: "Our Vision",
+    body: "To be a LEADER in management and technology education focusing on developing Leaders and Entrepreneurs.",
     img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=85",
     imgAlt: "Person looking toward horizon, representing vision",
   },
   {
-    label: "Mission",
-    body: "To empower students with transformative education that blends academic excellence with holistic development, nurturing responsible global citizens who contribute meaningfully to society through innovation, integrity, and compassion.",
+    label: "Our Mission",
+    body: [
+      "Contribute to and Enable: The development of individuals to enhance their competencies as Business Leaders and Entrepreneurs.",
+      "Create and Deliver: Teaching learning platforms and curricula which embrace innovation and deliver contemporary knowledge and skills.",
+      "Engage and Empower: Industry and societal stakeholders through outreach and extension activities.",
+      "Innovate and Execute: Region-specific research, industry and society-based solutions.",
+    ],
     img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=85",
     imgAlt: "Students collaborating together, representing mission",
   },
   {
-    label: "Core Values",
-    body: "Excellence in education. Integrity in action. Innovation in thinking. Inclusivity in practice. Responsibility toward community and environment. We believe in empowering minds and shaping futures through collaborative, value-driven learning.",
+    label: "Values",
+    body: [
+      "Transparency",
+      "Fair Play",
+      "Ethics",
+      "Sustainability",
+    ],
     img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=85",
     imgAlt: "Team working together, representing core values",
   },
@@ -139,8 +158,27 @@ function VmHero() {
   );
 }
 
+/* ─── Pillar body renderer ───────────────────────────────────────────────── */
+function PillarBodyContent({ body, fontFamily }: { body: PillarBody; fontFamily: string }) {
+  if (typeof body === "string") {
+    return (
+      <p className="pcard-body" style={{ fontFamily }}>{body}</p>
+    );
+  }
+  return (
+    <ul className="pcard-bullets">
+      {body.map((item, i) => (
+        <li key={i} className="pcard-bullet-item">
+          <span className="pcard-bullet-dot" aria-hidden="true" />
+          <span className="pcard-body" style={{ fontFamily }}>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /* ─── Pillar row ─────────────────────────────────────────────────────────── */
-function PillarRow({ pillar, index }: { pillar: typeof pillars[0]; index: number }) {
+function PillarRow({ pillar, index }: { pillar: Pillar; index: number }) {
   const rowRef  = useRef<HTMLDivElement>(null);
   const numRef  = useRef<HTMLSpanElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -197,7 +235,7 @@ function PillarRow({ pillar, index }: { pillar: typeof pillars[0]; index: number
           <div ref={textRef} className="pcard-text-wrap" style={{ opacity: 0, transform: "translateY(28px)" }}>
             <h2 className="pcard-label" style={{ fontFamily: cinzel.style.fontFamily }}>{pillar.label}</h2>
             <div className="pcard-divider" />
-            <p className="pcard-body" style={{ fontFamily: playfair.style.fontFamily }}>{pillar.body}</p>
+            <PillarBodyContent body={pillar.body} fontFamily={playfair.style.fontFamily} />
           </div>
         </div>
         <div ref={imgRef} className="pcard-img-wrap" style={{ opacity: 0, transform: "translateY(24px) scale(0.97)" }}>
@@ -240,8 +278,8 @@ function PillarsSection() {
   );
 }
 
-/* ─── Programme Outcomes (new premium section) ───────────────────────────── */
-type Dept  = "MBA" | "MCA";
+/* ─── Programme Outcomes ─────────────────────────────────────────────────── */
+type Dept   = "MBA" | "MCA";
 type SubTab = "peo" | "po" | "pso";
 
 const SUB_TABS: { key: SubTab; label: string; short: string }[] = [
@@ -251,14 +289,11 @@ const SUB_TABS: { key: SubTab; label: string; short: string }[] = [
 ];
 
 function ProgrammeOutcomes() {
-  const [dept,    setDept]    = useState<Dept>("MBA");
-  const [subTab,  setSubTab]  = useState<SubTab>("peo");
-  const sectionRef = useRef<HTMLElement>(null);
+  const [dept,   setDept]   = useState<Dept>("MBA");
+  const [subTab, setSubTab] = useState<SubTab>("peo");
 
   const data  = dept === "MBA" ? MBA_DATA : MCA_DATA;
-  const items = data[subTab];
 
-  /* Animate items when tab changes */
   const listRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const els = listRef.current?.querySelectorAll<HTMLElement>(".po2-item");
@@ -276,22 +311,18 @@ function ProgrammeOutcomes() {
   }, [dept, subTab]);
 
   return (
-    <section className="po2-section" ref={sectionRef}>
+    <section className="po2-section">
 
-      {/* ── Section header ── */}
       <div className="po2-hdr">
         <div className="po2-eyebrow" style={{ fontFamily: cinzel.style.fontFamily }}>
           <span className="po2-eyebrow-line" />
           Outcome-Based Education
         </div>
-
         <div className="po2-hdr-row">
           <h2 className="po2-title" style={{ fontFamily: cinzel.style.fontFamily }}>
             Programme Objectives<br />
             <span className="po2-title-accent">&amp; Outcomes.</span>
           </h2>
-
-          {/* Dept toggle — pill style */}
           <div className="po2-dept-toggle">
             {(["MBA", "MCA"] as Dept[]).map(d => (
               <button
@@ -307,7 +338,6 @@ function ProgrammeOutcomes() {
         </div>
       </div>
 
-      {/* ── Sub-tabs ── */}
       <div className="po2-subtabs">
         {SUB_TABS.map(t => (
           <button
@@ -322,10 +352,7 @@ function ProgrammeOutcomes() {
         ))}
       </div>
 
-      {/* ── Content grid ── */}
       <div ref={listRef} className={`po2-grid po2-grid--${subTab}`}>
-
-        {/* PEO — 4-col, no title, just number + rule + body */}
         {subTab === "peo" && (data[subTab] as typeof MBA_DATA.peo).map((item) => (
           <div key={item.n} className="po2-item po2-peo-card">
             <span className="po2-ghost-num" aria-hidden="true">{item.n.replace(/\D/g, "")}</span>
@@ -334,8 +361,6 @@ function ProgrammeOutcomes() {
             <p className="po2-body" style={{ fontFamily: playfair.style.fontFamily }}>{item.body}</p>
           </div>
         ))}
-
-        {/* PO — 3-col, badge + title + rule + body */}
         {subTab === "po" && (data[subTab] as typeof MBA_DATA.po).map((item) => (
           <div key={item.n} className="po2-item po2-po-card">
             <span className="po2-ghost-num" aria-hidden="true">{item.n.replace(/\D/g, "")}</span>
@@ -347,15 +372,11 @@ function ProgrammeOutcomes() {
             <p className="po2-body" style={{ fontFamily: playfair.style.fontFamily }}>{item.body}</p>
           </div>
         ))}
-
-        {/* PSO — 2-col, horizontal icon+text layout */}
         {subTab === "pso" && (data[subTab] as typeof MBA_DATA.pso).map((item, i) => (
           <div key={item.n} className="po2-item po2-pso-card">
-            {/* Left: large number orb */}
             <div className="po2-pso-orb" style={{ background: i === 0 ? `rgba(0,92,159,0.09)` : `rgba(30,58,138,0.07)`, borderColor: i === 0 ? `rgba(0,92,159,0.18)` : `rgba(30,58,138,0.14)` }}>
               <span className="po2-pso-orb-num" style={{ fontFamily: cinzel.style.fontFamily, color: i === 0 ? BLUE : "#1e3a8a" }}>{item.n}</span>
             </div>
-            {/* Right: text */}
             <div className="po2-pso-body">
               <p className="po2-pso-title" style={{ fontFamily: cinzel.style.fontFamily }}>{item.title}</p>
               <div className="po2-card-rule po2-card-rule--narrow" />
@@ -365,7 +386,6 @@ function ProgrammeOutcomes() {
         ))}
       </div>
 
-      {/* ── Decorative dept label ── */}
       <div className="po2-dept-watermark" aria-hidden="true" style={{ fontFamily: cinzel.style.fontFamily }}>{dept}</div>
     </section>
   );
@@ -421,7 +441,7 @@ export const VisionMissionPage: React.FC = () => (
       }
       .ph-line { width:28px; height:1px; background:${BLUE}; opacity:0.5; }
       .pcard {
-        position:relative; display:flex; align-items:center;
+        position:relative; display:flex; align-items:flex-start;
         gap:clamp(2rem,5vw,5rem);
         padding:clamp(2.5rem,5vh,4rem) 0;
         margin-bottom:clamp(1rem,2.5vh,2rem);
@@ -447,7 +467,28 @@ export const VisionMissionPage: React.FC = () => (
         transition:width 0.4s ease;
       }
       .pcard:hover .pcard-divider { width:56px; }
+
+      /* prose body */
       .pcard-body { font-size:clamp(0.82rem,1vw,0.95rem); line-height:1.85; color:#666; margin:0; max-width:560px; }
+
+      /* bullet list body */
+      .pcard-bullets {
+        list-style:none; margin:0; padding:0;
+        display:flex; flex-direction:column;
+        gap:clamp(0.5rem,1vh,0.72rem);
+        max-width:560px;
+      }
+      .pcard-bullet-item {
+        display:flex; align-items:flex-start; gap:0.6rem;
+      }
+      .pcard-bullet-dot {
+        flex-shrink:0; margin-top:0.5em;
+        width:5px; height:5px; border-radius:50%;
+        background:${BLUE}; opacity:0.5;
+      }
+      /* .pcard-body inside a bullet inherits prose styles, no max-width needed here */
+      .pcard-bullet-item .pcard-body { max-width:none; }
+
       .pcard-img-wrap {
         width:clamp(180px,22vw,300px); flex-shrink:0; border-radius:8px;
         overflow:hidden; aspect-ratio:4/3;
@@ -465,7 +506,7 @@ export const VisionMissionPage: React.FC = () => (
         .pcard-index { font-size:clamp(3.5rem,14vw,5rem); }
       }
 
-      /* ══ PROGRAMME OUTCOMES — premium redesign ══ */
+      /* ══ PROGRAMME OUTCOMES ══ */
       .po2-section {
         position:relative; overflow:hidden;
         background:#ffffff;
@@ -481,8 +522,6 @@ export const VisionMissionPage: React.FC = () => (
         background-size:70px 70px;
         pointer-events:none; z-index:0;
       }
-
-      /* Dept watermark */
       .po2-dept-watermark {
         position:absolute; bottom:-0.12em; right:-0.04em;
         font-size:clamp(12rem,28vw,22rem); font-weight:900;
@@ -490,8 +529,6 @@ export const VisionMissionPage: React.FC = () => (
         pointer-events:none; user-select:none; z-index:0;
         letter-spacing:-0.06em;
       }
-
-      /* Header */
       .po2-hdr { position:relative; z-index:1; margin-bottom:clamp(1.5rem,3vh,2.5rem); }
       .po2-eyebrow {
         display:flex; align-items:center; gap:0.7rem; margin-bottom:0.8rem;
@@ -512,8 +549,6 @@ export const VisionMissionPage: React.FC = () => (
         background:linear-gradient(90deg,${BLUE},#1e3a8a);
         -webkit-background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
       }
-
-      /* Dept toggle */
       .po2-dept-toggle {
         display:inline-flex; padding:4px;
         background:rgba(0,92,159,0.06);
@@ -526,14 +561,9 @@ export const VisionMissionPage: React.FC = () => (
         font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
         transition:background 0.28s, color 0.28s, box-shadow 0.28s;
       }
-      .po2-dept-btn.active {
-        background:${BLUE}; color:#fff;
-        box-shadow:0 4px 18px rgba(0,92,159,0.28);
-      }
+      .po2-dept-btn.active { background:${BLUE}; color:#fff; box-shadow:0 4px 18px rgba(0,92,159,0.28); }
       .po2-dept-btn:not(.active) { background:transparent; color:rgba(0,92,159,0.5); }
       .po2-dept-btn:not(.active):hover { background:rgba(0,92,159,0.08); color:${BLUE}; }
-
-      /* Sub-tabs */
       .po2-subtabs {
         position:relative; z-index:1;
         display:flex; gap:0;
@@ -562,12 +592,9 @@ export const VisionMissionPage: React.FC = () => (
         .po2-subtab-short { display:inline; }
         .po2-subtab-full  { display:none; }
       }
-
-      /* Common card parts */
       .po2-num-badge {
         display:inline-flex; align-items:center; justify-content:center;
-        min-width:34px; height:28px; padding:0 8px;
-        border-radius:6px; flex-shrink:0;
+        min-width:34px; height:28px; padding:0 8px; border-radius:6px; flex-shrink:0;
         background:rgba(0,92,159,0.08); border:1px solid rgba(0,92,159,0.15);
         font-size:clamp(0.44rem,0.62vw,0.54rem); font-weight:800;
         letter-spacing:0.06em; color:${BLUE};
@@ -585,22 +612,13 @@ export const VisionMissionPage: React.FC = () => (
         color:${BLUE}; opacity:0.032; pointer-events:none; user-select:none;
         letter-spacing:-0.04em;
       }
-      .po2-body {
-        font-size:clamp(0.8rem,0.95vw,0.92rem);
-        line-height:1.82; color:#555; margin:0;
-      }
-
-      /* PEO grid (4-col) */
+      .po2-body { font-size:clamp(0.8rem,0.95vw,0.92rem); line-height:1.82; color:#555; margin:0; }
       .po2-grid { position:relative; z-index:1; }
-      .po2-grid--peo {
-        display:grid; grid-template-columns:repeat(4,1fr);
-        gap:clamp(0.75rem,1.5vw,1.1rem);
-      }
+      .po2-grid--peo { display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(0.75rem,1.5vw,1.1rem); }
       .po2-peo-card {
         position:relative; overflow:hidden;
         padding:clamp(1.2rem,2vw,1.8rem);
-        border:1px solid rgba(0,92,159,0.09); border-radius:10px;
-        background:#fff;
+        border:1px solid rgba(0,92,159,0.09); border-radius:10px; background:#fff;
         transition:box-shadow 0.28s, transform 0.28s, border-color 0.28s;
       }
       .po2-peo-card::before {
@@ -609,17 +627,9 @@ export const VisionMissionPage: React.FC = () => (
         transform:scaleX(0); transform-origin:left;
         transition:transform 0.32s cubic-bezier(0.22,1,0.36,1);
       }
-      .po2-peo-card:hover {
-        box-shadow:0 14px 44px rgba(0,92,159,0.10);
-        transform:translateY(-3px); border-color:rgba(0,92,159,0.20);
-      }
+      .po2-peo-card:hover { box-shadow:0 14px 44px rgba(0,92,159,0.10); transform:translateY(-3px); border-color:rgba(0,92,159,0.20); }
       .po2-peo-card:hover::before { transform:scaleX(1); }
-
-      /* PO grid (3-col) */
-      .po2-grid--po {
-        display:grid; grid-template-columns:repeat(3,1fr);
-        gap:clamp(0.75rem,1.5vw,1.1rem);
-      }
+      .po2-grid--po { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(0.75rem,1.5vw,1.1rem); }
       .po2-po-card {
         position:relative; overflow:hidden;
         padding:clamp(1.2rem,2vw,1.8rem);
@@ -633,23 +643,14 @@ export const VisionMissionPage: React.FC = () => (
         transform:scaleY(0); transform-origin:bottom;
         transition:transform 0.32s cubic-bezier(0.22,1,0.36,1);
       }
-      .po2-po-card:hover {
-        box-shadow:0 14px 44px rgba(0,92,159,0.10);
-        transform:translateY(-3px); border-color:rgba(0,92,159,0.20);
-      }
+      .po2-po-card:hover { box-shadow:0 14px 44px rgba(0,92,159,0.10); transform:translateY(-3px); border-color:rgba(0,92,159,0.20); }
       .po2-po-card:hover::before { transform:scaleY(1); }
       .po2-po-top { display:flex; align-items:center; gap:0.7rem; margin-bottom:0; }
       .po2-po-title {
         font-size:clamp(0.5rem,0.72vw,0.64rem); font-weight:700;
-        text-transform:uppercase; letter-spacing:0.08em; color:${DARK}; margin:0;
-        line-height:1.25;
+        text-transform:uppercase; letter-spacing:0.08em; color:${DARK}; margin:0; line-height:1.25;
       }
-
-      /* PSO grid (2-col) */
-      .po2-grid--pso {
-        display:grid; grid-template-columns:1fr 1fr;
-        gap:clamp(0.75rem,1.5vw,1.3rem);
-      }
+      .po2-grid--pso { display:grid; grid-template-columns:1fr 1fr; gap:clamp(0.75rem,1.5vw,1.3rem); }
       .po2-pso-card {
         position:relative; overflow:hidden;
         padding:clamp(1.4rem,2.5vw,2.2rem);
@@ -658,27 +659,19 @@ export const VisionMissionPage: React.FC = () => (
         display:flex; gap:clamp(1rem,2vw,1.6rem); align-items:flex-start;
         transition:box-shadow 0.28s, transform 0.28s, border-color 0.28s;
       }
-      .po2-pso-card:hover {
-        box-shadow:0 18px 52px rgba(0,92,159,0.12);
-        transform:translateY(-3px); border-color:rgba(0,92,159,0.22);
-      }
+      .po2-pso-card:hover { box-shadow:0 18px 52px rgba(0,92,159,0.12); transform:translateY(-3px); border-color:rgba(0,92,159,0.22); }
       .po2-pso-orb {
-        width:54px; height:54px; flex-shrink:0; border-radius:14px;
-        border:1px solid; display:flex; align-items:center; justify-content:center;
+        width:54px; height:54px; flex-shrink:0; border-radius:14px; border:1px solid;
+        display:flex; align-items:center; justify-content:center;
         transition:box-shadow 0.28s;
       }
       .po2-pso-card:hover .po2-pso-orb { box-shadow:0 6px 20px rgba(0,92,159,0.18); }
-      .po2-pso-orb-num {
-        font-size:clamp(0.44rem,0.62vw,0.54rem); font-weight:800; letter-spacing:0.06em;
-      }
+      .po2-pso-orb-num { font-size:clamp(0.44rem,0.62vw,0.54rem); font-weight:800; letter-spacing:0.06em; }
       .po2-pso-body { flex:1; min-width:0; }
       .po2-pso-title {
         font-size:clamp(0.52rem,0.74vw,0.66rem); font-weight:700;
-        text-transform:uppercase; letter-spacing:0.08em; color:${DARK}; margin:0;
-        line-height:1.3;
+        text-transform:uppercase; letter-spacing:0.08em; color:${DARK}; margin:0; line-height:1.3;
       }
-
-      /* Responsive */
       @media(max-width:1100px) {
         .po2-grid--peo { grid-template-columns:repeat(2,1fr); }
         .po2-grid--po  { grid-template-columns:repeat(2,1fr); }
@@ -689,7 +682,6 @@ export const VisionMissionPage: React.FC = () => (
         .po2-pso-card { flex-direction:column; }
         .po2-dept-watermark { display:none; }
       }
-
       @media(prefers-reduced-motion:reduce) {
         .po2-peo-card::before, .po2-po-card::before { transition:none; }
         .po2-peo-card:hover, .po2-po-card:hover, .po2-pso-card:hover { transform:none; }
