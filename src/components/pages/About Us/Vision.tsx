@@ -42,7 +42,7 @@ const pillars: Pillar[] = [
   {
     label: "Our Vision",
     body: "To be a LEADER in management and technology education focusing on developing Leaders and Entrepreneurs.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=85",
+    img: "/convert/LEAD51.webp",
     imgAlt: "Person looking toward horizon, representing vision",
   },
   {
@@ -53,7 +53,7 @@ const pillars: Pillar[] = [
       "Engage and Empower: Industry and societal stakeholders through outreach and extension activities.",
       "Innovate and Execute: Region-specific research, industry and society-based solutions.",
     ],
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=85",
+    img: "/convert/LEAD46.webp",
     imgAlt: "Students collaborating together, representing mission",
   },
   {
@@ -64,7 +64,7 @@ const pillars: Pillar[] = [
       "Ethics",
       "Sustainability",
     ],
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=85",
+    img: "/convert/LEAD45.webp",
     imgAlt: "Team working together, representing core values",
   },
 ];

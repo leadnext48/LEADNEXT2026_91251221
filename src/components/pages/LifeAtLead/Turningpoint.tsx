@@ -69,9 +69,9 @@ const STATS = [
 ];
 
 const IMGS = {
-  aboutLeft:    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+  aboutLeft:    "/convert/LEAD04.webp",
   visionBg:     "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1600&q=80",
-  participants: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
+  participants: "/convert/DSC000912.webp",
   // ── FIXED: verified college campus walkway
   impactBg:     "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80",
 };

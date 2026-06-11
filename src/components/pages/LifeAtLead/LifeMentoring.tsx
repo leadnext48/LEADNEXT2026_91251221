@@ -353,10 +353,10 @@ function PhilosophySection() {
         <div style={{ position: "relative", minHeight: 420, opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(30px)", transition: "opacity 0.9s 0.2s ease, transform 0.9s 0.2s ease" }}>
           <div style={{ position: "absolute", top: -12, right: -12, width: "65%", height: "55%", borderWidth: 1, borderStyle: "solid", borderColor: COLORS.border, borderRadius: RADIUS.sm, pointerEvents: "none", zIndex: 0 }} />
           <div style={{ position: "relative", zIndex: 1, width: "75%", marginLeft: "auto", overflow: "hidden", borderRadius: RADIUS.card, boxShadow: SHADOWS.hero }}>
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80&auto=format&fit=crop" alt="Mentor guiding a student" style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover", display: "block" }} loading="lazy" />
+            <img src="/convert/LEAD14.webp" alt="Mentor guiding a student" style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover", display: "block" }} loading="lazy" />
           </div>
           <div style={{ position: "absolute", bottom: 0, left: 0, width: "48%", overflow: "hidden", borderRadius: RADIUS.card, borderWidth: 4, borderStyle: "solid", borderColor: "#fff", boxShadow: "0 14px 40px rgba(0,0,0,0.12)", zIndex: 2, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.7s 0.5s ease, transform 0.7s 0.5s ease" }}>
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&q=80&auto=format&fit=crop" alt="Students collaborating" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} loading="lazy" />
+            <img src="/convert/LEAD35.webp" alt="Students collaborating" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} loading="lazy" />
           </div>
         </div>
       </div>
@@ -625,7 +625,7 @@ function StorytellingSection() {
   const [ref, visible] = useInView(0.15);
   return (
     <section ref={ref} style={{ position: "relative", overflow: "hidden", minHeight: 560 }}>
-      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80&auto=format&fit=crop" alt="Mentor and student" loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+      <img src="/convert/LEAD33.webp" alt="Mentor and student" loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,42,73,0.93) 0%, rgba(0,92,159,0.8) 100%)" }} />
       <div style={{ position: "relative", zIndex: 10, maxWidth: 960, margin: "0 auto", padding: `${SPACE.sectionY} ${SPACE.sectionX}`, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
         <div style={{ fontFamily: "Georgia, serif", fontSize: "clamp(6rem,12vw,10rem)", lineHeight: 0.6, color: "rgba(255,255,255,0.1)", marginBottom: "1.5rem", opacity: visible ? 1 : 0, transition: "opacity 0.8s ease" }}>"</div>
@@ -662,7 +662,7 @@ function LeadershipCultureSection() {
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "clamp(3rem,6vw,5rem)", alignItems: "center" }}>
           <div style={{ position: "relative", minHeight: 380, order: isMobile ? -1 : 0, opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-30px)", transition: "opacity 0.9s 0.15s ease, transform 0.9s 0.15s ease" }}>
             <div style={{ borderRadius: RADIUS.card, overflow: "hidden", boxShadow: SHADOWS.hero }}>
-              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80&auto=format&fit=crop" alt="Leadership culture" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }} loading="lazy" />
+              <img src="/convert/LEAD34.webp" alt="Leadership culture" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }} loading="lazy" />
             </div>
             <div style={{ position: "absolute", bottom: -20, right: -16, background: "#ffffff", borderRadius: RADIUS.card, padding: "1.25rem 1.5rem", boxShadow: "0 16px 48px rgba(0,0,0,0.12)", borderWidth: 1, borderStyle: "solid", borderColor: COLORS.border, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.7s 0.5s ease, transform 0.7s 0.5s ease" }}>
               <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: COLORS.primary, margin: "0 0 0.8rem" }}>Core Values</p>

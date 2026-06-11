@@ -278,7 +278,7 @@ function HeroSection(): React.JSX.Element {
               <div style={{ position: "relative", height: 340, overflow: "hidden", borderRadius: 16, boxShadow: "0 20px 60px rgba(0,0,0,.12)" }}>
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 6, background: C.green, zIndex: 2, borderRadius: "16px 0 0 16px" }} />
                 <img
-                  src="/pets1.jpg"
+                  src="/convert/LEAD28.webp"
                   alt="Animals at LEAD College campus"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -331,7 +331,7 @@ function PosterSection(): React.JSX.Element {
                 boxShadow: "0 24px 64px rgba(0,92,159,.18)", zIndex: 1,
               }}>
                 <img
-               src="/pets2.jpg"
+               src="/convert/LEAD07x.webp"
                   alt="Diverse animals on LEAD campus"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -354,7 +354,7 @@ function PosterSection(): React.JSX.Element {
                 boxShadow: "0 12px 40px rgba(0,0,0,.22)", zIndex: 2, border: "4px solid #fff",
               }}>
                 <img
-                  src="/pets3.jpg"
+                  src="/convert/LEAD08x.webp"
                   alt="Fish tanks at LEAD campus"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -640,7 +640,7 @@ function CollaborationSection(): React.JSX.Element {
               border: `1px solid ${C.parchment}`, position: "relative",
             }}>
               <img
-                src="/pets4.jpg"
+                src="/convert/LEAD36x.webp"
                 alt="Animals on LEAD campus grounds"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
@@ -752,7 +752,7 @@ function CommunitySection(): React.JSX.Element {
             boxShadow: "0 12px 40px rgba(0,92,159,.1)", position: "relative",
           }}>
             <img
-              src="/pets5.jpg"
+              src="/convert/photo_1_2024-11-25_17-10-18.jpeg"
               alt="LEAD campus wildlife and nature"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />

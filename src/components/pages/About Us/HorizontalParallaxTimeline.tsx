@@ -378,7 +378,7 @@ function ImagePanel() {
       {/* Main image with subtle parallax */}
       <div style={{ overflow: "hidden", borderRadius: 3, position: "relative", zIndex: 1 }}>
         <motion.img
-          src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=900&q=80&auto=format&fit=crop"
+          src="/convert/LEAD03.webp"
           alt="LEAD College campus"
           className="ls-img-main"
           style={{ y: imgY }}
@@ -406,7 +406,7 @@ function ImagePanel() {
         transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
       >
         <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&q=80&auto=format&fit=crop"
+          src="/convert/LEAD04.webp"
           alt="Students at LEAD"
           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
         />

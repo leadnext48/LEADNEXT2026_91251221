@@ -566,13 +566,13 @@ const navSections: NavSection[] = [
     title: "Admissions",
     items: [
       { title: "Overview",     href: "/admissions",          description: "Admission process & eligibility",    icon: Info        },
-      // ── Brochure: served directly from /public — opens in a new browser tab.
-      // Next.js automatically serves files placed in /public at the root URL,
-      // so /LEAD-MBA-Brochure-2026-28.pdf is accessible without any extra route or API.
-      // `external: true` adds the ExternalLink icon and sets rel="noopener noreferrer".
+      // ── Brochure: the MBA 2026–28 PDF served directly from /public/convert.
+      // Next.js serves files in /public at the root URL, so the PDF is reachable
+      // at "/convert/LEAD MBA 26 - 28.pdf" (spaces URL-encoded as %20).
+      // `external: true` makes it open in a new tab with rel="noopener noreferrer".
       {
         title: "Brochure",
-        href: "/LEAD-MBA-Brochure-2026-28.pdf",
+        href: "/convert/LEAD%20MBA%2026%20-%2028.pdf",
         description: "Download / view our programmes brochure",
         icon: FileDown,
         external: true,
@@ -603,8 +603,7 @@ const navSections: NavSection[] = [
       { title: "Canteen",                 href: "/life-at-lead/canteen",       description: "Nutritious meals and vibrant campus dining",          icon: UtensilsCrossed },
       { title: "Pets & Campus Life",      href: "/life-at-lead/pets",          description: "Unique biodiversity with animals and nature",         icon: PawPrint        },
       { title: "Farm & Nature",           href: "/life-at-lead/farm-nature",   description: "Sustainable living across 24 acres of greenery",     icon: Leaf            },
-      { title: "Events",                  href: "/life-at-lead/events",        description: "Workshops, festivals and leadership events",          icon: CalendarDays    },
-      { title: "Social Media",            href: "/life-at-lead/social-media",  description: "Stay connected with LEAD updates online",            icon: Share2          },
+
       { title: "Gallery",                 href: "/life-at-lead/gallery",       description: "Photo gallery capturing campus life moments",         icon: Camera          },
     ],
   },

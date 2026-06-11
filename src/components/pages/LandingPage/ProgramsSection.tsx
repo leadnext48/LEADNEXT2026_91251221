@@ -35,7 +35,7 @@ const PROGRAMS = [
     ],
     cta: "/mba",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+      "/convert/LEAD30.webp",
   },
   {
     id: "mca",

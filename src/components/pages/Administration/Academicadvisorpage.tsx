@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
 }
 
 const ADVISOR_IMAGE = '/administration/academicadvisor.png';
-const MEETING_IMAGE = 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=90&auto=format';
+const MEETING_IMAGE = '/convert/ue2c6ukku5cecojxhit2.webp';
 
 const BLUE = '#005C9F';
 

@@ -280,7 +280,7 @@ function HeroSection(): React.JSX.Element {
               <div style={{ position: "relative", height: 340, overflow: "hidden", borderRadius: 16, boxShadow: "0 20px 60px rgba(0,0,0,.12)" }}>
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 6, background: C.green, zIndex: 2, borderRadius: "16px 0 0 16px" }} />
                 <img
-                  src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD23.webp"
                   alt="LEAD College farm and green campus"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -334,7 +334,7 @@ function PosterSection(): React.JSX.Element {
               }}>
                 {/* photo-1416879595882-3373a0480b5b — vegetable garden rows, by Markus Spiske */}
                 <img
-                  src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD24x.webp"
                   alt="Farm cultivation at LEAD"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -358,7 +358,7 @@ function PosterSection(): React.JSX.Element {
               }}>
                 {/* photo-1464226184884-fa280b87c399 — lush green rolling hills, by Ales Krivec */}
                 <img
-                  src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=700&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD22.webp"
                   alt="Lush green campus at LEAD"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -645,7 +645,7 @@ function CollaborationSection(): React.JSX.Element {
             }}>
               {/* photo-1500382017468-9049fed747ef — rolling green farmland at golden hour */}
               <img
-                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&auto=format&fit=crop&q=80"
+                src="/convert/LEAD25x.webp"
                 alt="LEAD campus farm and green fields"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
@@ -758,7 +758,7 @@ function CommunitySection(): React.JSX.Element {
           }}>
             {/* photo-1501004318641-b39e6451bec6 — peaceful green plant close-up, by Scott Webb */}
             <img
-              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1400&auto=format&fit=crop&q=80"
+              src="/convert/LEAD21.webp"
               alt="LEAD campus green landscape and farm"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />

@@ -11,7 +11,7 @@ const features = [
     content:
       "LEAD provides comfortable residential hostels with secure access, calm study-friendly spaces, and a community built for lasting friendships.",
     image:
-      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&auto=format&fit=crop&q=80",
+      "/convert/LEAD57.jpg",
   },
   {
     step: "Step 2",
@@ -19,7 +19,7 @@ const features = [
     content:
       "LEAD supports active student life with modern sports facilities, fitness zones, and wellness-focused spaces that keep you energised beyond academics.",
     image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&auto=format&fit=crop&q=80",
+      "/convert/LEAD58.webp",
   },
   {
     step: "Step 3",
@@ -27,7 +27,7 @@ const features = [
     content:
       "LEAD offers serene green pockets and relaxing recreational spaces — a peaceful Palakkad setting that helps students reset, breathe, and stay inspired.",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2070&auto=format&fit=crop",
+      "/convert/LEAD21.webp",
   },
 ];
 

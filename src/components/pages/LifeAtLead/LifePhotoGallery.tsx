@@ -24,7 +24,7 @@ export default function LifePhotoGallery() {
       <LifeAtLeadHero
         title="Photo Gallery"
         description="The Photo Gallery documents memorable campus moments — from classroom engagement and incubation activities to sports events and celebrations."
-        imageSrc="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1920&q=80&auto=format&fit=crop"
+        imageSrc="/convert/LEAD32.webp"
       />
 
       <section

@@ -16,16 +16,16 @@ const MBA_URL = 'https://admission.lead.ac.in/lead-college-of-management-mba-app
 const MCA_URL = 'https://admission.lead.ac.in/lead-college-of-management-mca-application';
 
 const IMG = {
-  hero:    'https://images.unsplash.com/photo-1562774053-701939374585?w=1800&q=90&auto=format&fit=crop',
+  hero:    '/convert/LEAD02.webp',
   prog1:   'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=900&q=85&auto=format',
   prog2:   'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80&auto=format&fit=crop',
   prog3:   'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&q=80&auto=format&fit=crop',
   prog4:   'https://images.unsplash.com/photo-1562774053-701939374585?w=900&q=85&auto=format',
-  about:   'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=85&auto=format&fit=crop',
-  news:    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=85&auto=format&fit=crop',
-  contact: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85&auto=format&fit=crop',
+  about:   '/convert/LEAD61.webp',
+  news:    '/convert/LEAD30.webp',
+  contact: '/convert/LEAD65.webp',
   // ✅ CHANGED: professor mid-lecture in a modern hall — clearly college, not vague
-  video:   'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=85&auto=format&fit=crop',
+  video:   '/convert/LEAD13.webp',
 };
 
 /* ─────────── STYLE HELPERS ─────────── */

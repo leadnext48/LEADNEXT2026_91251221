@@ -16,15 +16,15 @@ const MBA_URL = 'https://admission.lead.ac.in/lead-college-of-management-mba-app
 
 /* ─────────── IMAGES ─────────── */
 const IMG = {
-  hero:        'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1920&q=90&auto=format&fit=crop',
-  curriculum:  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=90&auto=format',
-  int1:        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=90&auto=format',
-  int2:        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=90&auto=format',
-  int3:        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=90&auto=format',
-  social:      'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&q=90&auto=format',
-  residential: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&q=85&auto=format&fit=crop',
+  hero:        '/convert/LEAD33.webp',
+  curriculum:  '/convert/LEAD55.webp',
+  int1:        '/convert/LEAD38.webp',
+  int2:        '/convert/LEAD16.webp',
+  int3:        '/convert/LEAD13.webp',
+  social:      '/convert/LEAD31.webp',
+  residential: '/convert/LEAD52.webp',
   assessment:  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=90&auto=format',
-  cta:         'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&q=90&auto=format',
+  cta:         '/convert/LEAD32.webp',
 };
 
 /* ─────────── STYLE HELPERS ─────────── */

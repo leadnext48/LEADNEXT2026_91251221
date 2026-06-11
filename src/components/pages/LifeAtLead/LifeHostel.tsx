@@ -41,7 +41,7 @@ export default function LifeHostel() {
       <LifeAtLeadHero
         title="Hostel"
         description="As a fully residential institution, LEAD provides a structured and disciplined hostel environment that supports focused academic engagement. Students benefit from safe, well-maintained accommodations designed to encourage collaboration and peer learning."
-        imageSrc="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1920&q=80&auto=format&fit=crop"
+        imageSrc="/convert/LEAD57.jpg"
       />
 
       <section style={{ maxWidth: 1200, margin: "0 auto", padding: `${SPACE.sectionY} ${SPACE.sectionX}` }}>

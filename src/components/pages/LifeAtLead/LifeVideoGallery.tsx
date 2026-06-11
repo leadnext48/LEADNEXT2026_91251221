@@ -32,30 +32,30 @@ interface Photo {
 }
 
 const PHOTOS: Photo[] = [
-  { id: "p-01", src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80&auto=format&fit=crop", alt: "Classroom engagement",   caption: "Classroom Engagement" },
-  { id: "p-02", src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=80&auto=format&fit=crop", alt: "Incubation activities",  caption: "Incubation Activities" },
-  { id: "p-03", src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80&auto=format&fit=crop", alt: "Student celebrations",   caption: "Student Celebrations" },
-  { id: "p-04", src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80&auto=format&fit=crop", alt: "Sports events",          caption: "Sports Events" },
-  { id: "p-05", src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80&auto=format&fit=crop", alt: "Campus life",            caption: "Campus Life" },
-  { id: "p-06", src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80&auto=format&fit=crop", alt: "Industry interactions",   caption: "Industry Interactions" },
-  { id: "p-07", src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1200&q=80&auto=format&fit=crop", alt: "Cultural events",        caption: "Cultural Events" },
-  { id: "p-08", src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=80&auto=format&fit=crop", alt: "Leadership programs",    caption: "Leadership Programs" },
-  { id: "p-09", src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80&auto=format&fit=crop", alt: "Campus greenery",        caption: "Campus Greenery" },
-  { id: "p-10", src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop", alt: "Tech workshop",          caption: "Tech Workshop" },
-  { id: "p-11", src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&q=80&auto=format&fit=crop", alt: "Seminar hall",           caption: "Seminar Hall" },
-  { id: "p-12", src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&q=80&auto=format&fit=crop", alt: "Student collaboration",  caption: "Student Collaboration" },
-  { id: "p-13", src: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=1200&q=80&auto=format&fit=crop", alt: "Convocation ceremony",    caption: "Convocation Ceremony" },
-  { id: "p-14", src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=1200&q=80&auto=format&fit=crop", alt: "Library reading",        caption: "Library Reading" },
-  { id: "p-15", src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1200&q=80&auto=format&fit=crop", alt: "Guest lecture",           caption: "Guest Lecture" },
-  { id: "p-16", src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop", alt: "Annual day celebration", caption: "Annual Day Celebration" },
-  { id: "p-17", src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80&auto=format&fit=crop", alt: "Team building",          caption: "Team Building Activity" },
-  { id: "p-18", src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=1200&q=80&auto=format&fit=crop", alt: "Research presentation",  caption: "Research Presentation" },
-  { id: "p-19", src: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=1200&q=80&auto=format&fit=crop", alt: "Outdoor activity",       caption: "Outdoor Activity" },
-  { id: "p-20", src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&q=80&auto=format&fit=crop", alt: "Campus tour",            caption: "Campus Tour" },
-  { id: "p-21", src: "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=1200&q=80&auto=format&fit=crop", alt: "Hackathon event",        caption: "Hackathon Event" },
-  { id: "p-22", src: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1200&q=80&auto=format&fit=crop", alt: "Note taking session",    caption: "Note Taking Session" },
-  { id: "p-23", src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1200&q=80&auto=format&fit=crop", alt: "Morning assembly",       caption: "Morning Assembly" },
-  { id: "p-24", src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&q=80&auto=format&fit=crop", alt: "Classroom discussion",   caption: "Classroom Discussion" },
+  { id: "p-01", src: "/convert/LEAD01.webp", alt: "Classroom engagement",   caption: "Classroom Engagement" },
+  { id: "p-02", src: "/convert/LEAD02.webp", alt: "Incubation activities",  caption: "Incubation Activities" },
+  { id: "p-03", src: "/convert/LEAD03.webp", alt: "Student celebrations",   caption: "Student Celebrations" },
+  { id: "p-04", src: "/convert/LEAD04.webp", alt: "Sports events",          caption: "Sports Events" },
+  { id: "p-05", src: "/convert/LEAD05.webp", alt: "Campus life",            caption: "Campus Life" },
+  { id: "p-06", src: "/convert/LEAD06x.webp", alt: "Industry interactions",  caption: "Industry Interactions" },
+  { id: "p-07", src: "/convert/LEAD07x.webp", alt: "Cultural events",        caption: "Cultural Events" },
+  { id: "p-08", src: "/convert/LEAD08x.webp", alt: "Leadership programs",    caption: "Leadership Programs" },
+  { id: "p-09", src: "/convert/LEAD09.webp", alt: "Campus greenery",        caption: "Campus Greenery" },
+  { id: "p-10", src: "/convert/LEAD10.webp", alt: "Tech workshop",          caption: "Tech Workshop" },
+  { id: "p-11", src: "/convert/LEAD11.webp", alt: "Seminar hall",           caption: "Seminar Hall" },
+  { id: "p-12", src: "/convert/LEAD12.webp", alt: "Student collaboration",  caption: "Student Collaboration" },
+  { id: "p-13", src: "/convert/LEAD13.webp", alt: "Convocation ceremony",   caption: "Convocation Ceremony" },
+  { id: "p-14", src: "/convert/LEAD14.webp", alt: "Library reading",        caption: "Library Reading" },
+  { id: "p-15", src: "/convert/LEAD15.webp", alt: "Guest lecture",          caption: "Guest Lecture" },
+  { id: "p-16", src: "/convert/LEAD16.webp", alt: "Annual day celebration", caption: "Annual Day Celebration" },
+  { id: "p-17", src: "/convert/LEAD17.webp", alt: "Team building",          caption: "Team Building Activity" },
+  { id: "p-18", src: "/convert/LEAD18x.webp", alt: "Research presentation",  caption: "Research Presentation" },
+  { id: "p-19", src: "/convert/LEAD19x.webp", alt: "Outdoor activity",       caption: "Outdoor Activity" },
+  { id: "p-20", src: "/convert/LEAD20.webp", alt: "Campus tour",            caption: "Campus Tour" },
+  { id: "p-21", src: "/convert/LEAD21.webp", alt: "Hackathon event",        caption: "Hackathon Event" },
+  { id: "p-22", src: "/convert/LEAD22.webp", alt: "Note taking session",    caption: "Note Taking Session" },
+  { id: "p-23", src: "/convert/LEAD23.webp", alt: "Morning assembly",       caption: "Morning Assembly" },
+  { id: "p-24", src: "/convert/LEAD24.webp", alt: "Classroom discussion",   caption: "Classroom Discussion" },
 ];
 
 /* ─── ANIMATIONS ─── */
@@ -277,7 +277,7 @@ export default function LifePhotoGallery() {
       <LifeAtLeadHero
         title="Photo Gallery"
         description="The Photo Gallery documents memorable campus moments — from classroom engagement and incubation activities to sports events and celebrations. It reflects the vibrancy, diversity, and spirit of the LEAD community while preserving institutional memories."
-        imageSrc="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920&q=80&auto=format&fit=crop"
+        imageSrc="/convert/LEAD32.webp"
       />
       <GridSection />
     </div>

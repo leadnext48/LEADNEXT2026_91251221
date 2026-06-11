@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
 }
 
 const DIRECTOR_IMAGE = '/administration/director.webp';
-const MEETING_IMAGE  = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=90&auto=format';
+const MEETING_IMAGE  = '/convert/LEAD06x.webp';
 
 const BLUE = '#005C9F';
 

@@ -186,8 +186,8 @@ export default function EntrepreneurshipPage(): JSX.Element {
     { icon: Network,  label: "All Under One Roof"   },
   ];
   const selCards = [
-    { id: "bi" as Panel,   icon: Building2, title: "LEAD-BI",   subtitle: "Business Incubator",           desc: "Transform from job seeker to job creator — a structured incubation programme with mentoring, modelling, and funding all under one roof.", cta: "Explore Business Incubator",   img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" },
-    { id: "iedc" as Panel, icon: Sparkles,  title: "LEAD IEDC", subtitle: "Innovation & Entrepreneurship", desc: "A Kerala Startup Mission initiative giving students the platform, technology, mentorship, and capital to build real ventures from campus.",    cta: "Explore Innovation Centre",    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
+    { id: "bi" as Panel,   icon: Building2, title: "LEAD-BI",   subtitle: "Business Incubator",           desc: "Transform from job seeker to job creator — a structured incubation programme with mentoring, modelling, and funding all under one roof.", cta: "Explore Business Incubator",   img: "/convert/LEAD66.webp" },
+    { id: "iedc" as Panel, icon: Sparkles,  title: "LEAD IEDC", subtitle: "Innovation & Entrepreneurship", desc: "A Kerala Startup Mission initiative giving students the platform, technology, mentorship, and capital to build real ventures from campus.",    cta: "Explore Innovation Centre",    img: "/convert/LEAD44.webp" },
   ];
   const marqueeWords = ["Incubation","Mentorship","Innovation","Funding","Prototyping","Ideathons","E-School","Startup School","Market Research","Entrepreneurship"];
 
@@ -334,7 +334,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                 </h2>
                 <div className="relative overflow-hidden mt-8" style={{ aspectRatio: "4/3" }}>
                   <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
+                    src="/convert/LEAD05.webp"
                     alt="Students collaborating on entrepreneurship"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
                   />
@@ -575,7 +575,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
                 ))}
               </div>
               <div className="relative overflow-hidden mt-8" style={{ aspectRatio: "16/10" }}>
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Business incubation" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" />
+                <img src="/convert/LEAD15.webp" alt="Business incubation" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,36,99,0.18) 0%, transparent 60%)" }} />
               </div>
             </div>
@@ -727,7 +727,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
           <Reveal direction="right" delay={120}>
             <div>
               <div className="relative overflow-hidden mb-7" style={{ aspectRatio: "16/9" }}>
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Modern entrepreneurship school" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" style={{ filter: "brightness(0.7) saturate(0.6)" }} />
+                <img src="/convert/LEAD70.webp" alt="Modern entrepreneurship school" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" style={{ filter: "brightness(0.7) saturate(0.6)" }} />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.5) 0%, transparent 60%)" }} />
                 <div className="absolute bottom-4 left-4">
                   <p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "8px", letterSpacing: "0.32em", opacity: 0.6 }}>THE FUTURE OF LEAD</p>
@@ -775,7 +775,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 ))}
               </div>
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="IEDC innovation lab" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" style={{ filter: "brightness(0.65) saturate(0.7)" }} />
+                  <img src="/convert/LEAD44.webp" alt="IEDC innovation lab" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" style={{ filter: "brightness(0.65) saturate(0.7)" }} />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.65) 0%, transparent 55%)" }} />
                 <div className="absolute bottom-4 left-4"><p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "8px", letterSpacing: "0.32em", opacity: 0.6 }}>LEAD IEDC LAB</p></div>
               </div>
@@ -903,7 +903,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 Our amenities encompass workspace, a startup school, an incubation centre, skilled mentors, and financial assistance extending from the initial idea phase to the scaling stage.
               </p>
               <div className="relative overflow-hidden mb-6" style={{ aspectRatio: "16/9" }}>
-                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80" alt="Students in workshop" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" />
+                <img src="/convert/LEAD45.webp" alt="Students in workshop" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,36,99,0.12) 0%, transparent 50%)" }} />
               </div>
               <div className="grid grid-cols-2 gap-2">
@@ -939,7 +939,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 </p>
               </div>
               <div className="mt-4 relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="IEDC events" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" />
+                <img src="/convert/LEAD39.webp" alt="IEDC events" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.4) 0%, transparent 60%)" }} />
                 <div className="absolute bottom-4 left-4"><p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "8px", letterSpacing: "0.28em", opacity: 0.65 }}>IEDC EVENTS · LEAD COLLEGE</p></div>
               </div>

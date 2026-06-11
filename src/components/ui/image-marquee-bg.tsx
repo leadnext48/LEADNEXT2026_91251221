@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils"
 import { Marquee } from "@/components/ui/3d-testimonails"
 
 const images = [
-  "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
-]
+  "/convert/LEAD01.webp",
+  "/convert/LEAD02.webp" ,
+  "/convert/LEAD03.webp",
+   "/convert/LEAD04.webp" ,
+    "/convert/LEAD05.webp",
 
+]
 function ImageCard({ src }: { src: string }) {
   return (
     <div className="relative h-24 w-44 overflow-hidden rounded-xl bg-white/5 shadow-sm">

@@ -278,7 +278,7 @@ function HeroSection(): React.JSX.Element {
               <div style={{ position: "relative", height: 340, overflow: "hidden", borderRadius: 16, boxShadow: "0 20px 60px rgba(0,0,0,.12)" }}>
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 6, background: C.green, zIndex: 2, borderRadius: "16px 0 0 16px" }} />
                 <img
-                  src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD57.jpg"
                   alt="Hostel at LEAD College"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -337,7 +337,7 @@ function PosterSection(): React.JSX.Element {
                 zIndex: 1,
               }}>
                 <img
-                  src="/hostel1.jpg"
+                  src="/convert/LEAD64x.webp"
                   alt="Hostel room at LEAD"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -372,7 +372,7 @@ function PosterSection(): React.JSX.Element {
                 border: "4px solid #fff",
               }}>
                 <img
-                  src="/hostel2.jpg"
+                  src="/convert/LEAD63.webp"
                   alt="Hostel community at LEAD"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -685,7 +685,7 @@ function CollaborationSection(): React.JSX.Element {
               position: "relative",
             }}>
               <img
-                src="https://images.unsplash.com/photo-1525026198548-4baa812f1183?w=900&auto=format&fit=crop&q=80"
+                src="/convert/LEAD71.webp"
                 alt="Students living together at LEAD hostel"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
@@ -831,7 +831,7 @@ function CommunitySection(): React.JSX.Element {
             position: "relative",
           }}>
             <img
-              src="https://images.unsplash.com/photo-1562564055-71e051d33c19?w=1400&auto=format&fit=crop&q=80"
+              src="/convert/photo_8_2025-05-07_12-00-48.jpeg"
               alt="LEAD hostel community living"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />

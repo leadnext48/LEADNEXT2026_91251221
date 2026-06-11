@@ -294,7 +294,7 @@ function HeroSection(): React.JSX.Element {
               <div style={{ position:"relative", height:340, overflow:"hidden", borderRadius:16, boxShadow:"0 20px 60px rgba(0,0,0,.12)" }}>
                 <div style={{ position:"absolute", left:0, top:0, bottom:0, width:6, background:C.green, zIndex:2, borderRadius:"16px 0 0 16px" }} />
                 <img
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD60.webp"
                   alt="Students at Curio"
                   style={{ width:"100%", height:"100%", objectFit:"cover", display:"block", transition:"transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -485,7 +485,7 @@ function PosterSection(): React.JSX.Element {
               boxShadow:    "0 20px 60px rgba(0,92,159,.13)",
             }}>
               <img
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900&auto=format&fit=crop&q=80"
+                src="/convert/LEAD69.webp"
                 alt="Students collaborating at Curio"
                 style={{ width:"100%", height:"100%", objectFit:"cover", display:"block" }}
               />

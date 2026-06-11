@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
 }
 
 const DEPUTY_IMAGE  = '/administration/deputydirector.png';
-const MEETING_IMAGE = 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=90&auto=format';
+const MEETING_IMAGE = '/convert/vkskfce2zjmedmxzoa4w.webp';
 
 const BLUE = '#005C9F';
 

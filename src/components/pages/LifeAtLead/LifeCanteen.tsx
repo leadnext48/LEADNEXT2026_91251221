@@ -278,7 +278,7 @@ function HeroSection(): React.JSX.Element {
               <div style={{ position: "relative", height: 340, overflow: "hidden", borderRadius: 16, boxShadow: "0 20px 60px rgba(0,0,0,.12)" }}>
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 6, background: C.green, zIndex: 2, borderRadius: "16px 0 0 16px" }} />
                 <img
-                  src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=900&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD41.webp"
                   alt="Canteen at LEAD College"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -337,7 +337,7 @@ function PosterSection(): React.JSX.Element {
                 zIndex: 1,
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD19x.webp"
                   alt="Freshly prepared meals at LEAD canteen"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -372,7 +372,7 @@ function PosterSection(): React.JSX.Element {
                 border: "4px solid #fff",
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=700&auto=format&fit=crop&q=80"
+                  src="/convert/LEAD42x.webp"
                   alt="Students dining together at LEAD"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
@@ -684,7 +684,7 @@ function CollaborationSection(): React.JSX.Element {
               position: "relative",
             }}>
               <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&auto=format&fit=crop&q=80"
+                src="/convert/LEAD43.jpg"
                 alt="Students dining at LEAD canteen"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
@@ -830,7 +830,7 @@ function CommunitySection(): React.JSX.Element {
             position: "relative",
           }}>
             <img
-              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1400&auto=format&fit=crop&q=80"
+              src="/convert/LEAD20.webp"
               alt="LEAD canteen dining space"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />

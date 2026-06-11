@@ -32,7 +32,7 @@ export const SmoothScrollHero = () => {
       {/* ✅ Lenis wrapper for smooth scrolling */}
       <ReactLenis root>
         {/* <Nav /> */}
-        <Hero />
+        {/* <Hero /> */}
         <Schedule />
       </ReactLenis>
     </div>
@@ -102,7 +102,7 @@ const CenterImage = () => {
         clipPath,
         backgroundSize,
         opacity,
-      backgroundImage: "url(/h1.jpg)",
+      backgroundImage: "url(/convert/DSC06898.webp)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -114,28 +114,28 @@ const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-src="/h2.jpg"
+src="/convert/DSC07270.webp"
         alt="An example of a space launch"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-src="/hr3.jpg"
+src="/convert/DSC00075.webp"
         alt="An example of a space launch"
         start={200}
         end={-250}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-src="/hr4.jpg"
+src="/convert/DSC00254.webp"
         alt="Orbiting satellite"
         start={-200}
         end={200}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-src="/hr5.jpg"
+src="/convert/DSC06679.webp"
         alt="Orbiting satellite"
         start={0}
         end={-500}

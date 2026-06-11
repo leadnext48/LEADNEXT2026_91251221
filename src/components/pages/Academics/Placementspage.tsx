@@ -678,7 +678,7 @@ function SectorSection() {
           <div style={{ overflow: "hidden", boxShadow: "0 24px 56px rgba(0,0,0,.12)" }}>
             <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", display: "block" }}>
               <Image
-                src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=700&q=85&auto=format&fit=crop"
+                src="/convert/LEAD37.webp"
                 alt="Corporate environment"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -689,7 +689,7 @@ function SectorSection() {
           <div style={{ position: "absolute", bottom: "-1.5rem", left: "-1.5rem", width: "42%", aspectRatio: "1/1", overflow: "hidden", border: `4px solid ${WHITE}`, boxShadow: "0 12px 32px rgba(0,0,0,.15)" }}>
             <div style={{ position: "relative", width: "100%", height: "100%" }}>
               <Image
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=85&auto=format&fit=crop"
+                src="/convert/LEAD15.webp"
                 alt="Team"
                 fill
                 sizes="(max-width: 768px) 42vw, 21vw"

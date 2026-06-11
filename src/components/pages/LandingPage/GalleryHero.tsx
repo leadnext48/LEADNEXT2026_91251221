@@ -20,7 +20,7 @@ const photos = [
     y: "15px",
     zIndex: 50,
     direction: "left" as Direction,
-    src: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1000&auto=format&fit=crop",
+    src: "/convert/LEAD09.webp",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const photos = [
     y: "32px",
     zIndex: 40,
     direction: "left" as Direction,
-    src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1000&auto=format&fit=crop",
+    src: "/convert/LEAD17.webp",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const photos = [
     y: "8px",
     zIndex: 30,
     direction: "right" as Direction,
-    src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop",
+    src: "/convert/LEAD22.webp",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const photos = [
     y: "22px",
     zIndex: 20,
     direction: "right" as Direction,
-    src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1000&auto=format&fit=crop",
+    src: "/convert/LEAD35.webp",
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const photos = [
     y: "44px",
     zIndex: 10,
     direction: "left" as Direction,
-    src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1000&auto=format&fit=crop",
+    src: "/convert/LEAD38.webp",
   },
 ]
 

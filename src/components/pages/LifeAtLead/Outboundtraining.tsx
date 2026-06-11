@@ -312,7 +312,7 @@ function HeroSection(): React.JSX.Element {
                 {/* Blue left accent bar — same as TP */}
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 6, background: COLORS.primary, zIndex: 2, borderRadius: "16px 0 0 16px" }} />
                 <img
-                  src="/obt1.jpg"
+                  src="/convert/IMG_1261.jpeg"
                   alt="OBT outdoor leadership training"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
@@ -539,7 +539,7 @@ function ActivitiesSection(): React.JSX.Element {
               >
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 5, background: GRADIENTS.primary90, zIndex: 2, borderRadius: "18px 0 0 18px" }} />
                 <img
-              src="/obt2.jpg"
+              src="/convert/AJD08797.jpg"
                   alt="Leadership group training"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .7s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -554,7 +554,7 @@ function ActivitiesSection(): React.JSX.Element {
                 style={{ position: "absolute", bottom: 0, right: 0, width: "55%", height: 210, borderRadius: 16, overflow: "hidden", boxShadow: "0 16px 48px rgba(0,0,0,.18)", border: "3px solid #fff", zIndex: 3 }}
               >
                 <img
-                      src="/obt3.jpg"
+                      src="/convert/IMG_9422.jpg"
                   alt="Outdoor team activity"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .7s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -597,7 +597,7 @@ function MentoringSection(): React.JSX.Element {
               <div style={{ position: "relative", height: 400, borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,.13)" }}>
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 5, background: GRADIENTS.primary90, zIndex: 2, borderRadius: "20px 0 0 20px" }} />
                 <img
-                     src="/obt4.jpg"
+                     src="/convert/AJD09072.jpg"
                   alt="Faculty mentoring students"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}

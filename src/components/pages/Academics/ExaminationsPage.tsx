@@ -417,7 +417,7 @@ export default function ExaminationsPage() {
               <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-[#0a2463]/20" />
               <div className="relative w-full h-full overflow-hidden rounded-sm shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=900&q=80"
+                  src="/convert/LEAD56.jpg"
                   alt="Examination hall"
                   className="w-full h-full object-cover"
                   style={{ filter: "saturate(0.85)" }}
@@ -462,7 +462,7 @@ export default function ExaminationsPage() {
           >
             <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden rounded-sm shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80"
+                src="/convert/LEAD49.webp"
                 alt="Academic integrity"
                 className="w-full h-full object-cover"
                 style={{ filter: "saturate(0.9)" }}
