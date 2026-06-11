@@ -539,7 +539,7 @@ function ActivitiesSection(): React.JSX.Element {
               >
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 5, background: GRADIENTS.primary90, zIndex: 2, borderRadius: "18px 0 0 18px" }} />
                 <img
-              src="/convert/AJD08797.jpg"
+              src="/convert/AJD08797.JPG"
                   alt="Leadership group training"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .7s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -554,7 +554,7 @@ function ActivitiesSection(): React.JSX.Element {
                 style={{ position: "absolute", bottom: 0, right: 0, width: "55%", height: 210, borderRadius: 16, overflow: "hidden", boxShadow: "0 16px 48px rgba(0,0,0,.18)", border: "3px solid #fff", zIndex: 3 }}
               >
                 <img
-                      src="/convert/IMG_9422.jpg"
+                      src="/convert/IMG_9422.JPG"
                   alt="Outdoor team activity"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .7s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -597,7 +597,7 @@ function MentoringSection(): React.JSX.Element {
               <div style={{ position: "relative", height: 400, borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 60px rgba(0,0,0,.13)" }}>
                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 5, background: GRADIENTS.primary90, zIndex: 2, borderRadius: "20px 0 0 20px" }} />
                 <img
-                     src="/convert/AJD09072.jpg"
+                     src="/convert/AJD09072.JPG"
                   alt="Faculty mentoring students"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .6s ease" }}
                   onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
