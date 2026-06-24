@@ -272,7 +272,7 @@ export default function ProgramsSection() {
                   fontWeight: 600,
                 }}
               >
-                LEAD College of Management
+                LEAD College
               </span>
               <span style={{ display: "inline-block", width: 20, height: 1.5, background: NAVY }} />
             </div>

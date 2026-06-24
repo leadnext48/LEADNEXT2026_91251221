@@ -516,7 +516,7 @@ export default function GatewaySection() {
         <DescCard
           visible={descVisible} delay={0} icon={Leaf}
           title="A Campus Among Nature"
-          text="LEAD College of Management sits in Dhoni — a tranquil pocket of the Western Ghats where lush greenery, clean air, and whispering streams shape an environment unlike any other campus in Kerala. Close enough to Palakkad town for convenience, yet far enough to preserve the calm that turns learning into something deeper."
+          text="LEAD College sits in Dhoni — a tranquil pocket of the Western Ghats where lush greenery, clean air, and whispering streams shape an environment unlike any other campus in Kerala. Close enough to Palakkad town for convenience, yet far enough to preserve the calm that turns learning into something deeper."
         />
         <DescCard
           visible={descVisible} delay={0.15} icon={Aperture}

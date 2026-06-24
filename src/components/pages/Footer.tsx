@@ -64,7 +64,7 @@ export default function Footer() {
 
           <div className={cn("space-y-2 text-sm text-white/85", playfair.className)}>
             <p>
-              LEAD College of Management
+              LEAD College
               <br />
               Dhoni PO, Palakkad
               <br />
@@ -101,7 +101,7 @@ export default function Footer() {
       </div>
 
       <div className={cn("mt-12 border-t border-white/20 pt-6 text-center text-sm text-white/60", playfair.className)}>
-        &copy; {new Date().getFullYear()} LEAD College of Management. All rights reserved.
+        &copy; {new Date().getFullYear()} LEAD College. All rights reserved.
       </div>
     </footer>
   )

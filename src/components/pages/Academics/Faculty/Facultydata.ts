@@ -170,7 +170,7 @@ const raw: RawMember[] = [
     google_scholar: null,
     linkedin: "https://www.linkedin.com/in/dr-arjun-k-p/",
     researchgate_scopus: null,
-    professional_biography: "Dr. Arjun K P serves as Assistant Professor and Board of Studies Member at LEAD College of Management (Autonomous), Palakkad. He holds a Ph.D. in Computer Science from Bharathiar University.",
+    professional_biography: "Dr. Arjun K P serves as Assistant Professor and Board of Studies Member at LEAD College (Autonomous), Palakkad. He holds a Ph.D. in Computer Science from Bharathiar University.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Cyber Security", institution: "Bharathiar University", year: "2026" },
       { degree: "M.Phil.", discipline: "MPhil", institution: "Bharathidasan University", year: "2018" },
@@ -319,7 +319,7 @@ const raw: RawMember[] = [
     google_scholar: "https://scholar.google.com/citations?user=JPXke4sAAAAJ&hl=en&authuser=2",
     linkedin: "http://www.linkedin.com/in/dr-irshad-vk",
     researchgate_scopus: "https://www.researchgate.net/profile/Mohammad-Irshad-Vk",
-    professional_biography: "Dr. Mohammad Irshad V. K. serves as Associate Dean (Academic Affairs) and Assistant Professor in Finance and Risk Management at LEAD College of Management (Autonomous), Palakkad. He earned his Ph.D. in Finance from Pondicherry University. He is a Certified Trainer for AIMA BizLab Edge Simulations by the All India Management Association. His teaching and research interests include equity market dynamics, financial and commodity derivatives analytics, enterprise and strategic risk management, sustainable and digital finance innovations, and algorithmic trading.",
+    professional_biography: "Dr. Mohammad Irshad V. K. serves as Associate Dean (Academic Affairs) and Assistant Professor in Finance and Risk Management at LEAD College (Autonomous), Palakkad. He earned his Ph.D. in Finance from Pondicherry University. He is a Certified Trainer for AIMA BizLab Edge Simulations by the All India Management Association. His teaching and research interests include equity market dynamics, financial and commodity derivatives analytics, enterprise and strategic risk management, sustainable and digital finance innovations, and algorithmic trading.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Finance", institution: "Pondicherry University", year: "2023" },
       { degree: "MBA", discipline: "Banking and Finance", institution: "Alagappa University", year: "2022" },
@@ -343,7 +343,7 @@ const raw: RawMember[] = [
     google_scholar: "https://scholar.google.com/citations?user=6asMuz8AAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/dr-mohammed-iqbal/",
     researchgate_scopus: "https://www.researchgate.net/profile/Mohammed-Iqbal-13",
-    professional_biography: "Dr. Mohammed Iqbal serves as an Assistant Professor in Finance and Entrepreneurship at LEAD College of Management (Autonomous), Palakkad. He holds a Ph.D. in Finance from Pondicherry University with research on information asymmetry in the Indian equity market.",
+    professional_biography: "Dr. Mohammed Iqbal serves as an Assistant Professor in Finance and Entrepreneurship at LEAD College (Autonomous), Palakkad. He holds a Ph.D. in Finance from Pondicherry University with research on information asymmetry in the Indian equity market.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Finance", institution: "Pondicherry University", year: "2019" },
       { degree: "Master's Degree", discipline: "M.Com (Business Finance)", institution: "Pondicherry University", year: "2012" },
@@ -391,7 +391,7 @@ const raw: RawMember[] = [
     google_scholar: null,
     linkedin: "http://www.linkedin.com/in/jith-rajan",
     researchgate_scopus: null,
-    professional_biography: "Dr. Jith Rajan serves as an Assistant Professor at LEAD College of Management, Palakkad. He brings over 13 years of experience, combining academic rigor with corporate strategy, including significant experience as a Marketing Head. He advocates inquisitive and experiential learning, bridging industry practices with classroom teaching. He was honored with the Dr. A.P.J. Abdul Kalam Memorial Award 2025 by the Research Council of India for his contributions to academia and research.",
+    professional_biography: "Dr. Jith Rajan serves as an Assistant Professor at LEAD College, Palakkad. He brings over 13 years of experience, combining academic rigor with corporate strategy, including significant experience as a Marketing Head. He advocates inquisitive and experiential learning, bridging industry practices with classroom teaching. He was honored with the Dr. A.P.J. Abdul Kalam Memorial Award 2025 by the Research Council of India for his contributions to academia and research.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Marketing", institution: "Kerala University of Fisheries and Ocean Studies", year: "2026" },
       { degree: "M.Phil.", discipline: "Management", institution: "Bharathiar University", year: "2011" },
@@ -465,7 +465,7 @@ const raw: RawMember[] = [
     google_scholar: "https://scholar.google.com/citations?hl=en",
     linkedin: "https://www.linkedin.com/in/dr-krishna-priya-m-a-5b17a6228/",
     researchgate_scopus: "https://www.scopus.com/authid/detail.uri?authorId=57850671300",
-    professional_biography: "Dr. Krishnapriya M. A. serves as an Associate Professor at LEAD College of Management (Autonomous), Palakkad. She holds a Ph.D. in Computer Science and brings over two decades of teaching experience.",
+    professional_biography: "Dr. Krishnapriya M. A. serves as an Associate Professor at LEAD College (Autonomous), Palakkad. She holds a Ph.D. in Computer Science and brings over two decades of teaching experience.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Computer Science - Knowledge Management", institution: "Bharathiar University", year: "2023" },
       { degree: "Master's Degree", discipline: "MCA", institution: "Bharathiar University", year: "2001" },
@@ -585,7 +585,7 @@ const raw: RawMember[] = [
     google_scholar: null,
     linkedin: "http://www.linkedin.com/in/meghap-m",
     researchgate_scopus: null,
-    professional_biography: "Dr. Megha P M is an academician, researcher, and startup mentor with a strong background in biotechnology and translational research. She holds a Ph.D. in Microbiology from Bharathiar University and currently serves as Head of Entrepreneurship and LEAD Business Incubator at LEAD College of Management, Palakkad.",
+    professional_biography: "Dr. Megha P M is an academician, researcher, and startup mentor with a strong background in biotechnology and translational research. She holds a Ph.D. in Microbiology from Bharathiar University and currently serves as Head of Entrepreneurship and LEAD Business Incubator at LEAD College, Palakkad.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Microbiology", institution: "Bharathiar University", year: "2009–2018" },
       { degree: "M.Phil.", discipline: "Microbiology", institution: "Bharathiar University", year: "2007–2008" },
@@ -609,7 +609,7 @@ const raw: RawMember[] = [
     google_scholar: "https://scholar.google.com/citations?user=eJlEXjsAAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/dr-urmila-r-menon-536a6a381",
     researchgate_scopus: "https://www.scopus.com/authid/detail.uri?authorId=57194334972",
-    professional_biography: "Dr. Urmila R. Menon is an Assistant Professor of Commerce at LEAD College of Management. She holds a Ph.D. in Commerce from the University of Calicut and is UGC-NET qualified. With over three and a half years of teaching experience, she specializes in financial management, accounting, security analysis, portfolio management, and management control systems.",
+    professional_biography: "Dr. Urmila R. Menon is an Assistant Professor of Commerce at LEAD College. She holds a Ph.D. in Commerce from the University of Calicut and is UGC-NET qualified. With over three and a half years of teaching experience, she specializes in financial management, accounting, security analysis, portfolio management, and management control systems.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Commerce", institution: "University of Calicut", year: "2023" },
       { degree: "M.Phil.", discipline: "Commerce - Advanced Financial Management", institution: "University of Calicut", year: "2018" },
@@ -634,7 +634,7 @@ const raw: RawMember[] = [
     google_scholar: "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=sabina+A+Nair",
     linkedin: "https://www.linkedin.com/in/dr-sabina-nair-053379ba/",
     researchgate_scopus: "http://www.researchgate.net/scientific-contributions/Sabina-A-Nair-2331440390",
-    professional_biography: "Dr. Sabina A Nair is an Assistant Professor (Senior Grade) in the Department of Management at LEAD College of Management, Palakkad, with a Ph.D. in Neuromarketing from the University of Madras. She has teaching experience from institutions such as IILM University, Gurugram and the University of Madras, with multiple publications in Scopus indexed and UGC listed journals and presentations at national and international conferences, including at the National University of Singapore.",
+    professional_biography: "Dr. Sabina A Nair is an Assistant Professor (Senior Grade) in the Department of Management at LEAD College, Palakkad, with a Ph.D. in Neuromarketing from the University of Madras. She has teaching experience from institutions such as IILM University, Gurugram and the University of Madras, with multiple publications in Scopus indexed and UGC listed journals and presentations at national and international conferences, including at the National University of Singapore.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Commerce / Neuromarketing", institution: "University of Madras", year: "2021" },
       { degree: "Master's Degree", discipline: "M.Com", institution: "Calicut University", year: "2007" },
@@ -658,7 +658,7 @@ const raw: RawMember[] = [
     google_scholar: null,
     linkedin: "https://www.linkedin.com/in/pramod-v-083b0bb1",
     researchgate_scopus: null,
-    professional_biography: "Mr. Pramod V holds an M.Com from SN College, Alathur and an MBA from DMS Palayad. He has been serving as an Assistant Professor at LEAD College of Management since 2014 and brings around 13 years of academic experience along with about one year of industry experience. His research interests include crowdfunding and fintech. He has also authored a book titled \"Role of Content Marketing in Customer Engagement\". He is passionate about student engagement and applies mind-mapping techniques in academics to enhance student learning outcomes.",
+    professional_biography: "Mr. Pramod V holds an M.Com from SN College, Alathur and an MBA from DMS Palayad. He has been serving as an Assistant Professor at LEAD College since 2014 and brings around 13 years of academic experience along with about one year of industry experience. His research interests include crowdfunding and fintech. He has also authored a book titled \"Role of Content Marketing in Customer Engagement\". He is passionate about student engagement and applies mind-mapping techniques in academics to enhance student learning outcomes.",
     educational_qualifications: [
       { degree: "MBA", discipline: "HR & Finance", institution: "Kannur University", year: "2009–11" },
       { degree: "Master's Degree", discipline: "M.Com", institution: "University of Calicut", year: "2007–09" },
@@ -822,7 +822,7 @@ const raw: RawMember[] = [
     institutional_roles: "Research Department Cell, Conference and Publications",
     email: "Satyendra.k@lead.ac.in",
     orcid_id: "0009-0008-8948-5820",
-    google_scholar: "https://scholar.google.com/citations?user=RqnbTHQAAAAJ&hl=en",
+    google_scholar: "https://scholar.google.com/citations?user=xA9xfEYAAAAJ&hl=en",
     linkedin: "http://www.linkedin.com/in/satyendra-kushwaha-905633200",
     researchgate_scopus: "https://www.researchgate.net/profile/Satyendra-Kushwaha-4",
     professional_biography: "Satyendra Kushwaha is a finance researcher with a strong interest in financial economics, financial markets, and global economic dynamics.",
@@ -986,7 +986,7 @@ const raw: RawMember[] = [
     google_scholar: "https://scholar.google.com/citations?user=9dNkiKAAAAAJ",
     linkedin: "https://www.linkedin.com/in/dr-subhashini-d-33a3bb120/",
     researchgate_scopus: "https://www.scopus.com/authid/detail.uri?authorId=57739643600",
-    professional_biography: "Dr. Subhashini Durai is an Assistant Professor in the MBA Department at LEAD College of Management (Autonomous), Palakkad. She holds a Ph.D. in Management Science from Anna University and an M.Phil. from Bharathiar University, along with dual MBA degrees in Human Resource Management and Production and Operations Management.",
+    professional_biography: "Dr. Subhashini Durai is an Assistant Professor in the MBA Department at LEAD College (Autonomous), Palakkad. She holds a Ph.D. in Management Science from Anna University and an M.Phil. from Bharathiar University, along with dual MBA degrees in Human Resource Management and Production and Operations Management.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Management Science", institution: "Anna University", year: "2020" },
       { degree: "M.Phil.", discipline: "Management Science", institution: "Bharathiar University", year: "2013" },
@@ -1010,7 +1010,7 @@ const raw: RawMember[] = [
     google_scholar: null,
     linkedin: "http://www.linkedin.com/in/dr-syamraj-kp-92945458",
     researchgate_scopus: "https://www.scopus.com/authid/detail.uri?authorId=58505280200",
-    professional_biography: "Dr. Syamraj KP is an academic and researcher specializing in finance, risk analytics, and corporate governance. He holds a Ph.D. in Commerce (Financial Market) from the University of Kerala and serves as Assistant Professor of Finance and Accounting at LEAD College of Management. His teaching focuses on financial analytics, investment management, and financial forecasting using Python.",
+    professional_biography: "Dr. Syamraj KP is an academic and researcher specializing in finance, risk analytics, and corporate governance. He holds a Ph.D. in Commerce (Financial Market) from the University of Kerala and serves as Assistant Professor of Finance and Accounting at LEAD College. His teaching focuses on financial analytics, investment management, and financial forecasting using Python.",
     educational_qualifications: [
       { degree: "Ph.D.", discipline: "Commerce", institution: "University of Kerala", year: "2025" },
       { degree: "M.Phil.", discipline: "Commerce", institution: "University of Kerala", year: "2017" },

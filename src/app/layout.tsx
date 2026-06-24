@@ -7,23 +7,27 @@ import ScrollHeader from "@/components/layout/ScrollHeader"
 // NOTE: SITE_URL is the canonical production domain. Update it if the site
 // is deployed under a different host so canonical/OG/sitemap URLs stay correct.
 const SITE_URL = "https://lead.ac.in"
-const SITE_NAME = "LEAD College of Management"
-const TITLE = "LEAD College of Management | MBA & MCA in Palakkad, Kerala"
+const SITE_NAME = "LEAD College"
+// Former name — kept only as an SEO alias so visitors searching the old brand
+// ("LEAD College of Management") still find the site. Not shown to users.
+const FORMER_NAME = "LEAD College of Management"
+const TITLE = "LEAD College | MBA & MCA in Palakkad, Kerala"
 const DESCRIPTION =
-  "LEAD College of Management (Autonomous) is an AICTE-approved institution in Dhoni, Palakkad offering industry-integrated MBA and MCA programmes — a 95%+ placement record, global exposure, and mentorship from seasoned professionals. Affiliated to the University of Calicut."
+  "LEAD College (Autonomous) is an AICTE-approved institution in Dhoni, Palakkad offering industry-integrated MBA and MCA programmes — internships every semester, a strong 90%+ placement record, and mentorship from seasoned professionals. Affiliated to the University of Calicut."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE,
-    // Child pages that set their own `title` get "<Page> | LEAD College of Management"
-    template: "%s | LEAD College of Management",
+    // Child pages that set their own `title` get "<Page> | LEAD College"
+    template: "%s | LEAD College",
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
-    "LEAD College of Management",
+    "LEAD College",
     "LEAD College Palakkad",
+    "LEAD College of Management", // former name — retained for search discoverability
     "MBA in Kerala",
     "MCA in Kerala",
     "MBA in Palakkad",
@@ -54,7 +58,7 @@ export const metadata: Metadata = {
         url: "/logolead.png",
         width: 600,
         height: 272,
-        alt: "LEAD College of Management",
+        alt: "LEAD College",
       },
     ],
   },
@@ -77,6 +81,53 @@ export const metadata: Metadata = {
   },
 }
 
+// ── Structured data (JSON-LD) for rich Google results ─────────────────────
+// CollegeOrUniversity + WebSite graph. Contact details mirror the site Footer.
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["CollegeOrUniversity", "EducationalOrganization"],
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      alternateName: FORMER_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}/logolead.png`,
+      image: `${SITE_URL}/logolead.png`,
+      description: DESCRIPTION,
+      foundingDate: "2010",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Dhoni PO",
+        addressLocality: "Palakkad",
+        addressRegion: "Kerala",
+        postalCode: "678009",
+        addressCountry: "IN",
+      },
+      email: "info@lead.ac.in",
+      telephone: "+91-9497713693",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+91-9497713693",
+          email: "info@lead.ac.in",
+          contactType: "admissions",
+          areaServed: "IN",
+          availableLanguage: ["en", "ml"],
+        },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      inLanguage: "en-IN",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -85,6 +136,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+        />
+
         <ScrollHeader />
 
         {/* Page Content */}

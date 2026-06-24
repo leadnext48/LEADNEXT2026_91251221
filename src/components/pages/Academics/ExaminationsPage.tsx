@@ -471,7 +471,7 @@ export default function ExaminationsPage() {
               <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: "linear-gradient(to top, rgba(2,8,24,0.6), transparent)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className={`${cinzel.className} text-white/50 text-[9px] tracking-[0.28em] uppercase mb-1`}>Office of Examinations</p>
-                <p className={`${playfair.className} text-white text-sm font-semibold`}>LEAD College of Management</p>
+                <p className={`${playfair.className} text-white text-sm font-semibold`}>LEAD College</p>
               </div>
             </div>
 

@@ -100,7 +100,7 @@ function ApplyModal({ open, onClose }: { open: boolean; onClose: () => void }) {
           <div className="relative z-10">
             <div className="apply-eyebrow" style={{ fontFamily: cinzel.style.fontFamily }}>
               <span className="apply-eyebrow-dash" />
-              LEAD College of Management
+              LEAD College
             </div>
             <h2 className="apply-hero-title" style={{ fontFamily: cinzel.style.fontFamily }}>
               Begin Your Journey
@@ -452,6 +452,13 @@ function MobileMenu({
       className="fixed inset-0 top-16 z-40 bg-white p-4 md:hidden overflow-y-auto"
     >
       <div className="flex flex-col gap-6">
+        <Button
+          className="w-full bg-black text-white cursor-pointer"
+          onClick={onApply}
+        >
+          Apply Now
+        </Button>
+
         {navSections.map((section) => (
           <div key={section.title}>
             <p className="text-sm font-semibold text-gray-900">{section.title}</p>
@@ -475,13 +482,6 @@ function MobileMenu({
             </div>
           </div>
         ))}
-
-        <Button
-          className="mt-4 w-full bg-black text-white cursor-pointer"
-          onClick={onApply}
-        >
-          Apply Now
-        </Button>
       </div>
     </div>,
     document.body
@@ -554,7 +554,6 @@ const navSections: NavSection[] = [
     title: "Administration",
     items: [
       { title: "Director",                href: "/director",               description: "Institutional head overseeing academic and administrative leadership",  icon: GraduationCap  },
-      { title: "Academic Advisor",        href: "/academic-advisor",       description: "Provides academic guidance, policy direction, and strategic input",    icon: BookOpen       },
       { title: "Deputy Director",         href: "/deputy-director",        description: "Assists the Director in institutional governance and operations",       icon: ShieldCheck    },
       { title: "Academic Administrator",  href: "/academic-administrator", description: "Manages academic coordination, compliance, and execution",             icon: ClipboardCheck },
       { title: "Deans",                   href: "/deans",                  description: "Leads faculties and academic departments",                             icon: Users          },

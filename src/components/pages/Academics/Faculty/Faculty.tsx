@@ -112,7 +112,7 @@ export default function FacultyPage() {
               <div className="fac-hero-rule" />
               <p style={{ fontFamily: playfair.style.fontFamily }}>
                 Scholars, practitioners, and mentors — the people who shape
-                every learner at LEAD College of Management, Palakkad.
+                every learner at LEAD College, Palakkad.
               </p>
             </div>
             <div className="fac-hero-stats">

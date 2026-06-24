@@ -36,7 +36,7 @@ const IconAcademic = () => (
 );
 
 const credentials = [
-  { Icon: IconBuilding,  text: 'Academic Administrator — LEAD College of Management (Autonomous)' },
+  { Icon: IconBuilding,  text: 'Academic Administrator — LEAD College (Autonomous)' },
   { Icon: IconBriefcase, text: '10 Years of Industrial Experience' },
   { Icon: IconAcademic,  text: '22 Years of Teaching Experience' },
 ];
