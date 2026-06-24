@@ -41,7 +41,20 @@ export default function HeroSection() {
   const fitHeadline = useCallback(() => {
     const el = headlineRef.current
     if (!el) return
-    const target = window.innerWidth * 0.80
+    const W = window.innerWidth
+
+    /* Mobile — let the headline wrap onto multiple lines so it stays large & prominent */
+    if (W <= 640) {
+      el.style.whiteSpace = 'normal'
+      el.style.lineHeight = '1.06'
+      setHeadlineFontSize(Math.min(Math.round(W * 0.14), 96))
+      return
+    }
+
+    /* Desktop / tablet — fit a single line to 80vw */
+    el.style.whiteSpace = 'nowrap'
+    el.style.lineHeight = '1'
+    const target = W * 0.80
     let lo = 10, hi = 400, mid = lo
     el.style.fontSize = `${hi}px`
     if (el.scrollWidth <= target) { setHeadlineFontSize(hi); return }
@@ -327,7 +340,7 @@ export default function HeroSection() {
               marginTop:     '0.2rem',
             }}
           >
-            LEAD College of Management &nbsp;·&nbsp; Dhoni, Palakkad
+            LEAD College &nbsp;·&nbsp; Dhoni, Palakkad
           </p>
         </div>
 

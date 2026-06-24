@@ -798,7 +798,7 @@ export default function AdmissionsPage() {
                   <iframe
                     className="w-full h-full"
                     src="https://www.youtube.com/embed/VrkT32NhEM4?start=101&autoplay=1&rel=0&modestbranding=1"
-                    title="LEAD College of Management — Admissions"
+                    title="LEAD College — Admissions"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />

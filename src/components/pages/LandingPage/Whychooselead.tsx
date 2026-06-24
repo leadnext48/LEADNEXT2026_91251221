@@ -348,7 +348,7 @@ export default function WhyChooseLead() {
             fontSize: 'clamp(7px,0.52vw,9px)', letterSpacing: '0.42em',
             textTransform: 'uppercase', color: 'rgba(255,255,255,0.26)',
             margin: '0 0 0.5rem', fontWeight: 600,
-          }}>LEAD College of Management</p>
+          }}>LEAD College</p>
           <h2 className={cinzel.className} style={{ margin: 0 }}>
             <span className="wcl-corner-line1">Reimagine</span>
             <span className="wcl-corner-line2">Your Future.</span>
@@ -452,7 +452,7 @@ export default function WhyChooseLead() {
                   fontSize: 'clamp(7px,0.5vw,9px)', letterSpacing: '0.42em',
                   textTransform: 'uppercase', color: `${NAVY}55`,
                   margin: '0 0 0.4rem', fontWeight: 600,
-                }}>LEAD College of Management</p>
+                }}>LEAD College</p>
                 <h2 className={cinzel.className} style={{
                   fontSize: 'clamp(2rem,3.8vw,4.8rem)',
                   fontWeight: 900, letterSpacing: '-0.03em',

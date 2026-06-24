@@ -34,7 +34,7 @@ export const governanceData: GovernanceBody[] = [
     shortLabel: "The Trust",
     icon: Shield,
     description:
-      "LEAD College of Management is governed and promoted by a committed educational trust established with the objective of advancing quality education and social development. The Trust firmly believes that education is a powerful instrument for societal transformation and individual empowerment. Guided by strong ethical values and a long-term vision, the Trust ensures that the institution operates with transparency, accountability, and academic integrity.",
+      "LEAD College is governed and promoted by a committed educational trust established with the objective of advancing quality education and social development. The Trust firmly believes that education is a powerful instrument for societal transformation and individual empowerment. Guided by strong ethical values and a long-term vision, the Trust ensures that the institution operates with transparency, accountability, and academic integrity.",
     term: "The Trust is a Permanent Body. The decision to coopt new members to the body is solely at the discretion of the existing Trust members collectively and based on extraordinary process of coopting.",
     meetings: "Meetings of the Trust shall be convened at least once every six months, or more frequently as required to ensure effective functioning.",
     composition: [
@@ -64,7 +64,7 @@ export const governanceData: GovernanceBody[] = [
     shortLabel: "Governing Body",
     icon: Users,
     description:
-      "The Governing Body of LEAD College of Management serves as the apex decision-making authority of the institution. It provides strategic direction, policy guidance, and governance oversight to ensure that the college functions in alignment with its vision and statutory requirements. Comprising experienced academicians, administrators, and Industrial and Social professionals, the Governing Body is responsible for framing institutional policies, approving academic initiatives, and monitoring overall performance.",
+      "The Governing Body of LEAD College serves as the apex decision-making authority of the institution. It provides strategic direction, policy guidance, and governance oversight to ensure that the college functions in alignment with its vision and statutory requirements. Comprising experienced academicians, administrators, and Industrial and Social professionals, the Governing Body is responsible for framing institutional policies, approving academic initiatives, and monitoring overall performance.",
     term: "The term of the nominated members of the GB shall be FIVE (5) years.",
     meetings: "Meetings of the GB shall be convened at least once every six months.",
     composition: [
@@ -352,7 +352,7 @@ export const governanceData: GovernanceBody[] = [
     shortLabel: "Academic Council",
     icon: GraduationCap,
     description:
-      "With the conferment of autonomous status, LEAD College of Management constituted the Academic Council as its principal academic authority to uphold and enhance academic standards. The Academic Council plays a pivotal role in ensuring that the institution offers a relevant, coherent, innovative, and future-oriented curriculum, aligned with regulatory requirements and industry expectations.",
+      "With the conferment of autonomous status, LEAD College constituted the Academic Council as its principal academic authority to uphold and enhance academic standards. The Academic Council plays a pivotal role in ensuring that the institution offers a relevant, coherent, innovative, and future-oriented curriculum, aligned with regulatory requirements and industry expectations.",
     term: "The term of the nominated members of the Academic Council shall be three (3) years.",
     meetings: "Meetings of the Academic Council shall be convened at least once every six months, or as required, to deliberate on academic matters.",
     composition: [
@@ -550,7 +550,7 @@ export const governanceData: GovernanceBody[] = [
     shortLabel: "Finance Committee",
     icon: DollarSign,
     description:
-      "The Finance Committee of LEAD College of Management, as an autonomous institution, is a statutory body constituted to oversee and regulate the financial management of the college. The Committee plays a pivotal role in ensuring financial discipline, transparency, and sustainability in alignment with the institutional objectives and regulatory requirements.",
+      "The Finance Committee of LEAD College, as an autonomous institution, is a statutory body constituted to oversee and regulate the financial management of the college. The Committee plays a pivotal role in ensuring financial discipline, transparency, and sustainability in alignment with the institutional objectives and regulatory requirements.",
     term: "The term of the Finance Committee shall be three (3) years, unless otherwise specified by statutory or regulatory provisions.",
     meetings: "Meetings of the Finance Committee shall be held at least once every six months. Additional meetings may be convened as required to address urgent financial or developmental matters.",
     composition: [
@@ -598,7 +598,7 @@ export const governanceData: GovernanceBody[] = [
     shortLabel: "IQAC",
     icon: Award,
     description:
-      "Recognizing that quality enhancement is a continuous and dynamic process, the Internal Quality Assurance Cell (IQAC) is an integral part of the institutional framework at LEAD College of Management. The IQAC is established to promote, sustain, and enhance quality across all academic and administrative functions of the institution.",
+      "Recognizing that quality enhancement is a continuous and dynamic process, the Internal Quality Assurance Cell (IQAC) is an integral part of the institutional framework at LEAD College. The IQAC is established to promote, sustain, and enhance quality across all academic and administrative functions of the institution.",
     term: "The membership of the nominated members shall be for a period of two years.",
     meetings: "The IQAC meets at least once every quarter. The quorum for the meeting shall be two-thirds of the total number of members.",
     composition: [

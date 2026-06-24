@@ -144,7 +144,7 @@ function HeroSection() {
             </motion.h1>
             <motion.div initial={{ scaleX:0 }} animate={{ scaleX:1 }} transition={{ duration:.45, delay:.25, ease:"easeOut" }} style={{ width:36, height:2, background:`linear-gradient(90deg,${COLORS.primary},#1e3a8a)`, marginBottom:"clamp(.9rem,1.8vh,1.4rem)", transformOrigin:"left" }} />
             <motion.p initial={{ opacity:0, y:16 }} animate={{ opacity:1, y:0 }} transition={{ duration:.55, delay:.3, ease:"easeOut" }} style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.88rem,1.05vw,.98rem)", lineHeight:1.8, color:"#666", margin:0 }}>
-              An intensive seven-day journey of self-discovery, experiential challenge, and purposeful transformation — conceived and led by Dr. Thomas K George at LEAD College of Management.
+              An intensive seven-day journey of self-discovery, experiential challenge, and purposeful transformation — conceived and led by Dr. Thomas K George at LEAD College.
             </motion.p>
             <motion.div className="tp-hero-strip" initial={{ opacity:0, y:14 }} animate={{ opacity:1, y:0 }} transition={{ duration:.55, delay:.42, ease:"easeOut" }}>
               {STRIP_ITEMS.map((s) => { const Icon = s.icon; return (

@@ -144,7 +144,7 @@ function VmHero() {
       <div className="vmh-content">
         <div className="vm-h-child vmh-eyebrow" style={{ ...init, fontFamily: cinzel.style.fontFamily }}>
           <span className="vmh-eyebrow-line" />
-          LEAD College of Management
+          LEAD College
         </div>
         <h1 className="vm-h-child vmh-title" style={{ ...init, fontFamily: cinzel.style.fontFamily }}>
           Vision &amp; Mission

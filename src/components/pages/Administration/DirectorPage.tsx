@@ -10,8 +10,8 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const DIRECTOR_IMAGE = '/administration/director.webp';
-const MEETING_IMAGE  = '/convert/LEAD06x.webp';
+const DIRECTOR_IMAGE = '/administration/academicadvisor.png';
+const MEETING_IMAGE  = '/convert/ue2c6ukku5cecojxhit2.webp';
 
 const BLUE = '#005C9F';
 
@@ -21,29 +21,23 @@ const IconBuilding = () => (
     <path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M9 21V12h6v9"/>
   </svg>
 );
-const IconTarget = () => (
+const IconAward = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+    <circle cx="12" cy="8" r="6"/>
+    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
   </svg>
 );
-const IconUsers = () => (
+const IconAcademic = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-  </svg>
-);
-const IconHeart = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
   </svg>
 );
 
 const credentials = [
-    { Icon: IconHeart,    text: 'Chairman — Prompt Charitable Trust' },
-  { Icon: IconBuilding, text: 'Director — LEAD College of Management (Autonomous)' },
-  { Icon: IconTarget,   text: 'Strategic Vision & Institutional Leadership' },
-  { Icon: IconUsers,    text: 'Academic Excellence & Industry Partnership' },
-
+  { Icon: IconBuilding, text: 'Director — LEAD College (Autonomous)' },
+  { Icon: IconAward,    text: 'Alumnus — IIM Ahmedabad · Doctorate, Symbiosis International University' },
+  { Icon: IconAcademic, text: '26 Years of Industry & Academic Experience' },
 ];
 
 export default function DirectorPage() {
@@ -142,16 +136,12 @@ export default function DirectorPage() {
   ];
 
   const messageParagraphs = [
-    `At LEAD College, we believe that management education must go beyond classrooms, textbooks, and examinations. The purpose of education is to shape individuals who are competent, ethical, socially responsible, and capable of creating meaningful impact in organizations and society. Our vision is to develop professionals who not only succeed in their careers but also lead with integrity, compassion, and a strong sense of purpose.`,
-    `The business environment today is dynamic, technology-driven, and globally interconnected. To prepare our students for this reality, LEAD College offers a modern, industry-aligned curriculum that integrates managerial knowledge with digital capability, analytical thinking, and practical application. Our programs emphasize experiential learning through internships every semester, live projects, industry interactions, and a comprehensive final capstone project. This structured exposure ensures that students graduate with real-world experience and confidence.`,
-    `At the heart of LEAD is a strong focus on skill development and authentic assessment. We measure learning not merely through written examinations, but through presentations, simulations, case analysis, fieldwork, and performance-based evaluations. Our outcome-based approach ensures that every student develops the managerial, communication, problem-solving, and leadership competencies required by the industry.`,
-    `We also recognize that leadership is built through exposure and responsibility. Our fully residential learning environment creates a culture of discipline, collaboration, peer learning, and personal growth. Students learn to manage time, work in diverse teams, take initiative, and develop the professional attitude essential for leadership roles.`,
-    `Entrepreneurship and innovation form another key pillar of our academic philosophy. In addition to preparing students for corporate careers, we offer special learning pathways for aspiring entrepreneurs, mentoring them to transform ideas into viable ventures. Through incubation support, industry mentoring, and practical guidance, we aim to nurture job creators as well as job seekers.`,
-    `Equally important is our commitment to social responsibility. Our Social Immersion Program enables students to engage with communities, understand grassroots realities, and develop empathy-driven leadership. We believe that true management education must balance commercial success with social sensitivity and ethical responsibility.`,
-    `The strength of LEAD College lies in its people—our dedicated faculty members, experienced industry mentors, committed administrative team, and motivated students. With national and international academic expertise, continuous curriculum updating, and a strong quality assurance system, we strive to maintain the highest standards of academic excellence.`,
-    `I would also like to acknowledge with deep gratitude, the wholehearted support extended by the people of Palakkad in particular, and Kerala as a whole and the strong administrative cooperation received from various Government departments and several other institutions. Their encouragement and facilitative approach have played a significant role in making the entire LEAD process smooth, efficient, and hassle-free.`,
-    `As Director, my commitment is to ensure that LEAD College remains a vibrant learning community that is responsive to industry needs, aligned with global trends, and grounded in strong human values. We are not just preparing students for their first job—we are shaping future managers, entrepreneurs, and responsible leaders for a rapidly changing world.`,
-    `I warmly welcome you to LEAD College—where learning is practical, growth is continuous, and leadership is a way of life.`,
+    `Education today stands at a critical intersection of knowledge, technology, and real-world application. The role of higher education is no longer limited to imparting theoretical understanding; it must enable learners to think critically, adapt continuously, and create value in dynamic professional environments. At LEAD College, our academic vision is built around this philosophy—learning that is relevant, skill-driven, technology-enabled, and aligned with the future of work.`,
+    `Our approach to curriculum design focuses on integrating managerial knowledge with digital capability, analytical thinking, and experiential learning. Continuous curriculum renewal, outcome-based education, and authentic assessment ensure that students develop competencies in application, problem-solving, decision-making, and innovation rather than mere conceptual familiarity. Internships, live projects, social immersion, research, and capstone experiences are embedded to bridge the gap between classroom learning and professional practice.`,
+    `Equally important is our commitment to faculty excellence and academic innovation. We continuously invest in faculty development to align teaching with industry expectations, emerging technologies, and modern pedagogical practices, including the responsible use of digital tools and Artificial Intelligence in learning. This ensures that the learning environment remains contemporary, engaging, and future-ready.`,
+    `Research and intellectual inquiry form another important dimension of our academic ecosystem. We encourage applied, interdisciplinary, and industry-linked research that contributes to knowledge creation while addressing real organizational and societal challenges. Our goal is to cultivate a culture of curiosity, evidence-based thinking, and continuous academic growth.`,
+    `At LEAD, academic excellence is guided by a larger purpose—to develop responsible professionals who combine competence with integrity, innovation with ethics, and ambition with social sensitivity. We remain committed to building a learning ecosystem that empowers students to become confident leaders, thoughtful decision-makers, and lifelong learners.`,
+    `I warmly invite you to be part of this academic journey at LEAD, where learning is purposeful, relevant, and designed for the future.`,
   ];
 
   return (
@@ -275,10 +265,7 @@ export default function DirectorPage() {
 
               <div ref={nameRef} style={{ opacity: 0, marginBottom: 'clamp(1rem,2vh,2rem)' }}>
                 <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.75rem, 1.2vw, 1.4rem)', fontWeight: 600, margin: 0 }}>
-                  Dr. Thomas George
-                  <span style={{ fontFamily: playfair.style.fontFamily, fontStyle: 'italic', color: '#777', marginLeft: 8, fontSize: '0.85em' }}>
-                    (Thomman)
-                  </span>
+                  Dr. Sreekanth S. V.
                 </p>
               </div>
 
@@ -300,7 +287,7 @@ export default function DirectorPage() {
               <div aria-hidden="true" style={{ position: 'absolute', bottom: 0, left: '10%', right: '10%', height: '30%', background: 'radial-gradient(ellipse at center bottom, rgba(0,92,159,0.1) 0%, transparent 70%)', pointerEvents: 'none', zIndex: 0 }} />
               <Image
                 src={DIRECTOR_IMAGE}
-                alt="Dr. Thomas George (Thomman) — Director, LEAD College"
+                alt="Dr. Sreekanth S. V. — Director, LEAD College"
                 fill
                 priority
                 fetchPriority="high"
@@ -323,8 +310,8 @@ export default function DirectorPage() {
                   <div className="absolute left-0 top-0 bottom-0 w-1.5" style={{ background: BLUE }} />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-white border border-gray-100 shadow-xl rounded-xl px-6 py-4 z-10">
-                  <p className={`${cinzel.className} text-2xl font-bold`} style={{ color: BLUE }}>15+</p>
-                  <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#555' }}>Years of Academic Leadership</p>
+                  <p className={`${cinzel.className} text-2xl font-bold`} style={{ color: BLUE }}>26+</p>
+                  <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#555' }}>Years of Industry & Academic Experience</p>
                 </div>
               </div>
               <div className="dir-role-content space-y-6">
@@ -393,11 +380,11 @@ export default function DirectorPage() {
             <div className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
               <div className="h-1.5" style={{ background: 'linear-gradient(90deg, #000000, #1e3a8a, #005C9F)' }} />
               <div className="p-8 md:p-12 space-y-6">
-                <p className={`${cinzel.className} text-sm uppercase tracking-[0.2em] font-semibold`} style={{ color: BLUE }}>Dear Students, Parents, and Stakeholders,</p>
+                <p className={`${cinzel.className} text-sm uppercase tracking-[0.2em] font-semibold`} style={{ color: BLUE }}>Dear Students, Faculty Members, and Stakeholders,</p>
                 <blockquote className="relative pl-6 py-2 my-4" style={{ borderLeft: `4px solid ${BLUE}` }}>
                   <div className="absolute -top-2 -left-1 text-5xl leading-none select-none" style={{ color: 'rgba(0,92,159,0.15)' }}>"</div>
                   <p className="relative z-10 italic" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.9rem, 1.1vw, 1.05rem)', lineHeight: 1.9, color: '#444' }}>
-                    The purpose of education is to shape individuals who are competent, ethical, socially responsible, and capable of creating meaningful impact in organizations and society.
+                    Learning that is relevant, skill-driven, technology-enabled, and aligned with the future of work — this is the academic vision at LEAD College.
                   </p>
                 </blockquote>
                 <div className="dir-msg-body space-y-5">
@@ -408,12 +395,12 @@ export default function DirectorPage() {
                 <div className="border-t border-gray-200 pt-8 mt-8">
                   <div className="dir-msg-sig flex flex-col sm:flex-row items-start sm:items-center gap-6">
                     <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-md" style={{ border: `2px solid rgba(0,92,159,0.2)` }}>
-                      <Image src={DIRECTOR_IMAGE} alt="Dr. Thomas George" fill className="object-cover object-top" />
+                      <Image src={DIRECTOR_IMAGE} alt="Dr. Sreekanth S. V." fill className="object-cover object-top" />
                     </div>
                     <div className="space-y-1">
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontStyle: 'italic', fontWeight: 600, color: '#111' }}>Dr. Thomas George (Thomman)</p>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontStyle: 'italic', fontWeight: 600, color: '#111' }}>Dr. Sreekanth S. V.</p>
                       <p className={`${cinzel.className} text-xs uppercase tracking-[0.25em] font-semibold`} style={{ color: BLUE }}>Director, LEAD College</p>
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#888' }}>LEAD College of Management (Autonomous), Palakkad</p>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#888' }}>MBA · Doctorate, Symbiosis International University · Alumnus, IIM Ahmedabad</p>
                     </div>
                   </div>
                 </div>

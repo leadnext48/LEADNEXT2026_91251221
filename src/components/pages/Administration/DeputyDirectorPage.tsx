@@ -34,7 +34,7 @@ const IconTarget = () => (
 );
 
 const credentials = [
-  { Icon: IconBuilding, text: 'Deputy Director — LEAD College of Management (Autonomous)' },
+  { Icon: IconBuilding, text: 'Deputy Director — LEAD College (Autonomous)' },
   { Icon: IconAcademic, text: 'Ph.D. Economics — Jawaharlal Nehru University' },
   { Icon: IconTarget,   text: '27+ Years Teaching & Research Experience' },
 ];
@@ -671,7 +671,7 @@ export default function DeputyDirectorPage() {
                         Deputy Director, LEAD College
                       </p>
                       <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#888' }}>
-                        LEAD College of Management (Autonomous), Palakkad
+                        LEAD College (Autonomous), Palakkad
                       </p>
                     </div>
                   </div>

@@ -781,7 +781,7 @@ export default function QualityAssurancePage() {
                 </h3>
                 <div style={{ width: 36, height: 2, background: BLUE, marginBottom: 'clamp(1rem, 2vh, 1.6rem)', borderRadius: 1 }} />
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.8rem, 0.95vw, 0.92rem)', lineHeight: 1.85, color: '#555', margin: '0 0 clamp(0.8rem, 1.5vh, 1.1rem)' }}>
-                  LEAD College of Management has institutionalised a culture of pedagogical innovation — a strategic move beyond traditional lecture-based delivery to a dynamic, learner-centric model aligned with Outcome-Based Education (OBE) principles.
+                  LEAD College has institutionalised a culture of pedagogical innovation — a strategic move beyond traditional lecture-based delivery to a dynamic, learner-centric model aligned with Outcome-Based Education (OBE) principles.
                 </p>
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.92vw, 0.88rem)', lineHeight: 1.82, color: '#777', margin: '0 0 clamp(0.8rem, 1.5vh, 1.1rem)' }}>
                   Over the past three academic years, our faculty have systematically designed, implemented, and refined a portfolio of diverse instructional strategies that promote experiential learning, critical thinking, and real-world application.

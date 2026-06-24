@@ -123,6 +123,16 @@ export default function OriginalThinkersSection() {
     }).catch(console.error);
   }, []);
 
+  /* Mobile detection — below 900px we drop the scroll-image animation entirely */
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 900px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   return (
     <section className="relative bg-white">
       <style>{`
@@ -193,8 +203,105 @@ export default function OriginalThinkersSection() {
         }
       `}</style>
 
-      {/* 580vh — enough for all animation phases plus card viewing */}
-      <div ref={stickyRef} className="relative h-[580vh]">
+      {isMobile ? (
+        /* ── MOBILE — static Vision / Mission / Values (scroll-image animation removed) ── */
+        <div className={`mx-auto ${CONTENT_WIDTH} px-6 py-14`}>
+          <div
+            className="flex items-center justify-center gap-3 pb-3"
+            style={{ paddingTop: "clamp(1.5rem,5vh,2.5rem)" }}
+          >
+            <span style={{ display: "inline-block", width: 20, height: 1.5, background: NAVY }} />
+            <span
+              className={cinzel.className}
+              style={{
+                fontSize: "clamp(8px,2.6vw,10px)",
+                letterSpacing: "0.3em",
+                textTransform: "uppercase",
+                color: `${NAVY}90`,
+                fontWeight: 600,
+                textAlign: "center",
+              }}
+            >
+              LEAD College
+            </span>
+            <span style={{ display: "inline-block", width: 20, height: 1.5, background: NAVY }} />
+          </div>
+
+          <h2
+            className={`${cinzel.className} text-black font-semibold text-center`}
+            style={{ fontSize: "clamp(2.2rem,10vw,3.4rem)", lineHeight: 1.05 }}
+          >
+            Original Thinkers
+          </h2>
+
+          <div
+            style={{
+              height: 1,
+              background: `linear-gradient(90deg,transparent,${NAVY}18,transparent)`,
+              margin: "1.25rem 0 1.75rem",
+            }}
+          />
+
+          <p
+            className={playfair.className}
+            style={{
+              fontSize: "clamp(13px,3.6vw,15.5px)",
+              lineHeight: 1.85,
+              color: "#555",
+              margin: "0 0 1.5rem",
+              textAlign: "center",
+            }}
+          >
+            Established in 2010 in Palakkad, Kerala, LEAD College was
+            built on an unwavering belief — that education rooted in courage and
+            conscience could transform lives. From 58 students who refused to leave
+            during adversity, to a thriving autonomous institution, every milestone
+            was earned through integrity, perseverance, and a relentless commitment
+            to learners. At LEAD, we don&apos;t just teach — we transform.
+          </p>
+
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "2.5rem" }}>
+            <Link
+              href="/the-lead-story"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.55rem",
+                padding: "0.78rem 1.5rem",
+                background: `linear-gradient(90deg,${NAVY},#1e3a8a)`,
+                borderRadius: 8,
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+                boxShadow: "0 6px 22px rgba(10,36,99,0.22)",
+              }}
+            >
+              <span
+                className={cinzel.className}
+                style={{ fontSize: "clamp(9px,2.4vw,10px)", letterSpacing: "0.2em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}
+              >
+                Discover Our Story
+              </span>
+              <ArrowUpRight size={12} color="rgba(255,255,255,0.8)" strokeWidth={2} />
+            </Link>
+          </div>
+
+          <div className="ot-cards-row">
+            {CARDS.map(card => (
+              <BigCard
+                key={card.id}
+                anim={lotties[card.id]}
+                title={card.title}
+                content={card.content}
+                lottieScale={card.id === "mission" ? 1.35 : 1}
+                cinzel={cinzel}
+                playfair={playfair}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        /* 580vh — enough for all animation phases plus card viewing */
+        <div ref={stickyRef} className="relative h-[580vh]">
         <div className="sticky top-0" style={{ minHeight: "100vh" }}>
 
           {/* ═══ TITLE ═══ */}
@@ -219,7 +326,7 @@ export default function OriginalThinkersSection() {
                     fontWeight: 600,
                   }}
                 >
-                  LEAD College of Management
+                  LEAD College
                 </span>
                 <span style={{ display: "inline-block", width: 20, height: 1.5, background: NAVY }} />
               </div>
@@ -283,7 +390,7 @@ export default function OriginalThinkersSection() {
                     maxWidth: 680,
                   }}
                 >
-                  Established in 2010 in Palakkad, Kerala, LEAD College of Management was
+                  Established in 2010 in Palakkad, Kerala, LEAD College was
                   built on an unwavering belief — that education rooted in courage and
                   conscience could transform lives. From 58 students who refused to leave
                   during adversity, to a thriving autonomous institution, every milestone
@@ -339,6 +446,7 @@ export default function OriginalThinkersSection() {
 
         </div>
       </div>
+      )}
     </section>
   );
 }

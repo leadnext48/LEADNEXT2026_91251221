@@ -23,7 +23,6 @@ const ROUTES = [
   "/journal",
   "/entrepreneurship",
   "/director",
-  "/academic-advisor",
   "/deputy-director",
   "/academic-administrator",
   "/deans",
