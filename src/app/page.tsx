@@ -1,3 +1,4 @@
+import FeaturedVideoSection from "@/components/pages/LandingPage/FeaturedVideoSection";
 import { FeatureStepsDemo } from "@/components/pages/LandingPage/FeatureStepsDemo";
 import { PhotoGallery } from "@/components/pages/LandingPage/GalleryHero";
 import HeroSection from "@/components/pages/LandingPage/HeroSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <SmoothScrollHero />
       <OriginalThinkersSection />
         <WhyChooseLead />
+      <FeaturedVideoSection />
          <ProgramsSection />
 
       {/* ✅ More space below 4th component */}
