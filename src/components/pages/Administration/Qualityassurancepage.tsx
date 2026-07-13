@@ -25,6 +25,7 @@ import {
   Monitor,
   Globe,
   Link,
+  CalendarClock,
 } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
@@ -246,9 +247,29 @@ const MCA_DATA = {
   ],
 };
 
-export default function QualityAssurancePage() {
+type DisclosureLink = { label: string; href: string; type: string };
+
+export default function QualityAssurancePage({
+  meetingMinutes = [],
+}: {
+  meetingMinutes?: DisclosureLink[];
+}) {
   const [activeDept, setActiveDept] = useState<'MBA'|'MCA'>('MBA');
   const [activePOTab, setActivePOTab] = useState<'peo'|'po'|'pso'>('peo');
+
+  /* Meeting-minutes files are read from the folder at build time (see app/iqac/page.tsx).
+     Appended as a sub-section under Mandatory Disclosures only when files exist. */
+  const disclosureSections = meetingMinutes.length
+    ? [
+        ...disclosures,
+        {
+          id: 'meeting-minutes',
+          icon: CalendarClock,
+          title: 'Meeting Minutes',
+          links: meetingMinutes,
+        },
+      ]
+    : disclosures;
 
   const heroRef    = useRef<HTMLElement>(null);
   const titleRef   = useRef<HTMLHeadingElement>(null);
@@ -675,7 +696,7 @@ export default function QualityAssurancePage() {
           <div className="qa-disc-layout">
             <div className="qa-disc-sidebar" id="qa-disc-sidebar">
               <div className="qa-disc-pill" id="qa-disc-pill" />
-              {disclosures.map((d, i) => (
+              {disclosureSections.map((d, i) => (
                 <button
                   key={d.id}
                   className={`qa-disc-tab${i === 0 ? ' active' : ''}`}
@@ -709,7 +730,7 @@ export default function QualityAssurancePage() {
             </div>
 
             <div className="qa-disc-panel">
-              {disclosures.map((d, i) => (
+              {disclosureSections.map((d, i) => (
                 <div key={d.id} className={`qa-disc-panel-section qa-panel-${d.id}${i === 0 ? ' visible' : ''}`}>
                   <div className="qa-disc-panel-header">
                     <d.icon size={18} color={BLUE} strokeWidth={1.5} />
