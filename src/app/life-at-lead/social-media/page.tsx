@@ -1,15 +1,16 @@
 import SocialMediaPage from "@/components/pages/LifeAtLead/SocialMediaPage";
-
+import { getSocialChannels } from "@/sanity/fetch";
 
 export const metadata = {
-  title: "Sports & Recreation | Life at LEAD",
-  description: "Physical fitness and recreation at LEAD — indoor and outdoor sports, teamwork, and competitive spirit.",
+  title: "Social Media | Life at LEAD",
+  description: "Connect with LEAD College across Instagram, Facebook, and YouTube — campus highlights, events, and student stories.",
 };
 
-export default function SocialMedia() {
+export default async function SocialMedia() {
+  const channels = await getSocialChannels();
   return (
     <main>
-      <SocialMediaPage />
+      <SocialMediaPage channels={channels} />
     </main>
   );
 }

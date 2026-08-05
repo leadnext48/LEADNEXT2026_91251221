@@ -158,7 +158,7 @@ function FacultyCard({ name, role, qualifications, email, initials, delay }: { n
 
 type ResourceType = "result" | "notice" | "schedule" | "calendar";
 
-interface ResourceItem { title: string; type: ResourceType; }
+interface ResourceItem { title: string; type: ResourceType; fileUrl?: string | null; }
 
 const colors: Record<ResourceType, string> = {
   result: "bg-green-50 text-green-700 border-green-200",
@@ -170,9 +170,9 @@ const labels: Record<ResourceType, string> = {
   result: "RESULT", notice: "NOTICE", schedule: "SCHEDULE", calendar: "CALENDAR",
 };
 
-function ResourceRow({ title, type }: { title: string; type: ResourceType }) {
+function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceType; fileUrl?: string | null }) {
   return (
-    <div className="group flex items-center justify-between p-5 border-b border-gray-100 last:border-b-0 hover:bg-blue-50/30 transition-colors duration-200 cursor-pointer">
+    <div className="group flex items-center justify-between p-5 border-b border-gray-100 last:border-b-0 hover:bg-blue-50/30 transition-colors duration-200">
       <div className="flex items-center gap-4 flex-1 min-w-0">
         <div className="flex-shrink-0 w-8 h-10 bg-white border border-gray-200 flex items-center justify-center group-hover:border-blue-300 transition-colors">
           <svg width="14" height="16" viewBox="0 0 24 28" fill="none" stroke="#9ca3af" strokeWidth="1.5" className="group-hover:stroke-blue-500 transition-colors">
@@ -188,20 +188,27 @@ function ResourceRow({ title, type }: { title: string; type: ResourceType }) {
         <span className={`${cinzel.className} text-[10px] font-bold px-2 py-0.5 border rounded-full flex-shrink-0 ${colors[type]}`}>{labels[type]}</span>
       </div>
       <div className="flex items-center gap-2 ml-4 flex-shrink-0">
-        <motion.a
-          href="#"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className={`${cinzel.className} text-[10px] font-semibold tracking-widest px-4 py-2 text-white hover:bg-blue-700 transition-all duration-200 flex items-center gap-1`}
-          style={{ backgroundColor: COLOR_ONE }}
-          onClick={(e) => e.preventDefault()}
-        >
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M12 2v13M7 10l5 5 5-5" />
-            <path d="M3 20h18" />
-          </svg>
-          DOWNLOAD
-        </motion.a>
+        {fileUrl ? (
+          <motion.a
+            href={fileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`${cinzel.className} text-[10px] font-semibold tracking-widest px-4 py-2 text-white hover:bg-blue-700 transition-all duration-200 flex items-center gap-1`}
+            style={{ backgroundColor: COLOR_ONE }}
+          >
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M12 2v13M7 10l5 5 5-5" />
+              <path d="M3 20h18" />
+            </svg>
+            DOWNLOAD
+          </motion.a>
+        ) : (
+          <span className={`${cinzel.className} text-[10px] font-semibold tracking-widest px-4 py-2 text-gray-400 border border-gray-200 flex items-center`}>
+            AWAITING FILE
+          </span>
+        )}
       </div>
     </div>
   );
@@ -252,53 +259,44 @@ function PaginatedResourceGroup({ label, items }: { label: string; items: Resour
   return (
     <div className="mb-10">
       <h3 className={`${cinzel.className} text-xs font-bold tracking-[0.3em] text-gray-400 mb-4 uppercase`}>— {label}</h3>
-      <motion.div
-        key={page}
-        initial={{ opacity: 0, translateY: 6 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 0.25, ease: "easeOut" }}
-        style={{ willChange: "opacity, transform" }}
-        className="border border-gray-200"
-      >
-        {visible.map((item) => (
-          <ResourceRow key={item.title} title={item.title} type={item.type} />
-        ))}
-      </motion.div>
-      <Pagination current={page} total={totalPages} onChange={setPage} />
+      {items.length === 0 ? (
+        <div className={`${playfair.className} border border-gray-200 p-5 text-sm text-gray-400 italic`}>
+          No documents published yet.
+        </div>
+      ) : (
+        <>
+          <motion.div
+            key={page}
+            initial={{ opacity: 0, translateY: 6 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            style={{ willChange: "opacity, transform" }}
+            className="border border-gray-200"
+          >
+            {visible.map((item) => (
+              <ResourceRow key={item.title} title={item.title} type={item.type} fileUrl={item.fileUrl} />
+            ))}
+          </motion.div>
+          <Pagination current={page} total={totalPages} onChange={setPage} />
+        </>
+      )}
     </div>
   );
 }
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
-
-const RESULTS: ResourceItem[] = [
-  { title: "MBA Semester 2 Results - May 2024", type: "result" },
-  { title: "MCA Final Year Results - 2024", type: "result" },
-  { title: "Supplementary Examination Results - March 2024", type: "result" },
-  { title: "MBA Semester 1 Results - November 2023", type: "result" },
-  { title: "MCA Semester 3 Results - December 2023", type: "result" },
-  { title: "Arrear Results - February 2024", type: "result" },
-];
-
-const NOTICES: ResourceItem[] = [
-  { title: "Important Notice: Exam Hall Ticket Download", type: "notice" },
-  { title: "Revised Examination Schedule for MBA Program", type: "notice" },
-  { title: "Instructions for Online Examination", type: "notice" },
-  { title: "Notice: Revaluation Application Window Open", type: "notice" },
-  { title: "Examination Fee Payment Deadline Extended", type: "notice" },
-];
-
-const SCHEDULES: ResourceItem[] = [
-  { title: "MBA Final Examination Schedule - Semester 2", type: "schedule" },
-  { title: "MCA Mid-Term Examination Schedule", type: "schedule" },
-  { title: "Annual Examination Calendar 2024-25", type: "calendar" },
-  { title: "Supplementary Exam Schedule - August 2024", type: "schedule" },
-  { title: "Internal Assessment Schedule - October 2024", type: "schedule" },
-];
-
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-export default function ExaminationsPage() {
+export interface ExamResourcesData {
+  results: ResourceItem[];
+  notices: ResourceItem[];
+  schedules: ResourceItem[];
+}
+
+export default function ExaminationsPage({
+  results = [],
+  notices = [],
+  schedules = [],
+}: Partial<ExamResourcesData>) {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -621,9 +619,9 @@ export default function ExaminationsPage() {
             </div>
           </SectionReveal>
 
-          <PaginatedResourceGroup label="EXAMINATION RESULTS" items={RESULTS} />
-          <PaginatedResourceGroup label="NOTICES & CIRCULARS" items={NOTICES} />
-          <PaginatedResourceGroup label="SCHEDULES & CALENDARS" items={SCHEDULES} />
+          <PaginatedResourceGroup label="EXAMINATION RESULTS" items={results} />
+          <PaginatedResourceGroup label="NOTICES & CIRCULARS" items={notices} />
+          <PaginatedResourceGroup label="SCHEDULES & CALENDARS" items={schedules} />
 
           <motion.p
             variants={fadeIn}

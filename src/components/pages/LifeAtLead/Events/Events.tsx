@@ -19,7 +19,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { cinzel, playfair } from "@/app/fonts";
-import { EVENTS } from "@/components/pages/LifeAtLead/Events/data";
+
+export interface EventCardItem {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  image: string;
+}
 
 /* ─── PALETTE ─── */
 const C = {
@@ -148,7 +155,7 @@ function HeroSection() {
 /* ═══════════════════════════════════════════════════════════════
    EVENT CARD — no badge, image + title + date only
 ═══════════════════════════════════════════════════════════════ */
-function EventCard({ event }: { event: (typeof EVENTS)[0] }) {
+function EventCard({ event }: { event: EventCardItem }) {
   return (
     <motion.div variants={GRID_ITEM} style={{ display: "flex", flexDirection: "column" }}>
       <Link href={`/life-at-lead/events/${event.slug}`} style={{ textDecoration: "none", color: "inherit", display: "flex", flexDirection: "column", height: "100%" }}>
@@ -216,15 +223,15 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
 /* ═══════════════════════════════════════════════════════════════
    GRID SECTION — pure white, 3 × 3 = 9 per page
 ═══════════════════════════════════════════════════════════════ */
-function GridSection() {
+function GridSection({ events }: { events: EventCardItem[] }) {
   const [page, setPage] = useState(1);
 
   // Sentinel ref — scrolls to "All Events / LEAD Event Space", not page top
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
-  const totalPages = Math.ceil(EVENTS.length / PER_PAGE);
+  const totalPages = Math.ceil(events.length / PER_PAGE);
   const start      = (page - 1) * PER_PAGE;
-  const visible    = EVENTS.slice(start, start + PER_PAGE);
+  const visible    = events.slice(start, start + PER_PAGE);
 
   const handlePageChange = (p: number) => {
     setPage(p);
@@ -252,7 +259,7 @@ function GridSection() {
               <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2.2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: C.text, margin: 0, lineHeight: .95 }}>LEAD Event Space</h2>
             </div>
             <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.7rem,.8vw,.76rem)", color: C.faint, margin: 0, alignSelf: "flex-end" }}>
-              Showing {start + 1}–{Math.min(start + PER_PAGE, EVENTS.length)} of {EVENTS.length} events
+              Showing {start + 1}–{Math.min(start + PER_PAGE, events.length)} of {events.length} events
             </p>
           </div>
           <div style={{ height: 1, background: `linear-gradient(90deg,rgba(0,92,159,.18) 0%,transparent 100%)`, marginTop: "1.1rem" }} />
@@ -279,11 +286,11 @@ function GridSection() {
 }
 
 /* ─── PAGE EXPORT ─── */
-export default function EventsPage() {
+export default function EventsPage({ events }: { events: EventCardItem[] }) {
   return (
     <div style={{ background: "#ffffff" }}>
       <HeroSection />
-      <GridSection />
+      <GridSection events={events} />
     </div>
   );
 }

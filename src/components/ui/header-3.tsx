@@ -604,6 +604,8 @@ const navSections: NavSection[] = [
       { title: "Farm & Nature",           href: "/life-at-lead/farm-nature",   description: "Sustainable living across 24 acres of greenery",     icon: Leaf            },
 
       { title: "Gallery",                 href: "/life-at-lead/gallery",       description: "Photo gallery capturing campus life moments",         icon: Camera          },
+      { title: "Events",                  href: "/life-at-lead/events",        description: "Academic, cultural, and entrepreneurial events year-round", icon: CalendarDays },
+      { title: "Social Media",            href: "/life-at-lead/social-media",  description: "Connect with LEAD across Instagram, Facebook & YouTube", icon: Share2       },
     ],
   },
 ];

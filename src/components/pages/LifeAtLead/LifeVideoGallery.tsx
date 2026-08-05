@@ -24,39 +24,12 @@ const SECTIONX = "clamp(1.5rem,6vw,8rem)";
 const PER_PAGE = 12;
 
 /* ─── PHOTOS DATA ─── */
-interface Photo {
+export interface Photo {
   id: string;
   src: string;
   alt: string;
   caption: string;
 }
-
-const PHOTOS: Photo[] = [
-  { id: "p-01", src: "/convert/LEAD01.webp", alt: "Classroom engagement",   caption: "Classroom Engagement" },
-  { id: "p-02", src: "/convert/LEAD02.webp", alt: "Incubation activities",  caption: "Incubation Activities" },
-  { id: "p-03", src: "/convert/LEAD03.webp", alt: "Student celebrations",   caption: "Student Celebrations" },
-  { id: "p-04", src: "/convert/LEAD04.webp", alt: "Sports events",          caption: "Sports Events" },
-  { id: "p-05", src: "/convert/LEAD05.webp", alt: "Campus life",            caption: "Campus Life" },
-  { id: "p-06", src: "/convert/LEAD06x.webp", alt: "Industry interactions",  caption: "Industry Interactions" },
-  { id: "p-07", src: "/convert/LEAD07x.webp", alt: "Cultural events",        caption: "Cultural Events" },
-  { id: "p-08", src: "/convert/LEAD08x.webp", alt: "Leadership programs",    caption: "Leadership Programs" },
-  { id: "p-09", src: "/convert/LEAD09.webp", alt: "Campus greenery",        caption: "Campus Greenery" },
-  { id: "p-10", src: "/convert/LEAD10.webp", alt: "Tech workshop",          caption: "Tech Workshop" },
-  { id: "p-11", src: "/convert/LEAD11.webp", alt: "Seminar hall",           caption: "Seminar Hall" },
-  { id: "p-12", src: "/convert/LEAD12.webp", alt: "Student collaboration",  caption: "Student Collaboration" },
-  { id: "p-13", src: "/convert/LEAD13.webp", alt: "Convocation ceremony",   caption: "Convocation Ceremony" },
-  { id: "p-14", src: "/convert/LEAD14.webp", alt: "Library reading",        caption: "Library Reading" },
-  { id: "p-15", src: "/convert/LEAD15.webp", alt: "Guest lecture",          caption: "Guest Lecture" },
-  { id: "p-16", src: "/convert/LEAD16.webp", alt: "Annual day celebration", caption: "Annual Day Celebration" },
-  { id: "p-17", src: "/convert/LEAD17.webp", alt: "Team building",          caption: "Team Building Activity" },
-  { id: "p-18", src: "/convert/LEAD18x.webp", alt: "Research presentation",  caption: "Research Presentation" },
-  { id: "p-19", src: "/convert/LEAD19x.webp", alt: "Outdoor activity",       caption: "Outdoor Activity" },
-  { id: "p-20", src: "/convert/LEAD20.webp", alt: "Campus tour",            caption: "Campus Tour" },
-  { id: "p-21", src: "/convert/LEAD21.webp", alt: "Hackathon event",        caption: "Hackathon Event" },
-  { id: "p-22", src: "/convert/LEAD22.webp", alt: "Note taking session",    caption: "Note Taking Session" },
-  { id: "p-23", src: "/convert/LEAD23.webp", alt: "Morning assembly",       caption: "Morning Assembly" },
-  { id: "p-24", src: "/convert/LEAD24.webp", alt: "Classroom discussion",   caption: "Classroom Discussion" },
-];
 
 /* ─── ANIMATIONS ─── */
 const GRID_CONTAINER: Variants = {
@@ -186,7 +159,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
 /* ═══════════════════════════════════════════════════════════════
    GRID SECTION
 ═══════════════════════════════════════════════════════════════ */
-function GridSection() {
+function GridSection({ photos }: { photos: Photo[] }) {
   const [page, setPage] = useState(1);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -194,9 +167,9 @@ function GridSection() {
   // not to window top. scrollMarginTop accounts for the fixed navbar.
   const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
-  const totalPages = Math.ceil(PHOTOS.length / PER_PAGE);
+  const totalPages = Math.ceil(photos.length / PER_PAGE);
   const start = (page - 1) * PER_PAGE;
-  const visible = PHOTOS.slice(start, start + PER_PAGE);
+  const visible = photos.slice(start, start + PER_PAGE);
 
   const handlePageChange = (p: number) => {
     setPage(p);
@@ -209,12 +182,12 @@ function GridSection() {
   const openLightbox  = (localIndex: number) => setLightboxIndex(start + localIndex);
   const closeLightbox = () => setLightboxIndex(null);
   const prevPhoto     = () => { if (lightboxIndex !== null && lightboxIndex > 0) setLightboxIndex(lightboxIndex - 1); };
-  const nextPhoto     = () => { if (lightboxIndex !== null && lightboxIndex < PHOTOS.length - 1) setLightboxIndex(lightboxIndex + 1); };
+  const nextPhoto     = () => { if (lightboxIndex !== null && lightboxIndex < photos.length - 1) setLightboxIndex(lightboxIndex + 1); };
 
   return (
     <>
       {lightboxIndex !== null && (
-        <Lightbox photos={PHOTOS} index={lightboxIndex} onClose={closeLightbox} onPrev={prevPhoto} onNext={nextPhoto} />
+        <Lightbox photos={photos} index={lightboxIndex} onClose={closeLightbox} onPrev={prevPhoto} onNext={nextPhoto} />
       )}
 
       <section style={{ background: "#ffffff", padding: "clamp(3rem,6vh,5rem) 0 clamp(4rem,8vh,7rem)" }}>
@@ -241,7 +214,7 @@ function GridSection() {
                 </h2>
               </div>
               <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.7rem,.8vw,.76rem)", color: C.faint, margin: 0, alignSelf: "flex-end" }}>
-                Showing {start + 1}–{Math.min(start + PER_PAGE, PHOTOS.length)} of {PHOTOS.length} photos
+                Showing {start + 1}–{Math.min(start + PER_PAGE, photos.length)} of {photos.length} photos
               </p>
             </div>
             <div style={{ height: 1, background: "linear-gradient(90deg,rgba(0,92,159,.18) 0%,transparent 100%)", marginTop: "1.1rem" }} />
@@ -271,7 +244,7 @@ function GridSection() {
 }
 
 /* ─── PAGE EXPORT ─── */
-export default function LifePhotoGallery() {
+export default function LifePhotoGallery({ photos = [] }: { photos?: Photo[] }) {
   return (
     <div style={{ background: "#ffffff" }}>
       <LifeAtLeadHero
@@ -279,7 +252,7 @@ export default function LifePhotoGallery() {
         description="The Photo Gallery documents memorable campus moments — from classroom engagement and incubation activities to sports events and celebrations. It reflects the vibrancy, diversity, and spirit of the LEAD community while preserving institutional memories."
         imageSrc="/convert/LEAD32.webp"
       />
-      <GridSection />
+      <GridSection photos={photos} />
     </div>
   );
 }

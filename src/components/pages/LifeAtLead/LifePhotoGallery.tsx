@@ -6,19 +6,12 @@ import { COLORS, TYPE, SPACE, RADIUS } from "@/lib/design-tokens";
 import LifeAtLeadHero from "./LifeAtLeadHero";
 import LifeGallery from "./LifeGallery";
 
-const PHOTOS = [
-  { src: "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600&q=80&auto=format&fit=crop", alt: "Classroom engagement" },
-  { src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80&auto=format&fit=crop", alt: "Incubation activities" },
-  { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&auto=format&fit=crop", alt: "Student celebrations" },
-  { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&auto=format&fit=crop", alt: "Sports events" },
-  { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80&auto=format&fit=crop", alt: "Campus life" },
-  { src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80&auto=format&fit=crop", alt: "Industry interactions" },
-  { src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&q=80&auto=format&fit=crop", alt: "Cultural events" },
-  { src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80&auto=format&fit=crop", alt: "Leadership programs" },
-  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop", alt: "Campus greenery" },
-];
+interface GalleryItem {
+  src: string;
+  alt: string;
+}
 
-export default function LifePhotoGallery() {
+export default function LifePhotoGallery({ photos = [] }: { photos?: GalleryItem[] }) {
   return (
     <>
       <LifeAtLeadHero
@@ -68,7 +61,7 @@ export default function LifePhotoGallery() {
           </p>
         </div>
 
-        <LifeGallery items={PHOTOS} />
+        <LifeGallery items={photos} />
       </section>
 
       {/* CTA */}

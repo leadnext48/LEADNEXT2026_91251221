@@ -6,3 +6,5 @@ node_modules/
 .env.production.local
 build/
 dist/
+.sanity/
+studio/dist/

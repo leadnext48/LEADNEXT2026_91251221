@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { ChevronLeft, ChevronRight, Instagram, Facebook, Youtube, ExternalLink } from "lucide-react";
 import { cinzel, playfair } from "@/app/fonts";
-import { EVENTS } from "@/components/pages/LifeAtLead/Events/data";
 
 const C = {
   blue:     "#005C9F",
@@ -32,7 +31,7 @@ interface SocialCard {
   description: string;
   handle: string;
   url: string;
-  image: string;
+  image: string | null;
   followers: string;
   cta: string;
 }
@@ -63,30 +62,17 @@ const PLATFORM_META: Record<Platform, {
   },
 };
 
-const buildCards = (events: typeof EVENTS): SocialCard[] => {
-  const imgs = events.map((e) => e.image);
-  const get = (i: number) => imgs[i % imgs.length];
-  return [
-    { id: "ig-1", platform: "instagram", title: "Campus Life Highlights", description: "Daily snapshots of campus events, student achievements, and life at LEAD.", handle: "@leadcollege", url: "https://www.instagram.com/leadcollege", image: get(0), followers: "12.4K Followers", cta: "Follow on Instagram" },
-    { id: "fb-1", platform: "facebook",  title: "LEAD Official Page",     description: "Official announcements, event updates, and community stories from LEAD College.", handle: "LEAD College", url: "https://www.facebook.com/leadcollege", image: get(1), followers: "28.7K Followers", cta: "Like on Facebook" },
-    { id: "yt-1", platform: "youtube",   title: "LEAD TV",                description: "Full recordings of seminars, convocations, guest lectures, and campus tours.", handle: "LEAD College Official", url: "https://www.youtube.com/@leadcollege", image: get(2), followers: "9.1K Subscribers", cta: "Subscribe on YouTube" },
-    { id: "ig-2", platform: "instagram", title: "Student Stories",        description: "Voices from the community — student journeys, internships, and milestone moments.", handle: "@leadstudents", url: "https://www.instagram.com/leadcollege", image: get(3), followers: "7.2K Followers", cta: "Follow on Instagram" },
-    { id: "yt-2", platform: "youtube",   title: "Knowledge Series",       description: "Curated talks, panel discussions, and academic sessions from LEAD's thought leaders.", handle: "LEAD Knowledge Hub", url: "https://www.youtube.com/@leadcollege", image: get(4), followers: "5.8K Subscribers", cta: "Subscribe on YouTube" },
-    { id: "fb-2", platform: "facebook",  title: "LEAD Alumni Network",    description: "Stay connected with the ever-growing LEAD alumni community across the globe.", handle: "LEAD Alumni", url: "https://www.facebook.com/leadcollege", image: get(5), followers: "14.3K Members", cta: "Join the Group" },
-    { id: "ig-3", platform: "instagram", title: "Events & Fests",         description: "Behind-the-scenes coverage of LEAD's biggest cultural and academic events.", handle: "@leadevents", url: "https://www.instagram.com/leadcollege", image: get(6), followers: "6.5K Followers", cta: "Follow on Instagram" },
-    { id: "fb-3", platform: "facebook",  title: "Admissions & Updates",   description: "Prospective student queries, admission cycles, and important college notices.", handle: "LEAD Admissions", url: "https://www.facebook.com/leadcollege", image: get(7), followers: "19.0K Followers", cta: "Follow for Updates" },
-    { id: "yt-3", platform: "youtube",   title: "Campus Tour & Vlogs",    description: "First-person walkthroughs of LEAD's campus, labs, hostels, and common spaces.", handle: "LEAD Campus", url: "https://www.youtube.com/@leadcollege", image: get(8), followers: "3.4K Subscribers", cta: "Subscribe on YouTube" },
-    { id: "ig-1b", platform: "instagram", title: "Campus Life Highlights", description: "Daily snapshots of campus events, student achievements, and life at LEAD.", handle: "@leadcollege", url: "https://www.instagram.com/leadcollege", image: get(0), followers: "12.4K Followers", cta: "Follow on Instagram" },
-    { id: "fb-1b", platform: "facebook",  title: "LEAD Official Page",     description: "Official announcements, event updates, and community stories from LEAD College.", handle: "LEAD College", url: "https://www.facebook.com/leadcollege", image: get(1), followers: "28.7K Followers", cta: "Like on Facebook" },
-    { id: "yt-1b", platform: "youtube",   title: "LEAD TV",                description: "Full recordings of seminars, convocations, guest lectures, and campus tours.", handle: "LEAD College Official", url: "https://www.youtube.com/@leadcollege", image: get(2), followers: "9.1K Subscribers", cta: "Subscribe on YouTube" },
-    { id: "ig-2b", platform: "instagram", title: "Student Stories",        description: "Voices from the community — student journeys, internships, and milestone moments.", handle: "@leadstudents", url: "https://www.instagram.com/leadcollege", image: get(3), followers: "7.2K Followers", cta: "Follow on Instagram" },
-    { id: "yt-2b", platform: "youtube",   title: "Knowledge Series",       description: "Curated talks, panel discussions, and academic sessions from LEAD's thought leaders.", handle: "LEAD Knowledge Hub", url: "https://www.youtube.com/@leadcollege", image: get(4), followers: "5.8K Subscribers", cta: "Subscribe on YouTube" },
-    { id: "fb-2b", platform: "facebook",  title: "LEAD Alumni Network",    description: "Stay connected with the ever-growing LEAD alumni community across the globe.", handle: "LEAD Alumni", url: "https://www.facebook.com/leadcollege", image: get(5), followers: "14.3K Members", cta: "Join the Group" },
-    { id: "ig-3b", platform: "instagram", title: "Events & Fests",         description: "Behind-the-scenes coverage of LEAD's biggest cultural and academic events.", handle: "@leadevents", url: "https://www.instagram.com/leadcollege", image: get(6), followers: "6.5K Followers", cta: "Follow on Instagram" },
-    { id: "fb-3b", platform: "facebook",  title: "Admissions & Updates",   description: "Prospective student queries, admission cycles, and important college notices.", handle: "LEAD Admissions", url: "https://www.facebook.com/leadcollege", image: get(7), followers: "19.0K Followers", cta: "Follow for Updates" },
-    { id: "yt-3b", platform: "youtube",   title: "Campus Tour & Vlogs",    description: "First-person walkthroughs of LEAD's campus, labs, hostels, and common spaces.", handle: "LEAD Campus", url: "https://www.youtube.com/@leadcollege", image: get(8), followers: "3.4K Subscribers", cta: "Subscribe on YouTube" },
-  ];
-};
+export interface SocialChannel {
+  id: string;
+  platform: Platform;
+  title: string;
+  description: string;
+  handle: string;
+  url: string;
+  image: string | null;
+  followers: string;
+  cta: string;
+}
 
 const GRID_CONTAINER: Variants = {
   hidden:  {},
@@ -226,16 +212,22 @@ function SocialCard({ card }: { card: SocialCard }) {
 
   return (
     <motion.div variants={GRID_ITEM} style={{ display: "flex", flexDirection: "column" }}>
-      <a  style={anchorStyle}>
+      <a href={card.url} target="_blank" rel="noopener noreferrer" style={anchorStyle}>
 
         <div style={{ position: "relative", borderRadius: "12px 12px 0 0", overflow: "hidden", aspectRatio: "16/10", flexShrink: 0, background: "#f0f4f8" }}>
-          <img
-            src={card.image}
-            alt={card.title}
-            style={imgStyle}
-            onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.05)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
-          />
+          {card.image ? (
+            <img
+              src={card.image}
+              alt={card.title}
+              style={imgStyle}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.05)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; }}
+            />
+          ) : (
+            <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: meta.gradient }}>
+              <Icon size={54} strokeWidth={1.4} color="rgba(255,255,255,0.92)" />
+            </div>
+          )}
           <div style={{ position: "absolute", top: 10, right: 10, background: meta.gradient, borderRadius: 8, padding: "5px 9px", display: "flex", alignItems: "center", gap: 5, boxShadow: "0 2px 8px rgba(0,0,0,.18)" }}>
             <Icon size={11} strokeWidth={2} color="#fff" />
             <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.3rem,.38vw,.36rem)", letterSpacing: ".14em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}>
@@ -382,12 +374,11 @@ function GridSection({ cards }: { cards: SocialCard[] }) {
 }
 
 /* ─── PAGE EXPORT ─── */
-export default function SocialMediaPage() {
-  const cards = buildCards(EVENTS);
+export default function SocialMediaPage({ channels }: { channels: SocialChannel[] }) {
   return (
     <div style={{ background: "#ffffff" }}>
       <HeroSection />
-      <GridSection cards={cards} />
+      <GridSection cards={channels} />
     </div>
   );
 }

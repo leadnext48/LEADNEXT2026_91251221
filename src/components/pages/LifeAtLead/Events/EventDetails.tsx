@@ -13,11 +13,19 @@
 
 import React from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, ChevronRight } from "lucide-react";
 import { cinzel, playfair } from "@/app/fonts";
-import { getEventBySlug, EVENTS } from "@/components/pages/LifeAtLead/Events/data";
+
+export interface EventDetailData {
+  slug: string;
+  title: string;
+  category: string;
+  date: string;
+  image: string;
+  excerpt: string;
+  body: string;
+}
 
 /* ─── PALETTE ─── */
 const C = {
@@ -44,8 +52,7 @@ function splitBody(body: string): { first: string[]; rest: string[] } {
 }
 
 /* ─── RELATED EVENTS ─── */
-function RelatedEvents({ current }: { current: string }) {
-  const related = EVENTS.filter(e => e.slug !== current).slice(0, 3);
+function RelatedEvents({ related }: { related: EventDetailData[] }) {
   return (
     <div style={{ marginTop: "clamp(3rem,6vh,5rem)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", marginBottom: "clamp(1.4rem,3vh,2rem)" }}>
@@ -113,41 +120,7 @@ function RelatedEvents({ current }: { current: string }) {
 /* ═══════════════════════════════════════════════════════════════
    COMPONENT
 ═══════════════════════════════════════════════════════════════ */
-export default function EventDetailPage() {
-  const params = useParams();
-  const slug   = typeof params?.slug === "string"
-    ? params.slug
-    : Array.isArray(params?.slug) ? params.slug[0] : "";
-
-  const event = getEventBySlug(slug);
-
-  /* ── Not found ── */
-  if (!event) {
-    return (
-      <main style={{
-        background: "#ffffff", minHeight: "60vh",
-        display: "flex", flexDirection: "column",
-        alignItems: "center", justifyContent: "center", gap: "1.2rem",
-      }}>
-        <p style={{
-          fontFamily: cinzel.style.fontFamily,
-          fontSize: "clamp(.68rem,.88vw,.82rem)",
-          letterSpacing: ".2em", textTransform: "uppercase", color: C.faint,
-        }}>Event not found</p>
-        <Link href="/life-at-lead/events" style={{
-          fontFamily: cinzel.style.fontFamily,
-          fontSize: "clamp(.38rem,.5vw,.46rem)",
-          letterSpacing: ".18em", textTransform: "uppercase",
-          color: C.blue, fontWeight: 700, textDecoration: "none",
-          display: "inline-flex", alignItems: "center", gap: ".45rem",
-        }}>
-          <ArrowLeft size={12} strokeWidth={2} />
-          Back to All Events
-        </Link>
-      </main>
-    );
-  }
-
+export default function EventDetailPage({ event, related }: { event: EventDetailData; related: EventDetailData[] }) {
   const { first, rest } = splitBody(event.body);
 
   return (
@@ -331,7 +304,7 @@ export default function EventDetailPage() {
           )}
 
           {/* ══ RELATED EVENTS ══ */}
-          <RelatedEvents current={event.slug} />
+          <RelatedEvents related={related} />
 
           {/* ══ BACK BUTTON ══ */}
           <div style={{

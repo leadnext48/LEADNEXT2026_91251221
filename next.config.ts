@@ -9,6 +9,7 @@ remotePatterns: [
 { protocol: "https", hostname: "source.unsplash.com" },
 { protocol: "https", hostname: "images.pexels.com" },
 { protocol: "https", hostname: "me7aitdbxq.ufs.sh" },
+{ protocol: "https", hostname: "cdn.sanity.io" },
 ],
 },
 };

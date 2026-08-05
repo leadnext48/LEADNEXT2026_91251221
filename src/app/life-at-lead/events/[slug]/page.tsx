@@ -1,16 +1,26 @@
+import { notFound } from "next/navigation";
 import EventDetailPage from "@/components/pages/LifeAtLead/Events/EventDetails";
-import EventsPage from "@/components/pages/LifeAtLead/Events/Events";
-import LifeEvents from "@/components/pages/LifeAtLead/LifeEvents";
+import { getEvent, getEventSlugs } from "@/sanity/fetch";
 
-export const metadata = {
-  title: "Events | Life at LEAD",
-  description: "LEAD hosts a wide range of academic, cultural, entrepreneurial, and social events throughout the year.",
-};
+export async function generateStaticParams() {
+  const slugs = await getEventSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
-export default function EventsDetail() {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const data = await getEvent(slug);
+  if (!data) return { title: "Event | Life at LEAD" };
+  return { title: `${data.event.title} | Life at LEAD`, description: data.event.excerpt };
+}
+
+export default async function EventsDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const data = await getEvent(slug);
+  if (!data) notFound();
   return (
     <main>
-      <EventDetailPage />
+      <EventDetailPage event={data.event} related={data.related} />
     </main>
   );
 }

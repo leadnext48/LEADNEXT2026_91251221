@@ -1,15 +1,16 @@
 import LifePhotoGallery from "@/components/pages/LifeAtLead/LifeVideoGallery";
-
+import { getGalleryPhotos } from "@/sanity/fetch";
 
 export const metadata = {
-  title: "Video Gallery | Life at LEAD",
-  description: "The Video Gallery captures the energy and experiences of Life at LEAD through curated visual storytelling.",
+  title: "Gallery | Life at LEAD",
+  description: "Photo gallery capturing memorable campus moments and the spirit of Life at LEAD.",
 };
 
-export default function VideoGalleryPage() {
+export default async function GalleryPage() {
+  const photos = await getGalleryPhotos();
   return (
     <main>
-      <LifePhotoGallery />
+      <LifePhotoGallery photos={photos} />
     </main>
   );
 }
