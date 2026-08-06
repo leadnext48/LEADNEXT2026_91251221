@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { cinzel, playfair } from "@/app/fonts"
 
@@ -84,17 +84,17 @@ export default function Footer() {
           </h3>
 
           <div className="flex gap-4 text-white">
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-[#085eaa]">
-              <Facebook className="h-5 w-5" />
+            <a href="https://www.youtube.com/@leadcollegeofficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transition-colors hover:text-[#085eaa]">
+              <Youtube className="h-5 w-5" />
             </a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-[#085eaa]">
+            <a href="https://www.instagram.com/lead_college_official/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition-colors hover:text-[#085eaa]">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-[#085eaa]">
+            <a href="https://in.linkedin.com/school/lead-college-autonomous/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-[#085eaa]">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="#" onClick={(e) => e.preventDefault()} className="transition-colors hover:text-[#085eaa]">
-              <Twitter className="h-5 w-5" />
+            <a href="https://www.facebook.com/leadcollegeofficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transition-colors hover:text-[#085eaa]">
+              <Facebook className="h-5 w-5" />
             </a>
           </div>
         </div>
