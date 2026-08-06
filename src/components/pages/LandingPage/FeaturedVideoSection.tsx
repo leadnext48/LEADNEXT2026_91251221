@@ -16,6 +16,7 @@
 */
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { cinzel, playfair } from '@/app/fonts';
 
 const VIDEO_ID = 'VrkT32NhEM4';
@@ -89,111 +90,51 @@ export default function FeaturedVideoSection() {
         </p>
       </div>
 
-      {/* Video frame — 16:9. Thumbnail facade until the user clicks play. */}
+      {/* Video frame — 16:9. Styled to match the Admissions Overview video.
+          Thumbnail facade (local image) until the user clicks play. */}
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <div
-          style={{
-            position: 'relative',
-            width: '100%',
-            aspectRatio: '16 / 9',
-            borderRadius: 12,
-            overflow: 'hidden',
-            background: '#000',
-            border: '1px solid rgba(0,92,159,0.12)',
-            boxShadow: '0 24px 70px rgba(0,92,159,0.14)',
-          }}
+          className="relative rounded-2xl overflow-hidden shadow-2xl"
+          style={{ aspectRatio: '16 / 9', background: '#000' }}
         >
           {playing ? (
             <iframe
+              className="w-full h-full"
               src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`}
               title="Featured Video — LEAD College"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+              style={{ position: 'absolute', inset: 0, border: 0 }}
             />
           ) : (
-            <button
-              type="button"
-              onClick={() => setPlaying(true)}
-              aria-label="Play video"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                padding: 0,
-                border: 'none',
-                cursor: 'pointer',
-                background: 'transparent',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <img
-                src={`https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
-                alt="Featured video preview"
-                loading="lazy"
-                onError={(e) => {
-                  // Not every video has a maxres thumbnail (404); fall back to
-                  // hqdefault, which always exists.
-                  const img = e.currentTarget;
-                  if (!img.dataset.fallback) {
-                    img.dataset.fallback = '1';
-                    img.src = `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`;
-                  }
-                }}
-                onLoad={(e) => {
-                  // Some videos return a tiny gray "unavailable" placeholder
-                  // (120x90) with a 200 status instead of a 404 — catch that too.
-                  const img = e.currentTarget;
-                  if (!img.dataset.fallback && img.naturalWidth <= 120) {
-                    img.dataset.fallback = '1';
-                    img.src = `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`;
-                  }
-                }}
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+            <div className="relative w-full h-full">
+              <Image
+                src="/convert/LEAD02.webp"
+                alt="Featured video — LEAD College campus"
+                fill
+                sizes="(max-width: 1100px) 100vw, 1100px"
+                className="object-cover"
               />
-              {/* Subtle dark overlay for contrast */}
-              <span
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(180deg, rgba(7,17,28,0.15), rgba(7,17,28,0.35))',
-                }}
-              />
-              {/* Play button */}
-              <span
-                style={{
-                  position: 'relative',
-                  width: 'clamp(56px, 7vw, 84px)',
-                  height: 'clamp(56px, 7vw, 84px)',
-                  borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.92)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
-                  transition: 'transform 0.2s ease, background 0.2s ease',
-                }}
-                className="qa-video-play"
-              >
+              <div className="absolute inset-0 bg-black/42 flex flex-col items-center justify-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => setPlaying(true)}
+                  className="fv-play-btn w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-2xl"
+                  aria-label="Play video"
+                >
+                  <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+                    <path d="M7 5l18 9-18 9V5z" fill={BLUE} />
+                  </svg>
+                </button>
                 <span
-                  style={{
-                    display: 'block',
-                    width: 0,
-                    height: 0,
-                    marginLeft: '18%',
-                    borderTop: 'clamp(9px, 1.1vw, 13px) solid transparent',
-                    borderBottom: 'clamp(9px, 1.1vw, 13px) solid transparent',
-                    borderLeft: 'clamp(15px, 1.9vw, 22px) solid ' + BLUE,
-                  }}
-                />
-              </span>
-              <style>{`
-                .qa-video-play:hover { transform: scale(1.08); background: #fff; }
-              `}</style>
-            </button>
+                  className={cinzel.className}
+                  style={{ color: '#fff', fontSize: '0.58rem', letterSpacing: '0.3em', textTransform: 'uppercase', opacity: 0.72 }}
+                >
+                  Click to Play
+                </span>
+              </div>
+              <style>{`.fv-play-btn{transition:transform .2s ease}.fv-play-btn:hover{transform:scale(1.08)}`}</style>
+            </div>
           )}
         </div>
       </div>
