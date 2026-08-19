@@ -174,6 +174,13 @@ export default function MCAPage() {
         <style>{`
           .dot-grid { background-image: radial-gradient(circle, rgba(30,58,138,0.08) 1px, transparent 1px); background-size: 24px 24px; }
           .vh { height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+          /* Mobile/tablet: two-column sections stack, so release the fixed viewport height
+             and let content flow — prevents text cut-off and image/text overlap. */
+          @media (max-width: 1023px) {
+            .vh { height: auto; min-height: 100vh; overflow: visible; padding-top: 5.5rem; padding-bottom: 4rem; }
+            /* Full-bleed image sections (hero, CTA) keep their clip so parallax stays contained */
+            .vh.bg-black { overflow: hidden; padding-top: 0; padding-bottom: 0; }
+          }
 
           .h-line   { opacity: 0; transform: rotateX(80deg) translateY(-30px) scale(0.88); filter: blur(4px); transform-style: preserve-3d; backface-visibility: hidden; }
           .h-sub    { opacity: 0; transform: translateY(22px); }

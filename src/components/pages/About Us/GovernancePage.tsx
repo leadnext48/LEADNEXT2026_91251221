@@ -478,13 +478,28 @@ export default function GovernancePage() {
 
         /* Responsive */
         @media(max-width: 900px) {
+          /* Release the fixed-viewport lock so nothing clips or overlaps on mobile */
+          .gov-hero {
+            height: auto;
+            min-height: 100svh;
+            max-height: none;
+            padding-bottom: 4.5rem;
+          }
+          .gov-grid-section {
+            height: auto;
+            min-height: auto;
+            max-height: none;
+            overflow: visible;
+            padding-top: 4rem;
+            padding-bottom: 4.5rem;
+          }
           .governance-grid { grid-template-columns: repeat(2,1fr); }
           .gov-section-desc { text-align: left; max-width: none; }
           .gov-section-hdr-row { flex-direction: column; align-items: flex-start; }
         }
         @media(max-width: 580px) {
           .governance-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-          .gov-grid-section { padding: 3rem 1.5rem 4rem; }
+          .gov-grid-section { padding: 3.5rem 1.5rem 4.5rem; }
         }
         @media(prefers-reduced-motion: reduce) {
           .gov-marquee-track { animation: none; }

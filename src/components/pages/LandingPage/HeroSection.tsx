@@ -98,7 +98,7 @@ export default function HeroSection() {
         const t = Math.min((now - t0) / 750, 1)
         leadText.setAttribute('opacity', String(t))
         if (t < 1) rafRef.current = requestAnimationFrame(tick)
-        else setTimeout(startScale, 1500)
+        else setTimeout(startScale, 600)   // trimmed static white hold (was 1500) so content appears sooner
       }
       rafRef.current = requestAnimationFrame(tick)
     }
@@ -142,11 +142,46 @@ export default function HeroSection() {
       return () => clearTimeout(timer)
     }
 
-    let cleanup = () => {}
-    document.fonts.ready.then(() => { cleanup = startAnim() ?? (() => {}) })
+    // ── Safety net so the first screen never stays blank ──────────────
+    // If the intro is interrupted or document.fonts.ready never settles,
+    // reveal the hero content regardless.
+    let revealed = false
+    const forceReveal = () => {
+      if (revealed) return
+      revealed = true
+      svg.style.opacity = '0'
+      contentRef.current?.classList.add('lc-visible')
+      scrollRef.current?.classList.add('lc-visible')
+    }
+
+    const timers: ReturnType<typeof setTimeout>[] = []
+    let animCleanup = () => {}
+    let started = false
+    const begin = () => {
+      if (started || revealed) return
+      started = true
+      animCleanup = startAnim() ?? (() => {})
+    }
+
+    const prefersReduced =
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReduced) {
+      // Skip the cinematic intro entirely — show content immediately.
+      forceReveal()
+    } else {
+      // Start on whichever comes first — fonts ready or an 800ms cap — so a
+      // slow font load can't keep the hero blank.
+      document.fonts.ready.then(begin)
+      timers.push(setTimeout(begin, 800))
+      // Absolute guarantee the content is visible within ~5s.
+      timers.push(setTimeout(forceReveal, 5000))
+    }
 
     return () => {
-      cleanup()
+      animCleanup()
+      timers.forEach(clearTimeout)
       cancelAnimationFrame(rafRef.current)
     }
   }, [])

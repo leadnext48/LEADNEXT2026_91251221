@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Header } from "@/components/ui/header-3";
 
 export default function ScrollHeader() {
+  const pathname = usePathname();
   const triggerRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -22,6 +24,11 @@ export default function ScrollHeader() {
     observer.observe(triggerRef.current);
     return () => observer.disconnect();
   }, []);
+
+  // The new homepage at "/" renders its own always-visible header (blue strip
+  // + Header), so suppress the scroll-reveal global header there to avoid a
+  // double nav. The legacy homepage at /home keeps the scroll-reveal header.
+  if (pathname === "/") return null;
 
   return (
     <>

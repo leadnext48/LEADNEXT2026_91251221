@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
 const ROYAL_BLUE = "#1e3a8a";
@@ -97,6 +97,8 @@ const FontStyle = () => (
         padding: 5rem 6vw 4rem;
       }
       .ls-hero-image-wrap { grid-row: auto; margin-top: 3rem; }
+      /* Hide the small accent photo on mobile — it shrinks too much to look good */
+      .ls-hero-accent-sq { display: none !important; }
     }
 
     /* Left column: label + heading stacked */
@@ -233,101 +235,146 @@ const FontStyle = () => (
       opacity: 0.1;
     }
 
-    /* ── Cards Strip ─────────────────────────────────────── */
-    .ls-strip { background: #fff; border-top: 1px solid rgba(30,58,138,0.07); }
-    .ls-strip-header { padding: 4rem 0 2rem 8vw; }
-    .ls-strip-label {
+    /* ═══════════════════════════════════════════════════════
+       VERTICAL STORYTELLING TIMELINE
+       ═══════════════════════════════════════════════════════ */
+    .ls-tl-wrap {
+      background: #fff;
+      border-top: 1px solid rgba(30,58,138,0.07);
+      padding-top: 4.5rem;
+    }
+    .ls-tl-header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 8vw 1rem;
+    }
+    .ls-tl-eyebrow {
       font-family: 'Cinzel', serif;
-      font-size: 1rem;
+      font-size: 0.62rem;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: black;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      color: var(--blue);
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1rem;
     }
-    .ls-strip-label::before {
+    .ls-tl-eyebrow::before {
       content: '';
       display: inline-block;
       width: 28px; height: 1px;
       background: var(--blue); opacity: 0.4;
     }
-
-    /* ── Horizontal scroll ───────────────────────────────── */
-    .ls-hs-sticky {
-      position: sticky;
-      top: 0;
-      overflow: hidden;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-    .ls-hs-inner {
-      display: flex;
-      gap: 2rem;
-      padding: 0 8vw;
-      will-change: transform;
+    .ls-tl-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.55rem, 2.9vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: 0.01em;
+      color: #0D0D0D;
     }
 
-    /* ── Card ─────────────────────────────────────────────── */
-    .ls-card {
+    /* ── Timeline body ─────────────────────────────────────── */
+    .ls-tl {
       position: relative;
-      flex-shrink: 0;
-      width: clamp(290px, 27vw, 370px);
-      padding: 2.5rem 2rem 2.25rem;
-      background: #fff;
-      border: 1px solid rgba(30,58,138,0.12);
-      border-top: 3px solid var(--blue);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 8vw 6rem;
+    }
+    /* central rail */
+    .ls-tl-rail {
+      position: absolute;
+      top: 3rem; bottom: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      background: rgba(30,58,138,0.10);
       border-radius: 2px;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      cursor: default;
+      overflow: hidden;
     }
-    .ls-card:hover {
-      box-shadow: 0 14px 44px rgba(30,58,138,0.11);
-      transform: translateY(-7px);
+    .ls-tl-rail-fill {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, var(--blue) 0%, #3b5bbf 100%);
+      transform-origin: top center;
     }
-    .ls-card-year {
+
+    /* ── Row ───────────────────────────────────────────────── */
+    .ls-tl-row {
+      position: relative;
+      display: grid;
+      /* fixed centre channel reserves clear space for the node so text can never collide with it */
+      grid-template-columns: 1fr 96px 1fr;
+      column-gap: 0;
+      align-items: start;
+      margin-bottom: 4.75rem;
+    }
+    .ls-tl-row:last-child { margin-bottom: 0; }
+
+    .ls-tl-content { padding-top: 0.15rem; min-width: 0; }
+    .ls-tl-row.left  .ls-tl-content { grid-column: 1; text-align: right; padding-right: 1.75rem; }
+    .ls-tl-row.right .ls-tl-content { grid-column: 3; text-align: left;  padding-left: 1.75rem; }
+
+    .ls-tl-year {
       font-family: 'Cinzel', serif;
-      font-size: 0.56rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 0.5rem;
-      opacity: 0.65;
-    }
-    .ls-card-num {
-      font-family: 'Cinzel', serif;
-      font-size: 5.5rem;
+      font-size: clamp(2rem, 3.6vw, 3.15rem);
       font-weight: 900;
       line-height: 1;
-      color: rgba(30,58,138,0.055);
-      position: absolute;
-      top: 1rem; right: 1.25rem;
-      letter-spacing: -0.04em;
-      user-select: none; pointer-events: none;
-    }
-    .ls-card-icon {
+      letter-spacing: -0.015em;
       color: var(--blue);
-      margin-bottom: 1.2rem;
-      width: 42px; height: 42px;
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid rgba(30,58,138,0.15);
-      border-radius: 50%;
+      display: block;
+      margin-bottom: 0.85rem;
     }
-    .ls-card-title {
+    .ls-tl-ct {
       font-family: 'Cinzel', serif;
-      font-size: 0.85rem;
+      font-size: 0.92rem;
       font-weight: 600;
       letter-spacing: 0.03em;
       color: #0D0D0D;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.7rem;
       line-height: 1.4;
     }
-    .ls-card-text {
+    .ls-tl-text {
       font-family: 'Playfair Display', serif;
-      font-size: 0.93rem;
-      line-height: 1.75;
+      font-size: 0.95rem;
+      line-height: 1.85;
       color: #555;
+      max-width: 44ch;
+      display: inline-block;
+    }
+
+    /* node on rail */
+    .ls-tl-node {
+      position: absolute;
+      top: 0.15rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid rgba(30,58,138,0.18);
+      color: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2;
+      box-shadow: 0 4px 18px rgba(30,58,138,0.12);
+    }
+
+    /* ── Mobile: single-column, rail on the left ───────────── */
+    @media (max-width: 820px) {
+      .ls-tl { padding: 2.5rem 6vw 4rem; }
+      .ls-tl-rail { top: 2.5rem; bottom: 4rem; left: 24px; transform: none; }
+      .ls-tl-row {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        padding-left: 72px;   /* clears the rail + node so text never collides */
+        margin-bottom: 3.25rem;
+      }
+      .ls-tl-row.left  .ls-tl-content,
+      .ls-tl-row.right .ls-tl-content {
+        grid-column: 1;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .ls-tl-node { left: 24px; width: 44px; height: 44px; }
+      .ls-tl-text { max-width: none; }
     }
   `}</style>
 );
@@ -391,8 +438,9 @@ function ImagePanel() {
         }} />
       </div>
 
-      {/* Accent square image bottom-left */}
+      {/* Accent square image bottom-left — hidden on mobile (too small to read) */}
       <motion.div
+        className="ls-hero-accent-sq"
         style={{
           position: "absolute", bottom: "-1.5rem", left: "-2rem",
           width: "42%", aspectRatio: "1/1",
@@ -415,71 +463,64 @@ function ImagePanel() {
   );
 }
 
-// ─── Milestone Card ───────────────────────────────────────────────────────────
-function MilestoneCard({ number, year, title, text }: { number: number; year: string; title: string; text: string }) {
+// ─── Timeline Row ─────────────────────────────────────────────────────────────
+function TimelineRow({ number, year, title, text, side }: { number: number; year: string; title: string; text: string; side: "left" | "right" }) {
   const Icon = icons[number - 1];
+  const reveal = {
+    initial: { opacity: 0, y: 28 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "0px 0px -80px 0px" },
+  } as const;
+
   return (
-    <div className="ls-card">
-      <span className="ls-card-num">{String(number).padStart(2, "0")}</span>
-      <p className="ls-card-year">{year}</p>
-      <div className="ls-card-icon"><Icon /></div>
-      <h3 className="ls-card-title">{title}</h3>
-      <p className="ls-card-text">{text}</p>
+    <div className={`ls-tl-row ${side}`}>
+      <motion.div
+        className="ls-tl-content"
+        {...reveal}
+        transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <span className="ls-tl-year">{year}</span>
+        <h3 className="ls-tl-ct">{title}</h3>
+        <p className="ls-tl-text">{text}</p>
+      </motion.div>
+
+      <motion.div
+        className="ls-tl-node"
+        initial={{ opacity: 0, scale: 0.55 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "0px 0px -80px 0px" }}
+        transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <Icon />
+      </motion.div>
     </div>
   );
 }
 
-// ─── HorizontalSlides ────────────────────────────────────────────────────────
-function HorizontalSlides({ children }: { children: React.ReactNode }) {
-  const outerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-  const [x, setX] = useState(0);
-  const [outerHeight, setOuterHeight] = useState(0);
-
-  useEffect(() => {
-    const recalc = () => {
-      if (!innerRef.current) return;
-      const travel = Math.max(0, innerRef.current.scrollWidth - window.innerWidth);
-      setOuterHeight(window.innerHeight + travel);
-    };
-    recalc();
-    const ro = new ResizeObserver(recalc);
-    if (innerRef.current) ro.observe(innerRef.current);
-    window.addEventListener("resize", recalc);
-    return () => { ro.disconnect(); window.removeEventListener("resize", recalc); };
-  }, []);
-
-  useEffect(() => {
-    const update = () => {
-      const outer = outerRef.current;
-      const inner = innerRef.current;
-      if (!outer || !inner || !outerHeight) return;
-      const outerTop    = outer.getBoundingClientRect().top + window.scrollY;
-      const scrollStart = outerTop;
-      const scrollEnd   = outerTop + outer.offsetHeight - window.innerHeight;
-      const progress    = Math.max(0, Math.min(1,
-        (window.scrollY - scrollStart) / Math.max(1, scrollEnd - scrollStart)
-      ));
-      const maxX = inner.scrollWidth - window.innerWidth;
-      setX(-(progress * maxX));
-    };
-    window.addEventListener("scroll", update, { passive: true });
-    update();
-    return () => window.removeEventListener("scroll", update);
-  }, [outerHeight]);
+// ─── Vertical Timeline ────────────────────────────────────────────────────────
+function VerticalTimeline() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 82%", "end 55%"],
+  });
+  const railScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div ref={outerRef} style={{ height: outerHeight || "100vh", position: "relative" }}>
-      <div className="ls-hs-sticky">
-        <motion.div
-          ref={innerRef}
-          className="ls-hs-inner"
-          animate={{ x }}
-          transition={{ type: "spring", stiffness: 85, damping: 25, mass: 0.8 }}
-        >
-          {children}
-        </motion.div>
+    <div className="ls-tl" ref={ref}>
+      <div className="ls-tl-rail">
+        <motion.div className="ls-tl-rail-fill" style={{ scaleY: railScale }} />
       </div>
+      {milestones.map((m, i) => (
+        <TimelineRow
+          key={m.number}
+          number={m.number}
+          year={m.year}
+          title={m.title}
+          text={m.text}
+          side={i % 2 === 0 ? "left" : "right"}
+        />
+      ))}
     </div>
   );
 }
@@ -560,22 +601,13 @@ export default function LeadStorySection() {
 
         <div className="ls-divider" />
 
-        {/* ══ HORIZONTAL MILESTONE CARDS ══ */}
-        <div className="ls-strip">
-          <div className="ls-strip-header">
-            <p className="ls-strip-label">Milestones &amp; Legacy</p>
+        {/* ══ VERTICAL MILESTONE TIMELINE ══ */}
+        <div className="ls-tl-wrap">
+          <div className="ls-tl-header">
+            <p className="ls-tl-eyebrow">Milestones &amp; Legacy</p>
+            <h2 className="ls-tl-title">The chapters that shaped LEAD.</h2>
           </div>
-          <HorizontalSlides>
-            {milestones.map((m) => (
-              <MilestoneCard
-                key={m.number}
-                number={m.number}
-                year={m.year}
-                title={m.title}
-                text={m.text}
-              />
-            ))}
-          </HorizontalSlides>
+          <VerticalTimeline />
         </div>
 
       </section>

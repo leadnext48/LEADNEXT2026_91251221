@@ -426,7 +426,7 @@ function Faculty() {
       initials: "TG",
       image: "/faculty/Dr. Thomas George K.jpg",
       name: "Dr. Thomas George K",
-      role: "Director & Ph.D. Guide",
+      role: "Chairman & Ph.D. Guide",
       bio: "Visionary academic leader with 25+ years of experience in entrepreneurship, international training, and institutional development. Expertise in strategic management, organizational behavior, and educational innovation.",
       tags: ["Strategic Management and Implementation", "Entrepreneurship", "Leadership"],
     },

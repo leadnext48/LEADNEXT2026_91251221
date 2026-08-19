@@ -47,7 +47,7 @@ type NavSection = {
 /* APPLY MODAL                                                       */
 /* ---------------------------------------------------------------- */
 
-function ApplyModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function ApplyModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -408,9 +408,9 @@ export function Header() {
           {/* MOBILE TOGGLE */}
           <Button
             size="icon"
-            variant="outline"
+            variant="ghost"
             onClick={() => setOpen(!open)}
-            className="ml-auto md:hidden"
+            className="ml-auto md:hidden border-0 shadow-none hover:bg-transparent"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label="Toggle menu"
