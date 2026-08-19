@@ -400,13 +400,18 @@ const CSS = `
 .hv-hero-bar span{flex:1 1 auto;min-width:160px;padding:1.1rem clamp(1.15rem,4vw,3.2rem);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82);font-weight:600;border-right:1px solid rgba(255,255,255,.12);text-align:center;}
 .hv-hero-bar span:last-child{border-right:none;}
 @media(max-width:640px){.hv-hero-bar span{flex-basis:50%;border-bottom:1px solid rgba(255,255,255,.1);}}
-/* hero entrance — content "arises" on load, staggered */
-@keyframes hvRise{from{opacity:0;transform:translateY(30px);filter:blur(6px);}to{opacity:1;transform:none;filter:blur(0);}}
-.hv-hero-eyebrow{animation:hvRise 1.3s cubic-bezier(.22,1,.36,1) .25s both;}
-.hv-hero-title{animation:hvRise 1.7s cubic-bezier(.22,1,.36,1) .45s both;}
-.hv-hero-sub{animation:hvRise 1.5s cubic-bezier(.22,1,.36,1) .85s both;}
-.hv-hero-cta{animation:hvRise 1.5s cubic-bezier(.22,1,.36,1) 1.1s both;}
-.hv-hero-bar{animation:hvRise 1.6s cubic-bezier(.22,1,.36,1) 1.35s both;}
+/* hero entrance — GPU-only (transform + opacity), same rise-and-fade motion &
+   easing as the Who-We-Are reveal. No filter:blur here on purpose: animating
+   blur on the huge hero title repaints on the main thread and stutters while
+   the page hydrates (badly on mobile). transform + opacity stay on the
+   compositor thread, so this is smooth even during load. */
+@keyframes hvRise{from{opacity:0;transform:translateY(34px);}to{opacity:1;transform:none;}}
+.hv-hero-eyebrow,.hv-hero-title,.hv-hero-sub,.hv-hero-cta,.hv-hero-bar{will-change:transform,opacity;}
+.hv-hero-eyebrow{animation:hvRise 1.1s cubic-bezier(.22,1,.36,1) .2s both;}
+.hv-hero-title{animation:hvRise 1.2s cubic-bezier(.22,1,.36,1) .38s both;}
+.hv-hero-sub{animation:hvRise 1.1s cubic-bezier(.22,1,.36,1) .6s both;}
+.hv-hero-cta{animation:hvRise 1.1s cubic-bezier(.22,1,.36,1) .78s both;}
+.hv-hero-bar{animation:hvRise 1.2s cubic-bezier(.22,1,.36,1) .95s both;}
 @media(prefers-reduced-motion:reduce){.hv-hero-eyebrow,.hv-hero-title,.hv-hero-sub,.hv-hero-cta,.hv-hero-bar{animation:none;}}
 
 /* ── section rhythm ── */

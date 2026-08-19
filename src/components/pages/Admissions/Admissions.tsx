@@ -17,10 +17,10 @@ const MCA_URL = 'https://admission.lead.ac.in/lead-college-of-management-mca-app
 
 const IMG = {
   hero:    '/convert/LEAD02.webp',
-  prog1:   'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=900&q=85&auto=format',
-  prog2:   'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80&auto=format&fit=crop',
-  prog3:   'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&q=80&auto=format&fit=crop',
-  prog4:   'https://images.unsplash.com/photo-1562774053-701939374585?w=900&q=85&auto=format',
+  prog1:   '/convert/LEAD33.webp',
+  prog2:   '/convert/LEAD66.webp',
+  prog3:   '/convert/LEAD11.webp',
+  prog4:   '/convert/LEAD45.webp',
   about:   '/convert/LEAD61.webp',
   news:    '/convert/LEAD30.webp',
   contact: '/convert/LEAD65.webp',

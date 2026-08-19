@@ -313,6 +313,14 @@ export default function DeansPage() {
         }
 
         @media (max-width: 768px) {
+          /* Release the fixed 100svh so the stacked content flows instead of
+             the flex-centering pushing the "Deans." title up out of view. */
+          .dn-hero {
+            height: auto;
+            min-height: 100svh;
+            align-items: flex-start;
+            padding: clamp(4.5rem, 11vh, 6.5rem) 0 clamp(2.5rem, 6vh, 4rem);
+          }
           .dn-hero-inner {
             grid-template-columns: 1fr;
             padding: 0 1.5rem;

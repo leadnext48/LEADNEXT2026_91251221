@@ -23,7 +23,7 @@ const IMG = {
   int3:        '/convert/LEAD13.webp',
   social:      '/convert/LEAD31.webp',
   residential: '/convert/LEAD52.webp',
-  assessment:  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=90&auto=format',
+  assessment:  '/convert/LEAD56.jpg',
   cta:         '/convert/LEAD32.webp',
 };
 
