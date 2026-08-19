@@ -361,6 +361,15 @@ export default function AdmissionsPage() {
             justify-content: center;
             overflow: hidden;
           }
+          /* Mobile/tablet: two-column sections stack and exceed the viewport,
+             so release the fixed 100vh and add top/bottom spacing. Without this
+             the flex-centering + overflow:hidden clips each section's title and
+             it reads as "hidden under the hero". Full-bleed image sections
+             (hero) keep their clip. */
+          @media (max-width: 1023px) {
+            .vh { height: auto; min-height: 100vh; overflow: visible; padding-top: 5.5rem; padding-bottom: 4rem; }
+            .vh.bg-black { overflow: hidden; padding-top: 0; padding-bottom: 0; }
+          }
           .pc {
             transition: transform 0.35s cubic-bezier(.23,1,.32,1), box-shadow 0.3s ease;
             will-change: transform;
