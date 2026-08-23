@@ -36,7 +36,7 @@ const IconAcademic = () => (
 );
 
 const credentials = [
-  { Icon: IconBuilding,  text: 'Academic Administrator — LEAD College (Autonomous)' },
+  { Icon: IconBuilding,  text: 'Registrar — LEAD College (Autonomous)' },
   { Icon: IconBriefcase, text: '10 Years of Industrial Experience' },
   { Icon: IconAcademic,  text: '22 Years of Teaching Experience' },
 ];
@@ -327,7 +327,7 @@ export default function AcademicAdministratorPage() {
                   overflow: 'visible',
                 }}
               >
-                <span style={{ display: 'block', color: '#0D0D0D' }}>the academic</span>
+                <span style={{ display: 'block', color: '#0D0D0D' }}>the</span>
                 <span style={{
                   display: 'block',
                   background: `linear-gradient(90deg, #0D0D0D 0%, ${BLUE} 70%)`,
@@ -337,7 +337,7 @@ export default function AcademicAdministratorPage() {
                   paddingBottom: '0.12em',
                   overflow: 'visible',
                 }}>
-                  administrator.
+                  registrar.
                 </span>
               </h1>
 
@@ -420,7 +420,7 @@ export default function AcademicAdministratorPage() {
               <Image
                 ref={imgElRef}
                 src={ADMIN_IMAGE}
-                alt="Ms. Yasmin Samad — Academic Administrator, LEAD College"
+                alt="Ms. Yasmin Samad — Registrar, LEAD College"
                 fill
                 priority
                 fetchPriority="high"
@@ -445,7 +445,7 @@ export default function AcademicAdministratorPage() {
                 <div className="relative h-[420px] overflow-hidden rounded-2xl shadow-xl">
                   <Image
                     src={MEETING_IMAGE}
-                    alt="Academic Administrator at work"
+                    alt="Registrar at work"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-105"
                   />
@@ -476,12 +476,12 @@ export default function AcademicAdministratorPage() {
                       color: 'transparent',
                     }}
                   >
-                    The Office of the<br /> Administrator
+                    The Office of the<br /> Registrar
                   </h2>
                 </div>
 
                 <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>
-                  The Academic Administrator plays a central role in process facilitation, quality assurance, and institutional compliance, ensuring that the academic and administrative functions of LEAD College operate efficiently, transparently, and in alignment with regulatory and institutional requirements.
+                  The Registrar plays a central role in process facilitation, quality assurance, and institutional compliance, ensuring that the academic and administrative functions of LEAD College operate efficiently, transparently, and in alignment with regulatory and institutional requirements.
                 </p>
                 <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>
                   The office is responsible for liaison and coordination with the LEAD Development Council (LDC), the affiliating University, and relevant Government and regulatory bodies, while overseeing the conduct of apex body meetings including the Governing Body, Academic Council, and Board of Studies.
@@ -532,7 +532,7 @@ export default function AcademicAdministratorPage() {
                   color: 'transparent',
                 }}
               >
-                  Key Deliverables of<br />Academic Administration
+                  Key Deliverables of the<br />Registrar&apos;s Office
               </h2>
               <div className="w-16 h-0.5 mx-auto mt-4" style={{ background: BLUE }} />
             </div>

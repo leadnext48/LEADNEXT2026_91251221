@@ -555,16 +555,18 @@ const navSections: NavSection[] = [
     items: [
       { title: "Director",                href: "/director",               description: "Institutional head overseeing academic and administrative leadership",  icon: GraduationCap  },
       { title: "Deputy Director",         href: "/deputy-director",        description: "Assists the Director in institutional governance and operations",       icon: ShieldCheck    },
-      { title: "Academic Administrator",  href: "/academic-administrator", description: "Manages academic coordination, compliance, and execution",             icon: ClipboardCheck },
+      { title: "Registrar",               href: "/registrar",              description: "Academic records, compliance, and institutional coordination",         icon: ClipboardCheck },
       { title: "Deans",                   href: "/deans",                  description: "Leads faculties and academic departments",                             icon: Users          },
       { title: "Program Office",          href: "/program-office",         description: "Handles program management, scheduling, and student services",         icon: Briefcase      },
       { title: "Quality & Accreditation", href: "/iqac",                   description: "Ensures IQAC, NAAC, NBA, NIRF & AICTE standards and compliance",      icon: BadgeCheck     },
+      { title: "Policies",                href: "/policies",               description: "Institutional policies — academic, student, HR & governance",         icon: ClipboardList  },
     ],
   },
   {
     title: "Admissions",
     items: [
       { title: "Overview",     href: "/admissions",          description: "Admission process & eligibility",    icon: Info        },
+      { title: "Refer a Student", href: "/refer",            description: "Refer a prospective MBA/MCA student (MG Claim)",  icon: Users       },
       // ── Brochure: the MBA 2026–28 PDF served directly from /public/convert.
       // Next.js serves files in /public at the root URL, so the PDF is reachable
       // at "/convert/LEAD MBA 26 - 28.pdf" (spaces URL-encoded as %20).

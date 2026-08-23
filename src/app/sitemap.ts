@@ -24,7 +24,7 @@ const ROUTES = [
   "/entrepreneurship",
   "/director",
   "/deputy-director",
-  "/academic-administrator",
+  "/registrar",
   "/deans",
   "/program-office",
   "/iqac",

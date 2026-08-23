@@ -10,7 +10,7 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const DIRECTOR_IMAGE = '/administration/academicadvisor.png';
+const DIRECTOR_IMAGE = '/administration/director.png';
 const MEETING_IMAGE  = '/convert/ue2c6ukku5cecojxhit2.webp';
 
 const BLUE = '#005C9F';

@@ -26,6 +26,10 @@ import {
   Globe,
   Link,
   CalendarClock,
+  ScrollText,
+  Building2,
+  Stamp,
+  BadgeCheck,
 } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
@@ -34,6 +38,17 @@ if (typeof window !== 'undefined') {
 
 const BLUE = '#005C9F';
 const DARK = '#07111C';
+
+/* ── Accreditation document links — files live in public/accreditations/… ── */
+const aicteApprovalLinks = [
+  '2010-2011', '2011-2012', '2012-2013', '2013-2014', '2014-2015', '2015-2016',
+  '2016-2017', '2017-2018', '2018-2019', '2019-2020', '2020-2021', '2021-2022',
+  '2022-2023', '2023-2024', '2024-2025', '2025-2026', '2026-2027',
+].map((y) => ({ label: y.replace('-', '–'), href: `/accreditations/aicte/${y}.pdf`, type: 'pdf' }));
+
+const nirfLinks = Array.from({ length: 9 }, (_, i) => 2018 + i).map((y) => ({
+  label: `NIRF ${y}`, href: `/accreditations/nirf/nirf-${y}.pdf`, type: 'pdf',
+}));
 
 /* ── Mandatory disclosures data ── */
 const disclosures = [
@@ -52,10 +67,34 @@ const disclosures = [
     ],
   },
   {
+    id: 'aicte-approvals',
+    icon: ScrollText,
+    title: 'AICTE Approvals',
+    links: aicteApprovalLinks,
+  },
+  {
+    id: 'autonomous',
+    icon: Building2,
+    title: 'Autonomous Status',
+    links: [
+      { label: 'UGC Autonomous Status',               href: '/accreditations/autonomous/ugc-autonomous-status.pdf',              type: 'pdf' },
+      { label: 'University Autonomous Order (2023)',   href: '/accreditations/autonomous/university-autonomous-order-2023.pdf',  type: 'pdf' },
+    ],
+  },
+  {
+    id: 'government',
+    icon: Stamp,
+    title: 'Government Approval',
+    links: [
+      { label: 'Government Approval — MBA & MCA', href: '/accreditations/government/government-approval-mba-mca.pdf', type: 'pdf' },
+    ],
+  },
+  {
     id: 'nba',
     icon: ShieldCheck,
     title: 'NBA',
     links: [
+      { label: 'NBA Accreditation Certificate (valid till 30 Jun 2025)', href: '/accreditations/nba/nba-accreditation-2025.pdf', type: 'pdf' },
       { label: 'SAR 2021', href: '#sar-2021', type: 'pdf' },
       { label: 'SAR 2025', href: '#sar-2025', type: 'pdf' },
     ],
@@ -72,15 +111,24 @@ const disclosures = [
     id: 'nirf',
     icon: BarChart3,
     title: 'NIRF',
+    links: nirfLinks,
+  },
+  {
+    id: 'iso',
+    icon: BadgeCheck,
+    title: 'ISO Certification',
     links: [
-      { label: 'NIRF 2018', href: '#nirf-2018', type: 'pdf' },
-      { label: 'NIRF 2019', href: '#nirf-2019', type: 'pdf' },
-      { label: 'NIRF 2020', href: '#nirf-2020', type: 'pdf' },
-      { label: 'NIRF 2021', href: '#nirf-2021', type: 'pdf' },
-      { label: 'NIRF 2022', href: '#nirf-2022', type: 'pdf' },
-      { label: 'NIRF 2023', href: '#nirf-2023', type: 'pdf' },
-      { label: 'NIRF 2024', href: '#nirf-2024', type: 'pdf' },
-      { label: 'NIRF 2025', href: '#nirf-2025', type: 'pdf' },
+      { label: 'ISO Certificate 2014', href: '/accreditations/iso/iso-2014.pdf', type: 'pdf' },
+      { label: 'ISO Certificate 2021', href: '/accreditations/iso/iso-2021.pdf', type: 'pdf' },
+      { label: 'ISO Certificate 2023', href: '/accreditations/iso/iso-2023.pdf', type: 'pdf' },
+    ],
+  },
+  {
+    id: 'hlact',
+    icon: Globe,
+    title: 'HLACT',
+    links: [
+      { label: 'HLACT UK Accreditation', href: '/accreditations/hlact/hlact-uk.png', type: 'doc' },
     ],
   },
   {
@@ -404,6 +452,8 @@ export default function QualityAssurancePage({
   return (
     <>
       <style>{`
+        /* Hide hero elements before GSAP runs so they animate in cleanly (no flash of un-animated text on first paint) */
+        .qa-hero .qa-eyebrow, .qa-hero .qa-hero-title, .qa-hero .qa-hero-sub, .qa-hero .qa-accred-row, .qa-hero .qa-hero-marquee-wrap { opacity: 0; }
         .qa-hero {
           height: 100svh; max-height: 100svh; background: #fff;
           display: flex; flex-direction: column; justify-content: center;
@@ -669,7 +719,7 @@ export default function QualityAssurancePage({
                   Official formation document establishing the Internal Quality Assurance Cell at LEAD College.
                 </p>
               </div>
-              <a href="#iqac-formation-letter" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '14px 26px', background: 'rgba(0,92,159,0.22)', border: '1px solid rgba(0,92,159,0.5)', borderRadius: 8, textDecoration: 'none', transition: 'background 0.25s, border-color 0.25s, transform 0.2s', cursor: 'pointer' }} onMouseEnter={e => { const t = e.currentTarget as HTMLElement; t.style.background = 'rgba(0,92,159,0.38)'; t.style.borderColor = 'rgba(0,92,159,0.75)'; t.style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { const t = e.currentTarget as HTMLElement; t.style.background = 'rgba(0,92,159,0.22)'; t.style.borderColor = 'rgba(0,92,159,0.5)'; t.style.transform = ''; }}>
+              <a href="/accreditations/iqac-formation-letter.pdf" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '14px 26px', background: 'rgba(0,92,159,0.22)', border: '1px solid rgba(0,92,159,0.5)', borderRadius: 8, textDecoration: 'none', transition: 'background 0.25s, border-color 0.25s, transform 0.2s', cursor: 'pointer' }} onMouseEnter={e => { const t = e.currentTarget as HTMLElement; t.style.background = 'rgba(0,92,159,0.38)'; t.style.borderColor = 'rgba(0,92,159,0.75)'; t.style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { const t = e.currentTarget as HTMLElement; t.style.background = 'rgba(0,92,159,0.22)'; t.style.borderColor = 'rgba(0,92,159,0.5)'; t.style.transform = ''; }}>
                 <FileText size={17} color="#fff" strokeWidth={1.5} />
                 <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff', fontWeight: 600 }}>Download Letter</span>
                 <Download size={13} color="rgba(255,255,255,0.55)" strokeWidth={1.5} />
@@ -840,7 +890,7 @@ export default function QualityAssurancePage({
                   A detailed, comprehensive overview of the innovative teaching methodologies implemented by our faculty — sorted chronologically and alphabetically, covering 2022–2025.
                 </p>
               </div>
-              <a href="#faculty-initiatives-table" className="qa-fi-cta-btn">
+              <a href="/accreditations/faculty-initiatives/faculty-initiatives-2022-2025.docx" target="_blank" rel="noopener noreferrer" className="qa-fi-cta-btn">
                 <FileText size={16} color="#fff" strokeWidth={1.5} />
                 <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff', fontWeight: 700 }}>View Detailed Table</span>
                 <ArrowUpRight size={14} color="rgba(255,255,255,0.7)" strokeWidth={2} />

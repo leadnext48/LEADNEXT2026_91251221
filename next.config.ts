@@ -12,6 +12,12 @@ remotePatterns: [
 { protocol: "https", hostname: "cdn.sanity.io" },
 ],
 },
+  async redirects() {
+    return [
+      // Academic Administrator was renamed to Registrar — keep old links working.
+      { source: "/academic-administrator", destination: "/registrar", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

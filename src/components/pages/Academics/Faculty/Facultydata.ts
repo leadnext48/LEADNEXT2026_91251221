@@ -725,7 +725,7 @@ const raw: RawMember[] = [
     designation: "Assistant Professor and Administrator",
     department_program: "Management (MBA & MCA)",
     department: "MBA",
-    institutional_roles: "Academic Administrator",
+    institutional_roles: "Registrar",
     email: "yasmin@lead.ac.in",
     orcid_id: "0009-0004-5111-2835",
     google_scholar: "https://scholar.google.com/citations?user=QKIksrwAAAAJ",
