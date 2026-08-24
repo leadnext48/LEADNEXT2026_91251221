@@ -14,7 +14,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { cinzel, playfair } from "@/app/fonts";
 
 export interface EventDetailData {
@@ -52,145 +52,155 @@ function splitBody(body: string): { first: string[]; rest: string[] } {
   return { first: paras.slice(0, 2), rest: paras.slice(2) };
 }
 
-/* ─── RELATED EVENTS ─── */
-function RelatedEvents({ related }: { related: EventDetailData[] }) {
+/* ─── EVENT GALLERY — linear manual carousel + click-to-zoom lightbox ─── */
+function EventGallery({ images, title }: { images: string[]; title: string }) {
+  const trackRef = React.useRef<HTMLDivElement>(null);
+  const [atStart, setAtStart] = React.useState(true);
+  const [atEnd, setAtEnd] = React.useState(false);
+  const [scrollable, setScrollable] = React.useState(false);
+  const [lightbox, setLightbox] = React.useState<number | null>(null);
+
+  const updateEdges = React.useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    setAtStart(el.scrollLeft <= 1);
+    setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1);
+    setScrollable(el.scrollWidth > el.clientWidth + 1);
+  }, []);
+
+  React.useEffect(() => {
+    updateEdges();
+    const el = trackRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateEdges, { passive: true });
+    window.addEventListener("resize", updateEdges);
+    return () => {
+      el.removeEventListener("scroll", updateEdges);
+      window.removeEventListener("resize", updateEdges);
+    };
+  }, [updateEdges]);
+
+  // Move exactly one image per click (not looped, not automatic).
+  const step = (dir: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const first = el.firstElementChild as HTMLElement | null;
+    const amount = first ? first.offsetWidth + 16 : el.clientWidth * 0.8;
+    el.scrollBy({ left: dir * amount, behavior: "smooth" });
+  };
+
+  // Lightbox: keyboard nav + Escape + lock background scroll.
+  React.useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      else if (e.key === "ArrowRight") setLightbox((v) => (v === null ? v : Math.min(images.length - 1, v + 1)));
+      else if (e.key === "ArrowLeft") setLightbox((v) => (v === null ? v : Math.max(0, v - 1)));
+    };
+    window.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [lightbox, images.length]);
+
+  if (!images.length) return null;
+
+  const ctrlBtn = (disabled: boolean): React.CSSProperties => ({
+    width: 40, height: 40, borderRadius: "50%",
+    border: `1px solid ${C.border}`, background: "#fff", color: C.blue,
+    display: "flex", alignItems: "center", justifyContent: "center",
+    cursor: disabled ? "not-allowed" : "pointer", opacity: disabled ? 0.35 : 1,
+    boxShadow: "0 2px 10px rgba(0,92,159,.06)",
+    transition: "opacity .2s ease, background .2s ease",
+  });
+  const lbBtn: React.CSSProperties = {
+    position: "absolute", width: 46, height: 46, borderRadius: "50%",
+    border: "1px solid rgba(255,255,255,.3)", background: "rgba(255,255,255,.09)", color: "#fff",
+    display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", zIndex: 2,
+    backdropFilter: "blur(4px)",
+  };
+
   return (
     <div style={{ marginTop: "clamp(3rem,6vh,5rem)" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", marginBottom: "clamp(1.4rem,3vh,2rem)" }}>
-        <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
-        <span style={{
-          fontFamily: cinzel.style.fontFamily,
-          fontSize: "clamp(.68rem,1.4vw,.78rem)",
-          letterSpacing: ".26em", textTransform: "uppercase",
-          color: C.blue, fontWeight: 700, whiteSpace: "nowrap",
-        }}>More Events</span>
-        <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
+      <style>{`
+        .eg-track { scrollbar-width: thin; scrollbar-color: rgba(0,92,159,.25) transparent; }
+        .eg-track::-webkit-scrollbar { height: 6px; }
+        .eg-track::-webkit-scrollbar-thumb { background: rgba(0,92,159,.22); border-radius: 100px; }
+        .eg-track::-webkit-scrollbar-track { background: transparent; }
+        .eg-item { flex: 0 0 calc((100% - 2rem) / 3); }
+        @media (max-width: 900px){ .eg-item { flex-basis: calc((100% - 1rem) / 2); } }
+        @media (max-width: 560px){ .eg-item { flex-basis: 100%; } }
+      `}</style>
+
+      {/* header: title (left) + carousel controls (right) */}
+      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap", marginBottom: "clamp(1.1rem,2.4vh,1.6rem)" }}>
+        <div>
+          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.5rem,.62vw,.58rem)", letterSpacing: ".26em", textTransform: "uppercase", color: C.blue, fontWeight: 700, margin: "0 0 .35rem" }}>Gallery</p>
+          <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.02em", color: C.text, margin: 0, lineHeight: 1 }}>Event Photos</h2>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.72rem,.85vw,.8rem)", color: C.faint, margin: ".55rem 0 0" }}>Click any photo to view it full size.</p>
+        </div>
+        {scrollable && (
+          <div style={{ display: "flex", gap: ".55rem", flexShrink: 0 }}>
+            <button type="button" onClick={() => step(-1)} disabled={atStart} aria-label="Previous photos" style={ctrlBtn(atStart)}><ChevronLeft size={18} strokeWidth={2} /></button>
+            <button type="button" onClick={() => step(1)} disabled={atEnd} aria-label="Next photos" style={ctrlBtn(atEnd)}><ChevronRight size={18} strokeWidth={2} /></button>
+          </div>
+        )}
       </div>
 
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(clamp(200px,20vw,290px),1fr))",
-        gap: "1.1rem",
-      }}>
-        {related.map(e => (
-          <Link key={e.slug} href={`/life-at-lead/events/${e.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
-            <div
-              style={{
-                borderRadius: 12, overflow: "hidden",
-                border: `1px solid ${C.border}`,
-                background: "#ffffff",
-                boxShadow: "0 2px 10px rgba(0,92,159,.05)",
-                transition: "transform .22s ease, box-shadow .22s ease",
-              }}
-              onMouseEnter={ev => {
-                const el = ev.currentTarget as HTMLElement;
-                el.style.transform = "translateY(-3px)";
-                el.style.boxShadow = "0 8px 26px rgba(0,92,159,.1)";
-              }}
-              onMouseLeave={ev => {
-                const el = ev.currentTarget as HTMLElement;
-                el.style.transform = "translateY(0)";
-                el.style.boxShadow = "0 2px 10px rgba(0,92,159,.05)";
-              }}
-            >
-              <div style={{ aspectRatio: "16/9", overflow: "hidden" }}>
-                <img src={e.image} alt={e.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-              </div>
-              <div style={{ padding: ".8rem 1rem .95rem", background: "#ffffff" }}>
-                <p style={{
-                  fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(.82rem,1.6vw,.92rem)",
-                  fontWeight: 700, textTransform: "uppercase",
-                  letterSpacing: ".05em", color: C.text,
-                  margin: "0 0 .4rem", lineHeight: 1.36,
-                }}>{e.title}</p>
-                <p style={{
-                  fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(.76rem,1.4vw,.82rem)",
-                  color: C.faint, margin: 0,
-                }}>{e.date}</p>
-              </div>
-            </div>
-          </Link>
+      {/* horizontal track — 3 / 2 / 1 medium images visible, snaps one at a time */}
+      <div ref={trackRef} className="eg-track" style={{ display: "flex", gap: "1rem", overflowX: "auto", scrollSnapType: "x mandatory", paddingBottom: ".6rem", WebkitOverflowScrolling: "touch" }}>
+        {images.map((src, t) => (
+          <button
+            key={t}
+            type="button"
+            className="eg-item"
+            onClick={() => setLightbox(t)}
+            aria-label={`View photo ${t + 1} full size`}
+            style={{
+              scrollSnapAlign: "start", padding: 0, border: `1px solid ${C.border}`, background: "#f0f4f8",
+              borderRadius: 14, overflow: "hidden", cursor: "zoom-in",
+              height: "clamp(190px, 24vw, 280px)", boxShadow: "0 6px 22px rgba(0,92,159,.07)",
+              transition: "transform .25s ease, box-shadow .25s ease",
+            }}
+            onMouseEnter={(e) => { const el = e.currentTarget; el.style.transform = "translateY(-3px)"; el.style.boxShadow = "0 12px 32px rgba(0,92,159,.13)"; }}
+            onMouseLeave={(e) => { const el = e.currentTarget; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 6px 22px rgba(0,92,159,.07)"; }}
+          >
+            <img src={src} alt={`${title} — photo ${t + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          </button>
         ))}
       </div>
-    </div>
-  );
-}
 
-/* ─── EVENT GALLERY — manual-click carousel (no infinite loop) ─── */
-function EventGallery({ images, title }: { images: string[]; title: string }) {
-  const [i, setI] = React.useState(0);
-  if (!images.length) return null;
-  const idx = Math.min(i, images.length - 1);
-  const prev = () => setI((v) => Math.max(0, v - 1));
-  const next = () => setI((v) => Math.min(images.length - 1, v + 1));
-
-  const arrowBtn = (disabled: boolean): React.CSSProperties => ({
-    position: "absolute", top: "50%", transform: "translateY(-50%)",
-    width: 42, height: 42, borderRadius: "50%",
-    border: "1px solid rgba(255,255,255,.35)",
-    background: "rgba(7,17,28,.45)", color: "#fff",
-    display: "flex", alignItems: "center", justifyContent: "center",
-    cursor: disabled ? "not-allowed" : "pointer",
-    opacity: disabled ? 0.35 : 1, backdropFilter: "blur(4px)",
-    transition: "opacity .2s ease, background .2s ease", zIndex: 2,
-  });
-
-  return (
-    <div style={{ marginTop: "clamp(3rem,6vh,5rem)" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", marginBottom: "clamp(1.4rem,3vh,2rem)" }}>
-        <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
-        <span style={{
-          fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,1.4vw,.78rem)",
-          letterSpacing: ".26em", textTransform: "uppercase", color: C.blue, fontWeight: 700, whiteSpace: "nowrap",
-        }}>Event Gallery</span>
-        <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
-      </div>
-
-      {/* main image */}
-      <div style={{
-        position: "relative", borderRadius: 16, overflow: "hidden",
-        border: `1px solid ${C.border}`, boxShadow: "0 18px 55px rgba(0,92,159,.12)", background: "#f0f4f8",
-      }}>
-        <img
-          key={idx}
-          src={images[idx]}
-          alt={`${title} — photo ${idx + 1}`}
-          style={{ width: "100%", display: "block", aspectRatio: "16/9", maxHeight: "min(62vh, 540px)", objectFit: "cover" }}
-        />
-        <button type="button" onClick={prev} disabled={idx === 0} aria-label="Previous photo" style={{ ...arrowBtn(idx === 0), left: 12 }}>
-          <ChevronLeft size={20} strokeWidth={2} />
-        </button>
-        <button type="button" onClick={next} disabled={idx === images.length - 1} aria-label="Next photo" style={{ ...arrowBtn(idx === images.length - 1), right: 12 }}>
-          <ChevronRight size={20} strokeWidth={2} />
-        </button>
-        <div style={{
-          position: "absolute", right: 12, bottom: 12, padding: "5px 12px", borderRadius: 100,
-          background: "rgba(7,17,28,.55)", backdropFilter: "blur(4px)", color: "#fff",
-          fontFamily: cinzel.style.fontFamily, fontSize: ".6rem", letterSpacing: ".1em", fontWeight: 700,
-        }}>{idx + 1} / {images.length}</div>
-      </div>
-
-      {/* thumbnails */}
-      {images.length > 1 && (
-        <div style={{ display: "flex", gap: ".6rem", marginTop: ".9rem", overflowX: "auto", paddingBottom: ".25rem" }}>
-          {images.map((src, t) => (
-            <button
-              key={t}
-              type="button"
-              onClick={() => setI(t)}
-              aria-label={`View photo ${t + 1}`}
-              style={{
-                flexShrink: 0, width: 74, height: 52, borderRadius: 8, overflow: "hidden", padding: 0,
-                cursor: "pointer", background: "none",
-                border: t === idx ? `2px solid ${C.blue}` : `1px solid ${C.border}`,
-                opacity: t === idx ? 1 : 0.65, transition: "opacity .2s ease, border-color .2s ease",
-              }}
-            >
-              <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+      {/* lightbox — full image, no cropping */}
+      {lightbox !== null && (
+        <div
+          onClick={() => setLightbox(null)}
+          style={{ position: "fixed", inset: 0, zIndex: 1000, background: "rgba(7,17,28,.9)", backdropFilter: "blur(6px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "clamp(1rem,4vw,3rem)" }}
+        >
+          <button type="button" aria-label="Close" onClick={() => setLightbox(null)} style={{ ...lbBtn, top: 18, right: 18 }}>
+            <X size={22} strokeWidth={2} />
+          </button>
+          {lightbox > 0 && (
+            <button type="button" aria-label="Previous" onClick={(e) => { e.stopPropagation(); setLightbox((v) => (v === null ? v : Math.max(0, v - 1))); }} style={{ ...lbBtn, left: "clamp(.6rem,2vw,2rem)", top: "50%", transform: "translateY(-50%)" }}>
+              <ChevronLeft size={24} strokeWidth={2} />
             </button>
-          ))}
+          )}
+          {lightbox < images.length - 1 && (
+            <button type="button" aria-label="Next" onClick={(e) => { e.stopPropagation(); setLightbox((v) => (v === null ? v : Math.min(images.length - 1, v + 1))); }} style={{ ...lbBtn, right: "clamp(.6rem,2vw,2rem)", top: "50%", transform: "translateY(-50%)" }}>
+              <ChevronRight size={24} strokeWidth={2} />
+            </button>
+          )}
+          <img
+            src={images[lightbox]}
+            alt={`${title} — photo ${lightbox + 1}`}
+            onClick={(e) => e.stopPropagation()}
+            style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", objectFit: "contain", borderRadius: 10, boxShadow: "0 20px 70px rgba(0,0,0,.5)" }}
+          />
+          <div style={{ position: "absolute", bottom: 20, left: "50%", transform: "translateX(-50%)", padding: "6px 14px", borderRadius: 100, background: "rgba(255,255,255,.1)", backdropFilter: "blur(4px)", color: "#fff", fontFamily: cinzel.style.fontFamily, fontSize: ".62rem", letterSpacing: ".12em", fontWeight: 700 }}>
+            {lightbox + 1} / {images.length}
+          </div>
         </div>
       )}
     </div>
@@ -200,7 +210,7 @@ function EventGallery({ images, title }: { images: string[]; title: string }) {
 /* ═══════════════════════════════════════════════════════════════
    COMPONENT
 ═══════════════════════════════════════════════════════════════ */
-export default function EventDetailPage({ event, related }: { event: EventDetailData; related: EventDetailData[] }) {
+export default function EventDetailPage({ event }: { event: EventDetailData; related?: EventDetailData[] }) {
   const { first, rest } = splitBody(event.body);
 
   return (
@@ -387,9 +397,6 @@ export default function EventDetailPage({ event, related }: { event: EventDetail
           {event.gallery && event.gallery.length > 0 && (
             <EventGallery images={event.gallery} title={event.title} />
           )}
-
-          {/* ══ RELATED EVENTS ══ */}
-          <RelatedEvents related={related} />
 
           {/* ══ BACK BUTTON ══ */}
           <div style={{
