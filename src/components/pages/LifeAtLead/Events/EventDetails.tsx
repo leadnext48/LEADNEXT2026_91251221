@@ -157,7 +157,7 @@ function EventGallery({ images, title }: { images: string[]; title: string }) {
           key={idx}
           src={images[idx]}
           alt={`${title} — photo ${idx + 1}`}
-          style={{ width: "100%", display: "block", aspectRatio: "16/9", objectFit: "cover" }}
+          style={{ width: "100%", display: "block", aspectRatio: "16/9", maxHeight: "min(62vh, 540px)", objectFit: "cover" }}
         />
         <button type="button" onClick={prev} disabled={idx === 0} aria-label="Previous photo" style={{ ...arrowBtn(idx === 0), left: 12 }}>
           <ChevronLeft size={20} strokeWidth={2} />

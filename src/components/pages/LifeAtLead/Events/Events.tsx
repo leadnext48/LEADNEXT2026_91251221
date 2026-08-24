@@ -265,14 +265,20 @@ function GridSection({ events }: { events: EventCardItem[] }) {
           <div style={{ height: 1, background: `linear-gradient(90deg,rgba(0,92,159,.18) 0%,transparent 100%)`, marginTop: "1.1rem" }} />
         </motion.div>
 
+        <style>{`
+          .ev-grid-cards { grid-template-columns: repeat(3, 1fr); }
+          @media (max-width: 900px){ .ev-grid-cards { grid-template-columns: repeat(2, 1fr); } }
+          @media (max-width: 600px){ .ev-grid-cards { grid-template-columns: 1fr; } }
+        `}</style>
         <AnimatePresence mode="wait">
           <motion.div
             key={page}
+            className="ev-grid-cards"
             initial="hidden"
             animate="visible"
             exit={{ opacity: 0, y: -8, transition: { duration: .18 } }}
             variants={GRID_CONTAINER}
-            style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
+            style={{ display: "grid", gap: "1.5rem" }}>
             {visible.map(event => (
               <EventCard key={event.id} event={event} />
             ))}

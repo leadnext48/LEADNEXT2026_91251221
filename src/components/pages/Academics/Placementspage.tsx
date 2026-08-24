@@ -606,9 +606,18 @@ function TrajectorySection() {
           </div>
         </div>
 
-        <div style={{
+        <style>{`
+          .pl-summary-grid { grid-template-columns: repeat(5,1fr) auto; }
+          @media (max-width: 900px){
+            .pl-summary-grid { grid-template-columns: repeat(3,1fr); }
+            .pl-summary-report { grid-column: 1 / -1; flex-direction: row !important; align-items: center !important; }
+          }
+          @media (max-width: 560px){
+            .pl-summary-grid { grid-template-columns: repeat(2,1fr); }
+          }
+        `}</style>
+        <div className="pl-summary-grid" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(5,1fr) auto",
           gap: "1px", background: "rgba(30,58,138,.07)",
           border: "1px solid rgba(30,58,138,.07)",
         }}>
@@ -629,11 +638,11 @@ function TrajectorySection() {
             </div>
           ))}
 
-          <a  style={{
+          <a className="pl-summary-report" style={{
             background: BLUE, padding: "1.75rem 1.5rem",
             display: "flex", flexDirection: "column",
             alignItems: "flex-start", justifyContent: "space-between",
-            textDecoration: "none", minWidth: 140,
+            textDecoration: "none", minWidth: 140, gap: "1rem",
           }}>
             <div>
               <div style={{ fontFamily: C, fontSize: "0.5rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,.45)", marginBottom: "0.4rem" }}>Batch {h.batch}</div>
@@ -754,8 +763,8 @@ function RecruitersSection() {
 
       {/* Marquee Area */}
       <div
+        className="pl-marquee-wrap"
         style={{
-          width: "75%",
           margin: "0 auto",
           height: "420px",
           overflow: "hidden",
@@ -767,9 +776,9 @@ function RecruitersSection() {
         }}
       >
         <div
+          className="pl-marquee-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(6, 1fr)",
             gap: "1.4rem",
             animation: "verticalMarquee 28s linear infinite",
           }}
@@ -822,6 +831,19 @@ function RecruitersSection() {
             100% {
               transform: translateY(-50%);
             }
+          }
+          .pl-marquee-wrap { width: 75%; }
+          .pl-marquee-grid { grid-template-columns: repeat(6, 1fr); }
+          @media (max-width: 1024px){
+            .pl-marquee-wrap { width: 88%; }
+            .pl-marquee-grid { grid-template-columns: repeat(4, 1fr); }
+          }
+          @media (max-width: 700px){
+            .pl-marquee-wrap { width: 92%; }
+            .pl-marquee-grid { grid-template-columns: repeat(3, 1fr); }
+          }
+          @media (max-width: 480px){
+            .pl-marquee-grid { grid-template-columns: repeat(2, 1fr); }
           }
         `}
       </style>

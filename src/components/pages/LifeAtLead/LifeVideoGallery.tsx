@@ -221,14 +221,21 @@ function GridSection({ photos }: { photos: Photo[] }) {
           </motion.div>
 
           {/* Grid — 4 columns × 3 rows = 12 per page */}
+          <style>{`
+            .gal-grid-photos { grid-template-columns: repeat(4, 1fr); }
+            @media (max-width: 1024px){ .gal-grid-photos { grid-template-columns: repeat(3, 1fr); } }
+            @media (max-width: 720px){ .gal-grid-photos { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 460px){ .gal-grid-photos { grid-template-columns: 1fr; } }
+          `}</style>
           <AnimatePresence mode="wait">
             <motion.div
               key={page}
+              className="gal-grid-photos"
               initial="hidden"
               animate="visible"
               exit={{ opacity: 0, y: -8, transition: { duration: 0.18 } }}
               variants={GRID_CONTAINER}
-              style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.25rem" }}
+              style={{ display: "grid", gap: "1.25rem" }}
             >
               {visible.map((photo, i) => (
                 <PhotoCard key={photo.id} photo={photo} onClick={() => openLightbox(i)} />
