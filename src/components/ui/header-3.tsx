@@ -444,14 +444,29 @@ function MobileMenu({
   onClose: () => void;
   onApply: () => void;
 }) {
+  const [menuTop, setMenuTop] = useState(64);
+
+  useEffect(() => {
+    if (!open) return;
+    // Start the panel right below the *visible* header — which is taller on the
+    // homepage because of the blue contact strip sitting above the nav.
+    const header = document.querySelector("header");
+    if (header) setMenuTop(Math.max(0, Math.round(header.getBoundingClientRect().bottom)));
+    // Lock background scroll so the page behind doesn't move or bleed through.
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, [open]);
+
   if (!open || typeof window === "undefined") return null;
 
   return createPortal(
     <div
       id="mobile-menu"
-      className="fixed inset-0 top-16 z-40 bg-white p-4 md:hidden overflow-y-auto"
+      style={{ top: menuTop }}
+      className="fixed inset-x-0 bottom-0 z-40 bg-white p-4 md:hidden overflow-y-auto overscroll-contain"
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 pb-10">
         <Button
           className="w-full bg-black text-white cursor-pointer"
           onClick={onApply}

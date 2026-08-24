@@ -372,9 +372,10 @@ const CSS = `
 .hv-strip-loc{display:inline-flex;align-items:center;gap:.35rem;color:#b8c8e0;}
 .hv-strip-sep{width:1px;height:13px;background:rgba(255,255,255,.22);}
 .hv-strip-adm{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#ffd98a;font-weight:600;}
-.hv-strip-social{display:flex;gap:.65rem;}
+.hv-strip-social{display:flex;gap:.65rem;flex-shrink:0;}
 @media(max-width:760px){.hv-hide-sm{display:none!important;}}
-@media(max-width:520px){.hv-strip-left a span,.hv-strip-adm{font-size:.55rem;}.hv-strip-left a:first-child{gap:.3rem;}}
+@media(max-width:640px){.hv-strip-adm{display:none!important;}.hv-strip-left a:nth-of-type(2){display:none!important;}.hv-strip-left .hv-strip-sep,.hv-strip-right .hv-strip-sep{display:none!important;}.hv-strip-in{gap:.5rem;}.hv-strip{font-size:.7rem;}}
+@media(max-width:520px){.hv-strip-left a span{font-size:.6rem;}.hv-strip-left a:first-child{gap:.3rem;}.hv-strip-social{gap:.85rem;}}
 
 /* ── hero ── */
 .hv-hero{position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#06122f;}

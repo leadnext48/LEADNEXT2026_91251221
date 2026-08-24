@@ -520,6 +520,8 @@ export default function QualityAssurancePage({
         .qa-dl-arrow { opacity: 0; transform: translate(-4px, 4px); transition: opacity 0.2s ease, transform 0.2s ease; flex-shrink: 0; }
         .qa-disc-panel-section { display: none; }
         .qa-disc-panel-section.visible { display: block; }
+        .qa-disc-mobile-nav { display: none; }
+        .qa-disc-select { width: 100%; padding: 0.9rem 2.5rem 0.9rem 1rem; border: 1px solid rgba(0,92,159,0.2); border-radius: 10px; background-color: #f5f8fc; font-family: var(--font-cinzel, serif); font-size: 0.72rem; font-weight: 700; color: #005C9F; text-transform: uppercase; letter-spacing: 0.05em; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23005C9F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; cursor: pointer; }
         .qa-accred-overview { background: #fff; height: 100svh; max-height: 100svh; overflow: hidden; box-sizing: border-box; padding: clamp(3rem, 6vh, 5rem) clamp(1.5rem, 10vw, 9rem); display: flex; flex-direction: column; justify-content: center; position: relative; }
         .qa-arc { position: absolute; top: -30%; right: -15%; width: clamp(400px, 55vw, 800px); height: clamp(400px, 55vw, 800px); border-radius: 50%; border: 1px solid rgba(0,92,159,0.055); pointer-events: none; z-index: 0; }
         .qa-arc::after { content: ''; position: absolute; top: 12%; left: 12%; right: 12%; bottom: 12%; border-radius: 50%; border: 1px solid rgba(0,92,159,0.04); }
@@ -575,7 +577,7 @@ export default function QualityAssurancePage({
         @media (max-width: 1280px) { .qa-fi-cards { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 1100px) { .qa-peo-grid { grid-template-columns: repeat(2, 1fr); } .qa-po-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 1024px) { .qa-personas-grid { grid-template-columns: 1fr; } .qa-disc-layout { grid-template-columns: 220px 1fr; } .qa-accred-overview-inner { grid-template-columns: 1fr; gap: 1.5rem; } .qa-accred-overview { height: auto; min-height: 100svh; } .qa-fi-body { grid-template-columns: 1fr; } .qa-fi-cards { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .qa-disc-layout { grid-template-columns: 1fr; } .qa-disc-sidebar { border-right: none; border-bottom: 1px solid rgba(0,92,159,0.09); display: flex; flex-wrap: wrap; } .qa-disc-tab { border-bottom: none; border-right: 1px solid rgba(0,92,159,0.07); flex: 1; min-width: 120px; } .qa-accred-strip { overflow-x: auto; flex-wrap: nowrap; } .qa-accred-row { min-width: 140px; } .qa-fi-cards { grid-template-columns: repeat(2, 1fr); } .qa-pso-grid { grid-template-columns: 1fr; } .qa-peo-grid { grid-template-columns: 1fr; } .qa-po-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .qa-disc-layout { grid-template-columns: 1fr; } .qa-disc-sidebar { display: none; } .qa-disc-mobile-nav { display: block; margin-bottom: 1rem; } .qa-disc-panel { padding: 1.2rem 1.1rem; } .qa-accred-strip { overflow-x: auto; flex-wrap: nowrap; } .qa-accred-row { min-width: 140px; } .qa-fi-cards { grid-template-columns: repeat(2, 1fr); } .qa-pso-grid { grid-template-columns: 1fr; } .qa-peo-grid { grid-template-columns: 1fr; } .qa-po-grid { grid-template-columns: 1fr; } }
         @media (max-width: 600px) { .qa-hero { padding-bottom: 4rem; } .qa-hero-marquee-wrap { display: none; } .qa-fi-cards { grid-template-columns: 1fr; } .qa-fi-cta { flex-direction: column; align-items: flex-start; } }
         @media (prefers-reduced-motion: reduce) { .qa-marquee-track { animation: none; } }
       `}</style>
@@ -741,6 +743,22 @@ export default function QualityAssurancePage({
                 All statutory disclosure documents as required by AICTE, NBA, NAAC, NIRF, and governing bodies.
               </p>
             </div>
+          </div>
+
+          <div className="qa-disc-mobile-nav">
+            <select
+              aria-label="Select a category to view documents"
+              className="qa-disc-select"
+              defaultValue={disclosureSections[0]?.id}
+              onChange={(e) => {
+                const btn = document.querySelector(`.qa-disc-tab[data-panel="${e.target.value}"]`) as HTMLElement | null;
+                btn?.click();
+              }}
+            >
+              {disclosureSections.map((d) => (
+                <option key={d.id} value={d.id}>{d.title} — {d.links.length} document{d.links.length !== 1 ? 's' : ''}</option>
+              ))}
+            </select>
           </div>
 
           <div className="qa-disc-layout">

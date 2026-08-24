@@ -51,6 +51,15 @@ export const event = defineType({
       validation: (r) => r.required(),
     }),
     defineField({
+      name: "gallery",
+      title: "Event Photo Gallery",
+      type: "array",
+      of: [{ type: "image", options: { hotspot: true } }],
+      description:
+        "Upload multiple photos from the event (shown as a gallery on the event page). This is separate from the cover image, and you can add as many as you like.",
+      options: { layout: "grid" },
+    }),
+    defineField({
       name: "excerpt",
       title: "Short Summary",
       type: "text",

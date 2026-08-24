@@ -217,13 +217,13 @@ export default function PoliciesPage() {
         .pol-dl-label { flex: 1; transition: color 0.2s ease; }
         .pol-dl-badge { font-size: 0.65rem; padding: 2px 7px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.2); border-radius: 100px; color: ${BLUE}; font-weight: 700; letter-spacing: 0.06em; font-family: var(--font-cinzel, serif); text-transform: uppercase; white-space: nowrap; }
         .pol-dl-arrow { opacity: 0; transform: translate(-4px, 4px); transition: opacity 0.2s ease, transform 0.2s ease; flex-shrink: 0; }
+        .pol-mobile-nav { display: none; }
+        .pol-select { width: 100%; padding: 0.9rem 2.5rem 0.9rem 1rem; border: 1px solid rgba(0,92,159,0.2); border-radius: 10px; background-color: #f5f8fc; font-family: var(--font-cinzel, serif); font-size: 0.72rem; font-weight: 700; color: ${BLUE}; text-transform: uppercase; letter-spacing: 0.05em; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23005C9F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; cursor: pointer; }
         @media (max-width: 900px) {
           .pol-layout { grid-template-columns: 1fr; }
-          .pol-sidebar { border-right: none; border-bottom: 1px solid rgba(0,92,159,0.09); display: flex; flex-wrap: wrap; }
-          .pol-tab { flex: 1; min-width: 150px; }
-          .pol-tab-count { display: none; }
-          .pol-pill { display: none; }
-          .pol-tab.active { background: ${BLUE}; }
+          .pol-sidebar { display: none; }
+          .pol-mobile-nav { display: block; margin-bottom: 1rem; }
+          .pol-panel { padding: 1.2rem 1.1rem; }
         }
         @media (max-width: 600px) { .pol-hero { padding-bottom: 4rem; } }
       `}</style>
@@ -267,6 +267,19 @@ export default function PoliciesPage() {
                 Browse by category. All documents open in a new tab for viewing or download.
               </p>
             </div>
+          </div>
+
+          <div className="pol-mobile-nav">
+            <select
+              aria-label="Select a policy category"
+              className="pol-select"
+              value={active}
+              onChange={(e) => setActive(e.target.value)}
+            >
+              {CATEGORIES.map((c) => (
+                <option key={c.id} value={c.id}>{c.title} — {c.items.length} document{c.items.length !== 1 ? 's' : ''}</option>
+              ))}
+            </select>
           </div>
 
           <div className="pol-layout">

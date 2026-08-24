@@ -10,6 +10,7 @@ export const eventsQuery = groq`
     date,
     excerpt,
     image,
+    gallery,
     body
   }
 `;
@@ -23,6 +24,7 @@ export const eventBySlugQuery = groq`
     date,
     excerpt,
     image,
+    gallery,
     body
   }
 `;

@@ -14,7 +14,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { cinzel, playfair } from "@/app/fonts";
 
 export interface EventDetailData {
@@ -23,6 +23,7 @@ export interface EventDetailData {
   category: string;
   date: string;
   image: string;
+  gallery: string[];
   excerpt: string;
   body: string;
 }
@@ -59,7 +60,7 @@ function RelatedEvents({ related }: { related: EventDetailData[] }) {
         <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
         <span style={{
           fontFamily: cinzel.style.fontFamily,
-          fontSize: "clamp(.4rem,.52vw,.48rem)",
+          fontSize: "clamp(.68rem,1.4vw,.78rem)",
           letterSpacing: ".26em", textTransform: "uppercase",
           color: C.blue, fontWeight: 700, whiteSpace: "nowrap",
         }}>More Events</span>
@@ -98,14 +99,14 @@ function RelatedEvents({ related }: { related: EventDetailData[] }) {
               <div style={{ padding: ".8rem 1rem .95rem", background: "#ffffff" }}>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(.6rem,.72vw,.68rem)",
+                  fontSize: "clamp(.82rem,1.6vw,.92rem)",
                   fontWeight: 700, textTransform: "uppercase",
                   letterSpacing: ".05em", color: C.text,
-                  margin: "0 0 .28rem", lineHeight: 1.32,
+                  margin: "0 0 .4rem", lineHeight: 1.36,
                 }}>{e.title}</p>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(.64rem,.74vw,.7rem)",
+                  fontSize: "clamp(.76rem,1.4vw,.82rem)",
                   color: C.faint, margin: 0,
                 }}>{e.date}</p>
               </div>
@@ -113,6 +114,85 @@ function RelatedEvents({ related }: { related: EventDetailData[] }) {
           </Link>
         ))}
       </div>
+    </div>
+  );
+}
+
+/* ─── EVENT GALLERY — manual-click carousel (no infinite loop) ─── */
+function EventGallery({ images, title }: { images: string[]; title: string }) {
+  const [i, setI] = React.useState(0);
+  if (!images.length) return null;
+  const idx = Math.min(i, images.length - 1);
+  const prev = () => setI((v) => Math.max(0, v - 1));
+  const next = () => setI((v) => Math.min(images.length - 1, v + 1));
+
+  const arrowBtn = (disabled: boolean): React.CSSProperties => ({
+    position: "absolute", top: "50%", transform: "translateY(-50%)",
+    width: 42, height: 42, borderRadius: "50%",
+    border: "1px solid rgba(255,255,255,.35)",
+    background: "rgba(7,17,28,.45)", color: "#fff",
+    display: "flex", alignItems: "center", justifyContent: "center",
+    cursor: disabled ? "not-allowed" : "pointer",
+    opacity: disabled ? 0.35 : 1, backdropFilter: "blur(4px)",
+    transition: "opacity .2s ease, background .2s ease", zIndex: 2,
+  });
+
+  return (
+    <div style={{ marginTop: "clamp(3rem,6vh,5rem)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "1.4rem", marginBottom: "clamp(1.4rem,3vh,2rem)" }}>
+        <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
+        <span style={{
+          fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,1.4vw,.78rem)",
+          letterSpacing: ".26em", textTransform: "uppercase", color: C.blue, fontWeight: 700, whiteSpace: "nowrap",
+        }}>Event Gallery</span>
+        <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
+      </div>
+
+      {/* main image */}
+      <div style={{
+        position: "relative", borderRadius: 16, overflow: "hidden",
+        border: `1px solid ${C.border}`, boxShadow: "0 18px 55px rgba(0,92,159,.12)", background: "#f0f4f8",
+      }}>
+        <img
+          key={idx}
+          src={images[idx]}
+          alt={`${title} — photo ${idx + 1}`}
+          style={{ width: "100%", display: "block", aspectRatio: "16/9", objectFit: "cover" }}
+        />
+        <button type="button" onClick={prev} disabled={idx === 0} aria-label="Previous photo" style={{ ...arrowBtn(idx === 0), left: 12 }}>
+          <ChevronLeft size={20} strokeWidth={2} />
+        </button>
+        <button type="button" onClick={next} disabled={idx === images.length - 1} aria-label="Next photo" style={{ ...arrowBtn(idx === images.length - 1), right: 12 }}>
+          <ChevronRight size={20} strokeWidth={2} />
+        </button>
+        <div style={{
+          position: "absolute", right: 12, bottom: 12, padding: "5px 12px", borderRadius: 100,
+          background: "rgba(7,17,28,.55)", backdropFilter: "blur(4px)", color: "#fff",
+          fontFamily: cinzel.style.fontFamily, fontSize: ".6rem", letterSpacing: ".1em", fontWeight: 700,
+        }}>{idx + 1} / {images.length}</div>
+      </div>
+
+      {/* thumbnails */}
+      {images.length > 1 && (
+        <div style={{ display: "flex", gap: ".6rem", marginTop: ".9rem", overflowX: "auto", paddingBottom: ".25rem" }}>
+          {images.map((src, t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={() => setI(t)}
+              aria-label={`View photo ${t + 1}`}
+              style={{
+                flexShrink: 0, width: 74, height: 52, borderRadius: 8, overflow: "hidden", padding: 0,
+                cursor: "pointer", background: "none",
+                border: t === idx ? `2px solid ${C.blue}` : `1px solid ${C.border}`,
+                opacity: t === idx ? 1 : 0.65, transition: "opacity .2s ease, border-color .2s ease",
+              }}
+            >
+              <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -158,7 +238,7 @@ export default function EventDetailPage({ event, related }: { event: EventDetail
               href="/life-at-lead/events"
               style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(.38rem,.48vw,.44rem)",
+                fontSize: "clamp(.74rem,1.5vw,.82rem)",
                 letterSpacing: ".16em", textTransform: "uppercase",
                 color: C.blue, fontWeight: 700, textDecoration: "none",
                 display: "inline-flex", alignItems: "center", gap: ".35rem",
@@ -167,13 +247,13 @@ export default function EventDetailPage({ event, related }: { event: EventDetail
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = ".7"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; }}
             >
-              <ArrowLeft size={11} strokeWidth={2.2} />
+              <ArrowLeft size={15} strokeWidth={2.2} />
               All Events
             </Link>
-            <ChevronRight size={10} color={C.faint} strokeWidth={1.8} />
+            <ChevronRight size={14} color={C.faint} strokeWidth={1.8} />
             <span style={{
               fontFamily: cinzel.style.fontFamily,
-              fontSize: "clamp(.38rem,.48vw,.44rem)",
+              fontSize: "clamp(.74rem,1.5vw,.82rem)",
               letterSpacing: ".12em", textTransform: "uppercase",
               color: C.faint, fontWeight: 600,
               maxWidth: "55vw",
@@ -190,10 +270,10 @@ export default function EventDetailPage({ event, related }: { event: EventDetail
               marginBottom: "clamp(.65rem,1.2vh,.95rem)",
             }}
           >
-            <Calendar size={11} color={C.faint} strokeWidth={1.6} />
+            <Calendar size={15} color={C.faint} strokeWidth={1.6} />
             <span style={{
               fontFamily: cinzel.style.fontFamily,
-              fontSize: "clamp(.38rem,.48vw,.44rem)",
+              fontSize: "clamp(.74rem,1.5vw,.82rem)",
               letterSpacing: ".16em", textTransform: "uppercase",
               color: C.faint, fontWeight: 600,
             }}>{event.date}</span>
@@ -303,6 +383,11 @@ export default function EventDetailPage({ event, related }: { event: EventDetail
             </motion.div>
           )}
 
+          {/* ══ EVENT GALLERY ══ */}
+          {event.gallery && event.gallery.length > 0 && (
+            <EventGallery images={event.gallery} title={event.title} />
+          )}
+
           {/* ══ RELATED EVENTS ══ */}
           <RelatedEvents related={related} />
 
@@ -317,7 +402,7 @@ export default function EventDetailPage({ event, related }: { event: EventDetail
               style={{
                 display: "inline-flex", alignItems: "center", gap: ".5rem",
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(.38rem,.5vw,.46rem)",
+                fontSize: "clamp(.74rem,1.5vw,.82rem)",
                 letterSpacing: ".18em", textTransform: "uppercase",
                 color: C.blue, fontWeight: 700, textDecoration: "none",
                 border: `1px solid rgba(0,92,159,.18)`,

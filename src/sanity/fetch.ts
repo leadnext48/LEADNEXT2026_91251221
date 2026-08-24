@@ -32,6 +32,7 @@ export interface EventItem {
   category: string;
   date: string;
   image: string;
+  gallery: string[];
   excerpt: string;
   body: string;
 }
@@ -45,6 +46,7 @@ interface RawEvent {
   excerpt: string;
   body: string;
   image: Parameters<typeof urlFor>[0];
+  gallery?: Parameters<typeof urlFor>[0][];
 }
 
 function mapEvent(e: RawEvent): EventItem {
@@ -55,6 +57,7 @@ function mapEvent(e: RawEvent): EventItem {
     category: e.category,
     date: formatDate(e.date),
     image: e.image ? urlFor(e.image).width(900).auto("format").url() : "",
+    gallery: (e.gallery || []).map((g) => urlFor(g).width(1400).auto("format").url()),
     excerpt: e.excerpt,
     body: e.body || "",
   };

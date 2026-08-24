@@ -17,7 +17,7 @@ const DARK = '#07111C';
 const STEPS = [
   { icon: UserCheck,     title: 'Share Their Details', body: 'Enter the prospective student’s name and contact, along with your own details.' },
   { icon: GraduationCap, title: 'They Apply',           body: 'Our admissions team reaches out and guides your referral through the MBA / MCA application.' },
-  { icon: Trophy,        title: 'Claim Your MG',        body: 'Every referral is tracked to you — so your Management Guarantee claim is recorded accurately.' },
+  { icon: Trophy,        title: 'Claim Your MG',        body: 'Every referral is tracked to your Mentor Group — so your MG claim is recorded accurately.' },
 ];
 
 export default function ReferPage() {
@@ -111,7 +111,7 @@ export default function ReferPage() {
             <div className="ref-hero-sub">
               <div style={{ width: 40, height: 2, background: `linear-gradient(90deg, ${BLUE}, #1e3a8a)`, marginBottom: 'clamp(1rem, 2vh, 1.6rem)' }} />
               <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.88rem, 1.05vw, 1rem)', lineHeight: 1.85, color: '#666', margin: 0 }}>
-                Know a future MBA or MCA student? Refer them to LEAD College and help them begin their journey. Submit the details below and our admissions team will take it forward &mdash; every referral is tracked for your Management Guarantee (MG) claim.
+                Know a future MBA or MCA student? Refer them to LEAD College and help them begin their journey. Submit the details below and our admissions team will take it forward &mdash; every referral is tracked to your Mentor Group (MG) for your claim.
               </p>
             </div>
 
