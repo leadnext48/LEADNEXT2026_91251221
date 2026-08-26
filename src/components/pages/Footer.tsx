@@ -53,6 +53,11 @@ export default function Footer() {
                 Placements
               </a>
             </li>
+            <li>
+              <a href="/recognition" className="transition-colors hover:text-[#085eaa]">
+                Recognition
+              </a>
+            </li>
           </ul>
         </div>
 

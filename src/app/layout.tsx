@@ -116,6 +116,31 @@ const STRUCTURED_DATA = {
           availableLanguage: ["en", "ml"],
         },
       ],
+      founder: { "@type": "Person", name: "Dr. Thomas George" },
+      affiliation: { "@type": "CollegeOrUniversity", name: "University of Calicut" },
+      // Real institutional recognitions (as shown on the site).
+      award: [
+        "AICTE Approved",
+        "NAAC Accredited (B++)",
+        "NBA Accredited",
+        "ISO 21001:2018 Certified",
+        "UGC Recognised",
+        "Autonomous status — University of Calicut",
+      ],
+      // Entity consolidation: authoritative + official profiles for the SAME
+      // institution. Helps Google/AI confidently identify LEAD as one entity
+      // and stop dropping it from results.
+      sameAs: [
+        "https://en.wikipedia.org/wiki/LEAD_College_of_Management",
+        "https://www.wikidata.org/wiki/Q61801485",
+        "https://in.linkedin.com/school/lead-college-autonomous/",
+        "https://www.instagram.com/lead_college_official/",
+        "https://www.facebook.com/leadcollegeofficial/",
+        "https://www.youtube.com/@leadcollegeofficial",
+        "https://collegedunia.com/college/55254-lead-college-of-management-palakkad",
+        "https://www.shiksha.com/college/lead-college-of-management-palakkad-43312",
+        "https://www.careers360.com/colleges/lead-college-of-management-palakkad",
+      ],
     },
     {
       "@type": "WebSite",

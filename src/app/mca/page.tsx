@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import MCACinematicPage from "@/components/pages/Academics/MCAPage";
 
 export const metadata: Metadata = {
-  title: "MCA Programme",
+  title: "MCA in Kerala — AI & Data Science MCA in Palakkad",
   description:
-    "LEAD College's 2-year MCA — a future-ready programme spanning AI & Machine Learning, Data Science, Cloud Computing, Generative AI and Cyber Security, with lab-intensive learning and industry internships.",
+    "LEAD College's 2-year MCA in Palakkad, Kerala — an AICTE-approved, future-ready programme spanning AI & Machine Learning, Data Science, Cloud Computing, Generative AI and Cyber Security, with lab-intensive learning and industry internships.",
   keywords: [
     "MCA in Palakkad",
     "MCA in Kerala",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import MBACinematicPage from "@/components/pages/Academics/MBAPage";
 
 export const metadata: Metadata = {
-  title: "MBA Programme",
+  title: "MBA in Kerala — Residential MBA in Palakkad",
   description:
-    "LEAD College's 2-year residential MBA — industry-integrated, with internships every semester, live industry & startup projects, and specialisations in Marketing, Finance, HR and Analytics.",
+    "LEAD College's 2-year residential MBA in Palakkad, Kerala — an AICTE-approved, autonomous, industry-integrated programme with internships every semester, live industry & startup projects, a 90%+ placement record, and specialisations in Marketing, Finance, HR and Analytics.",
   keywords: [
     "MBA in Palakkad",
     "MBA in Kerala",

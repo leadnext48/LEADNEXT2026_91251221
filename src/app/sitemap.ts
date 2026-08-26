@@ -15,6 +15,7 @@ const ROUTES = [
   "/governance",
   "/mba",
   "/mca",
+  "/recognition",
   "/faculty",
   "/placements",
   "/calendar",
