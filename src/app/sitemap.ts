@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next"
 // Generates /sitemap.xml from the site's static routes.
 // Dynamic routes (faculty/[slug], governance/[slug], life-at-lead/events/[slug])
 // are intentionally omitted — add them here if/when their slugs are known.
-const SITE_URL = "https://lead.ac.in"
+const SITE_URL = "https://www.lead.ac.in"
 
 const ROUTES = [
   "", // home

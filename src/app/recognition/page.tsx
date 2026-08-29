@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { cinzel, playfair } from "@/app/fonts";
 
-const SITE_URL = "https://lead.ac.in";
+const SITE_URL = "https://www.lead.ac.in";
 
 export const metadata: Metadata = {
   title: "Recognition, Accreditation & Rankings",

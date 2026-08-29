@@ -6,7 +6,7 @@ import ScrollHeader from "@/components/layout/ScrollHeader"
 // ── Site-wide SEO constants ──────────────────────────────────────────────
 // NOTE: SITE_URL is the canonical production domain. Update it if the site
 // is deployed under a different host so canonical/OG/sitemap URLs stay correct.
-const SITE_URL = "https://lead.ac.in"
+const SITE_URL = "https://www.lead.ac.in"
 const SITE_NAME = "LEAD College"
 // Former name — kept only as an SEO alias so visitors searching the old brand
 // ("LEAD College of Management") still find the site. Not shown to users.

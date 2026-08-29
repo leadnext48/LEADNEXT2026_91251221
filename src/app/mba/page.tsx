@@ -37,11 +37,11 @@ const courseJsonLd = {
   name: "Master of Business Administration (MBA)",
   description:
     "A 2-year, industry-integrated and fully residential MBA at LEAD College, Palakkad, with internships every semester, live industry, research and startup projects, and specialisations in Marketing, Finance, Human Resources and Analytics. Affiliated to the University of Calicut.",
-  url: "https://lead.ac.in/mba",
+  url: "https://www.lead.ac.in/mba",
   provider: {
     "@type": "CollegeOrUniversity",
     name: "LEAD College",
-    url: "https://lead.ac.in",
+    url: "https://www.lead.ac.in",
   },
   educationalCredentialAwarded: "Master of Business Administration (MBA)",
   hasCourseInstance: {

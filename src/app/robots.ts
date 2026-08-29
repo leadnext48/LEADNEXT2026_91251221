@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 
 // Generates /robots.txt — allows all crawlers and points to the sitemap.
 // Keep the host/sitemap domain in sync with SITE_URL in layout.tsx.
-const SITE_URL = "https://lead.ac.in"
+const SITE_URL = "https://www.lead.ac.in"
 
 // AI / LLM crawlers we explicitly welcome (GEO). "*" already allows these, but
 // naming them makes our intent unambiguous to the AI search engines that read

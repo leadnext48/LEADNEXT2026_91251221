@@ -37,11 +37,11 @@ const courseJsonLd = {
   name: "Master of Computer Applications (MCA)",
   description:
     "A 2-year, future-ready MCA at LEAD College, Palakkad, covering Cloud Computing, AI & Machine Learning, Data Science & Big Data, Generative AI, Cyber Security & Forensics, modern web frameworks and software engineering, with lab-intensive learning and industry internships. Affiliated to the University of Calicut.",
-  url: "https://lead.ac.in/mca",
+  url: "https://www.lead.ac.in/mca",
   provider: {
     "@type": "CollegeOrUniversity",
     name: "LEAD College",
-    url: "https://lead.ac.in",
+    url: "https://www.lead.ac.in",
   },
   educationalCredentialAwarded: "Master of Computer Applications (MCA)",
   hasCourseInstance: {
