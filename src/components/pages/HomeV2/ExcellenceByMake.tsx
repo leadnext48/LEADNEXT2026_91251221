@@ -80,7 +80,7 @@ const EBM_CSS = `
 .ebm-header{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,2.5vw,2.5rem);align-items:start;margin-bottom:clamp(.55rem,1vw,.9rem);}
 .ebm-head-left{display:flex;flex-direction:column;gap:clamp(1rem,2vh,1.6rem);}
 .ebm-head-top{padding-bottom:clamp(.8rem,1.8vh,1.3rem);border-bottom:1px solid rgba(10,36,99,.10);}
-.ebm-eyebrow{font-size:clamp(7px,.5vw,9px);letter-spacing:.42em;text-transform:uppercase;color:${NAVY}55;margin:0 0 .4rem;font-weight:600;}
+.ebm-eyebrow{font-size:clamp(10px,.7vw,12px);letter-spacing:.28em;text-transform:uppercase;color:${NAVY}55;margin:0 0 .4rem;font-weight:600;}
 .ebm-h2{font-size:clamp(2rem,3.8vw,4.8rem);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;margin:0;line-height:.92;}
 .ebm-lottie{display:flex;align-items:center;justify-content:center;max-height:320px;overflow:hidden;}
 .ebm-lottie-fallback{width:clamp(160px,22vw,300px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;opacity:.07;}
@@ -98,7 +98,7 @@ const EBM_CSS = `
 .ebm-num{position:absolute;top:.55rem;right:.8rem;font-size:clamp(2rem,2.8vw,3.2rem);font-weight:900;line-height:1;color:${NAVY};opacity:.04;letter-spacing:-.04em;pointer-events:none;}
 .ebm-icon{width:36px;height:36px;border:1px solid rgba(10,36,99,.14);background:linear-gradient(135deg,rgba(10,36,99,.06),rgba(30,58,138,.03));display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:4px;transition:background .28s,border-color .28s;}
 .ebm-card:hover .ebm-icon{background:linear-gradient(135deg,rgba(10,36,99,.12),rgba(30,58,138,.08));border-color:rgba(10,36,99,.28);}
-.ebm-t{font-size:clamp(8.5px,.68vw,11px);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:${NAVY};margin:0;line-height:1.2;}
+.ebm-t{font-size:clamp(11px,.8vw,13px);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:${NAVY};margin:0;line-height:1.2;}
 .ebm-hair{height:1px;background:linear-gradient(90deg,rgba(10,36,99,.18) 0%,transparent 100%);}
 .ebm-b{font-size:clamp(12px,.9vw,14px);color:#4a5568;margin:0;line-height:1.74;}
 `;

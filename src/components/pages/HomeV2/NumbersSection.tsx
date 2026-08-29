@@ -78,10 +78,10 @@ const NB_CSS = `
 .nb-p{font-size:clamp(.82rem,1vw,.94rem);line-height:1.75;color:rgba(14,21,36,.7);margin:.75rem 0 0;max-width:36rem;}
 .nb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem 1.6rem;margin:2rem 0 0;max-width:560px;}
 .nb-v{font-size:clamp(1.25rem,2.1vw,1.9rem);font-weight:700;color:#0e1524;letter-spacing:.01em;line-height:1;}
-.nb-l{font-size:clamp(.56rem,.72vw,.68rem);letter-spacing:.05em;text-transform:uppercase;font-weight:600;color:rgba(14,21,36,.62);margin-top:.5rem;}
+.nb-l{font-size:clamp(.68rem,.8vw,.76rem);letter-spacing:.04em;text-transform:uppercase;font-weight:600;color:rgba(14,21,36,.62);margin-top:.5rem;}
 .nb-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.9rem;}
 .nb-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.62rem 1.15rem;border-radius:7px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;}
-.nb-btn span{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;}
+.nb-btn span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;}
 .nb-btn:hover{transform:translateY(-2px);}
 .nb-btn-solid{background:linear-gradient(135deg,#0a2463 0%,#005C9F 100%);box-shadow:0 5px 18px rgba(10,36,99,.26);}
 .nb-btn-solid span{color:#fff;}.nb-btn-solid svg{color:rgba(255,255,255,.85);}

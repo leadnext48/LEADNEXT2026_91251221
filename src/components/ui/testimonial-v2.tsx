@@ -108,7 +108,7 @@ function TestimonialsColumn({
       >
         {Array.from({ length: 2 }, (_, index) => (
           <React.Fragment key={index}>
-            {testimonials.map(({ text, image, name, role }, i) => (
+            {testimonials.map(({ text, name, role }, i) => (
               <motion.li
                 key={`${index}-${i}`}
                 aria-hidden={index === 1}
@@ -138,15 +138,22 @@ function TestimonialsColumn({
                   </p>
 
                   <footer className="flex items-center gap-3 mt-6">
-                    <img
-                      width={40}
-                      height={40}
-                      src={image}
-                      alt={`Avatar of ${name}`}
-                      className="h-10 w-10 rounded-full object-cover ring-2 ring-neutral-100"
-                    />
+                    <span
+                      aria-hidden
+                      className={cn(
+                        "flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#005C9F] text-base font-semibold text-white ring-2 ring-neutral-100",
+                        cinzel.className,
+                      )}
+                    >
+                      {name
+                        .split(" ")
+                        .filter(Boolean)
+                        .slice(0, 2)
+                        .map((n) => n[0])
+                        .join("")}
+                    </span>
                     <div className="flex flex-col">
-                      <cite className="font-semibold not-italic text-neutral-900">
+                      <cite className="text-[15px] font-semibold not-italic text-neutral-900">
                         {name}
                       </cite>
                       <span className="text-sm text-neutral-500 mt-0.5">

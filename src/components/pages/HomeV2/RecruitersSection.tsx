@@ -57,7 +57,7 @@ const RQ_CSS = `
 .rq{position:relative;background:linear-gradient(180deg,#fff 0%,#f3f7fc 100%);padding:clamp(3.2rem,6.5vw,5.5rem) 0;overflow:hidden;}
 .rq-inner{max-width:1240px;margin:0 auto;padding:0 clamp(1.15rem,4vw,3.2rem);}
 .rq-head{text-align:center;max-width:760px;margin:0 auto;}
-.rq-eyebrow{display:flex;align-items:center;justify-content:center;gap:.8rem;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:#005C9F;font-weight:600;margin:0 0 1rem;}
+.rq-eyebrow{display:flex;align-items:center;justify-content:center;gap:.8rem;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:#005C9F;font-weight:600;margin:0 0 1rem;}
 .rq-dash{display:inline-block;width:24px;height:1.5px;background:#005C9F;}
 .rq-title{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.02;font-weight:700;letter-spacing:-.015em;margin:0;
   background:linear-gradient(90deg,#0D0D0D 0%,#005C9F 64%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
