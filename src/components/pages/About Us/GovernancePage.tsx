@@ -160,7 +160,7 @@ export default function GovernancePage() {
                 <span style={{ width: 3, height: 3, borderRadius: "50%", background: BLUE, display: "inline-block", opacity: 0.5 }} />
                 <span style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "0.48rem", letterSpacing: "0.28em",
+                  fontSize: "0.74rem", letterSpacing: "0.16em",
                   textTransform: "uppercase", color: BLUE, opacity: 0.5, fontWeight: 600,
                 }}>{item}</span>
               </div>
@@ -266,7 +266,7 @@ export default function GovernancePage() {
           opacity: 0; transform: translateY(-10px);
           display: flex; align-items: center; gap: 12px;
           margin-bottom: clamp(0.7rem,1.5vh,1.2rem);
-          font-size: clamp(0.44rem,0.68vw,0.6rem);
+          font-size: clamp(0.66rem,0.85vw,0.74rem);
           letter-spacing: 0.38em; text-transform: uppercase;
           color: ${BLUE}; font-weight: 600;
         }
@@ -372,7 +372,7 @@ export default function GovernancePage() {
         }
         .gov-section-eyebrow {
           display: flex; align-items: center; gap: 0.75rem;
-          font-size: clamp(0.44rem,0.64vw,0.58rem);
+          font-size: clamp(0.66rem,0.85vw,0.74rem);
           letter-spacing: 0.34em; text-transform: uppercase;
           color: ${BLUE}; font-weight: 600; margin-bottom: 0.6rem;
         }
@@ -493,7 +493,7 @@ export default function GovernancePage() {
             padding-top: 4rem;
             padding-bottom: 4.5rem;
           }
-          .governance-grid { grid-template-columns: repeat(2,1fr); }
+          .governance-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
           .gov-section-desc { text-align: left; max-width: none; }
           .gov-section-hdr-row { flex-direction: column; align-items: flex-start; }
         }

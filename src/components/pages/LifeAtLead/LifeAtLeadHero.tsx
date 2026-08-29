@@ -137,7 +137,7 @@ export default function LifeAtLeadHero({
             priority
             sizes="100vw"
             className="object-cover lal-img"
-            style={{ opacity: 0 }}
+            style={{ opacity: 1 }}
           />
           {/* Bottom-heavy gradient so stats stay readable */}
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.48) 50%, rgba(0,0,0,0.14) 100%)" }} />
@@ -176,7 +176,7 @@ export default function LifeAtLeadHero({
           <div
             className="lal-eyebrow"
             style={{
-              opacity: 0,
+              opacity: 1,
               display: "flex",
               alignItems: "center",
               gap: 12,
@@ -187,8 +187,8 @@ export default function LifeAtLeadHero({
             <span
               style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(0.44rem, 0.65vw, 0.58rem)",
-                letterSpacing: "0.32em",
+                fontSize: "clamp(0.66rem, 0.82vw, 0.74rem)",
+                letterSpacing: "0.26em",
                 textTransform: "uppercase",
                 color: "rgba(255,255,255,0.62)",
                 fontWeight: 600,
@@ -217,7 +217,7 @@ export default function LifeAtLeadHero({
               <span
                 key={i}
                 className="lal-line"
-                style={{ display: "block", opacity: 0, color: "#fff" }}
+                style={{ display: "block", opacity: 1, color: "#fff" }}
               >
                 {line}
               </span>
@@ -233,7 +233,7 @@ export default function LifeAtLeadHero({
               background: "rgba(255,255,255,0.48)",
               borderRadius: 2,
               marginBottom: "clamp(1rem, 2vh, 1.6rem)",
-              opacity: 0,
+              opacity: 1,
             }}
           />
 
@@ -241,7 +241,7 @@ export default function LifeAtLeadHero({
           <p
             className="lal-sub"
             style={{
-              opacity: 0,
+              opacity: 1,
               fontFamily: playfair.style.fontFamily,
               fontSize: "clamp(0.82rem, 0.98vw, 0.96rem)",
               lineHeight: 1.8,
@@ -258,7 +258,7 @@ export default function LifeAtLeadHero({
             <div
               className="lal-btns"
               style={{
-                opacity: 0,
+                opacity: 1,
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "center",
@@ -273,9 +273,9 @@ export default function LifeAtLeadHero({
                   className="lal-cb"
                   style={{
                     fontFamily: cinzel.style.fontFamily,
-                    fontSize: "clamp(0.48rem, 0.68vw, 0.62rem)",
+                    fontSize: "clamp(0.72rem, 0.85vw, 0.76rem)",
                     textTransform: "uppercase",
-                    letterSpacing: "0.15em",
+                    letterSpacing: "0.11em",
                     fontWeight: 600,
                     padding: "0.6rem 1.4rem",
                     borderRadius: 999,
@@ -316,7 +316,7 @@ export default function LifeAtLeadHero({
               }}
             >
               {stats.map((s) => (
-                <div key={s.val} className="lal-stat" style={{ opacity: 0, textAlign: "center" }}>
+                <div key={s.val} className="lal-stat" style={{ opacity: 1, textAlign: "center" }}>
                   <p
                     style={{
                       fontFamily: cinzel.style.fontFamily,
@@ -332,7 +332,7 @@ export default function LifeAtLeadHero({
                   <p
                     style={{
                       fontFamily: playfair.style.fontFamily,
-                      fontSize: "0.62rem",
+                      fontSize: "0.75rem",
                       color: "rgba(255,255,255,0.44)",
                       marginTop: 4,
                       lineHeight: 1.45,
@@ -355,7 +355,7 @@ export default function LifeAtLeadHero({
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 10,
-            opacity: 0,
+            opacity: 1,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -366,8 +366,8 @@ export default function LifeAtLeadHero({
           <span
             style={{
               fontFamily: cinzel.style.fontFamily,
-              fontSize: "clamp(0.36rem, 0.5vw, 0.44rem)",
-              letterSpacing: "0.3em",
+              fontSize: "clamp(0.66rem, 0.7vw, 0.72rem)",
+              letterSpacing: "0.24em",
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.4)",
               fontWeight: 600,

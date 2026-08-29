@@ -30,7 +30,7 @@ const IMG = {
 /* ─────────── STYLE HELPERS ─────────── */
 const P: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 'clamp(0.75rem, 0.88vw, 0.88rem)',
+  fontSize: 'clamp(0.88rem, 0.98vw, 0.98rem)',
   lineHeight: 1.8,
   color: '#555',
 };
@@ -41,7 +41,7 @@ const TG: React.CSSProperties = {
 
 /* ─────────── REUSABLE ATOMS ─────────── */
 const Label = ({ text }: { text: string }) => (
-  <span className={cinzel.className} style={{ fontSize: '0.6rem', letterSpacing: '0.3em', color: BLUE2, textTransform: 'uppercase', fontWeight: 600 }}>{text}</span>
+  <span className={cinzel.className} style={{ fontSize: '0.75rem', letterSpacing: '0.24em', color: BLUE2, textTransform: 'uppercase', fontWeight: 600 }}>{text}</span>
 );
 
 const Title = ({ children, size = 'clamp(1.53rem,2.7vw,2.52rem)' }: { children: React.ReactNode; size?: string }) => (
@@ -54,8 +54,8 @@ const Btn = ({ href, label, primary, ext }: { href: string; label: string; prima
   <a href={href} target={ext ? '_blank' : undefined} rel="noreferrer"
     className={`inline-flex items-center gap-1.5 ${cinzel.className} px-4 py-2 rounded-full font-semibold transition-all duration-300`}
     style={primary
-      ? { background: BLUE, color: '#fff', fontSize: '0.58rem', textTransform: 'uppercase', letterSpacing: '0.14em' }
-      : { background: 'transparent', color: BLUE, border: `1.5px solid ${BLUE}`, fontSize: '0.58rem', textTransform: 'uppercase', letterSpacing: '0.14em' }}>
+      ? { background: BLUE, color: '#fff', fontSize: '0.73rem', textTransform: 'uppercase', letterSpacing: '0.14em' }
+      : { background: 'transparent', color: BLUE, border: `1.5px solid ${BLUE}`, fontSize: '0.73rem', textTransform: 'uppercase', letterSpacing: '0.14em' }}>
     {label}
   </a>
 );
@@ -196,7 +196,7 @@ export default function MBAPage() {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-14 pt-28 pb-10">
               {/* Small eyebrow */}
               <p className={`h-line ${cinzel.className} uppercase text-white/70 mb-3`}
-                style={{ fontSize: 'clamp(0.5rem,0.72vw,0.65rem)', letterSpacing: '0.35em', fontWeight: 600 }}>
+                style={{ fontSize: 'clamp(0.66rem,0.82vw,0.74rem)', letterSpacing: '0.28em', fontWeight: 600 }}>
                 Designing Leaders
               </p>
 
@@ -217,8 +217,8 @@ export default function MBAPage() {
                       background: 'rgba(255,255,255,0.1)', color: '#fff',
                       border: '1px solid rgba(255,255,255,0.28)',
                       backdropFilter: 'blur(8px)',
-                      fontSize: 'clamp(0.44rem,.62vw,.58rem)',
-                      textTransform: 'uppercase', letterSpacing: '0.16em',
+                      fontSize: 'clamp(0.66rem,0.78vw,0.74rem)',
+                      textTransform: 'uppercase', letterSpacing: '0.12em',
                     }}>
                     {b}
                   </span>
@@ -235,7 +235,7 @@ export default function MBAPage() {
                 ].map(s => (
                   <div key={s.val} className="h-stat">
                     <p className={cinzel.className} style={{ fontSize: 'clamp(1rem,1.8vw,1.7rem)', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{s.val}</p>
-                    <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.6rem', color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>{s.lbl}</p>
+                    <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>{s.lbl}</p>
                   </div>
                 ))}
               </div>
@@ -247,7 +247,7 @@ export default function MBAPage() {
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-14 items-center">
 
               {/* Left */}
-              <div className="cm-l" style={{ opacity: 0 }}>
+              <div className="cm-l" style={{ opacity: 1 }}>
                 <Label text="About the Programme" />
                 <Title size="clamp(1.44rem,2.6vw,2.4rem)">LEAD MBA —<br />A Commitment to<br />Continuous Excellence</Title>
                 <div className="mt-6 grid grid-cols-2 gap-2.5">
@@ -259,7 +259,7 @@ export default function MBAPage() {
                   ].map(s => (
                     <div key={s.l} className="bg-blue-50/60 rounded-xl p-3 border border-blue-100/50">
                       <p className={cinzel.className} style={{ fontSize: '1.25rem', fontWeight: 700, color: BLUE, lineHeight: 1 }}>{s.v}</p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.65rem', color: '#666', marginTop: 2 }}>{s.l}</p>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: '#666', marginTop: 2 }}>{s.l}</p>
                     </div>
                   ))}
                 </div>
@@ -270,7 +270,7 @@ export default function MBAPage() {
               </div>
 
               {/* Right */}
-              <div className="cm-r space-y-5" style={{ opacity: 0 }}>
+              <div className="cm-r space-y-5" style={{ opacity: 1 }}>
                 <p style={P}>
                   The MBA programme at LEAD College is built on a singular conviction — that management education must be dynamic, purposeful, and rooted in real-world practice. Since its inception in 2010, the Department of Management Studies has continuously evolved its approach, integrating modern pedagogy with experiential learning to produce graduates who are genuinely prepared for the demands of industry and society.
                 </p>
@@ -290,19 +290,19 @@ export default function MBAPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                 {/* Image */}
-                <div className="cu-img relative h-[400px] overflow-hidden rounded-2xl shadow-xl" style={{ opacity: 0 }}>
+                <div className="cu-img relative h-[400px] overflow-hidden rounded-2xl shadow-xl" style={{ opacity: 1 }}>
                   <Image src={IMG.curriculum} alt="Evolving Curriculum" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: BLUE }} />
                 </div>
 
                 {/* Content */}
-                <div className="cu-txt space-y-4" style={{ opacity: 0 }}>
+                <div className="cu-txt space-y-4" style={{ opacity: 1 }}>
                   <Label text="Curriculum" />
                   <Title size="clamp(1.3rem,2.4vw,2.2rem)">A Curriculum<br />That Evolves</Title>
                   <p style={P}>At LEAD, the MBA curriculum is not static. Leveraging autonomous status, the syllabus is reviewed and refined for every incoming batch, incorporating:</p>
                   <div className="space-y-2">
                     {['Current industry trends and digital disruptions', 'Emerging technologies and business models', 'Regulatory and market developments'].map(pt => (
-                      <div key={pt} className="cu-pt flex items-start gap-3" style={{ opacity: 0 }}>
+                      <div key={pt} className="cu-pt flex items-start gap-3" style={{ opacity: 1 }}>
                         <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2" style={{ background: BLUE }} />
                         <p style={{ ...P, margin: 0 }}>{pt}</p>
                       </div>
@@ -327,7 +327,7 @@ export default function MBAPage() {
 
               <div className="grid md:grid-cols-3 gap-5">
                 {INTERNSHIPS.map(({ n, sem, img, desc }) => (
-                  <div key={n} className="in-card group relative rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white flex flex-col" style={{ opacity: 0 }}>
+                  <div key={n} className="in-card group relative rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white flex flex-col" style={{ opacity: 1 }}>
                     {/* Image — scale-[1.3] wrapper prevents parallax gap */}
                     <div className="relative overflow-hidden" style={{ height: 240, flexShrink: 0 }}>
                       <div className="absolute inset-0 scale-[1.3] origin-center">
@@ -359,22 +359,22 @@ export default function MBAPage() {
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
 
               {/* Image */}
-              <div className="so-img relative h-[400px]" style={{ opacity: 0 }}>
+              <div className="so-img relative h-[400px]" style={{ opacity: 1 }}>
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <Image src={IMG.social} alt="Social Immersion" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: BLUE }} />
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="backdrop-blur-md rounded-xl px-4 py-3 border border-white/18" style={{ background: 'rgba(255,255,255,0.1)' }}>
-                      <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 2 }}>Learning with Purpose</p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.5 }}>Real communities. Real challenges. Real management.</p>
+                      <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.74rem', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 2 }}>Learning with Purpose</p>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.5 }}>Real communities. Real challenges. Real management.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Text */}
-              <div className="so-txt space-y-4" style={{ opacity: 0 }}>
+              <div className="so-txt space-y-4" style={{ opacity: 1 }}>
                 <Label text="Experiential Component" />
                 <Title size="clamp(1.44rem,2.6vw,2.4rem)">Social<br />Immersion</Title>
                 <p style={P}>An integral component designed to sensitize students to societal realities while applying management principles to real-world social contexts. Through structured field engagement, students identify social and developmental challenges, analyse them using managerial frameworks, and propose sustainable, practical solutions.</p>
@@ -384,7 +384,7 @@ export default function MBAPage() {
                     'Foster empathy, ethical awareness, and inclusive leadership',
                     'Sustainable, practical solutions to social challenges',
                   ].map(pt => (
-                    <div key={pt} className="so-hl flex items-start gap-3 border-l-4 pl-4 py-2" style={{ borderColor: BLUE, opacity: 0 }}>
+                    <div key={pt} className="so-hl flex items-start gap-3 border-l-4 pl-4 py-2" style={{ borderColor: BLUE, opacity: 1 }}>
                       <p style={{ ...P, margin: 0 }}>{pt}</p>
                     </div>
                   ))}
@@ -427,7 +427,7 @@ export default function MBAPage() {
 
               <div className="grid md:grid-cols-3 gap-5">
                 {PROJECTS.map(({ title, desc, icon }, idx) => (
-                  <div key={title} className="pr-card bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style={{ opacity: 0 }}>
+                  <div key={title} className="pr-card bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style={{ opacity: 1 }}>
                     {/* Mini undraw illustration per card */}
                     <div className="w-full h-28 mb-4 flex items-center justify-center rounded-xl" style={{ background: 'rgba(30,58,138,0.04)' }}>
                       {idx === 0 && (
@@ -477,7 +477,7 @@ export default function MBAPage() {
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
 
               {/* Left: all text */}
-              <div className="re-l space-y-5" style={{ opacity: 0 }}>
+              <div className="re-l space-y-5" style={{ opacity: 1 }}>
                 <Label text="Campus Life" />
                 <Title size="clamp(1.44rem,2.6vw,2.4rem)">Fully Residential.<br />Fully Immersive.</Title>
                 <p style={P}>
@@ -485,7 +485,7 @@ export default function MBAPage() {
                 </p>
                 <div className="space-y-3 pt-1">
                   {RESIDENTIAL_FEATURES.map(({ title, desc }) => (
-                    <div key={title} className="re-feat flex items-start gap-3" style={{ opacity: 0 }}>
+                    <div key={title} className="re-feat flex items-start gap-3" style={{ opacity: 1 }}>
                       <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2" style={{ background: BLUE }} />
                       <div>
                         <p className={cinzel.className} style={{ fontSize: 'clamp(0.62rem,0.78vw,0.72rem)', fontWeight: 700, color: BLUE, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 2 }}>{title}</p>
@@ -500,7 +500,7 @@ export default function MBAPage() {
               </div>
 
               {/* Right: image with overlay */}
-              <div className="re-l relative h-[480px]" style={{ opacity: 0 }}>
+              <div className="re-l relative h-[480px]" style={{ opacity: 1 }}>
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={IMG.residential}
@@ -514,10 +514,10 @@ export default function MBAPage() {
                   {/* Bottom overlay card */}
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="rounded-xl px-5 py-4 border border-white/18" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(12px)' }}>
-                      <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 4 }}>
+                      <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.74rem', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 4 }}>
                         Fully Residential Campus
                       </p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.78rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.55 }}>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.9rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.55 }}>
                         Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.
                       </p>
                     </div>
@@ -537,7 +537,7 @@ export default function MBAPage() {
 
               <div className="grid md:grid-cols-3 gap-5">
                 {FACULTY_ITEMS.map(({ title, desc, path }) => (
-                  <div key={title} className="fa-item bg-white rounded-2xl p-7 border border-gray-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300" style={{ opacity: 0 }}>
+                  <div key={title} className="fa-item bg-white rounded-2xl p-7 border border-gray-100 shadow-sm text-center hover:shadow-md hover:-translate-y-1 transition-all duration-300" style={{ opacity: 1 }}>
                     <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5" style={{ background: 'rgba(30,58,138,0.07)' }}>
                       <svg className="w-7 h-7" style={{ color: BLUE }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d={path} />
@@ -556,13 +556,13 @@ export default function MBAPage() {
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
 
               {/* Left: text */}
-              <div className="as-txt space-y-4" style={{ opacity: 0 }}>
+              <div className="as-txt space-y-4" style={{ opacity: 1 }}>
                 <Label text="Evaluation" />
                 <Title size="clamp(1.44rem,2.6vw,2.4rem)">Skill-Based<br />Assessment</Title>
                 <p style={P}>Assessment goes beyond traditional examinations. We adopt authentic, skill-based evaluation methods to ensure measurable managerial and digital competence.</p>
                 <div className="space-y-2.5">
                   {ASSESSMENT_METHODS.map(m => (
-                    <div key={m} className="as-mth flex items-start gap-3 p-3.5 rounded-xl border border-gray-100 bg-white hover:bg-blue-50/40 transition-colors duration-300" style={{ opacity: 0 }}>
+                    <div key={m} className="as-mth flex items-start gap-3 p-3.5 rounded-xl border border-gray-100 bg-white hover:bg-blue-50/40 transition-colors duration-300" style={{ opacity: 1 }}>
                       <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2" style={{ background: BLUE }} />
                       <p style={{ ...P, margin: 0 }}>{m}</p>
                     </div>
@@ -572,7 +572,7 @@ export default function MBAPage() {
               </div>
 
               {/* Right: image */}
-              <div className="as-img relative h-[420px]" style={{ opacity: 0 }}>
+              <div className="as-img relative h-[420px]" style={{ opacity: 1 }}>
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <Image src={IMG.assessment} alt="Skill Assessment" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: BLUE }} />
@@ -586,7 +586,7 @@ export default function MBAPage() {
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1fr_1.6fr] gap-14 items-center">
 
               {/* Left: heading + undraw illustration */}
-              <div className="ld-item flex flex-col gap-6" style={{ opacity: 0 }}>
+              <div className="ld-item flex flex-col gap-6" style={{ opacity: 1 }}>
                 <div>
                   <Label text="Career Outcomes" />
                   <Title size="clamp(1.44rem,2.6vw,2.4rem)">Preparing<br />Leaders for<br />Industry &amp;<br />Society</Title>
@@ -631,14 +631,14 @@ export default function MBAPage() {
               {/* Right: 4 career path cards */}
               <div className="grid grid-cols-2 gap-4">
                 {LEADERSHIP_PATHS.map(({ title, desc, path }) => (
-                  <div key={title} className="ld-item bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style={{ opacity: 0 }}>
+                  <div key={title} className="ld-item bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style={{ opacity: 1 }}>
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style={{ background: BLUE }}>
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={path} />
                       </svg>
                     </div>
                     <h3 className={cinzel.className} style={{ fontSize: 'clamp(0.68rem,0.82vw,0.78rem)', fontWeight: 700, color: '#111', marginBottom: '0.35rem', textTransform: 'uppercase', letterSpacing: '0.04em', lineHeight: 1.3 }}>{title}</h3>
-                    <p style={{ ...P, fontSize: '0.75rem' }}>{desc}</p>
+                    <p style={{ ...P, fontSize: '0.88rem' }}>{desc}</p>
                   </div>
                 ))}
               </div>
@@ -655,19 +655,19 @@ export default function MBAPage() {
             <div className="relative z-10 max-w-5xl mx-auto px-6 text-center w-full">
               <h2 className={`${cinzel.className} uppercase font-bold leading-[0.9] mb-6`}
                 style={{ fontSize: 'clamp(2.8rem,6vw,6.5rem)' }}>
-                <span className="cta-line block text-white" style={{ opacity: 0 }}>Begin Your</span>
-                <span className="cta-line block text-white" style={{ opacity: 0 }}>Journey</span>
+                <span className="cta-line block text-white" style={{ opacity: 1 }}>Begin Your</span>
+                <span className="cta-line block text-white" style={{ opacity: 1 }}>Journey</span>
               </h2>
 
               <p className="cta-sub max-w-2xl mx-auto mb-10"
-                style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.9rem,1.1vw,1.05rem)', lineHeight: 1.85, color: 'rgba(255,255,255,0.88)', opacity: 0 }}>
+                style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.9rem,1.1vw,1.05rem)', lineHeight: 1.85, color: 'rgba(255,255,255,0.88)', opacity: 1 }}>
                 Join the next generation of business leaders, innovators, and change-makers at LEAD. Our MBA programme has been shaping industry-ready professionals since 2010 — through rigorous academics, real-world internships, and a fully residential campus that builds character alongside competence. Whether you aspire to lead a corporation, launch a venture, or drive meaningful social change, LEAD gives you the foundation, the network, and the mindset to do it. Your journey begins here.
               </p>
 
               <div className="flex justify-center">
                 <a href={MBA_URL} target="_blank" rel="noreferrer"
                   className={`cta-btn ${cinzel.className} px-10 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105`}
-                  style={{ background: '#fff', color: BLUE, fontSize: 'clamp(0.58rem,.78vw,.72rem)', textTransform: 'uppercase', letterSpacing: '0.2em', opacity: 0 }}>
+                  style={{ background: '#fff', color: BLUE, fontSize: 'clamp(0.66rem,0.82vw,0.74rem)', textTransform: 'uppercase', letterSpacing: '0.2em', opacity: 1 }}>
                   Apply Now
                 </a>
               </div>

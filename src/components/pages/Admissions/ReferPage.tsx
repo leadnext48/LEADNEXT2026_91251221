@@ -85,7 +85,7 @@ export default function ReferPage() {
         .ref-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: clamp(0.7rem, 1.5vh, 1.2rem); }
         .ref-hero-title { font-size: clamp(2rem, 5.5vw, 6.5rem); font-weight: 800; line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase; margin: 0 0 clamp(1rem, 2vh, 1.6rem); }
         .ref-hero-sub { max-width: 560px; }
-        .ref-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem); margin-top: clamp(2rem, 4vh, 3rem); }
+        .ref-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.6rem); margin-top: clamp(2rem, 4vh, 3rem); }
         .ref-step { display: flex; flex-direction: column; gap: 0.6rem; padding: clamp(1rem, 2vw, 1.4rem); border: 1px solid rgba(0,92,159,0.10); border-radius: 8px; background: #fff; }
         .ref-step-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.12); display: flex; align-items: center; justify-content: center; }
         @media (max-width: 820px) { .ref-steps { grid-template-columns: 1fr; } }
@@ -100,7 +100,7 @@ export default function ReferPage() {
           <div className="ref-hero-inner">
             <div className="ref-eyebrow">
               <span style={{ display: 'inline-block', width: 28, height: 1.5, background: BLUE }} />
-              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.68vw, 0.6rem)', letterSpacing: '0.38em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>
+              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.32em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>
                 Admissions — Referral Programme
               </span>
             </div>
@@ -130,7 +130,7 @@ export default function ReferPage() {
         {/* FORM */}
         <section ref={bodyRef} className="ref-form-section">
           <div className="ref-form-hdr" style={{ textAlign: 'center' }}>
-            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: '0.6rem' }}>
+            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.74rem)', letterSpacing: '0.28em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: '0.6rem' }}>
               <span style={{ display: 'inline-block', width: 18, height: 1.5, background: BLUE }} />
               MG Claim
             </p>

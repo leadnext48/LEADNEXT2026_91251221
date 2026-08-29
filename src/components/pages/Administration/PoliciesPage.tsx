@@ -215,7 +215,7 @@ export default function PoliciesPage() {
         .pol-dl-icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s ease, border-color 0.2s ease; }
         .pol-dl:hover .pol-dl-icon { background: rgba(0,92,159,0.12); border-color: rgba(0,92,159,0.25); }
         .pol-dl-label { flex: 1; transition: color 0.2s ease; }
-        .pol-dl-badge { font-size: 0.65rem; padding: 2px 7px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.2); border-radius: 100px; color: ${BLUE}; font-weight: 700; letter-spacing: 0.06em; font-family: var(--font-cinzel, serif); text-transform: uppercase; white-space: nowrap; }
+        .pol-dl-badge { font-size: 0.72rem; padding: 2px 7px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.2); border-radius: 100px; color: ${BLUE}; font-weight: 700; letter-spacing: 0.06em; font-family: var(--font-cinzel, serif); text-transform: uppercase; white-space: nowrap; }
         .pol-dl-arrow { opacity: 0; transform: translate(-4px, 4px); transition: opacity 0.2s ease, transform 0.2s ease; flex-shrink: 0; }
         .pol-mobile-nav { display: none; }
         .pol-select { width: 100%; padding: 0.9rem 2.5rem 0.9rem 1rem; border: 1px solid rgba(0,92,159,0.2); border-radius: 10px; background-color: #f5f8fc; font-family: var(--font-cinzel, serif); font-size: 0.72rem; font-weight: 700; color: ${BLUE}; text-transform: uppercase; letter-spacing: 0.05em; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23005C9F' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; cursor: pointer; }
@@ -235,7 +235,7 @@ export default function PoliciesPage() {
           <div className="pol-hero-inner">
             <div className="pol-eyebrow">
               <span style={{ display: 'inline-block', width: 28, height: 1.5, background: BLUE }} />
-              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.68vw, 0.6rem)', letterSpacing: '0.38em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>
+              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.3em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>
                 LEAD College — Institutional Governance
               </span>
             </div>
@@ -255,7 +255,7 @@ export default function PoliciesPage() {
         {/* POLICY LIBRARY */}
         <section ref={libRef} className="pol-lib">
           <div className="pol-lib-hdr">
-            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
+            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.74rem)', letterSpacing: '0.28em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
               <span style={{ display: 'inline-block', width: 18, height: 1.5, background: BLUE }} />
               Document Library
             </p>
@@ -293,8 +293,8 @@ export default function PoliciesPage() {
                       <c.icon size={15} color={BLUE} strokeWidth={1.5} />
                     </span>
                     <span style={{ flex: 1, minWidth: 0 }}>
-                      <span className="pol-tab-label" style={{ display: 'block', fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.52rem, 0.72vw, 0.64rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#334', marginBottom: 2 }}>{c.title}</span>
-                      <span className="pol-tab-count" style={{ display: 'block', fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.62rem, 0.76vw, 0.7rem)', color: '#aaa' }}>{c.items.length} document{c.items.length !== 1 ? 's' : ''}</span>
+                      <span className="pol-tab-label" style={{ display: 'block', fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#334', marginBottom: 2 }}>{c.title}</span>
+                      <span className="pol-tab-count" style={{ display: 'block', fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.68rem, 0.82vw, 0.76rem)', color: '#aaa' }}>{c.items.length} document{c.items.length !== 1 ? 's' : ''}</span>
                     </span>
                   </button>
                 );
@@ -305,7 +305,7 @@ export default function PoliciesPage() {
               <div className="pol-panel-header">
                 <activeCat.icon size={18} color={BLUE} strokeWidth={1.5} />
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.7rem, 1vw, 0.9rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: DARK, margin: 0 }}>{activeCat.title}</h3>
-                <span style={{ marginLeft: 'auto', fontFamily: cinzel.style.fontFamily, fontSize: '0.6rem', fontWeight: 700, color: 'rgba(0,92,159,0.3)', letterSpacing: '0.08em' }}>
+                <span style={{ marginLeft: 'auto', fontFamily: cinzel.style.fontFamily, fontSize: '0.74rem', fontWeight: 700, color: 'rgba(0,92,159,0.3)', letterSpacing: '0.08em' }}>
                   {String(activeCat.items.length).padStart(2, '0')} DOCS
                 </span>
               </div>

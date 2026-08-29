@@ -48,14 +48,14 @@ const MAX_W    = 1280;
 
 /* ─── STANDARD SIZES (matching OBT / LOT pages) ─── */
 const SZ = {
-  eyebrow:    "clamp(.52rem,.68vw,.62rem)",   // was .42rem → .52rem
+  eyebrow:    "clamp(.66rem,.8vw,.74rem)",   // was .42rem → .52rem
   heading:    "clamp(1.6rem,3vw,3.8rem)",      // was 1.1rem → 1.6rem
   heroH1:     "clamp(2rem,3.8vw,5rem)",        // hero specific
   body:       "clamp(.9rem,1.05vw,1.02rem)",   // was .86rem → .9rem
   bodySmall:  "clamp(.85rem,.98vw,.95rem)",     // secondary body
   cardTitle:  "clamp(.72rem,.88vw,.84rem)",     // was .62rem → .72rem
   cardBody:   "clamp(.82rem,.96vw,.9rem)",      // was .74rem → .82rem
-  label:      "clamp(.52rem,.62vw,.58rem)",     // badge / step labels
+  label:      "clamp(.66rem,.72vw,.72rem)",     // badge / step labels
 } as const;
 
 const SECTION_PAD = "clamp(5rem,10vh,9rem)";   // was 4rem,8vh,7rem
@@ -296,7 +296,7 @@ function ProcessSection() {
             </p>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER} className="griev-steps-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "1.5rem" }}>
+          <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER} className="griev-steps-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: "1.5rem" }}>
             {STEPS.map((step, i) => (
               <motion.div key={step.num} variants={FADE_UP} custom={i * 0.08} style={{ position: "relative", padding: "2rem 2.1rem", border: `1px solid ${C.border}`, borderRadius: 18, background: "#ffffff", boxShadow: "0 2px 16px rgba(0,92,159,.05)", overflow: "hidden" }}>
                 {/* Large watermark number */}

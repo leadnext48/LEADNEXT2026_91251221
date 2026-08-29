@@ -273,7 +273,7 @@ export default function AcademicCalendarPage() {
 
                 <div className="grid grid-cols-7" style={{ gap: "2px", marginBottom: "clamp(6px,0.8vh,12px)" }}>
                   {["S","M","T","W","T","F","S"].map((d, i) => (
-                    <div key={i} className={`${cinzel.className} text-center text-white/30 py-0.5`} style={{ fontSize: "clamp(7px,0.6vw,10px)" }}>{d}</div>
+                    <div key={i} className={`${cinzel.className} text-center text-white/30 py-0.5`} style={{ fontSize: "clamp(11px,0.7vw,12px)" }}>{d}</div>
                   ))}
                   {(() => {
                     const now = new Date();
@@ -287,7 +287,7 @@ export default function AcademicCalendarPage() {
                         <div
                           key={i}
                           className={`${playfair.className} text-center py-0.5 rounded transition-all ${isToday ? "bg-[#2952c8] text-white font-semibold" : isWeekend ? "text-white/30" : "text-white/60"}`}
-                          style={{ fontSize: "clamp(8px,0.65vw,11px)" }}
+                          style={{ fontSize: "clamp(11px,0.72vw,13px)" }}
                         >
                           {day}
                         </div>
@@ -303,7 +303,7 @@ export default function AcademicCalendarPage() {
                   ].map((ev) => (
                     <div key={ev.label} className="flex items-center" style={{ gap: "clamp(5px,0.5vw,8px)", marginBottom: "clamp(3px,0.3vh,6px)" }}>
                       <span className={`rounded-full flex-shrink-0 ${ev.color}`} style={{ width: "clamp(5px,0.45vw,8px)", height: "clamp(5px,0.45vw,8px)" }} />
-                      <span className={`${playfair.className} text-white/60`} style={{ fontSize: "clamp(8px,0.62vw,11px)" }}>{ev.label}</span>
+                      <span className={`${playfair.className} text-white/60`} style={{ fontSize: "clamp(11px,0.72vw,13px)" }}>{ev.label}</span>
                     </div>
                   ))}
                 </div>
@@ -393,14 +393,14 @@ export default function AcademicCalendarPage() {
                     <span
                       className={`${cinzel.className} inline-block bg-[#d6e4ff] text-[#0a2463] uppercase mb-1`}
                       style={{
-                        fontSize: "clamp(8px,0.65vw,11px)",
-                        letterSpacing: "0.22em",
+                        fontSize: "clamp(11px,0.7vw,12px)",
+                        letterSpacing: "0.16em",
                         padding: "3px 8px",
                       }}
                     >
                       PDF Document
                     </span>
-                    <p className={`${playfair.className} text-gray-400`} style={{ fontSize: "clamp(9px,0.7vw,11px)", lineHeight: 1.9 }}>
+                    <p className={`${playfair.className} text-gray-400`} style={{ fontSize: "clamp(11px,0.72vw,13px)", lineHeight: 1.9 }}>
                       Published by Office of Academic Affairs
                     </p>
                   </div>
@@ -478,7 +478,7 @@ export default function AcademicCalendarPage() {
                 {/* Meta line */}
                 <p
                   className={`${playfair.className} text-gray-400 tracking-wide italic`}
-                  style={{ fontSize: "clamp(9px,0.68vw,11px)", marginTop: "clamp(6px,0.7vh,10px)", lineHeight: 1.9 }}
+                  style={{ fontSize: "clamp(11px,0.7vw,13px)", marginTop: "clamp(6px,0.7vh,10px)", lineHeight: 1.9 }}
                 >
                   PDF · 2.4 MB · Last updated: July {session.start}
                 </p>
@@ -518,7 +518,7 @@ export default function AcademicCalendarPage() {
                   <div className={`${cinzel.className} text-white/20 font-black`} style={{ fontSize: "clamp(28px,5vw,80px)", lineHeight: 1 }}>
                     {String(session.end).slice(2)}
                   </div>
-                  <div className={`${cinzel.className} text-white/40 uppercase`} style={{ fontSize: "clamp(7px,0.6vw,10px)", letterSpacing: "0.28em", marginTop: "clamp(6px,0.7vh,12px)" }}>
+                  <div className={`${cinzel.className} text-white/40 uppercase`} style={{ fontSize: "clamp(11px,0.7vw,12px)", letterSpacing: "0.2em", marginTop: "clamp(6px,0.7vh,12px)" }}>
                     Academic Session
                   </div>
                 </div>

@@ -90,9 +90,9 @@ function Lightbox({ photos, index, onClose, onPrev, onNext }: {
           <div style={{ marginTop: "1rem", display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", gap: "1rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
               <Camera size={13} color="rgba(255,255,255,.6)" strokeWidth={1.8} />
-              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.4rem,.52vw,.48rem)", letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.75)", fontWeight: 600 }}>{photo.caption}</span>
+              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.76rem)", letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.75)", fontWeight: 600 }}>{photo.caption}</span>
             </div>
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.36rem,.46vw,.42rem)", letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(255,255,255,.4)", fontWeight: 600, flexShrink: 0 }}>{index + 1} / {photos.length}</span>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.72vw,.72rem)", letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.4)", fontWeight: 600, flexShrink: 0 }}>{index + 1} / {photos.length}</span>
           </div>
         </motion.div>
       </motion.div>
@@ -121,7 +121,7 @@ function PhotoCard({ photo, onClick }: { photo: Photo; onClick: () => void }) {
       </div>
       <div style={{ padding: ".7rem 1rem .8rem", display: "flex", alignItems: "center", gap: ".4rem" }}>
         <Camera size={10} color={C.blue} strokeWidth={1.8} />
-        <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.38rem,.48vw,.44rem)", letterSpacing: ".12em", textTransform: "uppercase", color: C.muted, fontWeight: 600 }}>{photo.caption}</span>
+        <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.76rem)", letterSpacing: ".08em", textTransform: "uppercase", color: C.muted, fontWeight: 600 }}>{photo.caption}</span>
       </div>
     </motion.div>
   );
@@ -140,7 +140,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
   }
 
   const Btn = ({ children, page, active = false, disabled = false }: { children: React.ReactNode; page: number | null; active?: boolean; disabled?: boolean }) => (
-    <button onClick={() => { if (page !== null && !disabled) onChange(page); }} disabled={disabled} style={{ width: 32, height: 32, borderRadius: 8, border: active ? "none" : `1px solid ${C.border}`, background: active ? G.blue : "#ffffff", color: active ? "#fff" : disabled ? "#ccc" : C.muted, fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.38rem,.48vw,.44rem)", fontWeight: 700, letterSpacing: ".06em", cursor: disabled ? "not-allowed" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .18s ease", boxShadow: active ? "0 4px 14px rgba(0,92,159,.2)" : "none", flexShrink: 0 }}>{children}</button>
+    <button onClick={() => { if (page !== null && !disabled) onChange(page); }} disabled={disabled} style={{ width: 32, height: 32, borderRadius: 8, border: active ? "none" : `1px solid ${C.border}`, background: active ? G.blue : "#ffffff", color: active ? "#fff" : disabled ? "#ccc" : C.muted, fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.72rem,.8vw,.8rem)", fontWeight: 700, letterSpacing: ".06em", cursor: disabled ? "not-allowed" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .18s ease", boxShadow: active ? "0 4px 14px rgba(0,92,159,.2)" : "none", flexShrink: 0 }}>{children}</button>
   );
 
   return (
@@ -148,7 +148,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
       <Btn page={current - 1} disabled={current === 1}><ChevronLeft size={13} strokeWidth={2} /></Btn>
       {pages.map((p, i) =>
         p === "…"
-          ? <span key={`el-${i}`} style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", color: C.faint, padding: "0 .18rem" }}>…</span>
+          ? <span key={`el-${i}`} style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".74rem", color: C.faint, padding: "0 .18rem" }}>…</span>
           : <Btn key={p} page={p} active={p === current}>{p}</Btn>
       )}
       <Btn page={current + 1} disabled={current === total}><ChevronRight size={13} strokeWidth={2} /></Btn>
@@ -206,7 +206,7 @@ function GridSection({ photos }: { photos: Photo[] }) {
           >
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", flexWrap: "wrap", gap: ".8rem" }}>
               <div>
-                <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.4rem,.54vw,.5rem)", letterSpacing: ".26em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>
+                <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.76rem)", letterSpacing: ".2em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>
                   All Photos
                 </p>
                 <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2.2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: C.text, margin: 0, lineHeight: 0.95 }}>
@@ -222,9 +222,9 @@ function GridSection({ photos }: { photos: Photo[] }) {
 
           {/* Grid — 4 columns × 3 rows = 12 per page */}
           <style>{`
-            .gal-grid-photos { grid-template-columns: repeat(4, 1fr); }
-            @media (max-width: 1024px){ .gal-grid-photos { grid-template-columns: repeat(3, 1fr); } }
-            @media (max-width: 720px){ .gal-grid-photos { grid-template-columns: repeat(2, 1fr); } }
+            .gal-grid-photos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            @media (max-width: 1024px){ .gal-grid-photos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+            @media (max-width: 720px){ .gal-grid-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
             @media (max-width: 460px){ .gal-grid-photos { grid-template-columns: 1fr; } }
           `}</style>
           <AnimatePresence mode="wait">

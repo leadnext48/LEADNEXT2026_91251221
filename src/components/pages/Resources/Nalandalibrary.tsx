@@ -44,7 +44,7 @@ const VP       = { once: true, amount: 0.08 };
 
 /* ─── STANDARD SIZES ─── */
 const SZ = {
-  eyebrow:   "clamp(.52rem,.68vw,.62rem)",
+  eyebrow:   "clamp(.66rem,.82vw,.74rem)",
   heading:   "clamp(1.6rem,3vw,3.8rem)",
   heroH1:    "clamp(2rem,3.8vw,5rem)",
   heroSub:   "clamp(1rem,1.8vw,2.4rem)",   // tagline — roughly 48% of heroH1
@@ -52,7 +52,7 @@ const SZ = {
   bodySmall: "clamp(.85rem,.98vw,.95rem)",
   cardTitle: "clamp(.72rem,.88vw,.84rem)",
   cardBody:  "clamp(.82rem,.96vw,.9rem)",
-  label:     "clamp(.52rem,.62vw,.58rem)",
+  label:     "clamp(.66rem,.74vw,.72rem)",
 } as const;
 
 const SECTION_PAD = "clamp(5rem,10vh,9rem)";

@@ -199,9 +199,9 @@ export default function RTISection() {
         /* ── S1 hero targets — pre-hidden for GSAP ── */
         .rti-eyebrow,
         .rti-intro,
-        .rti-note          { opacity: 0; transform: translateY(16px); }
-        .rti-title         { opacity: 0; transform: translateY(20px); }
-        .rti-title-divider { opacity: 0; transform: scaleX(0); transform-origin: left; }
+        .rti-note          { opacity: 1; transform: none; }
+        .rti-title         { opacity: 1; transform: none; }
+        .rti-title-divider { opacity: 1; transform: none; transform-origin: left; }
 
         /* ── S2 overrides — undo any hidden state, plain visible ── */
         .rti-s2 .rti-eyebrow { opacity: 1; transform: none; }
@@ -217,7 +217,7 @@ export default function RTISection() {
         .rti-br { bottom:24px; right:24px; border-bottom:1.5px solid rgba(0,92,159,.22); border-right:1.5px solid rgba(0,92,159,.22); }
 
         /* ── Eyebrow ── */
-        .rti-eyebrow { display:flex; align-items:center; gap:.7rem; margin-bottom:clamp(1rem,1.8vh,1.5rem); font-size:clamp(.52rem,.7vw,.65rem); letter-spacing:.3em; text-transform:uppercase; color:#005C9F; }
+        .rti-eyebrow { display:flex; align-items:center; gap:.7rem; margin-bottom:clamp(1rem,1.8vh,1.5rem); font-size:clamp(.72rem,.85vw,.78rem); letter-spacing:.24em; text-transform:uppercase; color:#005C9F; }
         .rti-eyebrow-line { width:28px; height:1px; background:#005C9F; opacity:.5; flex-shrink:0; }
 
         /* ── S1 ── */
@@ -269,7 +269,7 @@ export default function RTISection() {
 
         .rti-avatar { position:relative; width:clamp(50px,5vw,68px); height:clamp(60px,6vw,80px); flex-shrink:0; border-radius:6px; overflow:hidden; background:#f0f4f8; border:1px solid rgba(0,92,159,.08); }
         .rti-officer-info { min-width:0; }
-        .rti-officer-role  { font-size:clamp(.42rem,.58vw,.54rem); letter-spacing:.22em; text-transform:uppercase; color:#005C9F; margin:0; }
+        .rti-officer-role  { font-size:clamp(.72rem,.8vw,.76rem); letter-spacing:.16em; text-transform:uppercase; color:#005C9F; margin:0; }
         .rti-officer-name  { font-size:clamp(.82rem,1.05vw,1rem); font-weight:600; color:#0d0d0d; margin:.2rem 0 .15rem; }
         .rti-officer-email { font-size:clamp(.68rem,.82vw,.78rem); color:#777; margin:0; transition:color .25s ease; }
         .rti-officer:hover .rti-officer-email { color:#005C9F; }

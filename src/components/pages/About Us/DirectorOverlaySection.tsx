@@ -158,8 +158,8 @@ function BioSection() {
         }
 
         .bio-image-caption {
-          font-size: clamp(0.45rem, 0.6vw, 0.58rem);
-          letter-spacing: 0.28em;
+          font-size: clamp(0.66rem, 0.8vw, 0.74rem);
+          letter-spacing: 0.22em;
           text-transform: uppercase;
           color: rgba(0,92,159,0.5);
           display: flex;
@@ -198,8 +198,8 @@ function BioSection() {
           line-height: 1;
         }
         .bio-stat-label {
-          font-size: clamp(0.42rem, 0.6vw, 0.55rem);
-          letter-spacing: 0.18em;
+          font-size: clamp(0.66rem, 0.8vw, 0.72rem);
+          letter-spacing: 0.14em;
           text-transform: uppercase;
           color: #666;
         }
@@ -220,8 +220,8 @@ function BioSection() {
           align-items: center;
           gap: 0.7rem;
           margin-bottom: clamp(1rem, 2vh, 1.5rem);
-          font-size: clamp(0.5rem, 0.7vw, 0.65rem);
-          letter-spacing: 0.32em;
+          font-size: clamp(0.72rem, 0.85vw, 0.76rem);
+          letter-spacing: 0.26em;
           text-transform: uppercase;
           color: ${BLUE};
         }
@@ -523,8 +523,8 @@ function AwardsSection() {
           align-items: center;
           gap: 0.7rem;
           margin-bottom: 0.8rem;
-          font-size: clamp(0.5rem, 0.7vw, 0.62rem);
-          letter-spacing: 0.32em;
+          font-size: clamp(0.7rem, 0.8vw, 0.74rem);
+          letter-spacing: 0.26em;
           text-transform: uppercase;
           color: ${BLUE};
         }
@@ -558,7 +558,7 @@ function AwardsSection() {
         ── */
         .aw2-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 14px;
         }
 
@@ -639,8 +639,8 @@ function AwardsSection() {
         .aw2-card-year {
           display: inline-flex;
           align-items: center;
-          font-size: clamp(0.42rem, 0.55vw, 0.52rem);
-          letter-spacing: 0.25em;
+          font-size: clamp(0.66rem, 0.7vw, 0.72rem);
+          letter-spacing: 0.2em;
           text-transform: uppercase;
           color: ${BLUE};
           border: 1px solid rgba(0,92,159,0.18);

@@ -358,7 +358,7 @@ export default function DeansPage() {
               style={{
                 position: 'absolute',
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: '0.52rem',
+                fontSize: '0.72rem',
                 letterSpacing: '0.2em',
                 color: `rgba(0,92,159,${0.06 + i * 0.018})`,
                 fontWeight: 700,
@@ -376,11 +376,11 @@ export default function DeansPage() {
 
             {/* LEFT */}
             <div>
-              <div className="dn-label" style={{ opacity: 0, marginBottom: 'clamp(0.7rem, 1.4vh, 1.3rem)' }}>
+              <div className="dn-label" style={{ opacity: 1, marginBottom: 'clamp(0.7rem, 1.4vh, 1.3rem)' }}>
                 <span style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: 'clamp(0.48rem, 0.72vw, 0.65rem)',
-                  letterSpacing: '0.35em',
+                  fontSize: 'clamp(0.66rem, 0.85vw, 0.74rem)',
+                  letterSpacing: '0.28em',
                   textTransform: 'uppercase',
                   color: BLUE,
                   fontWeight: 600,
@@ -403,7 +403,7 @@ export default function DeansPage() {
                   margin: '0 0 clamp(0.7rem, 1.4vh, 1.3rem)',
                   textTransform: 'uppercase',
                   letterSpacing: '-0.01em',
-                  opacity: 0,
+                  opacity: 1,
                 }}
               >
                 <span style={{ display: 'block', color: '#0D0D0D' }}>The</span>
@@ -430,7 +430,7 @@ export default function DeansPage() {
                 }}
               />
 
-              <div ref={introRef} style={{ opacity: 0 }}>
+              <div ref={introRef} style={{ opacity: 1 }}>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
                   fontSize: 'clamp(0.8rem, 1vw, 0.95rem)',
@@ -453,7 +453,7 @@ export default function DeansPage() {
                   <div key={label} className="dn-wing-pill">
                     <span style={{
                       fontFamily: cinzel.style.fontFamily,
-                      fontSize: 'clamp(0.38rem, 0.52vw, 0.46rem)',
+                      fontSize: 'clamp(0.62rem, 0.7vw, 0.7rem)',
                       color: 'rgba(0,92,159,0.45)',
                       fontWeight: 700,
                       letterSpacing: '0.1em',
@@ -463,7 +463,7 @@ export default function DeansPage() {
                     <span style={{ width: 1, height: 10, background: 'rgba(0,92,159,0.2)', display: 'inline-block' }} />
                     <span style={{
                       fontFamily: cinzel.style.fontFamily,
-                      fontSize: 'clamp(0.4rem, 0.58vw, 0.52rem)',
+                      fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)',
                       letterSpacing: '0.22em',
                       textTransform: 'uppercase',
                       color: BLUE,
@@ -478,7 +478,7 @@ export default function DeansPage() {
 
             {/* RIGHT */}
             <div>
-              <div className="dn-quote-block" style={{ opacity: 0 }}>
+              <div className="dn-quote-block" style={{ opacity: 1 }}>
                 <div
                   aria-hidden="true"
                   style={{
@@ -516,7 +516,7 @@ export default function DeansPage() {
                   </p>
                   <footer style={{
                     fontFamily: cinzel.style.fontFamily,
-                    fontSize: 'clamp(0.4rem, 0.6vw, 0.55rem)',
+                    fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)',
                     letterSpacing: '0.28em',
                     textTransform: 'uppercase',
                     color: BLUE,
@@ -533,7 +533,7 @@ export default function DeansPage() {
                     key={d.id}
                     className="dn-roster-row"
                     style={{
-                      opacity: 0,
+                      opacity: 1,
                       display: 'flex',
                       alignItems: 'center',
                       gap: '1rem',
@@ -543,7 +543,7 @@ export default function DeansPage() {
                   >
                     <span style={{
                       fontFamily: cinzel.style.fontFamily,
-                      fontSize: 'clamp(0.5rem, 0.72vw, 0.64rem)',
+                      fontSize: 'clamp(0.66rem, 0.75vw, 0.72rem)',
                       fontWeight: 700,
                       color: 'rgba(0,92,159,0.28)',
                       width: 22,
@@ -555,7 +555,7 @@ export default function DeansPage() {
                     <div>
                       <p style={{
                         fontFamily: cinzel.style.fontFamily,
-                        fontSize: 'clamp(0.48rem, 0.7vw, 0.62rem)',
+                        fontSize: 'clamp(0.72rem, 0.85vw, 0.8rem)',
                         fontWeight: 700,
                         letterSpacing: '0.08em',
                         textTransform: 'uppercase',
@@ -566,7 +566,7 @@ export default function DeansPage() {
                       </p>
                       <p style={{
                         fontFamily: cinzel.style.fontFamily,
-                        fontSize: 'clamp(0.4rem, 0.55vw, 0.5rem)',
+                        fontSize: 'clamp(0.64rem, 0.7vw, 0.7rem)',
                         letterSpacing: '0.22em',
                         textTransform: 'uppercase',
                         color: BLUE,
@@ -663,7 +663,7 @@ export default function DeansPage() {
                     }}>
                       <p style={{
                         fontFamily: cinzel.style.fontFamily,
-                        fontSize: 'clamp(0.36rem, 0.5vw, 0.46rem)',
+                        fontSize: 'clamp(0.62rem, 0.7vw, 0.7rem)',
                         letterSpacing: '0.26em',
                         textTransform: 'uppercase',
                         color: 'rgba(255,255,255,0.68)',
@@ -704,7 +704,7 @@ export default function DeansPage() {
                     }} />
                     <span style={{
                       fontFamily: cinzel.style.fontFamily,
-                      fontSize: 'clamp(0.36rem, 0.52vw, 0.47rem)',
+                      fontSize: 'clamp(0.62rem, 0.72vw, 0.72rem)',
                       letterSpacing: '0.24em',
                       textTransform: 'uppercase',
                       color: BLUE,
@@ -719,7 +719,7 @@ export default function DeansPage() {
                 <div className={`dn-text-col dn-text-${d.id}`}>
                   <span style={{
                     fontFamily: cinzel.style.fontFamily,
-                    fontSize: 'clamp(0.4rem, 0.58vw, 0.52rem)',
+                    fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)',
                     letterSpacing: '0.3em',
                     textTransform: 'uppercase',
                     color: BLUE,
@@ -773,7 +773,7 @@ export default function DeansPage() {
 
                   <p style={{
                     fontFamily: cinzel.style.fontFamily,
-                    fontSize: 'clamp(0.36rem, 0.52vw, 0.47rem)',
+                    fontSize: 'clamp(0.62rem, 0.72vw, 0.72rem)',
                     letterSpacing: '0.28em',
                     textTransform: 'uppercase',
                     color: BLUE,

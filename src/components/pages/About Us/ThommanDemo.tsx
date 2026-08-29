@@ -211,7 +211,7 @@ export default function ChairmanSection() {
         .chairman-year {
           position: absolute;
           bottom: 30px; left: 200px;
-          font-size: clamp(0.45rem, 0.65vw, 0.6rem);
+          font-size: clamp(0.66rem, 0.75vw, 0.74rem);
           letter-spacing: 0.3em;
           color: rgba(0,92,159,0.38);
           z-index: 3;
@@ -231,7 +231,7 @@ export default function ChairmanSection() {
           padding: 0 200px;
           box-sizing: border-box;
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           align-items: center;
           gap: clamp(1rem, 3vw, 3rem);
           position: relative;
@@ -300,7 +300,7 @@ export default function ChairmanSection() {
           {/* LEFT: Text */}
           <div className="chairman-text">
 
-            <div ref={labelRef} style={{ opacity: 0, marginBottom: "clamp(0.6rem,1.2vh,1.2rem)" }}>
+            <div ref={labelRef} style={{ opacity: 1, marginBottom: "clamp(0.6rem,1.2vh,1.2rem)" }}>
               <span style={{
                 fontFamily: cinzel.style.fontFamily,
                 fontSize: "clamp(0.55rem, 0.9vw, 1rem)",
@@ -319,7 +319,7 @@ export default function ChairmanSection() {
               fontSize: "clamp(2.8rem, 5.5vw, 7.5rem)",
               fontWeight: 600, lineHeight: 1.0,
               margin: "0 0 clamp(0.8rem,1.5vh,1.5rem)",
-              textTransform: "lowercase", opacity: 0,
+              textTransform: "lowercase", opacity: 1,
               paddingBottom: "0.1em", overflow: "visible",
             }}>
               <span style={{ display: "block", color: "#0D0D0D" }}>the hand</span>
@@ -336,7 +336,7 @@ export default function ChairmanSection() {
               marginBottom: "clamp(0.8rem,1.5vh,1.5rem)", transformOrigin: "left",
             }} />
 
-            <div ref={nameRef} style={{ opacity: 0, marginBottom: "clamp(1rem,2vh,2rem)" }}>
+            <div ref={nameRef} style={{ opacity: 1, marginBottom: "clamp(1rem,2vh,2rem)" }}>
               <p style={{
                 fontFamily: cinzel.style.fontFamily,
                 fontSize: "clamp(0.75rem, 1.2vw, 1.4rem)",
@@ -371,7 +371,7 @@ export default function ChairmanSection() {
                   display: "flex", alignItems: "center", gap: "0.75rem",
                   fontFamily: cinzel.style.fontFamily,
                   fontSize: "clamp(0.5rem, 0.85vw, 0.9rem)",
-                  letterSpacing: "0.08em", color: "#222", opacity: 0,
+                  letterSpacing: "0.08em", color: "#222", opacity: 1,
                 }}>
                   <span style={{ color: BLUE, flexShrink: 0 }}><Icon /></span>
                   <span style={{ position: "relative", paddingBottom: 5 }}>

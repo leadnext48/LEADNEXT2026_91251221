@@ -227,8 +227,8 @@ function HeroSection() {
             <span style={{ display: "inline-block", width: 28, height: 1.5, background: COLORS.primary }} />
             <span style={{
               fontFamily: cinzel.style.fontFamily,
-              fontSize: "clamp(0.44rem,0.68vw,0.6rem)",
-              letterSpacing: "0.38em", textTransform: "uppercase",
+              fontSize: "clamp(0.66rem,0.8vw,0.74rem)",
+              letterSpacing: "0.3em", textTransform: "uppercase",
               color: COLORS.primary, fontWeight: 600,
             }}>LEAD College — Life at LEAD</span>
           </motion.div>
@@ -290,7 +290,7 @@ function HeroSection() {
               <div>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(0.46rem,0.62vw,0.56rem)", fontWeight: 700,
+                  fontSize: "clamp(0.66rem,0.72vw,0.72rem)", fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase", color: "#334", margin: "0 0 2px",
                 }}>{b.label}</p>
                 <p style={{
@@ -310,7 +310,7 @@ function HeroSection() {
                 <span style={{ width: 3, height: 3, borderRadius: "50%", background: COLORS.primary, display: "inline-block", opacity: 0.5 }} />
                 <span style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "0.48rem", letterSpacing: "0.28em", textTransform: "uppercase",
+                  fontSize: "0.74rem", letterSpacing: "0.22em", textTransform: "uppercase",
                   color: COLORS.primary, opacity: 0.5, fontWeight: 600,
                 }}>{item}</span>
               </div>
@@ -385,7 +385,7 @@ function FrameworkSection() {
           <motion.p variants={fadeUp} custom={0} style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.eyebrow, color: COLORS.primary, marginBottom: "0.75rem" }}>Framework</motion.p>
           <motion.h2 variants={fadeUp} custom={1} style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.display3, color: COLORS.dark, margin: "0 0 1rem" }}>Four Pillars of Mentoring</motion.h2>
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.15 }} variants={stagger} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)", gap: SPACE.colGapMd }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.15 }} variants={stagger} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, minmax(0, 1fr))", gap: SPACE.colGapMd }}>
           {FRAMEWORK_CARDS.map((card, i) => <FrameworkCard key={card.title} {...card} index={i} />)}
         </motion.div>
       </div>
@@ -547,7 +547,7 @@ function AcademicGuidanceSection() {
               By fostering disciplined academic habits and intellectual curiosity, mentoring helps students develop a strong foundation for professional success.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "minmax(0, 1fr) minmax(0, 1fr)", gap: "1.25rem" }}>
             {GUIDANCE_POINTS.map((pt, i) => (
               <div key={pt.title} style={{ background: "#ffffff", borderWidth: 1, borderStyle: "solid", borderColor: COLORS.border, borderRadius: RADIUS.card, padding: "1.5rem", boxShadow: SHADOWS.card, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: `opacity 0.6s ${i * 0.1 + 0.2}s ease, transform 0.6s ${i * 0.1 + 0.2}s ease` }}>
                 <div style={{ width: 36, height: 36, borderRadius: RADIUS.sm, background: "rgba(0,92,159,0.07)", borderWidth: 1, borderStyle: "solid", borderColor: "rgba(0,92,159,0.12)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "0.9rem" }}>
@@ -590,7 +590,7 @@ function FeedbackReflectionSection() {
         </div>
 
         {/* Steps — white bg */}
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, 1fr)", gap: "1.5rem", marginBottom: "3rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, minmax(0, 1fr))", gap: "1.5rem", marginBottom: "3rem" }}>
           {REFLECTION_STEPS.map((step, i) => (
             <div key={step.num} style={{ position: "relative", padding: "2rem 1.5rem", background: "#ffffff", borderWidth: 1, borderStyle: "solid", borderColor: COLORS.border, borderRadius: RADIUS.card, boxShadow: SHADOWS.card, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: `opacity 0.6s ${i * 0.1 + 0.2}s ease, transform 0.6s ${i * 0.1 + 0.2}s ease` }}>
               {i < REFLECTION_STEPS.length - 1 && !isMobile && (
@@ -657,7 +657,7 @@ function LeadershipCultureSection() {
   const [ref, visible] = useInView(0.15);
   const isMobile = useIsMobile();
   return (
-    <section ref={ref} style={{ background: "#ffffff", padding: `${SPACE.sectionY} 0` }}>
+    <section ref={ref} style={{ background: "#ffffff", padding: `${SPACE.sectionY} 0`, overflowX: "hidden" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: `0 ${SPACE.sectionX}` }}>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "clamp(3rem,6vw,5rem)", alignItems: "center" }}>
           <div style={{ position: "relative", minHeight: 380, order: isMobile ? -1 : 0, opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-30px)", transition: "opacity 0.9s 0.15s ease, transform 0.9s 0.15s ease" }}>
@@ -665,12 +665,12 @@ function LeadershipCultureSection() {
               <img src="/convert/LEAD34.webp" alt="Leadership culture" style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }} loading="lazy" />
             </div>
             <div style={{ position: "absolute", bottom: -20, right: -16, background: "#ffffff", borderRadius: RADIUS.card, padding: "1.25rem 1.5rem", boxShadow: "0 16px 48px rgba(0,0,0,0.12)", borderWidth: 1, borderStyle: "solid", borderColor: COLORS.border, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.7s 0.5s ease, transform 0.7s 0.5s ease" }}>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: COLORS.primary, margin: "0 0 0.8rem" }}>Core Values</p>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: COLORS.primary, margin: "0 0 0.8rem" }}>Core Values</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                 {LEADERSHIP_VALUES.map((val) => (
                   <div key={val.label} style={{ display: "flex", alignItems: "center", gap: "0.35rem", background: "rgba(0,92,159,0.06)", borderWidth: 1, borderStyle: "solid", borderColor: "rgba(0,92,159,0.12)", borderRadius: RADIUS.pill, padding: "0.3rem 0.75rem" }}>
                     <val.icon size={10} color={COLORS.primary} strokeWidth={2} />
-                    <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.58rem", fontWeight: 600, letterSpacing: "0.1em", color: COLORS.dark }}>{val.label}</span>
+                    <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.1em", color: COLORS.dark }}>{val.label}</span>
                   </div>
                 ))}
               </div>
@@ -720,7 +720,7 @@ function ImpactSection() {
             Every number represents a student whose journey was shaped by personalized, consistent, and committed mentorship.
           </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)", gap: SPACE.colGapMd }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "repeat(2, minmax(0, 1fr))" : "repeat(4, minmax(0, 1fr))", gap: SPACE.colGapMd }}>
           {IMPACT_DATA.map((item, i) => (
             <div key={item.label} style={{
               textAlign: "center",

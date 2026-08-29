@@ -243,8 +243,8 @@ export default function DeputyDirectorPage() {
         .dd-year {
           position: absolute;
           bottom: 30px; left: 200px;
-          font-size: clamp(0.45rem, 0.65vw, 0.6rem);
-          letter-spacing: 0.3em;
+          font-size: clamp(0.66rem, 0.85vw, 0.74rem);
+          letter-spacing: 0.24em;
           color: rgba(0,92,159,0.38);
           z-index: 3;
           pointer-events: none;
@@ -340,7 +340,7 @@ export default function DeputyDirectorPage() {
                   lineHeight: 1.0,
                   margin: '0 0 clamp(0.8rem,1.5vh,1.5rem)',
                   textTransform: 'lowercase',
-                  opacity: 0,
+                  opacity: 1,
                   paddingBottom: '0.1em',
                   overflow: 'visible',
                 }}
@@ -369,7 +369,7 @@ export default function DeputyDirectorPage() {
                 }}
               />
 
-              <div ref={nameRef} style={{ opacity: 0, marginBottom: 'clamp(1rem,2vh,2rem)' }}>
+              <div ref={nameRef} style={{ opacity: 1, marginBottom: 'clamp(1rem,2vh,2rem)' }}>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
                   fontSize: 'clamp(0.75rem, 1.2vw, 1.4rem)',
@@ -399,7 +399,7 @@ export default function DeputyDirectorPage() {
                       fontSize: 'clamp(0.5rem, 0.85vw, 0.9rem)',
                       letterSpacing: '0.08em',
                       color: '#222',
-                      opacity: 0,
+                      opacity: 1,
                     }}
                   >
                     <span style={{ color: BLUE, flexShrink: 0 }}><Icon /></span>

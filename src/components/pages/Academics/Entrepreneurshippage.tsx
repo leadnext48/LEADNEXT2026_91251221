@@ -77,8 +77,8 @@ const Eyebrow: FC<{ text: string; light?: boolean }> = ({ text, light = false })
   <div className="flex items-center gap-3 mb-5">
     <div className="h-px w-7 flex-shrink-0" style={{ background: light ? "rgba(255,255,255,0.3)" : NAVY }} />
     <span
-      className={`${cinzel.className} uppercase tracking-[0.38em]`}
-      style={{ fontSize: "10px", color: light ? "rgba(255,255,255,0.5)" : "rgba(10,36,99,0.55)", fontWeight: 600 }}
+      className={`${cinzel.className} uppercase tracking-[0.3em]`}
+      style={{ fontSize: "12px", color: light ? "rgba(255,255,255,0.5)" : "rgba(10,36,99,0.55)", fontWeight: 600 }}
     >
       {text}
     </span>
@@ -192,7 +192,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
   const marqueeWords = ["Incubation","Mentorship","Innovation","Funding","Prototyping","Ideathons","E-School","Startup School","Market Research","Entrepreneurship"];
 
   return (
-    <div className={`${cinzel.className} ${playfair.className} min-h-screen bg-white`}>
+    <div className={`${cinzel.className} ${playfair.className} min-h-screen bg-white overflow-x-hidden`}>
 
       {/* ════════════════════════════
           HERO
@@ -281,7 +281,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                         backgroundClip: "text", color: "transparent",
                       }}
                     >{stat.value}</span>
-                    <span className={`${playfair.className} text-gray-400 tracking-wide`} style={{ fontSize: "clamp(9px,0.68vw,11px)" }}>{stat.label}</span>
+                    <span className={`${playfair.className} text-gray-400 tracking-wide`} style={{ fontSize: "clamp(11px,0.7vw,13px)" }}>{stat.label}</span>
                   </div>
                 ))}
                 <div className="h-8 w-px bg-gray-200 hidden sm:block" />
@@ -292,7 +292,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                     document.getElementById("programmes")?.scrollIntoView({ behavior: "smooth" });
                   }}
                   className={`${cinzel.className} group inline-flex items-center gap-2 uppercase tracking-[0.18em] font-bold px-6 py-3 transition-opacity duration-300 hover:opacity-80`}
-                  style={{ fontSize: "10px", backgroundColor: NAVY, color: "white" }}
+                  style={{ fontSize: "12px", backgroundColor: NAVY, color: "white" }}
                 >
                   <span>Explore Programmes</span>
                   <ArrowRight size={11} />
@@ -339,7 +339,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.7), transparent)" }}>
-                    <p className={`${cinzel.className} text-white`} style={{ fontSize: "8px", letterSpacing: "0.28em", opacity: 0.7, textTransform: "uppercase" }}>CAMPUS INNOVATION · LEAD COLLEGE</p>
+                    <p className={`${cinzel.className} text-white`} style={{ fontSize: "11px", letterSpacing: "0.22em", opacity: 0.7, textTransform: "uppercase" }}>CAMPUS INNOVATION · LEAD COLLEGE</p>
                   </div>
                 </div>
               </div>
@@ -364,7 +364,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       key={a.label}
                       className="bg-white px-5 py-5 hover:bg-[#f0f4fb] transition-colors duration-300"
                     >
-                      <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "10px", color: NAVY, letterSpacing: "0.1em" }}>{a.label}</p>
+                      <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "12px", color: NAVY, letterSpacing: "0.1em" }}>{a.label}</p>
                       <p className={`${playfair.className}`} style={{ fontSize: "12px", color: "#5a6d8a" }}>{a.sub}</p>
                     </div>
                   ))}
@@ -372,7 +372,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
 
                 {/* What makes LEAD different — fills the space below the grid */}
                 <div className="mt-8 space-y-4">
-                  <p className={`${cinzel.className} uppercase`} style={{ fontSize: "10px", letterSpacing: "0.28em", color: "rgba(10,36,99,0.45)", fontWeight: 600 }}>What makes LEAD different</p>
+                  <p className={`${cinzel.className} uppercase`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.45)", fontWeight: 600 }}>What makes LEAD different</p>
                   {[
                     { n: "01", title: "Autonomous MBA + Startup in Parallel", desc: "LEAD's autonomous status allows students to pursue an industry-aligned MBA while simultaneously building their venture — no compromises, both tracks run together." },
                     { n: "02", title: "Campus-to-Market Ecosystem",           desc: "From idea generation in the classroom to prototype labs, incubation support, and investor introductions — the entire entrepreneurial journey happens under one roof." },
@@ -383,9 +383,9 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       className="flex gap-4 p-4 hover:bg-[#f7f9fc] transition-colors duration-300"
                       style={{ border: "1px solid rgba(10,36,99,0.07)" }}
                     >
-                      <span className={`${cinzel.className} font-bold flex-shrink-0 mt-0.5`} style={{ fontSize: "9px", color: "rgba(10,36,99,0.3)", letterSpacing: "0.08em" }}>{item.n}</span>
+                      <span className={`${cinzel.className} font-bold flex-shrink-0 mt-0.5`} style={{ fontSize: "12px", color: "rgba(10,36,99,0.3)", letterSpacing: "0.08em" }}>{item.n}</span>
                       <div>
-                        <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "10px", color: NAVY, letterSpacing: "0.06em" }}>{item.title}</p>
+                        <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "12px", color: NAVY, letterSpacing: "0.06em" }}>{item.title}</p>
                         <p className={`${playfair.className}`} style={{ fontSize: "13px", color: "#555", lineHeight: 1.7 }}>{item.desc}</p>
                       </div>
                     </div>
@@ -421,8 +421,8 @@ export default function EntrepreneurshipPage(): JSX.Element {
               <div
                 className={`${cinzel.className} flex items-center gap-3 px-6 py-3 border`}
                 style={{
-                  fontSize: "10px",
-                  letterSpacing: "0.28em",
+                  fontSize: "12px",
+                  letterSpacing: "0.22em",
                   color: NAVY,
                   borderColor: NAVY,
                   backgroundColor: "rgba(10,36,99,0.04)",
@@ -476,12 +476,12 @@ export default function EntrepreneurshipPage(): JSX.Element {
                         {isActive ? (
                           <>
                             <CheckCircle2 size={9} color="rgba(255,255,255,0.9)" />
-                            <span className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "7px", letterSpacing: "0.25em", opacity: 0.95 }}>Selected</span>
+                            <span className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "11px", letterSpacing: "0.18em", opacity: 0.95 }}>Selected</span>
                           </>
                         ) : (
                           <>
                             <MousePointer2 size={9} color="rgba(255,255,255,0.85)" />
-                            <span className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "7px", letterSpacing: "0.25em", opacity: 0.9 }}>Click to explore</span>
+                            <span className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "11px", letterSpacing: "0.18em", opacity: 0.9 }}>Click to explore</span>
                           </>
                         )}
                       </div>
@@ -493,7 +493,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                         {id === "bi" ? "01" : "02"}
                       </span>
                       <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "clamp(28px,3.5vw,42px)", letterSpacing: "-0.02em", color: isActive ? "#ffffff" : NAVY, lineHeight: 1 }}>{title}</p>
-                      <p className={`${cinzel.className} uppercase mb-4`} style={{ fontSize: "8.5px", letterSpacing: "0.28em", color: isActive ? "rgba(255,255,255,0.5)" : "rgba(10,36,99,0.48)" }}>{subtitle}</p>
+                      <p className={`${cinzel.className} uppercase mb-4`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: isActive ? "rgba(255,255,255,0.5)" : "rgba(10,36,99,0.48)" }}>{subtitle}</p>
                       <p className={`${playfair.className} leading-relaxed mb-5`} style={{ fontSize: "14px", color: isActive ? "rgba(255,255,255,0.78)" : "#2c3e5e", lineHeight: 1.75 }}>{desc}</p>
 
                       {/* CTA row */}
@@ -501,7 +501,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                         background: isActive ? "rgba(255,255,255,0.1)" : "rgba(10,36,99,0.06)",
                         border: `1px solid ${isActive ? "rgba(255,255,255,0.16)" : "rgba(10,36,99,0.12)"}`,
                       }}>
-                        <span className={`${cinzel.className} uppercase`} style={{ fontSize: "8.5px", letterSpacing: "0.26em", color: isActive ? "rgba(255,255,255,0.7)" : NAVY, fontWeight: 600 }}>
+                        <span className={`${cinzel.className} uppercase`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: isActive ? "rgba(255,255,255,0.7)" : NAVY, fontWeight: 600 }}>
                           {isActive ? "Currently Viewing ↓ Scroll below" : cta}
                         </span>
                         <ArrowRight size={12} color={isActive ? "rgba(255,255,255,0.5)" : NAVY} style={{ flexShrink: 0 }} />
@@ -523,7 +523,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
           <section className="py-12 text-center" style={{ background: "white", borderTop: `1px solid ${NAVY}10` }}>
             <div className="flex flex-col items-center gap-3">
               <ChevronDown size={18} color={`${NAVY}30`} className="animate-bounce" />
-              <p className={`${cinzel.className} uppercase`} style={{ fontSize: "9px", letterSpacing: "0.32em", color: `${NAVY}40` }}>Select a programme above to reveal full details</p>
+              <p className={`${cinzel.className} uppercase`} style={{ fontSize: "12px", letterSpacing: "0.26em", color: `${NAVY}40` }}>Select a programme above to reveal full details</p>
             </div>
           </section>
         )}
@@ -538,7 +538,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
         <div className="flex gap-12 whitespace-nowrap" style={{ animation: "epMarquee 26s linear infinite", display: "inline-flex" }}>
           {[...Array(3)].map((_, r) =>
             marqueeWords.map((t, i) => (
-              <span key={`${r}-${i}`} className={`${cinzel.className} uppercase flex items-center gap-5 whitespace-nowrap`} style={{ fontSize: "9px", letterSpacing: "0.35em", color: "rgba(255,255,255,0.45)" }}>
+              <span key={`${r}-${i}`} className={`${cinzel.className} uppercase flex items-center gap-5 whitespace-nowrap`} style={{ fontSize: "12px", letterSpacing: "0.28em", color: "rgba(255,255,255,0.45)" }}>
                 <span className="w-1 h-1 rounded-full inline-block" style={{ background: "rgba(255,255,255,0.22)" }} />
                 {t}
               </span>
@@ -568,10 +568,10 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
             <div>
               <Eyebrow text="Business Incubator" />
               <h2 className={`${cinzel.className} font-bold leading-none mb-3`} style={{ fontSize: "clamp(42px,6vw,80px)", ...gradientTitle }}>LEAD-BI</h2>
-              <p className={`${cinzel.className} uppercase mb-7`} style={{ fontSize: "10px", letterSpacing: "0.28em", color: "rgba(10,36,99,0.48)" }}>Crafting Next Gen Entrepreneurs</p>
+              <p className={`${cinzel.className} uppercase mb-7`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.48)" }}>Crafting Next Gen Entrepreneurs</p>
               <div className="flex flex-wrap gap-2">
                 {["Incubation","Mentoring","Modelling","Funding"].map(t => (
-                  <span key={t} className={`${cinzel.className} uppercase px-4 py-2`} style={{ fontSize: "8px", letterSpacing: "0.3em", color: NAVY, border: "1px solid rgba(10,36,99,0.18)", background: "rgba(10,36,99,0.04)" }}>{t}</span>
+                  <span key={t} className={`${cinzel.className} uppercase px-4 py-2`} style={{ fontSize: "11px", letterSpacing: "0.24em", color: NAVY, border: "1px solid rgba(10,36,99,0.18)", background: "rgba(10,36,99,0.04)" }}>{t}</span>
                 ))}
               </div>
               <div className="relative overflow-hidden mt-8" style={{ aspectRatio: "16/10" }}>
@@ -592,7 +592,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
               <div className="grid sm:grid-cols-2 gap-3 mb-8">
                 {[["01","Incubation"],["02","Mentoring"],["03","Modelling"],["04","Funding"]].map(([n,l]) => (
                   <div key={l} className="flex items-center gap-3 px-4 py-3 hover:bg-[#edf1f9] transition-colors duration-300" style={{ border: "1px solid rgba(10,36,99,0.09)", background: "#f7f9fc", cursor: "default" }}>
-                    <span className={`${cinzel.className}`} style={{ fontSize: "9px", color: "rgba(10,36,99,0.4)", minWidth: 22 }}>{n}</span>
+                    <span className={`${cinzel.className}`} style={{ fontSize: "12px", color: "rgba(10,36,99,0.4)", minWidth: 22 }}>{n}</span>
                     <span className={`${playfair.className} font-semibold`} style={{ fontSize: "15px", color: NAVY }}>{l}</span>
                     <CheckCircle2 size={13} strokeWidth={1.5} color={NAVY} style={{ marginLeft: "auto", opacity: 0.5 }} />
                   </div>
@@ -601,7 +601,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
 
               {/* Content to fill the gap before the promise banner */}
               <div className="space-y-3">
-                <p className={`${cinzel.className} uppercase`} style={{ fontSize: "10px", letterSpacing: "0.28em", color: "rgba(10,36,99,0.45)", fontWeight: 600 }}>Who should apply</p>
+                <p className={`${cinzel.className} uppercase`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.45)", fontWeight: 600 }}>Who should apply</p>
                 {[
                   { icon: "→", text: "MBA students with a validated business idea and the drive to build it during their programme." },
                   { icon: "→", text: "Aspiring founders seeking structured support — from concept to prototype to funded startup." },
@@ -623,14 +623,14 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
             <div className={`${cinzel.className} font-black absolute -top-3 -right-2 select-none pointer-events-none leading-none`} style={{ fontSize: 100, color: "rgba(255,255,255,0.03)", letterSpacing: "-0.04em" }}>E</div>
             <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-center">
               <div>
-                <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "8px", letterSpacing: "0.38em", color: "rgba(255,255,255,0.35)" }}>Our Promise</p>
+                <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "11px", letterSpacing: "0.3em", color: "rgba(255,255,255,0.35)" }}>Our Promise</p>
                 <p className={`${playfair.className} leading-snug`} style={{ fontSize: "clamp(17px,1.5vw,24px)", color: "rgba(255,255,255,0.92)", maxWidth: 480, fontWeight: 600 }}>
                   "From B-School fame to E-School excellence — crafting vibrant entrepreneurs."
                 </p>
-                <p className={`${cinzel.className} uppercase mt-3`} style={{ fontSize: "8px", letterSpacing: "0.22em", color: "rgba(255,255,255,0.3)" }}>Dr P Rajan · LEAD BI Foundation</p>
+                <p className={`${cinzel.className} uppercase mt-3`} style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(255,255,255,0.3)" }}>Dr P Rajan · LEAD BI Foundation</p>
               </div>
               <div className="flex justify-end">
-                <a href="mailto:rajan@lead.ac.in" className={`${cinzel.className} flex items-center gap-3 px-6 py-3.5 uppercase hover:bg-white/15 transition-all duration-250`} style={{ fontSize: "9px", letterSpacing: "0.25em", border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.75)", textDecoration: "none", background: "rgba(255,255,255,0.06)" }}>
+                <a href="mailto:rajan@lead.ac.in" className={`${cinzel.className} flex items-center gap-3 px-6 py-3.5 uppercase hover:bg-white/15 transition-all duration-250`} style={{ fontSize: "12px", letterSpacing: "0.2em", border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.75)", textDecoration: "none", background: "rgba(255,255,255,0.06)" }}>
                   <Mail size={12} strokeWidth={1.5} />rajan@lead.ac.in
                 </a>
               </div>
@@ -646,7 +646,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
         <Reveal>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8" style={{ border: `1.5px solid ${NAVY}`, background: "rgba(10,36,99,0.02)" }}>
             <div>
-              <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "9px", letterSpacing: "0.32em", color: "rgba(10,36,99,0.45)" }}>Ready to build your venture?</p>
+              <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "12px", letterSpacing: "0.26em", color: "rgba(10,36,99,0.45)" }}>Ready to build your venture?</p>
               <p className={`${playfair.className} font-semibold`} style={{ fontSize: "clamp(16px,1.4vw,22px)", color: NAVY, lineHeight: 1.3 }}>
                 Join LEAD-BI — Start your entrepreneurial journey today.
               </p>
@@ -657,14 +657,14 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${cinzel.className} inline-flex items-center gap-2 uppercase tracking-[0.18em] font-bold px-7 py-4 transition-all duration-300 hover:opacity-90`}
-                style={{ fontSize: "10px", backgroundColor: NAVY, color: "white", textDecoration: "none" }}
+                style={{ fontSize: "12px", backgroundColor: NAVY, color: "white", textDecoration: "none" }}
               >
                 Apply Now <ArrowUpRight size={12} />
               </a>
               <a
                 href="mailto:rajan@lead.ac.in"
                 className={`${cinzel.className} inline-flex items-center gap-2 uppercase tracking-[0.18em] font-bold px-7 py-4 transition-all duration-300 hover:bg-[#f0f4fb]`}
-                style={{ fontSize: "10px", border: `1px solid ${NAVY}`, color: NAVY, textDecoration: "none" }}
+                style={{ fontSize: "12px", border: `1px solid ${NAVY}`, color: NAVY, textDecoration: "none" }}
               >
                 Enquire <Mail size={12} />
               </a>
@@ -681,7 +681,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
           <Reveal key={s.label} delay={i * 80}>
             <div className="px-10 py-12">
               <p className={`${cinzel.className} font-black leading-none mb-3`} style={{ fontSize: "clamp(44px,5vw,70px)", color: NAVY }}><Counter to={s.val} suffix={s.suffix} /></p>
-              <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "9px", letterSpacing: "0.28em", color: "rgba(10,36,99,0.5)" }}>{s.label}</p>
+              <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.5)" }}>{s.label}</p>
               <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "13px" }}>{s.sub}</p>
             </div>
           </Reveal>
@@ -718,7 +718,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
                 {pillars.map(({ icon: Icon, label }) => (
                   <div key={label} className="flex items-center gap-2 px-3 py-2 hover:bg-white/[0.12] transition-colors duration-300" style={{ border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)", cursor: "default" }}>
                     <Icon size={10} strokeWidth={1.5} color="rgba(255,255,255,0.45)" />
-                    <span className={`${cinzel.className} uppercase`} style={{ fontSize: "8px", letterSpacing: "0.2em", color: "rgba(255,255,255,0.55)" }}>{label}</span>
+                    <span className={`${cinzel.className} uppercase`} style={{ fontSize: "11px", letterSpacing: "0.16em", color: "rgba(255,255,255,0.55)" }}>{label}</span>
                   </div>
                 ))}
               </div>
@@ -730,7 +730,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
                 <img src="/convert/LEAD70.webp" alt="Modern entrepreneurship school" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.03]" style={{ filter: "brightness(0.7) saturate(0.6)" }} />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.5) 0%, transparent 60%)" }} />
                 <div className="absolute bottom-4 left-4">
-                  <p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "8px", letterSpacing: "0.32em", opacity: 0.6 }}>THE FUTURE OF LEAD</p>
+                  <p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "11px", letterSpacing: "0.26em", opacity: 0.6 }}>THE FUTURE OF LEAD</p>
                 </div>
               </div>
               {/* All three paragraphs — same style */}
@@ -768,16 +768,16 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
             <div>
               <Eyebrow text="Innovation & Entrepreneurship Development Centre" light />
               <h2 className={`${cinzel.className} font-bold leading-none mb-3 text-white`} style={{ fontSize: "clamp(42px,6vw,80px)" }}>LEAD IEDC</h2>
-              <p className={`${cinzel.className} uppercase mb-7`} style={{ fontSize: "10px", letterSpacing: "0.28em", color: "rgba(255,255,255,0.42)" }}>Innovation &amp; Entrepreneurship</p>
+              <p className={`${cinzel.className} uppercase mb-7`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(255,255,255,0.42)" }}>Innovation &amp; Entrepreneurship</p>
               <div className="flex flex-wrap gap-2 mb-8">
                 {["Engineering Partnership","Global Exposure","Initial Funding","Entrepreneur Community"].map(t => (
-                  <span key={t} className={`${cinzel.className} uppercase px-3 py-2`} style={{ fontSize: "7.5px", letterSpacing: "0.22em", color: "rgba(255,255,255,0.58)", border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.06)" }}>{t}</span>
+                  <span key={t} className={`${cinzel.className} uppercase px-3 py-2`} style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(255,255,255,0.58)", border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.06)" }}>{t}</span>
                 ))}
               </div>
               <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
                   <img src="/convert/LEAD44.webp" alt="IEDC innovation lab" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" style={{ filter: "brightness(0.65) saturate(0.7)" }} />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.65) 0%, transparent 55%)" }} />
-                <div className="absolute bottom-4 left-4"><p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "8px", letterSpacing: "0.32em", opacity: 0.6 }}>LEAD IEDC LAB</p></div>
+                <div className="absolute bottom-4 left-4"><p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "11px", letterSpacing: "0.26em", opacity: 0.6 }}>LEAD IEDC LAB</p></div>
               </div>
             </div>
           </Reveal>
@@ -796,7 +796,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
 
               {/* Content to fill the empty space in the navy bg column */}
               <div className="space-y-0 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-                <p className={`${cinzel.className} uppercase pt-6 mb-4`} style={{ fontSize: "10px", letterSpacing: "0.28em", color: "rgba(255,255,255,0.4)", fontWeight: 600 }}>What IEDC offers you</p>
+                <p className={`${cinzel.className} uppercase pt-6 mb-4`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(255,255,255,0.4)", fontWeight: 600 }}>What IEDC offers you</p>
                 {[
                   { n: "01", title: "Prototype Lab Access",   desc: "Hands-on access to fabrication tools, maker spaces, and digital labs to build and test your product ideas on campus." },
                   { n: "02", title: "Initial Seed Funding",   desc: "Selected IEDC ventures receive seed grants and financial support through Kerala Startup Mission to move from idea to MVP." },
@@ -808,9 +808,9 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                     className="flex gap-4 py-4 border-b"
                     style={{ borderColor: "rgba(255,255,255,0.07)" }}
                   >
-                    <span className={`${cinzel.className} flex-shrink-0 font-bold`} style={{ fontSize: "9px", color: "rgba(255,255,255,0.28)", minWidth: 22, marginTop: 2 }}>{item.n}</span>
+                    <span className={`${cinzel.className} flex-shrink-0 font-bold`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.28)", minWidth: 22, marginTop: 2 }}>{item.n}</span>
                     <div>
-                      <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "9px", letterSpacing: "0.14em", color: "rgba(255,255,255,0.65)", fontWeight: 600 }}>{item.title}</p>
+                      <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "12px", letterSpacing: "0.14em", color: "rgba(255,255,255,0.65)", fontWeight: 600 }}>{item.title}</p>
                       <p className={`${playfair.className}`} style={{ ...paraLightStyle, fontSize: "13px" }}>{item.desc}</p>
                     </div>
                   </div>
@@ -828,7 +828,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
         <Reveal>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-8" style={{ border: `1.5px solid ${NAVY}`, background: "rgba(10,36,99,0.02)" }}>
             <div>
-              <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "9px", letterSpacing: "0.32em", color: "rgba(10,36,99,0.45)" }}>Join the innovation community</p>
+              <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "12px", letterSpacing: "0.26em", color: "rgba(10,36,99,0.45)" }}>Join the innovation community</p>
               <p className={`${playfair.className} font-semibold`} style={{ fontSize: "clamp(16px,1.4vw,22px)", color: NAVY, lineHeight: 1.3 }}>
                 Be part of LEAD IEDC — where student ideas become real ventures.
               </p>
@@ -839,14 +839,14 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${cinzel.className} inline-flex items-center gap-2 uppercase tracking-[0.18em] font-bold px-7 py-4 transition-all duration-300 hover:opacity-90`}
-                style={{ fontSize: "10px", backgroundColor: NAVY, color: "white", textDecoration: "none" }}
+                style={{ fontSize: "12px", backgroundColor: NAVY, color: "white", textDecoration: "none" }}
               >
                 Apply Now <ArrowUpRight size={12} />
               </a>
               <a
                 href="mailto:rajan@lead.ac.in"
                 className={`${cinzel.className} inline-flex items-center gap-2 uppercase tracking-[0.18em] font-bold px-7 py-4 transition-all duration-300 hover:bg-[#f0f4fb]`}
-                style={{ fontSize: "10px", border: `1px solid ${NAVY}`, color: NAVY, textDecoration: "none" }}
+                style={{ fontSize: "12px", border: `1px solid ${NAVY}`, color: NAVY, textDecoration: "none" }}
               >
                 Enquire <Mail size={12} />
               </a>
@@ -863,7 +863,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
           <Reveal key={s.label} delay={i * 80}>
             <div className="px-10 py-12">
               <p className={`${cinzel.className} font-black leading-none mb-3`} style={{ fontSize: "clamp(44px,5vw,70px)", color: NAVY }}><Counter to={s.val} suffix={s.suffix} /></p>
-              <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "9px", letterSpacing: "0.28em", color: "rgba(10,36,99,0.5)" }}>{s.label}</p>
+              <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.5)" }}>{s.label}</p>
               <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "13px" }}>{s.sub}</p>
             </div>
           </Reveal>
@@ -910,7 +910,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 {amenities.map(a => (
                   <div key={a} className="flex items-center gap-2.5 px-4 py-3 hover:bg-[#edf1f9] hover:border-[rgba(10,36,99,0.2)] transition-all duration-300" style={{ border: "1px solid rgba(10,36,99,0.1)", background: "white", cursor: "default" }}>
                     <Zap size={10} strokeWidth={1.5} color={NAVY} style={{ flexShrink: 0, opacity: 0.5 }} />
-                    <span className={`${cinzel.className} uppercase`} style={{ fontSize: "8px", letterSpacing: "0.2em", color: "#2c3e5e" }}>{a}</span>
+                    <span className={`${cinzel.className} uppercase`} style={{ fontSize: "11px", letterSpacing: "0.16em", color: "#2c3e5e" }}>{a}</span>
                   </div>
                 ))}
               </div>
@@ -923,7 +923,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                   <div className="w-2 h-2 rounded-full bg-red-400" />
                   <div className="w-2 h-2 rounded-full bg-yellow-400" />
                   <div className="w-2 h-2 rounded-full bg-green-400" />
-                  <span className={`${cinzel.className} uppercase ml-2`} style={{ fontSize: "8px", letterSpacing: "0.3em", color: "rgba(10,36,99,0.38)" }}>Programmes &amp; Events</span>
+                  <span className={`${cinzel.className} uppercase ml-2`} style={{ fontSize: "11px", letterSpacing: "0.24em", color: "rgba(10,36,99,0.38)" }}>Programmes &amp; Events</span>
                 </div>
                 {programs.map((p, i) => (
                   <div key={p} className="flex items-center gap-3 px-5 py-4 hover:bg-[#f7f9fc] transition-colors duration-250" style={{ borderBottom: i < programs.length - 1 ? "1px solid rgba(10,36,99,0.06)" : "none" }}>
@@ -933,7 +933,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 ))}
               </div>
               <div className="mt-4 p-6" style={{ border: "1px solid rgba(10,36,99,0.1)", background: "white" }}>
-                <p className={`${cinzel.className} uppercase mb-3`} style={{ fontSize: "8px", letterSpacing: "0.38em", color: "rgba(10,36,99,0.38)" }}>About IEDC</p>
+                <p className={`${cinzel.className} uppercase mb-3`} style={{ fontSize: "11px", letterSpacing: "0.3em", color: "rgba(10,36,99,0.38)" }}>About IEDC</p>
                 <p className={`${playfair.className} leading-relaxed`} style={{ ...paraStyle }}>
                   IEDC is a flagship initiative of Kerala Startup Mission — an umbrella programme that plays an instrumental role in fostering innovation culture in academic institutions across the State of Kerala.
                 </p>
@@ -941,7 +941,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
               <div className="mt-4 relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
                 <img src="/convert/LEAD39.webp" alt="IEDC events" className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.04]" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,36,99,0.4) 0%, transparent 60%)" }} />
-                <div className="absolute bottom-4 left-4"><p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "8px", letterSpacing: "0.28em", opacity: 0.65 }}>IEDC EVENTS · LEAD COLLEGE</p></div>
+                <div className="absolute bottom-4 left-4"><p className={`${cinzel.className} uppercase text-white`} style={{ fontSize: "11px", letterSpacing: "0.22em", opacity: 0.65 }}>IEDC EVENTS · LEAD COLLEGE</p></div>
               </div>
             </div>
           </Reveal>
@@ -961,7 +961,7 @@ const ServiceGrid: FC<{ services: ServiceItem[] }> = ({ services }) => (
           <div className="w-9 h-9 flex items-center justify-center mb-5" style={{ background: "rgba(10,36,99,0.05)", border: "1px solid rgba(10,36,99,0.09)" }}>
             <Icon size={14} strokeWidth={1.5} color={NAVY} />
           </div>
-          <p className={`${cinzel.className} font-semibold uppercase mb-3`} style={{ fontSize: "10px", letterSpacing: "0.18em", color: NAVY }}>{title}</p>
+          <p className={`${cinzel.className} font-semibold uppercase mb-3`} style={{ fontSize: "12px", letterSpacing: "0.15em", color: NAVY }}>{title}</p>
           <p className={`${playfair.className} leading-relaxed`} style={{ ...paraStyle, fontSize: "13.5px" }}>{desc}</p>
         </div>
       </Reveal>

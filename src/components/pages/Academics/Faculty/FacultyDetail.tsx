@@ -369,7 +369,7 @@ export default function FacultyDetailPage() {
         .fd-root {
           background: #fff;
           width: 100%;
-          visibility: hidden;
+          visibility: visible;
           /* No min-height / height — let the global page layout (body flex-col)
              control document height. Setting min-height:100vh here would squish
              the fixed ScrollHeader and compress the footer. */
@@ -390,7 +390,7 @@ export default function FacultyDetailPage() {
           height: 100svh;
           overflow: hidden;
           background: linear-gradient(155deg, #cfe1f5 0%, #bfdbfe 100%);
-          opacity: 0; /* GSAP reveals */
+          opacity: 1; /* GSAP reveals */
         }
         .fd-sidebar-overlay {
           position: absolute;
@@ -408,9 +408,9 @@ export default function FacultyDetailPage() {
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
           color: #fff;
-          font-size: clamp(0.42rem, 0.65vw, 0.56rem);
+          font-size: clamp(0.66rem, 0.8vw, 0.74rem);
           font-weight: 700;
-          letter-spacing: 0.22em;
+          letter-spacing: 0.16em;
           text-transform: uppercase;
           padding: 6px 14px;
           border-radius: 100px;
@@ -450,7 +450,7 @@ export default function FacultyDetailPage() {
           padding: clamp(2.5rem, 5vh, 5rem) clamp(2rem, 4.5vw, 5rem);
           border-bottom: 1px solid rgba(0,92,159,.08);
         }
-        .fd-identity > * { opacity: 0; } /* GSAP stagger reveals */
+        .fd-identity > * { opacity: 1; } /* GSAP stagger reveals */
 
         .fd-back {
           display: inline-flex;
@@ -459,7 +459,7 @@ export default function FacultyDetailPage() {
           color: ${BLUE};
           text-decoration: none;
           font-family: ${cinzel.style.fontFamily};
-          font-size: clamp(0.56rem, 0.78vw, 0.68rem);
+          font-size: clamp(0.66rem, 0.82vw, 0.74rem);
           font-weight: 700;
           letter-spacing: 0.14em;
           text-transform: uppercase;
@@ -494,7 +494,7 @@ export default function FacultyDetailPage() {
           padding: 0;
         }
         .fd-role {
-          font-size: clamp(0.58rem, 0.72vw, 0.66rem);
+          font-size: clamp(0.66rem, 0.78vw, 0.74rem);
           letter-spacing: 0.16em;
           text-transform: uppercase;
           color: ${BLUE};
@@ -525,7 +525,7 @@ export default function FacultyDetailPage() {
           color: ${BLUE};
           text-decoration: none;
           font-family: ${cinzel.style.fontFamily};
-          font-size: clamp(0.56rem, 0.72vw, 0.66rem);
+          font-size: clamp(0.66rem, 0.78vw, 0.74rem);
           font-weight: 600;
           letter-spacing: 0.06em;
           max-width: 240px;
@@ -574,7 +574,7 @@ export default function FacultyDetailPage() {
           gap: 1px;
         }
         .fd-exp-chip-label {
-          font-size: clamp(0.54rem, 0.66vw, 0.6rem);
+          font-size: clamp(0.66rem, 0.7vw, 0.72rem);
           font-weight: 700;
           letter-spacing: 0.12em;
           text-transform: uppercase;
@@ -602,7 +602,7 @@ export default function FacultyDetailPage() {
           gap: 6px;
           color: ${BLUE};
           opacity: 0.48;
-          font-size: clamp(0.52rem, 0.65vw, 0.6rem);
+          font-size: clamp(0.66rem, 0.72vw, 0.72rem);
           letter-spacing: 0.12em;
           text-transform: uppercase;
         }
@@ -620,8 +620,8 @@ export default function FacultyDetailPage() {
           display: flex;
           align-items: center;
           gap: 10px;
-          font-size: clamp(0.5rem, 0.65vw, 0.58rem);
-          letter-spacing: 0.28em;
+          font-size: clamp(0.66rem, 0.74vw, 0.74rem);
+          letter-spacing: 0.2em;
           text-transform: uppercase;
           color: ${BLUE};
           font-weight: 700;
@@ -641,7 +641,7 @@ export default function FacultyDetailPage() {
           border-radius: 14px;
           padding: clamp(18px, 2.2vw, 28px);
           box-shadow: 0 1px 10px rgba(0,92,159,.04);
-          opacity: 0; /* GSAP scroll-triggered */
+          opacity: 1; /* GSAP scroll-triggered */
         }
         .fd-card-hdr {
           display: flex;
@@ -795,7 +795,7 @@ export default function FacultyDetailPage() {
 
         @media (max-width: 480px) {
           .fd-name { font-size: clamp(1.8rem, 9vw, 2.6rem) !important; }
-          .fd-social-link { font-size: 0.62rem; padding: 5px 10px; }
+          .fd-social-link { font-size: 0.74rem; padding: 5px 10px; }
           .fd-exp-chip { padding: 7px 11px 7px 8px; }
         }
 

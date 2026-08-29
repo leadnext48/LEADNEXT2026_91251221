@@ -265,8 +265,8 @@ export default function ProgramsSection() {
               <span
                 className={cinzel.className}
                 style={{
-                  fontSize: "clamp(7px, 0.52vw, 9px)",
-                  letterSpacing: "0.38em",
+                  fontSize: "clamp(11px, 0.7vw, 13px)",
+                  letterSpacing: "0.32em",
                   textTransform: "uppercase",
                   color: `${NAVY}90`,
                   fontWeight: 600,
@@ -308,7 +308,7 @@ export default function ProgramsSection() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
+              gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
               gap: "clamp(1rem, 2vw, 1.8rem)",
             }}
             className="max-[700px]:!grid-cols-1"
@@ -417,8 +417,8 @@ const ProgramCard = memo(function ProgramCard({
           <span
             className={cinzel.className}
             style={{
-              fontSize: "clamp(6px, 0.46vw, 8px)",
-              letterSpacing: "0.26em",
+              fontSize: "clamp(11px, 0.6vw, 12px)",
+              letterSpacing: "0.2em",
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.9)",
               fontWeight: 700,
@@ -495,8 +495,8 @@ const ProgramCard = memo(function ProgramCard({
                 border: `1px solid rgba(10,36,99,0.13)`,
                 borderRadius: 100,
                 background: `rgba(10,36,99,0.03)`,
-                fontSize: "clamp(6px, 0.46vw, 8px)",
-                letterSpacing: "0.2em",
+                fontSize: "clamp(11px, 0.6vw, 12px)",
+                letterSpacing: "0.16em",
                 textTransform: "uppercase",
                 color: NAVY,
                 fontWeight: 600,
@@ -559,8 +559,8 @@ const ProgramCard = memo(function ProgramCard({
             <span
               className={cinzel.className}
               style={{
-                fontSize: "clamp(6.5px, 0.48vw, 8.5px)",
-                letterSpacing: "0.26em",
+                fontSize: "clamp(11px, 0.6vw, 12px)",
+                letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 color: BLUE,
                 fontWeight: 700,
@@ -626,8 +626,8 @@ const ProgramCard = memo(function ProgramCard({
             <span
               className={cinzel.className}
               style={{
-                fontSize: "clamp(7px, 0.55vw, 9.5px)",
-                letterSpacing: "0.22em",
+                fontSize: "clamp(11px, 0.7vw, 12px)",
+                letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 color: "#fff",
                 fontWeight: 700,

@@ -42,8 +42,8 @@ const G = {
 
 const TYPE = {
   eyebrow: {
-    fontSize:      "clamp(.4rem,.58vw,.52rem)" as string,
-    letterSpacing: ".28em",
+    fontSize:      "clamp(.66rem,.72vw,.72rem)" as string,
+    letterSpacing: ".22em",
     textTransform: "uppercase" as const,
     fontWeight:    600,
   },
@@ -147,7 +147,7 @@ function HeroSection(): React.JSX.Element {
           padding: clamp(.8rem,1.6vh,1.3rem) 0;
           border-top: 1px solid rgba(0,92,159,.1);
           display: grid;
-          grid-template-columns: repeat(3,1fr);
+          grid-template-columns: repeat(3,minmax(0,1fr));
           gap: .5rem;
           margin-top: clamp(1.2rem,2.5vh,2rem);
           width: 100%; min-width: 0;
@@ -163,7 +163,7 @@ function HeroSection(): React.JSX.Element {
         .pets-strip-text { min-width: 0; overflow: hidden; }
         .pets-strip-label {
           display: block;
-          font-size: clamp(.48rem,.6vw,.56rem);
+          font-size: clamp(.68rem,.72vw,.74rem);
           letter-spacing: .08em; text-transform: uppercase;
           color: #333; font-weight: 700;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -178,7 +178,7 @@ function HeroSection(): React.JSX.Element {
           .pets-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .pets-hero-inner { grid-template-columns: 1fr; }
           .pets-hero-right, .pets-hero-bg-text { display: none; }
-          .pets-hero-strip { grid-template-columns: repeat(3,1fr); gap: .25rem; }
+          .pets-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
           .pets-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
           .pets-strip-item:first-child { padding-left: 0; }
         }
@@ -200,8 +200,8 @@ function HeroSection(): React.JSX.Element {
               <span style={{ display: "inline-block", width: 24, height: 1.5, flexShrink: 0, background: C.green }} />
               <span style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(.5rem,.65vw,.58rem)",
-                letterSpacing: "clamp(.08em,.2vw,.2em)",
+                fontSize: "clamp(.66rem,.75vw,.74rem)",
+                letterSpacing: "clamp(.08em,.16vw,.16em)",
                 textTransform: "uppercase",
                 color: C.green,
                 fontWeight: 600,
@@ -343,7 +343,7 @@ function PosterSection(): React.JSX.Element {
                   padding: ".45rem .9rem", display: "flex", alignItems: "center", gap: ".55rem",
                 }}>
                   <div style={{ width: 6, height: 6, borderRadius: "50%", background: C.green, flexShrink: 0 }} />
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.4rem,.52vw,.48rem)", letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.75)", fontWeight: 600 }}>A Campus Full of Life</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.7vw,.72rem)", letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.75)", fontWeight: 600 }}>A Campus Full of Life</span>
                 </div>
               </div>
 
@@ -414,7 +414,7 @@ function PosterSection(): React.JSX.Element {
               }}>
                 "No two days on the LEAD campus feel the same — because our campus is home to creatures that make every morning a small wonder."
               </p>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", letterSpacing: ".18em", textTransform: "uppercase", color: C.faint, margin: 0, fontWeight: 600 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: C.faint, margin: 0, fontWeight: 600 }}>
                 — Campus Life, LEAD College
               </p>
             </div>
@@ -518,7 +518,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,1fr)",
+            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {cards.map((card, i) => {
@@ -659,7 +659,7 @@ function CollaborationSection(): React.JSX.Element {
                 color: "transparent",
                 userSelect: "none",
               }} aria-hidden="true">06</div>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.42rem,.54vw,.5rem)", letterSpacing: ".2em", textTransform: "uppercase", color: C.faint, margin: 0, lineHeight: 1.5 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.7vw,.72rem)", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, margin: 0, lineHeight: 1.5 }}>
                 Ways animals<br />enrich daily life<br />at LEAD
               </p>
             </div>
@@ -681,7 +681,7 @@ function CollaborationSection(): React.JSX.Element {
                   background: "rgba(0,92,159,.07)", border: `1px solid rgba(0,92,159,.15)`,
                   display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1,
                 }}>
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", fontWeight: 800, color: C.green, letterSpacing: ".1em" }}>0{i + 1}</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", fontWeight: 800, color: C.green, letterSpacing: ".1em" }}>0{i + 1}</span>
                 </div>
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.7, color: C.muted, margin: 0 }}>{pt}</p>
               </motion.div>
@@ -740,7 +740,7 @@ function CommunitySection(): React.JSX.Element {
             a reminder that the best education happens not just in lecture halls,
             but in every corner of a living, breathing world.
           </h2>
-          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", letterSpacing: ".22em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>— Campus Life, LEAD College</p>
+          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>— Campus Life, LEAD College</p>
         </motion.div>
 
         <motion.div
@@ -771,7 +771,7 @@ function CommunitySection(): React.JSX.Element {
 
         <motion.div
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
-          style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3,1fr)", gap: "1rem" }}>
+          style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3,minmax(0,1fr))", gap: "1rem" }}>
           {pillars.map((p, i) => {
             const Icon = p.icon;
             return (
@@ -787,7 +787,7 @@ function CommunitySection(): React.JSX.Element {
                 }}>
                   <Icon size={16} color={C.green} strokeWidth={1.7} />
                 </div>
-                <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.6rem,.75vw,.7rem)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em", color: C.text, margin: "0 0 .4rem" }}>{p.title}</h3>
+                <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.75vw,.74rem)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em", color: C.text, margin: "0 0 .4rem" }}>{p.title}</h3>
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.76rem,.86vw,.82rem)", lineHeight: 1.7, color: C.muted, margin: 0 }}>{p.desc}</p>
               </motion.div>
             );

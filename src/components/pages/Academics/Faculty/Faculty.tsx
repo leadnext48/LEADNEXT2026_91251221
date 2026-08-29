@@ -159,7 +159,7 @@ export default function FacultyPage() {
                 <span style={{ width: 3, height: 3, borderRadius: "50%", background: BLUE, display: "inline-block", opacity: 0.5 }} />
                 <span style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "0.48rem", letterSpacing: "0.28em",
+                  fontSize: "0.74rem", letterSpacing: "0.22em",
                   textTransform: "uppercase", color: BLUE, opacity: 0.5, fontWeight: 600,
                 }}>{item}</span>
               </div>
@@ -295,8 +295,8 @@ export default function FacultyPage() {
           opacity: 0; transform: translateY(-10px);
           display: flex; align-items: center; gap: 12px;
           margin-bottom: clamp(0.7rem,1.5vh,1.2rem);
-          font-size: clamp(0.44rem,0.68vw,0.6rem);
-          letter-spacing: 0.38em; text-transform: uppercase;
+          font-size: clamp(0.66rem,0.8vw,0.74rem);
+          letter-spacing: 0.32em; text-transform: uppercase;
           color: ${BLUE}; font-weight: 600;
         }
         .fac-eyebrow-dash {
@@ -370,8 +370,8 @@ export default function FacultyPage() {
         }
         .fac-section-eyebrow {
           display: flex; align-items: center; gap: 0.75rem;
-          font-size: clamp(0.44rem,0.64vw,0.58rem);
-          letter-spacing: 0.34em; text-transform: uppercase;
+          font-size: clamp(0.66rem,0.78vw,0.74rem);
+          letter-spacing: 0.28em; text-transform: uppercase;
           color: ${BLUE}; font-weight: 600; margin-bottom: 0.6rem;
         }
         .fac-section-hdr-row {
@@ -513,7 +513,7 @@ export default function FacultyPage() {
         .fc-cta {
           display: flex; align-items: center; gap: 6px;
           margin-top: clamp(8px,0.8vw,12px);
-          font-size: clamp(9px,0.8vw,10.5px);
+          font-size: clamp(11px,0.9vw,13px);
           letter-spacing: 0.1em; text-transform: uppercase;
           color: rgba(0,92,159,0.5);
           font-family: ${cinzel.style.fontFamily};
@@ -534,7 +534,7 @@ export default function FacultyPage() {
           .faculty-grid { grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); }
         }
         @media(max-width:580px) {
-          .faculty-grid { grid-template-columns: repeat(2,1fr); gap: 14px; }
+          .faculty-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
           .fac-grid-section { padding: 3rem 1.2rem 4rem; }
           .fac-hero { padding: 3rem 1.5rem 3.5rem; }
         }

@@ -34,8 +34,8 @@ const C  = `'Cinzel', serif`;
 const PF = `'Playfair Display', serif`;
 
 const eyebrowStyle = (light = false): CSSProperties => ({
-  fontFamily: C, fontSize: "0.58rem",
-  letterSpacing: "0.32em", textTransform: "uppercase",
+  fontFamily: C, fontSize: "0.74rem",
+  letterSpacing: "0.26em", textTransform: "uppercase",
   color: light ? "rgba(255,255,255,0.4)" : BLUE,
   display: "flex", alignItems: "center", gap: "0.65rem",
   marginBottom: "1rem",
@@ -205,7 +205,7 @@ function Donut() {
         <text x={cx} y={cy - 6} textAnchor="middle"
           style={{ fontFamily: C, fontSize: 18, fontWeight: 700, fill: BLUE }}>2024</text>
         <text x={cx} y={cy + 14} textAnchor="middle"
-          style={{ fontFamily: PF, fontSize: 9, fill: "#aaa" }}>Season</text>
+          style={{ fontFamily: PF, fontSize: 12, fill: "#aaa" }}>Season</text>
       </svg>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem", flex: 1, minWidth: 180 }}>
         {slices.map(sl => (
@@ -278,12 +278,12 @@ function LineChart() {
             <line x1={PX} y1={mY(v)} x2={W - PX} y2={mY(v)}
               stroke="rgba(30,58,138,.06)" strokeWidth="1" />
             <text x={PX - 10} y={mY(v) + 4} textAnchor="end"
-              style={{ fontFamily: PF, fontSize: 10, fill: "#ccc" }}>₹{v}L</text>
+              style={{ fontFamily: PF, fontSize: 12, fill: "#ccc" }}>₹{v}L</text>
           </g>
         ))}
         {BATCH_CHART.map((d, i) => (
           <text key={d.b} x={toX(i)} y={H - 10} textAnchor="middle"
-            style={{ fontFamily: PF, fontSize: 10, fill: "#bbb" }}>{d.b}</text>
+            style={{ fontFamily: PF, fontSize: 12, fill: "#bbb" }}>{d.b}</text>
         ))}
         <path d={mkD(mPts) + ` L${toX(n - 1)},${H - PY} L${toX(0)},${H - PY} Z`}
           fill="url(#lg)" />
@@ -297,7 +297,7 @@ function LineChart() {
         ))}
         {BATCH_CHART.map((d, i) => (
           <text key={d.b + "val"} x={toX(i)} y={mY(d.med) - 10} textAnchor="middle"
-            style={{ fontFamily: C, fontSize: 9, fontWeight: 700, fill: BLUE,
+            style={{ fontFamily: C, fontSize: 12, fontWeight: 700, fill: BLUE,
               opacity: vis ? 1 : 0, transition: `opacity .3s ${1.5 + i * .12}s` }}>
             ₹{d.med}L
           </text>
@@ -505,7 +505,7 @@ function HeroSection() {
                   style={{
                     fontFamily: PF,
                     fontStyle: "italic",
-                    fontSize: "0.62rem",
+                    fontSize: "0.74rem",
                     color: "#aaa",
                     marginTop: "0.25rem",
                     whiteSpace: "pre-line",
@@ -595,7 +595,7 @@ function TrajectorySection() {
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
           {HIGHLIGHTS.map((hh, i) => (
             <button key={hh.batch} onClick={() => setActive(i)} style={{
-              fontFamily: C, fontSize: "0.58rem", letterSpacing: "0.2em",
+              fontFamily: C, fontSize: "0.74rem", letterSpacing: "0.14em",
               textTransform: "uppercase", padding: "0.55rem 1.1rem",
               background: active === i ? BLUE : "transparent",
               color: active === i ? WHITE : BLUE,
@@ -607,13 +607,13 @@ function TrajectorySection() {
         </div>
 
         <style>{`
-          .pl-summary-grid { grid-template-columns: repeat(5,1fr) auto; }
+          .pl-summary-grid { grid-template-columns: repeat(5, minmax(0, 1fr)) auto; }
           @media (max-width: 900px){
-            .pl-summary-grid { grid-template-columns: repeat(3,1fr); }
+            .pl-summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
             .pl-summary-report { grid-column: 1 / -1; flex-direction: row !important; align-items: center !important; }
           }
           @media (max-width: 560px){
-            .pl-summary-grid { grid-template-columns: repeat(2,1fr); }
+            .pl-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
           }
         `}</style>
         <div className="pl-summary-grid" style={{
@@ -633,7 +633,7 @@ function TrajectorySection() {
                 <item.Icon size={13} strokeWidth={1.8} />
               </div>
               <div style={{ fontFamily: C, fontWeight: 700, fontSize: "clamp(1rem,1.5vw,1.4rem)", color: BLUE, marginBottom: "0.3rem" }}>{item.val}</div>
-              <div style={{ fontFamily: C, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#bbb", marginBottom: "0.2rem" }}>{item.label}</div>
+              <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: "0.2rem" }}>{item.label}</div>
               <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#ccc", lineHeight: 1.4 }}>{item.sub}</div>
             </div>
           ))}
@@ -645,7 +645,7 @@ function TrajectorySection() {
             textDecoration: "none", minWidth: 140, gap: "1rem",
           }}>
             <div>
-              <div style={{ fontFamily: C, fontSize: "0.5rem", letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,.45)", marginBottom: "0.4rem" }}>Batch {h.batch}</div>
+              <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,.45)", marginBottom: "0.4rem" }}>Batch {h.batch}</div>
               <div style={{ fontFamily: C, fontSize: "0.72rem", fontWeight: 600, color: WHITE, letterSpacing: "0.06em", lineHeight: 1.4 }}>View<br />Detailed<br />Report</div>
             </div>
             <ArrowUpRight size={16} color="rgba(255,255,255,.5)" />
@@ -663,7 +663,14 @@ function SectorSection() {
   const [ref, vis] = useInView(0.1);
   return (
     <section style={{ background: WHITE, padding: "clamp(4rem,8vh,7rem) clamp(2rem,5vw,5rem)" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(3rem,6vw,7rem)", alignItems: "center" }}
+      <style>{`
+        @media (max-width: 640px){
+          .pl-sector-grid { grid-template-columns: minmax(0, 1fr) !important; }
+          .pl-sector-frame { display: none !important; }
+          .pl-sector-offset { left: 0 !important; bottom: 0 !important; }
+        }
+      `}</style>
+      <div className="pl-sector-grid" style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: "clamp(3rem,6vw,7rem)", alignItems: "center" }}
         ref={ref as React.RefCallback<HTMLDivElement>}>
         <div>
           <div style={{ ...eyebrowStyle(false), opacity: vis ? 1 : 0, transition: "opacity .7s" }}>{rule(false)} Sector Distribution · 2024–26</div>
@@ -683,7 +690,7 @@ function SectorSection() {
           opacity: vis ? 1 : 0, transform: vis ? "none" : "translateX(28px)",
           transition: "opacity .9s .2s, transform .9s .2s cubic-bezier(.22,1,.36,1)",
         }}>
-          <div style={{ position: "absolute", top: -16, right: -16, width: "60%", height: "60%", border: "1px solid rgba(30,58,138,.15)", pointerEvents: "none" }} />
+          <div className="pl-sector-frame" style={{ position: "absolute", top: -16, right: -16, width: "60%", height: "60%", border: "1px solid rgba(30,58,138,.15)", pointerEvents: "none" }} />
           <div style={{ overflow: "hidden", boxShadow: "0 24px 56px rgba(0,0,0,.12)" }}>
             <div style={{ width: "100%", aspectRatio: "4/3", position: "relative", display: "block" }}>
               <Image
@@ -695,7 +702,7 @@ function SectorSection() {
               />
             </div>
           </div>
-          <div style={{ position: "absolute", bottom: "-1.5rem", left: "-1.5rem", width: "42%", aspectRatio: "1/1", overflow: "hidden", border: `4px solid ${WHITE}`, boxShadow: "0 12px 32px rgba(0,0,0,.15)" }}>
+          <div className="pl-sector-offset" style={{ position: "absolute", bottom: "-1.5rem", left: "-1.5rem", width: "42%", aspectRatio: "1/1", overflow: "hidden", border: `4px solid ${WHITE}`, boxShadow: "0 12px 32px rgba(0,0,0,.15)" }}>
             <div style={{ position: "relative", width: "100%", height: "100%" }}>
               <Image
                 src="/convert/LEAD15.webp"
@@ -833,17 +840,17 @@ function RecruitersSection() {
             }
           }
           .pl-marquee-wrap { width: 75%; }
-          .pl-marquee-grid { grid-template-columns: repeat(6, 1fr); }
+          .pl-marquee-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
           @media (max-width: 1024px){
             .pl-marquee-wrap { width: 88%; }
-            .pl-marquee-grid { grid-template-columns: repeat(4, 1fr); }
+            .pl-marquee-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
           }
           @media (max-width: 700px){
             .pl-marquee-wrap { width: 92%; }
-            .pl-marquee-grid { grid-template-columns: repeat(3, 1fr); }
+            .pl-marquee-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
           }
           @media (max-width: 480px){
-            .pl-marquee-grid { grid-template-columns: repeat(2, 1fr); }
+            .pl-marquee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
           }
         `}
       </style>
@@ -922,7 +929,14 @@ function InternshipSection() {
         </div>
 
         {/* Stipend stat cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "1.25rem", maxWidth: 560, marginBottom: "4rem" }}>
+        <style>{`
+          @media (max-width: 640px){
+            .pl-stipend-grid { grid-template-columns: minmax(0, 1fr) !important; }
+            .pl-phase-grid { grid-template-columns: minmax(0, 1fr) !important; }
+            .pl-geo-grid { grid-template-columns: minmax(0, 1fr) !important; }
+          }
+        `}</style>
+        <div className="pl-stipend-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "1.25rem", maxWidth: 560, marginBottom: "4rem" }}>
           {[
             { l: "Average Monthly Stipend", v: "₹11,890", sub: "Latest Batch · Phase 1", dark: true  },
             { l: "Highest Stipend Offered",  v: "₹73,000", sub: "Top Performer",          dark: false },
@@ -935,7 +949,7 @@ function InternshipSection() {
               transition: `opacity .8s ${.4 + i * .12}s, transform .8s ${.4 + i * .12}s cubic-bezier(.22,1,.36,1)`,
             }}>
               <div style={{ fontFamily: C, fontWeight: 700, fontSize: "clamp(1.5rem,2.5vw,2.2rem)", color: c.dark ? WHITE : BLUE, lineHeight: 1, marginBottom: "0.5rem" }}>{c.v}</div>
-              <div style={{ fontFamily: C, fontSize: "0.52rem", letterSpacing: "0.2em", textTransform: "uppercase", color: c.dark ? "rgba(255,255,255,.45)" : "#bbb", marginBottom: "0.2rem" }}>{c.l}</div>
+              <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: c.dark ? "rgba(255,255,255,.45)" : "#bbb", marginBottom: "0.2rem" }}>{c.l}</div>
               <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: c.dark ? "rgba(255,255,255,.35)" : "#ccc" }}>{c.sub}</div>
             </div>
           ))}
@@ -943,9 +957,9 @@ function InternshipSection() {
 
         {/* Phase timeline */}
         <div style={{ marginBottom: "4rem" }}>
-          <div style={{ fontFamily: C, fontSize: "0.54rem", letterSpacing: "0.28em", textTransform: "uppercase", color: BLUE, marginBottom: "2.5rem", opacity: vis ? 1 : 0, transition: "opacity .7s .3s" }}>The 9-Month Internship Cycle</div>
+          <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: BLUE, marginBottom: "2.5rem", opacity: vis ? 1 : 0, transition: "opacity .7s .3s" }}>The 9-Month Internship Cycle</div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 0, position: "relative" }}>
+          <div className="pl-phase-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 0, position: "relative" }}>
       
             {phases.map((ph, i) => (
               <div key={ph.num} style={{
@@ -969,7 +983,7 @@ function InternshipSection() {
                     <div style={{ flex: 1, height: 1, background: "rgba(30,58,138,.08)" }} />
                   </div>
 
-                  <div style={{ fontFamily: C, fontSize: "0.46rem", letterSpacing: "0.22em", textTransform: "uppercase", color: BLUE, opacity: 0.55, marginBottom: "0.4rem" }}>{ph.num}</div>
+                  <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: BLUE, opacity: 0.55, marginBottom: "0.4rem" }}>{ph.num}</div>
                   <div style={{ fontFamily: C, fontSize: "clamp(0.85rem,1.1vw,1.05rem)", fontWeight: 700, color: "#0D0D0D", letterSpacing: "0.03em", marginBottom: "1.5rem", lineHeight: 1.2 }}>{ph.label}</div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem", marginBottom: "1.5rem" }}>
@@ -980,7 +994,7 @@ function InternshipSection() {
                       alignSelf: "flex-start",
                     }}>
                       <Calendar size={10} color={BLUE} strokeWidth={1.8} />
-                      <span style={{ fontFamily: C, fontSize: "0.46rem", letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE }}>{ph.season}</span>
+                      <span style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE }}>{ph.season}</span>
                     </div>
                     <div style={{
                       display: "inline-flex", alignItems: "center", gap: "0.5rem",
@@ -989,7 +1003,7 @@ function InternshipSection() {
                       alignSelf: "flex-start",
                     }}>
                       <Clock size={10} color="#aaa" strokeWidth={1.8} />
-                      <span style={{ fontFamily: C, fontSize: "0.46rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa" }}>{ph.dur}</span>
+                      <span style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#aaa" }}>{ph.dur}</span>
                     </div>
                   </div>
 
@@ -1002,7 +1016,7 @@ function InternshipSection() {
 
         {/* Sector bars */}
         <div style={{ marginBottom: "3rem" }}>
-          <div style={{ fontFamily: C, fontSize: "0.54rem", letterSpacing: "0.24em", textTransform: "uppercase", color: BLUE, marginBottom: "1.25rem" }}>Internship sector distribution — 359 students</div>
+          <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, marginBottom: "1.25rem" }}>Internship sector distribution — 359 students</div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
             {sectors.map((s, i) => (
               <div key={s.n} style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
@@ -1026,11 +1040,11 @@ function InternshipSection() {
         </div>
 
         {/* ── Geographic reach + Logo partners — true 50/50, equal height ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, alignItems: "stretch" }}>
+        <div className="pl-geo-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: 0, alignItems: "stretch" }}>
 
           {/* LEFT — Geographic reach */}
           <div style={{ paddingRight: "3rem", display: "flex", flexDirection: "column" }}>
-            <div style={{ fontFamily: C, fontSize: "0.54rem", letterSpacing: "0.24em", textTransform: "uppercase", color: BLUE, marginBottom: "1.5rem" }}>Geographic reach</div>
+            <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, marginBottom: "1.5rem" }}>Geographic reach</div>
 
             {/* Cards grow to fill available space equally */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem", flex: 1 }}>
@@ -1050,7 +1064,7 @@ function InternshipSection() {
                   <div style={{ width: 1, height: 40, background: "rgba(30,58,138,.1)", flexShrink: 0 }} />
                   <div>
                     <div style={{ fontFamily: PF, fontSize: "0.95rem", color: "#333", fontWeight: 600, marginBottom: "0.2rem" }}>{loc.l}</div>
-                    <div style={{ fontFamily: C, fontSize: "0.5rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#aaa" }}>{loc.c} students</div>
+                    <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#aaa" }}>{loc.c} students</div>
                   </div>
                 </div>
               ))}
@@ -1064,14 +1078,14 @@ function InternshipSection() {
 
           {/* RIGHT — Internship partners static 5-3-2 grid */}
           <div style={{ paddingLeft: "3rem", borderLeft: "1px solid rgba(30,58,138,.08)", display: "flex", flexDirection: "column" }}>
-            <div style={{ fontFamily: C, fontSize: "0.54rem", letterSpacing: "0.24em", textTransform: "uppercase", color: BLUE, marginBottom: "1.5rem" }}>Internship partners</div>
+            <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, marginBottom: "1.5rem" }}>Internship partners</div>
 
             {/* Logo grid — grows to fill space */}
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", flex: 1 }}>
 
               {/* Row 1 — 5 logos */}
 
-                     <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "0.5rem", flex: 1 }}>
+                     <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "0.5rem", flex: 1 }}>
                 {INTERN_LOGOS.slice(8, 10).map((p, i) => (
                   <div key={i} style={{
                     position: "relative",
@@ -1091,7 +1105,7 @@ function InternshipSection() {
        
 
               {/* Row 2 — 3 logos */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.5rem", flex: 1 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "0.5rem", flex: 1 }}>
                 {INTERN_LOGOS.slice(5, 8).map((p, i) => (
                   <div key={i} style={{
                     position: "relative",
@@ -1108,7 +1122,7 @@ function InternshipSection() {
                   </div>
                 ))}
               </div>
-                     <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "0.5rem", flex: 1 }}>
+                     <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: "0.5rem", flex: 1 }}>
                 {INTERN_LOGOS.slice(0, 5).map((p, i) => (
                   <div key={i} style={{
                     position: "relative",
@@ -1173,7 +1187,7 @@ function ProcessSection() {
               transition: `opacity .7s ${i * .1}s, transform .7s ${i * .1}s cubic-bezier(.22,1,.36,1)`,
             }}>
               <div style={{ fontFamily: C, fontSize: "2.8rem", fontWeight: 700, color: "rgba(255,255,255,0.28)", lineHeight: 1, marginBottom: "1.25rem" }}>{s.n}</div>
-              <h3 style={{ fontFamily: C, fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,.72)", margin: "0 0 0.75rem" }}>{s.t}</h3>
+              <h3 style={{ fontFamily: C, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,.72)", margin: "0 0 0.75rem" }}>{s.t}</h3>
               <p style={{ fontFamily: PF, fontSize: "clamp(0.78rem,.9vw,.9rem)", lineHeight: 1.85, color: "rgba(255,255,255,.38)", margin: 0 }}>{s.b}</p>
             </div>
           ))}
@@ -1240,15 +1254,15 @@ function VoicesSection() {
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem" }}>
                 <div>
                   <div style={{ fontFamily: C, fontSize: "0.72rem", fontWeight: 700, color: "#0D0D0D", letterSpacing: "0.04em", marginBottom: "0.2rem" }}>{t.name}</div>
-                  <div style={{ fontFamily: C, fontSize: "0.48rem", letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, opacity: 0.7, marginBottom: "0.15rem" }}>{t.placed}</div>
-                  <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.7rem", color: "#bbb" }}>{t.role} · Batch {t.batch}</div>
+                  <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, opacity: 0.7, marginBottom: "0.15rem" }}>{t.placed}</div>
+                  <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#bbb" }}>{t.role} · Batch {t.batch}</div>
                 </div>
                 <div style={{
                   flexShrink: 0, padding: "0.3rem 0.65rem",
                   background: "rgba(30,58,138,.04)", border: "1px solid rgba(30,58,138,.1)",
                 }}>
                   <div style={{ fontFamily: C, fontWeight: 700, fontSize: "0.8rem", color: BLUE, lineHeight: 1 }}>{t.pkg}</div>
-                  <div style={{ fontFamily: C, fontSize: "0.4rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#bbb", marginTop: "0.2rem" }}>Package</div>
+                  <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.11em", textTransform: "uppercase", color: "#bbb", marginTop: "0.2rem" }}>Package</div>
                 </div>
               </div>
             </div>
@@ -1309,14 +1323,14 @@ function HireSection() {
               transition: `opacity .7s ${.2 + i * .1}s, transform .7s ${.2 + i * .1}s cubic-bezier(.22,1,.36,1)`,
             }}>
               <ChevronRight size={14} color={BLUE} style={{ marginBottom: "1rem", opacity: 0.5 }} />
-              <h4 style={{ fontFamily: C, fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#0D0D0D", margin: "0 0 0.6rem" }}>{item.t}</h4>
+              <h4 style={{ fontFamily: C, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#0D0D0D", margin: "0 0 0.6rem" }}>{item.t}</h4>
               <p style={{ fontFamily: PF, fontSize: "0.85rem", lineHeight: 1.8, color: "#666", margin: 0 }}>{item.d}</p>
             </div>
           ))}
         </div>
 
         <div>
-          <div style={{ fontFamily: C, fontSize: "0.54rem", letterSpacing: "0.28em", textTransform: "uppercase", color: "#aaa", marginBottom: "1.75rem" }}>Placement cell · direct contacts</div>
+          <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#aaa", marginBottom: "1.75rem" }}>Placement cell · direct contacts</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(255px,1fr))", gap: "1px", background: "rgba(30,58,138,.07)", marginBottom: "2.5rem" }}>
             {CONTACTS.map((c, i) => (
               <div key={c.name} style={{
@@ -1326,7 +1340,7 @@ function HireSection() {
                 transition: `opacity .7s ${.3 + i * .1}s, transform .7s ${.3 + i * .1}s cubic-bezier(.22,1,.36,1)`,
               }}>
                 <div style={{ fontFamily: C, fontSize: "0.82rem", fontWeight: 600, color: "#0D0D0D", marginBottom: "0.2rem", letterSpacing: "0.02em" }}>{c.name}</div>
-                <div style={{ fontFamily: C, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: BLUE, opacity: 0.7, marginBottom: "1.1rem" }}>{c.role}</div>
+                <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, opacity: 0.7, marginBottom: "1.1rem" }}>{c.role}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                   <a href={`mailto:${c.email}`} style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
                     <Mail size={12} color="#aaa" />

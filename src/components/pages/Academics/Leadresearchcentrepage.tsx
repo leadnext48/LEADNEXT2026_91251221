@@ -69,7 +69,7 @@ function Eyebrow({ n, label, light = false }: { n: string; label: string; light?
       <div className="h-px w-7" style={{ backgroundColor: light ? "rgba(255,255,255,0.3)" : NAVY }} />
       <span
         className={`${cinzel.className} uppercase tracking-[0.38em]`}
-        style={{ fontSize: "10px", color: light ? "rgba(255,255,255,0.3)" : MUTED }}
+        style={{ fontSize: "12px", color: light ? "rgba(255,255,255,0.3)" : MUTED }}
       >
         {n} / {label}
       </span>
@@ -179,7 +179,7 @@ function Hero() {
       />
       <div className="relative z-10 flex items-center justify-end px-8 sm:px-14 pt-10">
         <motion.div initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3, ease: E }}>
-          <span className={`${cinzel.className} uppercase tracking-widest`} style={{ fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>
+          <span className={`${cinzel.className} uppercase tracking-widest`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.22)" }}>
             In Collaboration with KUFOS
           </span>
         </motion.div>
@@ -196,7 +196,7 @@ function Hero() {
               className="flex items-center gap-4 mb-5"
             >
               <div className="w-8 h-px" style={{ backgroundColor: "rgba(255,255,255,0.25)" }} />
-              <span className={`${cinzel.className} uppercase tracking-[0.38em]`} style={{ fontSize: "10px", color: "rgba(255,255,255,0.28)" }}>
+              <span className={`${cinzel.className} uppercase tracking-[0.38em]`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.28)" }}>
                 Doctoral Research Program · Full-Time Ph.D.
               </span>
             </motion.div>
@@ -270,7 +270,7 @@ function Hero() {
                   <span className={`${cinzel.className} font-bold text-white leading-none`} style={{ fontSize: "clamp(20px,2.4vw,36px)", letterSpacing: "-0.02em" }}>
                     <Num to={s.val} prefix={s.pre} suffix={s.suf} />
                   </span>
-                  <span className={`${cinzel.className} uppercase mt-1.5`} style={{ fontSize: "8px", letterSpacing: "0.28em", color: "rgba(255,255,255,0.3)", lineHeight: 1.4 }}>
+                  <span className={`${cinzel.className} uppercase mt-1.5`} style={{ fontSize: "11px", letterSpacing: "0.2em", color: "rgba(255,255,255,0.3)", lineHeight: 1.4 }}>
                     {s.label}
                   </span>
                 </div>
@@ -325,7 +325,7 @@ function About() {
               ABOUT<br />LEAD<br />RESEARCH<br />CENTRE
             </h2>
             <motion.div initial={{ opacity: 0, y: 14 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4, ease: E }} className="p-5 mb-8" style={{ border: `1px solid ${NAVY}14`, backgroundColor: OFF }}>
-              <p className={`${cinzel.className} uppercase tracking-widest mb-1`} style={{ fontSize: "9px", color: MUTED }}>University Affiliation</p>
+              <p className={`${cinzel.className} uppercase tracking-widest mb-1`} style={{ fontSize: "12px", color: MUTED }}>University Affiliation</p>
               <p className={`${cinzel.className} font-bold uppercase`} style={{ fontSize: "12px", color: NAVY }}>KUFOS</p>
               <p className={`${playfair.className} mt-0.5`} style={{ fontSize: "12px", color: MUTED }}>Kerala University of Fisheries and Ocean Studies</p>
             </motion.div>
@@ -338,7 +338,7 @@ function About() {
               ].map(({ icon: Icon, label }, i) => (
                 <motion.div key={label} initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.5 + i * 0.07, ease: E }} className="flex items-center gap-3 px-4 py-3" style={{ border: `1px solid ${NAVY}0e`, backgroundColor: OFF }}>
                   <Icon size={13} strokeWidth={1.5} color={NAVY} />
-                  <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "10px", color: `${NAVY}80` }}>{label}</span>
+                  <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "12px", color: `${NAVY}80` }}>{label}</span>
                 </motion.div>
               ))}
             </div>
@@ -526,8 +526,8 @@ function Faculty() {
                         key={tag}
                         className={`${cinzel.className} uppercase tracking-wider px-3 py-1.5`}
                         style={{
-                          fontSize: "9px",
-                          letterSpacing: "0.12em",
+                          fontSize: "11px",
+                          letterSpacing: "0.1em",
                           color: WHITE,
                           backgroundColor: NAVY,
                           border: `1px solid ${NAVY}`,
@@ -644,7 +644,7 @@ function Benefits() {
               <div className="w-8 h-8 flex items-center justify-center mb-3" style={{ backgroundColor: `${NAVY}07` }}>
                 <Icon size={13} strokeWidth={1.5} color={NAVY} />
               </div>
-              <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "9px", color: `${NAVY}60` }}>{label}</span>
+              <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "12px", color: `${NAVY}60` }}>{label}</span>
             </div>
           ))}
         </motion.div>
@@ -722,7 +722,7 @@ function Eligibility() {
             <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.07)" }}>
               {documents.map((d, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: 16 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.3 + i * 0.06, ease: E }} className="flex items-start gap-3 py-3 border-b" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-                  <span className={`${cinzel.className} font-black flex-shrink-0 mt-0.5`} style={{ fontSize: "10px", color: "rgba(255,255,255,0.18)" }}>{String(i + 1).padStart(2, "0")}</span>
+                  <span className={`${cinzel.className} font-black flex-shrink-0 mt-0.5`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.18)" }}>{String(i + 1).padStart(2, "0")}</span>
                   <span className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(12px,0.88vw,14px)", color: "rgba(255,255,255,0.55)", lineHeight: 1.75 }}>{d}</span>
                 </motion.div>
               ))}
@@ -763,7 +763,7 @@ function CTA() {
                   <Mail size={13} strokeWidth={1.5} color={NAVY} />
                 </div>
                 <div>
-                  <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize: "9px", color: MUTED }}>Email</p>
+                  <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize: "12px", color: MUTED }}>Email</p>
                   <p className={`${playfair.className} font-medium`} style={{ fontSize: "14px", color: NAVY }}>research@lead.ac.in</p>
                   <p className={`${playfair.className}`} style={{ fontSize: "13px", color: MUTED }}>info@lead.ac.in</p>
                 </div>
@@ -773,7 +773,7 @@ function CTA() {
                   <MapPin size={13} strokeWidth={1.5} color={NAVY} />
                 </div>
                 <div>
-                  <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize: "9px", color: MUTED }}>Address</p>
+                  <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize: "12px", color: MUTED }}>Address</p>
                   <p className={`${playfair.className} font-medium leading-relaxed`} style={{ fontSize: "14px", color: NAVY }}>LEAD College (Autonomous)<br />Dhoni, Palakkad District<br />Kerala 678014, India</p>
                 </div>
               </div>
@@ -781,7 +781,7 @@ function CTA() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 36 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.85, delay: 0.2, ease: E }} className="flex flex-col gap-3">
             <div id="apply" className="p-8 mb-2" style={{ border: `1px solid ${NAVY}12`, backgroundColor: NAVY }}>
-              <p className={`${cinzel.className} uppercase tracking-widest mb-2`} style={{ fontSize: "9px", color: "rgba(255,255,255,0.35)" }}>Full-Time Ph.D. Position</p>
+              <p className={`${cinzel.className} uppercase tracking-widest mb-2`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.35)" }}>Full-Time Ph.D. Position</p>
               <h3 className={`${cinzel.className} font-bold uppercase text-white leading-none mb-4`} style={{ fontSize: "clamp(18px,2vw,28px)", letterSpacing: "-0.02em" }}>APPLY NOW</h3>
               <p className={`${playfair.className} mb-6`} style={{ fontSize: "13px", color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>
                 Submit your application for full-time Research Scholar positions. Limited seats for the upcoming academic year.

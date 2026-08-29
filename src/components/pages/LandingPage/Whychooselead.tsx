@@ -235,7 +235,7 @@ export default function WhyChooseLead() {
         /* ── [B] section layout ── */
         .wcl-section-header {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           gap: clamp(1.2rem, 2.5vw, 2.5rem);
           align-items: start;
           margin-bottom: clamp(0.55rem, 1vw, 0.9rem);
@@ -251,19 +251,19 @@ export default function WhyChooseLead() {
         }
         .wcl-row1 {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           gap: clamp(0.55rem, 1vw, 0.9rem);
           margin-bottom: clamp(0.55rem, 1vw, 0.9rem);
         }
         .wcl-row2 {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, minmax(0, 1fr));
           gap: clamp(0.55rem, 1vw, 0.9rem);
         }
         @media (max-width:900px) {
           .wcl-section-header { grid-template-columns: 1fr; }
           .wcl-header-lottie  { display: none; }
-          .wcl-row2           { grid-template-columns: repeat(2,1fr); }
+          .wcl-row2           { grid-template-columns: repeat(2,minmax(0,1fr)); }
         }
         @media (max-width:540px) {
           .wcl-row1 { grid-template-columns: 1fr; }
@@ -345,7 +345,7 @@ export default function WhyChooseLead() {
         {/* TOP-LEFT corner */}
         <div ref={cornerTLRef} style={{ position: 'absolute', top: GAP_TOP, left: SIDE_PAD, zIndex: 10, maxWidth: '48vw' }}>
           <p className={cinzel.className} style={{
-            fontSize: 'clamp(7px,0.52vw,9px)', letterSpacing: '0.42em',
+            fontSize: 'clamp(11px,0.7vw,13px)', letterSpacing: '0.36em',
             textTransform: 'uppercase', color: 'rgba(255,255,255,0.26)',
             margin: '0 0 0.5rem', fontWeight: 600,
           }}>LEAD College</p>
@@ -362,7 +362,7 @@ export default function WhyChooseLead() {
             <span className="wcl-corner-line2">Real World.</span>
           </h2>
           <p className={cinzel.className} style={{
-            fontSize: 'clamp(7px,0.52vw,9px)', letterSpacing: '0.42em',
+            fontSize: 'clamp(11px,0.7vw,13px)', letterSpacing: '0.36em',
             textTransform: 'uppercase', color: 'rgba(255,255,255,0.22)',
             margin: '0.55rem 0 0', fontWeight: 600,
           }}>Since 2012</p>
@@ -382,7 +382,7 @@ export default function WhyChooseLead() {
           <div className="wcl-scroll-hint" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <ArrowDownCircle size={14} color="rgba(255,255,255,0.25)" strokeWidth={1.5}/>
             <span className={cinzel.className} style={{
-              fontSize: 'clamp(7px,0.5vw,9px)', letterSpacing: '0.32em',
+              fontSize: 'clamp(11px,0.7vw,13px)', letterSpacing: '0.26em',
               textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', fontWeight: 600,
             }}>Scroll to Discover</span>
           </div>
@@ -449,7 +449,7 @@ export default function WhyChooseLead() {
                 borderBottom: '1px solid rgba(10,36,99,0.10)',
               }}>
                 <p className={cinzel.className} style={{
-                  fontSize: 'clamp(7px,0.5vw,9px)', letterSpacing: '0.42em',
+                  fontSize: 'clamp(11px,0.7vw,13px)', letterSpacing: '0.36em',
                   textTransform: 'uppercase', color: `${NAVY}55`,
                   margin: '0 0 0.4rem', fontWeight: 600,
                 }}>LEAD College</p>
@@ -540,7 +540,7 @@ function Card({
       </div>
 
       <p className={cinzel.className} style={{
-        fontSize: 'clamp(8.5px,0.68vw,11px)',
+        fontSize: 'clamp(11px,0.72vw,13px)',
         fontWeight: 700, textTransform: 'uppercase',
         letterSpacing: '0.1em', color: NAVY, margin: 0, lineHeight: 1.2,
       }}>{title}</p>

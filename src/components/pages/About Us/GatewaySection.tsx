@@ -393,8 +393,8 @@ export default function GatewaySection() {
         <div ref={headerRef}>
           <p style={{
             fontFamily: cinzel.style.fontFamily,
-            fontSize: "0.6rem",
-            letterSpacing: "0.32em",
+            fontSize: "0.74rem",
+            letterSpacing: "0.26em",
             textTransform: "uppercase",
             color: "#065f46",
             marginBottom: "1.25rem",
@@ -537,8 +537,8 @@ export default function GatewaySection() {
         <div style={{ marginBottom: "clamp(2rem, 4vw, 3.5rem)" }}>
           <p style={{
             fontFamily: cinzel.style.fontFamily,
-            fontSize: "0.6rem",
-            letterSpacing: "0.32em",
+            fontSize: "0.74rem",
+            letterSpacing: "0.26em",
             textTransform: "uppercase",
             color: "#065f46",
             marginBottom: "0.75rem",
@@ -615,8 +615,8 @@ export default function GatewaySection() {
               }}>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "0.58rem",
-                  letterSpacing: "0.28em",
+                  fontSize: "0.73rem",
+                  letterSpacing: "0.22em",
                   textTransform: "uppercase",
                   color: "rgba(255,255,255,0.7)",
                   margin: "0 0 0.3rem",

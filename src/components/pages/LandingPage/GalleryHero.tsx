@@ -274,7 +274,7 @@ export const PhotoGallery = ({
           <span className="inline-block w-5 h-px bg-[#005C9F]" />
           <p
             className={cn(
-              "text-[0.6rem] font-semibold uppercase tracking-[0.35em] text-[#005C9F]",
+              "text-[0.74rem] font-semibold uppercase tracking-[0.3em] text-[#005C9F]",
               cinzel.className,
             )}
           >
@@ -366,7 +366,7 @@ export const PhotoGallery = ({
               boxShadow: "0 4px 18px rgba(10,36,99,0.28)",
             }}
           >
-            <span className="font-semibold uppercase tracking-[0.22em] text-[0.58rem] text-white">
+            <span className="font-semibold uppercase tracking-[0.18em] text-[0.72rem] text-white">
               Explore Full Gallery
             </span>
             <ArrowUpRight
@@ -377,7 +377,7 @@ export const PhotoGallery = ({
           </Link>
           <p
             className={cn(
-              "text-[0.65rem] text-black/30 tracking-widest uppercase",
+              "text-[0.74rem] text-black/30 tracking-widest uppercase",
               cinzel.className,
             )}
           >

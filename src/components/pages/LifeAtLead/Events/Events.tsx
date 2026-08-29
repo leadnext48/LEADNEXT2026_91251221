@@ -113,7 +113,7 @@ function HeroSection() {
             transition={{ duration: .45 }}
             style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: "clamp(.7rem,1.4vh,1.1rem)" }}>
             <span style={{ display: "inline-block", width: 28, height: 1.5, background: C.blue, flexShrink: 0 }} />
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.45rem,.6vw,.55rem)", letterSpacing: ".22em", textTransform: "uppercase", color: C.blue, fontWeight: 600 }}>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.72rem,.8vw,.78rem)", letterSpacing: ".16em", textTransform: "uppercase", color: C.blue, fontWeight: 600 }}>
               Life at LEAD — Campus Events
             </span>
           </motion.div>
@@ -170,11 +170,11 @@ function EventCard({ event }: { event: EventCardItem }) {
         <div style={{ flex: 1, background: "#ffffff", border: `1px solid ${C.border}`, borderTop: "none", borderRadius: "0 0 12px 12px", padding: "1rem 1.1rem 1.15rem", display: "flex", flexDirection: "column", boxShadow: "0 2px 12px rgba(0,92,159,.04)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: ".38rem", marginBottom: ".45rem" }}>
             <Calendar size={10} color={C.faint} strokeWidth={1.6} />
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.36rem,.44vw,.42rem)", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>{event.date}</span>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.6rem,.68vw,.66rem)", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>{event.date}</span>
           </div>
           <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.8vw,.76rem)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em", color: C.text, margin: "0 0 auto", lineHeight: 1.35 }}>{event.title}</h3>
           <div
-            style={{ display: "inline-flex", alignItems: "center", gap: ".38rem", fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.36rem,.44vw,.42rem)", letterSpacing: ".18em", textTransform: "uppercase", color: C.blue, fontWeight: 700, borderBottom: `1px solid rgba(0,92,159,.25)`, paddingBottom: "1px", width: "fit-content", marginTop: ".85rem", transition: "gap .2s ease" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: ".38rem", fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.6rem,.68vw,.66rem)", letterSpacing: ".18em", textTransform: "uppercase", color: C.blue, fontWeight: 700, borderBottom: `1px solid rgba(0,92,159,.25)`, paddingBottom: "1px", width: "fit-content", marginTop: ".85rem", transition: "gap .2s ease" }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.gap = ".6rem"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.gap = ".38rem"; }}
           >
@@ -203,7 +203,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
     <button
       onClick={() => { if (page !== null && !disabled) onChange(page); }}
       disabled={disabled}
-      style={{ width: 32, height: 32, borderRadius: 8, border: active ? "none" : `1px solid ${C.border}`, background: active ? G.blue : "#ffffff", color: active ? "#fff" : disabled ? "#ccc" : C.muted, fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.38rem,.48vw,.44rem)", fontWeight: 700, letterSpacing: ".06em", cursor: disabled ? "not-allowed" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .18s ease", boxShadow: active ? "0 4px 14px rgba(0,92,159,.2)" : "none", flexShrink: 0 }}
+      style={{ width: 32, height: 32, borderRadius: 8, border: active ? "none" : `1px solid ${C.border}`, background: active ? G.blue : "#ffffff", color: active ? "#fff" : disabled ? "#ccc" : C.muted, fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.75vw,.72rem)", fontWeight: 700, letterSpacing: ".06em", cursor: disabled ? "not-allowed" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .18s ease", boxShadow: active ? "0 4px 14px rgba(0,92,159,.2)" : "none", flexShrink: 0 }}
     >{children}</button>
   );
 
@@ -212,7 +212,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
       <Btn page={current - 1} disabled={current === 1}><ChevronLeft size={13} strokeWidth={2} /></Btn>
       {pages.map((p, i) =>
         p === "…"
-          ? <span key={`el-${i}`} style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", color: C.faint, padding: "0 .18rem" }}>…</span>
+          ? <span key={`el-${i}`} style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", color: C.faint, padding: "0 .18rem" }}>…</span>
           : <Btn key={p} page={p} active={p === current}>{p}</Btn>
       )}
       <Btn page={current + 1} disabled={current === total}><ChevronRight size={13} strokeWidth={2} /></Btn>
@@ -255,7 +255,7 @@ function GridSection({ events }: { events: EventCardItem[] }) {
           style={{ marginBottom: "clamp(1.8rem,3.5vh,2.8rem)" }}>
           <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", flexWrap: "wrap", gap: ".8rem" }}>
             <div>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.4rem,.54vw,.5rem)", letterSpacing: ".26em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>All Events</p>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.72rem,.8vw,.78rem)", letterSpacing: ".2em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>All Events</p>
               <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2.2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: C.text, margin: 0, lineHeight: .95 }}>LEAD Event Space</h2>
             </div>
             <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.7rem,.8vw,.76rem)", color: C.faint, margin: 0, alignSelf: "flex-end" }}>
@@ -266,8 +266,8 @@ function GridSection({ events }: { events: EventCardItem[] }) {
         </motion.div>
 
         <style>{`
-          .ev-grid-cards { grid-template-columns: repeat(3, 1fr); }
-          @media (max-width: 900px){ .ev-grid-cards { grid-template-columns: repeat(2, 1fr); } }
+          .ev-grid-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+          @media (max-width: 900px){ .ev-grid-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
           @media (max-width: 600px){ .ev-grid-cards { grid-template-columns: 1fr; } }
         `}</style>
         <AnimatePresence mode="wait">

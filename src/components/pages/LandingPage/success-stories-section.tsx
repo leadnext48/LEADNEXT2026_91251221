@@ -158,7 +158,7 @@ export default function SuccessStoriesSection() {
               }}
             >
               <span
-                className="font-semibold uppercase tracking-[0.22em] text-[0.58rem] text-white"
+                className="font-semibold uppercase tracking-[0.16em] text-[0.74rem] text-white"
               >
                 Explore Placement Record
               </span>
@@ -193,7 +193,7 @@ export default function SuccessStoriesSection() {
                 className="text-[#0a2463]/50 group-hover:text-[#0a2463]/80 transition-colors duration-200"
               />
               <span
-                className="font-semibold uppercase tracking-[0.22em] text-[0.58rem] text-[#0a2463]/60 group-hover:text-[#0a2463]/90 transition-colors duration-200"
+                className="font-semibold uppercase tracking-[0.16em] text-[0.74rem] text-[#0a2463]/60 group-hover:text-[#0a2463]/90 transition-colors duration-200"
               >
                 2024–26 Placement Summary
               </span>

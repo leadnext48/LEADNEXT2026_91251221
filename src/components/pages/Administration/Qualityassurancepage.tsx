@@ -159,7 +159,7 @@ function LinkIcon({ type }: { type: string }) {
 }
 function badgeStyle(color: string): React.CSSProperties {
   return {
-    fontSize: '0.65rem',
+    fontSize: '0.72rem',
     padding: '2px 7px',
     background: `${color}12`,
     border: `1px solid ${color}33`,
@@ -534,7 +534,7 @@ export default function QualityAssurancePage({
         .qa-fi-wm { position: absolute; right: -0.04em; bottom: -0.12em; font-family: var(--font-cinzel, serif); font-size: clamp(10rem, 22vw, 32rem); font-weight: 800; line-height: 1; letter-spacing: -0.06em; color: rgba(0,92,159,0.022); pointer-events: none; user-select: none; z-index: 0; }
         .qa-fi-inner { position: relative; z-index: 1; }
         .qa-fi-body { display: grid; grid-template-columns: 360px 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: start; margin-top: clamp(3rem, 6vh, 5rem); }
-        .qa-fi-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(0.75rem, 1.5vw, 1rem); }
+        .qa-fi-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(0.75rem, 1.5vw, 1rem); }
         .qa-fi-card { padding: clamp(1rem, 2vw, 1.4rem); border: 1px solid rgba(0,92,159,0.09); border-radius: 4px; background: #fff; display: flex; flex-direction: column; gap: 0.75rem; transition: box-shadow 0.28s ease, transform 0.28s ease, border-color 0.28s ease; cursor: default; will-change: transform; }
         .qa-fi-card:hover { box-shadow: 0 12px 40px rgba(0,92,159,0.09); transform: translateY(-3px); border-color: rgba(0,92,159,0.22); }
         .qa-fi-card:hover .qa-fi-card-icon-wrap { background: ${BLUE}; border-color: ${BLUE}; }
@@ -549,22 +549,22 @@ export default function QualityAssurancePage({
         .qa-po-hdr, .qa-po-tab-bar { position: relative; z-index: 1; }
         .qa-po-content { position: relative; z-index: 1; }
         .qa-dept-toggle { display: inline-flex; background: rgba(0,92,159,0.06); border: 1px solid rgba(0,92,159,0.12); border-radius: 100px; padding: 4px; gap: 2px; }
-        .qa-dept-btn { padding: 8px 28px; border-radius: 100px; border: none; cursor: pointer; font-family: var(--font-cinzel, serif); font-size: clamp(0.44rem, 0.66vw, 0.6rem); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.28s ease, color 0.28s ease, box-shadow 0.28s ease; }
+        .qa-dept-btn { padding: 8px 28px; border-radius: 100px; border: none; cursor: pointer; font-family: var(--font-cinzel, serif); font-size: clamp(0.66rem, 0.8vw, 0.74rem); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; transition: background 0.28s ease, color 0.28s ease, box-shadow 0.28s ease; }
         .qa-dept-btn.active { background: ${BLUE}; color: #fff; box-shadow: 0 4px 16px rgba(0,92,159,0.30); }
         .qa-dept-btn:not(.active) { background: transparent; color: rgba(0,92,159,0.55); }
         .qa-dept-btn:not(.active):hover { background: rgba(0,92,159,0.08); color: ${BLUE}; }
         .qa-po-subtabs { display: flex; gap: 0; border-bottom: 1px solid rgba(0,92,159,0.10); margin: clamp(2rem,4vh,3.5rem) 0 0; }
-        .qa-po-subtab { padding: 10px 28px; border: none; background: transparent; cursor: pointer; position: relative; font-family: var(--font-cinzel, serif); font-size: clamp(0.48rem, 0.7vw, 0.64rem); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; transition: color 0.22s ease; }
+        .qa-po-subtab { padding: 10px 28px; border: none; background: transparent; cursor: pointer; position: relative; font-family: var(--font-cinzel, serif); font-size: clamp(0.66rem, 0.82vw, 0.74rem); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #aaa; transition: color 0.22s ease; }
         .qa-po-subtab::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: ${BLUE}; transform: scaleX(0); transition: transform 0.28s cubic-bezier(0.22,1,0.36,1); }
         .qa-po-subtab.active { color: ${BLUE}; }
         .qa-po-subtab.active::after { transform: scaleX(1); }
         .qa-po-subtab:hover:not(.active) { color: #555; }
-        .qa-peo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(0.75rem, 1.5vw, 1.1rem); margin-top: clamp(1.8rem, 3.5vh, 2.8rem); }
+        .qa-peo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(0.75rem, 1.5vw, 1.1rem); margin-top: clamp(1.8rem, 3.5vh, 2.8rem); }
         .qa-peo-card { position: relative; padding: clamp(1.2rem, 2vw, 1.8rem); border: 1px solid rgba(0,92,159,0.09); border-radius: 8px; background: #fff; overflow: hidden; transition: box-shadow 0.28s, transform 0.28s, border-color 0.28s; will-change: transform; }
         .qa-peo-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, ${BLUE}, #1e3a8a); transform: scaleX(0); transform-origin: left; transition: transform 0.32s cubic-bezier(0.22,1,0.36,1); }
         .qa-peo-card:hover { box-shadow: 0 14px 44px rgba(0,92,159,0.10); transform: translateY(-3px); border-color: rgba(0,92,159,0.20); }
         .qa-peo-card:hover::before { transform: scaleX(1); }
-        .qa-po-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.75rem, 1.5vw, 1.1rem); margin-top: clamp(1.8rem, 3.5vh, 2.8rem); }
+        .qa-po-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(0.75rem, 1.5vw, 1.1rem); margin-top: clamp(1.8rem, 3.5vh, 2.8rem); }
         .qa-po-card { position: relative; padding: clamp(1.2rem, 2vw, 1.8rem); border: 1px solid rgba(0,92,159,0.09); border-radius: 8px; background: #fff; overflow: hidden; display: flex; flex-direction: column; gap: 0.7rem; transition: box-shadow 0.28s, transform 0.28s, border-color 0.28s; will-change: transform; }
         .qa-po-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, ${BLUE}, #1e3a8a); transform: scaleY(0); transform-origin: bottom; transition: transform 0.32s cubic-bezier(0.22,1,0.36,1); }
         .qa-po-card:hover { box-shadow: 0 14px 44px rgba(0,92,159,0.10); transform: translateY(-3px); border-color: rgba(0,92,159,0.20); }
@@ -573,7 +573,7 @@ export default function QualityAssurancePage({
         .qa-pso-card { position: relative; padding: clamp(1.4rem, 2.5vw, 2.2rem); border: 1px solid rgba(0,92,159,0.09); border-radius: 8px; background: linear-gradient(135deg, rgba(0,92,159,0.025) 0%, #fff 60%); overflow: hidden; display: flex; gap: clamp(1rem, 2vw, 1.6rem); align-items: flex-start; transition: box-shadow 0.28s, transform 0.28s, border-color 0.28s; will-change: transform; }
         .qa-pso-card:hover { box-shadow: 0 18px 52px rgba(0,92,159,0.12); transform: translateY(-3px); border-color: rgba(0,92,159,0.22); }
         .qa-card-num-ghost { position: absolute; font-family: var(--font-cinzel, serif); font-weight: 900; font-size: clamp(4rem, 7vw, 8rem); line-height: 1; color: ${BLUE}; opacity: 0.03; bottom: -0.1em; right: 0.1em; pointer-events: none; user-select: none; letter-spacing: -0.04em; }
-        .qa-num-badge { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.14); flex-shrink: 0; font-family: var(--font-cinzel, serif); font-size: 0.5rem; font-weight: 800; color: ${BLUE}; letter-spacing: 0.04em; }
+        .qa-num-badge { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; background: rgba(0,92,159,0.07); border: 1px solid rgba(0,92,159,0.14); flex-shrink: 0; font-family: var(--font-cinzel, serif); font-size: 0.72rem; font-weight: 800; color: ${BLUE}; letter-spacing: 0.04em; }
         @media (max-width: 1280px) { .qa-fi-cards { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 1100px) { .qa-peo-grid { grid-template-columns: repeat(2, 1fr); } .qa-po-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 1024px) { .qa-personas-grid { grid-template-columns: 1fr; } .qa-personas-section { height: auto; min-height: 100svh; max-height: none; overflow: visible; } .qa-portrait-wrap { flex: none; aspect-ratio: 4 / 3; } .qa-disc-layout { grid-template-columns: 220px 1fr; } .qa-accred-overview-inner { grid-template-columns: 1fr; gap: 1.5rem; } .qa-accred-overview { height: auto; min-height: 100svh; } .qa-fi-body { grid-template-columns: 1fr; } .qa-fi-cards { grid-template-columns: repeat(2, 1fr); } }
@@ -590,7 +590,7 @@ export default function QualityAssurancePage({
           <div className="qa-hero-inner">
             <div className="qa-eyebrow">
               <span style={{ display: 'inline-block', width: 28, height: 1.5, background: BLUE }} />
-              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.68vw, 0.6rem)', letterSpacing: '0.38em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>
+              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.82vw, 0.74rem)', letterSpacing: '0.3em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>
                 LEAD College — Academic Excellence
               </span>
             </div>
@@ -609,7 +609,7 @@ export default function QualityAssurancePage({
             {accredBodies.map((b) => (
               <div key={b.label} className="qa-accred-row">
                 <div style={{ width: 36, height: 36, borderRadius: 8, background: 'rgba(0,92,159,0.06)', border: '1px solid rgba(0,92,159,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.34rem, 0.5vw, 0.44rem)', fontWeight: 800, letterSpacing: '0.02em', color: BLUE }}>{b.label}</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', fontWeight: 800, letterSpacing: '0.02em', color: BLUE }}>{b.label}</span>
                 </div>
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.7rem, 0.85vw, 0.8rem)', color: '#777', margin: 0, lineHeight: 1.35 }}>{b.sub}</p>
               </div>
@@ -620,7 +620,7 @@ export default function QualityAssurancePage({
               {['IQAC','NBA Accreditation','NAAC','NIRF Ranking','Outcome-Based Education','Academic Audits','Regulatory Compliance','AICTE','Continuous Improvement','Quality Benchmarks','IQAC','NBA Accreditation','NAAC','NIRF Ranking','Outcome-Based Education','Academic Audits','Regulatory Compliance','AICTE','Continuous Improvement','Quality Benchmarks'].map((item, i) => (
                 <div key={i} className="qa-marquee-item">
                   <span style={{ width: 3, height: 3, borderRadius: '50%', background: BLUE, display: 'inline-block', opacity: 0.5 }} />
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: '0.48rem', letterSpacing: '0.28em', textTransform: 'uppercase', color: BLUE, opacity: 0.5, fontWeight: 600 }}>{item}</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: '0.72rem', letterSpacing: '0.24em', textTransform: 'uppercase', color: BLUE, opacity: 0.5, fontWeight: 600 }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -632,7 +632,7 @@ export default function QualityAssurancePage({
           <div className="qa-arc" aria-hidden="true" />
           <div className="qa-accred-overview-inner">
             <div className="qa-aov-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.42rem, 0.62vw, 0.56rem)', letterSpacing: '0.36em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 clamp(0.8rem, 1.5vh, 1.2rem)' }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.72rem)', letterSpacing: '0.3em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 clamp(0.8rem, 1.5vh, 1.2rem)' }}>
                 <span style={{ display: 'inline-block', width: 20, height: 1.5, background: BLUE }} />
                 Standards &amp; Recognition
               </p>
@@ -673,7 +673,7 @@ export default function QualityAssurancePage({
         {/* §3 PERSONAS */}
         <section ref={personasRef} className="qa-personas-section">
           <div>
-            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
+            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
               <span style={{ display: 'inline-block', width: 18, height: 1.5, background: BLUE }} />
               IQAC Leadership
             </p>
@@ -694,14 +694,14 @@ export default function QualityAssurancePage({
                     </span>
                   </div>
                   <div className="qa-portrait-name">
-                    <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.36rem, 0.5vw, 0.46rem)', letterSpacing: '0.28em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', margin: '0 0 4px' }}>{p.role}</p>
+                    <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', margin: '0 0 4px' }}>{p.role}</p>
                     <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(1rem, 1.5vw, 1.3rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: '#fff', margin: 0, lineHeight: 1.15 }}>{p.name}</p>
                   </div>
                 </div>
                 <div className="qa-persona-body">
                   <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '4px 11px', background: 'rgba(0,92,159,0.06)', border: '1px solid rgba(0,92,159,0.12)', borderRadius: 100, width: 'fit-content' }}>
                     <span style={{ width: 5, height: 5, borderRadius: '50%', background: BLUE, display: 'inline-block' }} />
-                    <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.36rem, 0.52vw, 0.46rem)', letterSpacing: '0.24em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>{p.tag}</span>
+                    <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', letterSpacing: '0.18em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>{p.tag}</span>
                   </div>
                   <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.8rem, 0.95vw, 0.9rem)', lineHeight: 1.82, color: '#555', margin: 0 }}>{p.description}</p>
                 </div>
@@ -715,7 +715,7 @@ export default function QualityAssurancePage({
           <div className="qa-link-band-content">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem' }}>
               <div>
-                <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', fontWeight: 600, marginBottom: '0.5rem' }}>IQAC Documentation</p>
+                <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', fontWeight: 600, marginBottom: '0.5rem' }}>IQAC Documentation</p>
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(1.1rem, 2.2vw, 2.2rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: '#fff', margin: 0, lineHeight: 1.1 }}>IQAC Formation Letter</h3>
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.76rem, 0.93vw, 0.88rem)', color: 'rgba(255,255,255,0.40)', margin: 'clamp(0.5rem, 1vh, 0.8rem) 0 0', lineHeight: 1.6 }}>
                   Official formation document establishing the Internal Quality Assurance Cell at LEAD College.
@@ -723,7 +723,7 @@ export default function QualityAssurancePage({
               </div>
               <a href="/accreditations/iqac-formation-letter.pdf" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '14px 26px', background: 'rgba(0,92,159,0.22)', border: '1px solid rgba(0,92,159,0.5)', borderRadius: 8, textDecoration: 'none', transition: 'background 0.25s, border-color 0.25s, transform 0.2s', cursor: 'pointer' }} onMouseEnter={e => { const t = e.currentTarget as HTMLElement; t.style.background = 'rgba(0,92,159,0.38)'; t.style.borderColor = 'rgba(0,92,159,0.75)'; t.style.transform = 'translateY(-2px)'; }} onMouseLeave={e => { const t = e.currentTarget as HTMLElement; t.style.background = 'rgba(0,92,159,0.22)'; t.style.borderColor = 'rgba(0,92,159,0.5)'; t.style.transform = ''; }}>
                 <FileText size={17} color="#fff" strokeWidth={1.5} />
-                <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff', fontWeight: 600 }}>Download Letter</span>
+                <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff', fontWeight: 600 }}>Download Letter</span>
                 <Download size={13} color="rgba(255,255,255,0.55)" strokeWidth={1.5} />
               </a>
             </div>
@@ -733,7 +733,7 @@ export default function QualityAssurancePage({
         {/* §5 MANDATORY DISCLOSURES */}
         <section ref={discRef} className="qa-disclosures-section">
           <div className="qa-disc-hdr">
-            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
+            <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
               <span style={{ display: 'inline-block', width: 18, height: 1.5, background: BLUE }} />
               Regulatory Compliance
             </p>
@@ -790,8 +790,8 @@ export default function QualityAssurancePage({
                     <d.icon size={15} color={BLUE} strokeWidth={1.5} />
                   </div>
                   <div style={{ flex: 1, minWidth: 0, textAlign: 'left' }}>
-                    <p className="qa-disc-tab-label" style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.52rem, 0.72vw, 0.64rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#334', margin: '0 0 2px', transition: 'color 0.25s ease', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{d.title}</p>
-                    <p className="qa-disc-tab-count" style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.62rem, 0.76vw, 0.7rem)', color: '#aaa', margin: 0, transition: 'color 0.25s ease' }}>{d.links.length} document{d.links.length !== 1 ? 's' : ''}</p>
+                    <p className="qa-disc-tab-label" style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.82vw, 0.74rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#334', margin: '0 0 2px', transition: 'color 0.25s ease', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{d.title}</p>
+                    <p className="qa-disc-tab-count" style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.74rem)', color: '#aaa', margin: 0, transition: 'color 0.25s ease' }}>{d.links.length} document{d.links.length !== 1 ? 's' : ''}</p>
                   </div>
                 </button>
               ))}
@@ -803,7 +803,7 @@ export default function QualityAssurancePage({
                   <div className="qa-disc-panel-header">
                     <d.icon size={18} color={BLUE} strokeWidth={1.5} />
                     <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.7rem, 1vw, 0.9rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: DARK, margin: 0 }}>{d.title}</h3>
-                    <span style={{ marginLeft: 'auto', fontFamily: cinzel.style.fontFamily, fontSize: '0.6rem', fontWeight: 700, color: 'rgba(0,92,159,0.3)', letterSpacing: '0.08em' }}>
+                    <span style={{ marginLeft: 'auto', fontFamily: cinzel.style.fontFamily, fontSize: '0.72rem', fontWeight: 700, color: 'rgba(0,92,159,0.3)', letterSpacing: '0.08em' }}>
                       {String(d.links.length).padStart(2, '0')} DOCS
                     </span>
                   </div>
@@ -840,7 +840,7 @@ export default function QualityAssurancePage({
           <div className="qa-fi-wm" aria-hidden="true">FI</div>
           <div className="qa-fi-inner">
             <div className="qa-fi-hdr">
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: BLUE, fontWeight: 600, display: 'flex', alignItems: 'center', gap: 10, marginBottom: '0.5rem' }}>
                 <span style={{ display: 'inline-block', width: 18, height: 1.5, background: BLUE }} />
                 Pedagogical Innovation
               </p>
@@ -853,7 +853,7 @@ export default function QualityAssurancePage({
                   {['Home', 'Faculty Initiatives'].map((crumb, ci) => (
                     <span key={crumb} style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                       {ci > 0 && <span style={{ color: 'rgba(0,92,159,0.3)', fontSize: '0.7rem' }}>/</span>}
-                      <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.42rem, 0.6vw, 0.54rem)', letterSpacing: '0.18em', textTransform: 'uppercase', color: ci === 1 ? BLUE : '#aaa', fontWeight: ci === 1 ? 700 : 500 }}>{crumb}</span>
+                      <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', letterSpacing: '0.18em', textTransform: 'uppercase', color: ci === 1 ? BLUE : '#aaa', fontWeight: ci === 1 ? 700 : 500 }}>{crumb}</span>
                     </span>
                   ))}
                 </div>
@@ -863,7 +863,7 @@ export default function QualityAssurancePage({
               <div className="qa-fi-intro-text">
                 <div className="qa-fi-year-badge">
                   <span style={{ width: 5, height: 5, borderRadius: '50%', background: BLUE, display: 'inline-block' }} />
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.4rem, 0.58vw, 0.52rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: BLUE, fontWeight: 700 }}>Academic Years 2022–2025</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: BLUE, fontWeight: 700 }}>Academic Years 2022–2025</span>
                 </div>
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.8rem, 1.1vw, 1.1rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: DARK, margin: '0 0 clamp(0.8rem, 1.5vh, 1.2rem)', lineHeight: 1.2 }}>
                   Institutional Commitment to Pedagogical Innovation
@@ -894,7 +894,7 @@ export default function QualityAssurancePage({
                       <item.icon size={16} color={BLUE} strokeWidth={1.6} />
                     </div>
                     <div>
-                      <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.52rem, 0.7vw, 0.64rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: DARK, margin: '0 0 0.4rem', lineHeight: 1.3 }}>{item.title}</p>
+                      <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.82vw, 0.74rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: DARK, margin: '0 0 0.4rem', lineHeight: 1.3 }}>{item.title}</p>
                       <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.7rem, 0.84vw, 0.8rem)', lineHeight: 1.72, color: '#666', margin: 0 }}>{item.body}</p>
                     </div>
                   </div>
@@ -903,14 +903,14 @@ export default function QualityAssurancePage({
             </div>
             <div className="qa-fi-cta">
               <div>
-                <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.64vw, 0.58rem)', letterSpacing: '0.28em', textTransform: 'uppercase', color: '#aaa', fontWeight: 600, marginBottom: '0.3rem' }}>Comprehensive Summary</p>
+                <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.72rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#aaa', fontWeight: 600, marginBottom: '0.3rem' }}>Comprehensive Summary</p>
                 <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.82rem, 0.98vw, 0.94rem)', lineHeight: 1.6, color: '#555', margin: 0, maxWidth: 560 }}>
                   A detailed, comprehensive overview of the innovative teaching methodologies implemented by our faculty — sorted chronologically and alphabetically, covering 2022–2025.
                 </p>
               </div>
               <a href="/accreditations/faculty-initiatives/faculty-initiatives-2022-2025.docx" target="_blank" rel="noopener noreferrer" className="qa-fi-cta-btn">
                 <FileText size={16} color="#fff" strokeWidth={1.5} />
-                <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff', fontWeight: 700 }}>View Detailed Table</span>
+                <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#fff', fontWeight: 700 }}>View Detailed Table</span>
                 <ArrowUpRight size={14} color="rgba(255,255,255,0.7)" strokeWidth={2} />
               </a>
             </div>

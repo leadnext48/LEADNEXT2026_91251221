@@ -118,15 +118,15 @@ function HeroSection() {
         .tp-hero-bg-text { position:absolute; right:0; bottom:-0.12em; font-size:clamp(16rem,32vw,48rem); font-weight:800; line-height:1; letter-spacing:-0.06em; color:rgba(0,92,159,.03); pointer-events:none; user-select:none; z-index:0; white-space:nowrap; }
         .tp-hero-inner { position:relative; z-index:2; display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(1.5rem,3vw,3rem); align-items:stretch; flex:1; min-height:0; width:100%; min-width:0; }
         .tp-hero-left { display:flex; flex-direction:column; justify-content:center; }
-        .tp-hero-strip { padding:clamp(.8rem,1.6vh,1.3rem) 0; border-top:1px solid rgba(0,92,159,.10); display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem; margin-top:clamp(1.2rem,2.5vh,2rem); width:100%; min-width:0; }
+        .tp-hero-strip { padding:clamp(.8rem,1.6vh,1.3rem) 0; border-top:1px solid rgba(0,92,159,.10); display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.5rem; margin-top:clamp(1.2rem,2.5vh,2rem); width:100%; min-width:0; }
         .tp-strip-item { display:flex; align-items:center; gap:10px; padding:0 .75rem; border-right:1px solid rgba(0,92,159,.10); min-width:0; overflow:hidden; }
         .tp-strip-item:first-child { padding-left:0; } .tp-strip-item:last-child { border-right:none; }
         .tp-strip-text { min-width:0; overflow:hidden; }
-        .tp-strip-label { display:block; font-size:clamp(.48rem,.6vw,.56rem); letter-spacing:.08em; text-transform:uppercase; color:#333; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .tp-strip-label { display:block; font-size:clamp(.68rem,.72vw,.74rem); letter-spacing:.05em; text-transform:uppercase; color:#333; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         .tp-strip-sub { display:block; font-size:clamp(.6rem,.75vw,.72rem); color:#777; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         .tp-hero-right { position:relative; align-self:flex-end; display:flex; align-items:flex-end; justify-content:center; height:100%; }
         .tp-thomman-img { position:relative; width:100%; height:100%; max-height:88svh; }
-        @media (max-width:767px) { .tp-hero { padding:5rem 1.25rem 0; height:auto; min-height:100svh; } .tp-hero-inner { grid-template-columns:1fr; } .tp-hero-right, .tp-hero-bg-text { display:none; } .tp-hero-strip { grid-template-columns:repeat(3,1fr); gap:.25rem; } .tp-strip-item { padding:0 .4rem; gap:6px; flex-direction:column; align-items:flex-start; } .tp-strip-item:first-child { padding-left:0; } }
+        @media (max-width:767px) { .tp-hero { padding:5rem 1.25rem 0; height:auto; min-height:100svh; } .tp-hero-inner { grid-template-columns:1fr; } .tp-hero-right, .tp-hero-bg-text { display:none; } .tp-hero-strip { grid-template-columns:repeat(3,minmax(0,1fr)); gap:.25rem; } .tp-strip-item { padding:0 .4rem; gap:6px; flex-direction:column; align-items:flex-start; } .tp-strip-item:first-child { padding-left:0; } }
         @media (min-width:768px) and (max-width:1100px) { .tp-hero { padding-left:3rem; padding-right:3rem; } }
       `}</style>
       <section className={`tp-hero ${cinzel.className}`}>
@@ -136,7 +136,7 @@ function HeroSection() {
           <div className="tp-hero-left" style={{ minWidth:0 }}>
             <motion.div initial={{ opacity:0, y:12 }} animate={{ opacity:1, y:0 }} transition={{ duration:.5, ease:"easeOut" }} style={{ display:"flex", alignItems:"center", gap:10, marginBottom:"clamp(.6rem,1.3vh,1rem)", overflow:"hidden" }}>
               <span style={{ display:"inline-block", width:24, height:1.5, flexShrink:0, background:COLORS.primary }} />
-              <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.5rem,.65vw,.58rem)", letterSpacing:"clamp(.08em,.2vw,.2em)", textTransform:"uppercase", color:COLORS.primary, fontWeight:600, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>LEAD College — Flagship Programme</span>
+              <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.78vw,.74rem)", letterSpacing:"clamp(.08em,.2vw,.2em)", textTransform:"uppercase", color:COLORS.primary, fontWeight:600, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>LEAD College — Flagship Programme</span>
             </motion.div>
             <motion.h1 initial={{ opacity:0, y:28 }} animate={{ opacity:1, y:0 }} transition={{ duration:.65, delay:.1, ease:"easeOut" }} style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(2.4rem,5.5vw,7rem)", fontWeight:800, lineHeight:.92, letterSpacing:"-.03em", textTransform:"uppercase", margin:"0 0 clamp(.9rem,1.8vh,1.6rem)" }}>
               <span style={{ display:"block", color:"#0D0D0D" }}>Thomman's</span>
@@ -198,7 +198,7 @@ function AboutSection() {
             <motion.div initial={{ scaleX:0 }} whileInView={{ scaleX:1 }} viewport={VP} transition={{ duration:.4, delay:.1, ease:"easeOut" }} style={{ width:36, height:2, background:GRADIENTS.primary90, borderRadius:2, marginBottom:"1.2rem", transformOrigin:"left" }} />
             <div style={{ borderLeft:`3px solid ${COLORS.primary}`, paddingLeft:"1.2rem", marginBottom:"1.4rem" }}>
               <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.88rem,1vw,.98rem)", fontWeight:600, fontStyle:"italic", lineHeight:1.6, color:"#0D0D0D", margin:"0 0 .5rem" }}>"Every individual possesses untapped potential that can be activated through awareness, discipline, and purpose."</p>
-              <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:".48rem", letterSpacing:".18em", textTransform:"uppercase", color:"#aaa", margin:0, fontWeight:600 }}>— Vision of Turning Point</p>
+              <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:".74rem", letterSpacing:".18em", textTransform:"uppercase", color:"#aaa", margin:0, fontWeight:600 }}>— Vision of Turning Point</p>
             </div>
             {[
               { label:"What It Is",   text:"A seven-day immersive journey combining reflective learning, experiential challenges, and deep group dynamics — unlike any conventional leadership training in format, depth, or lasting effect." },
@@ -206,7 +206,7 @@ function AboutSection() {
               { label:"The Outcome",  text:"Individuals emerge with renewed self-awareness, clarity of purpose, and a concrete action plan — not just a certificate, but an internal shift that redefines their next chapter." },
             ].map((item, i) => (
               <div key={i} style={{ marginBottom:".9rem" }}>
-                <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.5rem,.62vw,.58rem)", fontWeight:700, letterSpacing:".2em", textTransform:"uppercase", color:COLORS.primary, marginBottom:".3rem" }}>{item.label}</h3>
+                <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.76vw,.74rem)", fontWeight:700, letterSpacing:".2em", textTransform:"uppercase", color:COLORS.primary, marginBottom:".3rem" }}>{item.label}</h3>
                 <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.82rem,.9vw,.88rem)", lineHeight:1.75, color:"#555", margin:0 }}>{item.text}</p>
               </div>
             ))}
@@ -233,7 +233,7 @@ function VisionSection() {
       <div style={{ maxWidth:1200, margin:"0 auto", padding:"clamp(3rem,6vh,5rem) clamp(1.5rem,5vw,6rem)", position:"relative", zIndex:2, width:"100%", boxSizing:"border-box" }}>
         <div style={{ maxWidth:560 }}>
           <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0}>
-            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.4rem,.58vw,.52rem)", letterSpacing:".28em", textTransform:"uppercase", fontWeight:600, display:"flex", alignItems:"center", gap:10, marginBottom:"clamp(.6rem,1.2vh,1rem)", color:"rgba(255,255,255,.4)" }}>
+            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", letterSpacing:".28em", textTransform:"uppercase", fontWeight:600, display:"flex", alignItems:"center", gap:10, marginBottom:"clamp(.6rem,1.2vh,1rem)", color:"rgba(255,255,255,.4)" }}>
               <span style={{ display:"inline-block", width:22, height:1.5, background:"rgba(255,255,255,.32)" }} />Vision & Philosophy
             </p>
             <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(2rem,4.4vw,5.6rem)", fontWeight:900, lineHeight:.88, letterSpacing:"-.04em", textTransform:"uppercase", color:"#fff", margin:"0 0 4px" }}>Real Change</p>
@@ -269,13 +269,13 @@ function JourneySection() {
           <h2 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(1.2rem,2.2vw,2.7rem)", fontWeight:800, textTransform:"uppercase", letterSpacing:"-.025em", color:"#0D0D0D", margin:"0 0 .8rem", lineHeight:1 }}>The 7-Day Journey</h2>
           <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.82rem,.92vw,.88rem)", color:"#888", maxWidth:440, margin:"0 auto", lineHeight:1.65 }}>Each day builds deliberately on the last — from self-awareness through to committed, purposeful action.</p>
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr 1fr":"repeat(4,1fr)", gap:"1rem", marginBottom:"1rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr 1fr":"repeat(4,minmax(0,1fr))", gap:"1rem", marginBottom:"1rem" }}>
           {DAYS.slice(0,4).map((day) => { const Icon = day.icon; return (
             <motion.div key={day.day} variants={STAGGER_ITEM} style={{ background:"#fff", borderRadius:14, overflow:"hidden", border:"1px solid rgba(0,0,0,.06)", boxShadow:"0 2px 14px rgba(0,0,0,.05)", display:"flex", flexDirection:"column" }}>
               <div style={{ height:118, overflow:"hidden", flexShrink:0, position:"relative" }}>
                 <img src={DAY_IMAGES[day.day-1]} alt={day.theme.replace('\n',' ')} style={{ width:"100%", height:"100%", objectFit:"cover" }} />
                 <div style={{ position:"absolute", inset:0, background:"linear-gradient(to top,rgba(0,0,0,.35) 0%,transparent 60%)" }} />
-                <div style={{ position:"absolute", bottom:".65rem", left:".85rem", fontFamily:cinzel.style.fontFamily, fontSize:".4rem", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"rgba(255,255,255,.7)" }}>Day {day.day}</div>
+                <div style={{ position:"absolute", bottom:".65rem", left:".85rem", fontFamily:cinzel.style.fontFamily, fontSize:".72rem", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"rgba(255,255,255,.7)" }}>Day {day.day}</div>
               </div>
               <div style={{ padding:"1.1rem", flex:1, display:"flex", flexDirection:"column", position:"relative" }}>
                 <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:COLORS.primary, opacity:.25 }} />
@@ -286,7 +286,7 @@ function JourneySection() {
             </motion.div>
           ); })}
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(3,1fr)", gap:"1rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(3,minmax(0,1fr))", gap:"1rem" }}>
           {DAYS.slice(4).map((day) => { const Icon = day.icon; return (
             <motion.div key={day.day} variants={STAGGER_ITEM} style={{ background:"#fff", borderRadius:14, overflow:"hidden", border:"1px solid rgba(0,0,0,.06)", boxShadow:"0 2px 14px rgba(0,0,0,.05)", display:"flex", flexDirection:isMobile?"column":"row" }}>
               <div style={{ width:isMobile?"100%":150, height:isMobile?130:"auto", flexShrink:0, overflow:"hidden", position:"relative" }}>
@@ -295,7 +295,7 @@ function JourneySection() {
               </div>
               <div style={{ padding:"1.4rem", flex:1, display:"flex", flexDirection:"column", justifyContent:"center" }}>
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:".75rem" }}>
-                  <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:".4rem", fontWeight:700, letterSpacing:".16em", textTransform:"uppercase", color:"rgba(0,92,159,.45)" }}>Day {day.day}</span>
+                  <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:".72rem", fontWeight:700, letterSpacing:".16em", textTransform:"uppercase", color:"rgba(0,92,159,.45)" }}>Day {day.day}</span>
                   <div style={{ width:30, height:30, borderRadius:8, background:"rgba(0,92,159,.08)", display:"flex", alignItems:"center", justifyContent:"center" }}><Icon size={14} color={COLORS.primary} strokeWidth={1.8} /></div>
                 </div>
                 <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.78rem,.88vw,.84rem)", fontWeight:700, color:"#0D0D0D", margin:"0 0 .6rem", letterSpacing:".025em", lineHeight:1.3, textTransform:"uppercase", whiteSpace:"pre-line" }}>{day.theme}</h3>
@@ -328,7 +328,7 @@ function ParticipantsSection() {
               { title:"Educators & Anyone 18+", body:"Turning Point is open to anyone above 18 who desires meaningful personal growth. The program's power comes precisely from the diversity of its participants — multiple industries, life stages, and perspectives converging in one transformative space." },
             ].map((item, i) => (
               <div key={i} style={{ marginBottom:"1.1rem", paddingBottom:"1.1rem", borderBottom:i<3?"1px solid rgba(0,92,159,.08)":"none" }}>
-                <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.52rem,.66vw,.6rem)", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"#0D0D0D", marginBottom:".4rem" }}>{item.title}</h3>
+                <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.78vw,.74rem)", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"#0D0D0D", marginBottom:".4rem" }}>{item.title}</h3>
                 <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.8rem,.88vw,.86rem)", lineHeight:1.78, color:"#666", margin:0 }}>{item.body}</p>
               </div>
             ))}
@@ -355,7 +355,7 @@ function OutcomesSection() {
           <p style={{ fontFamily:cinzel.style.fontFamily, ...TYPE.eyebrow, color:COLORS.primary, marginBottom:".5rem" }}>What You Gain</p>
           <h2 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(1.2rem,2.2vw,2.7rem)", fontWeight:800, textTransform:"uppercase", letterSpacing:"-.025em", color:"#0D0D0D", margin:0, lineHeight:1 }}>Transformational Outcomes.</h2>
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(2,1fr)", gap:"1.2rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(2,minmax(0,1fr))", gap:"1.2rem" }}>
           {outcomes.map((o) => { const Icon = o.icon; return (
             <motion.div key={o.title} variants={STAGGER_ITEM} style={{ background:"#fff", borderRadius:16, padding:"1.8rem", border:"1px solid rgba(0,0,0,.07)", boxShadow:"0 2px 14px rgba(0,0,0,.04)" }}>
               <div style={{ display:"flex", alignItems:"center", gap:".8rem", marginBottom:"1.1rem" }}>
@@ -416,12 +416,12 @@ function ImpactSection() {
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
-          style={{ display:"grid", gridTemplateColumns:isMobile?"1fr 1fr":"repeat(4,1fr)", borderTop:"1px solid rgba(255,255,255,.08)", borderBottom:"1px solid rgba(255,255,255,.08)", marginBottom:"clamp(2.5rem,5vh,4rem)" }}>
+          style={{ display:"grid", gridTemplateColumns:isMobile?"1fr 1fr":"repeat(4,minmax(0,1fr))", borderTop:"1px solid rgba(255,255,255,.08)", borderBottom:"1px solid rgba(255,255,255,.08)", marginBottom:"clamp(2.5rem,5vh,4rem)" }}>
           {STATS.map((s, i, arr) => (
             <motion.div key={s.label} variants={STAGGER_ITEM}
               style={{ padding:"clamp(1.8rem,3.5vh,3rem) clamp(1rem,2vw,2rem)", borderRight:(!isMobile&&i<arr.length-1)?"1px solid rgba(255,255,255,.08)":"none", borderBottom:(isMobile&&i<2)?"1px solid rgba(255,255,255,.08)":"none" }}>
               <div style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(2.2rem,4.4vw,4.4rem)", fontWeight:900, color:"#fff", lineHeight:1, marginBottom:".4rem", letterSpacing:"-.04em" }}>{s.value}</div>
-              <div style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.44rem,.58vw,.52rem)", fontWeight:700, letterSpacing:".16em", textTransform:"uppercase", color:"rgba(255,255,255,.36)", marginBottom:".35rem" }}>{s.label}</div>
+              <div style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", fontWeight:700, letterSpacing:".16em", textTransform:"uppercase", color:"rgba(255,255,255,.36)", marginBottom:".35rem" }}>{s.label}</div>
               <div style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.7rem,.78vw,.74rem)", color:"rgba(255,255,255,.22)", lineHeight:1.4 }}>{s.sub}</div>
             </motion.div>
           ))}
@@ -433,9 +433,9 @@ function ImpactSection() {
               <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,1.1vw,1.05rem)", fontWeight:600, fontStyle:"italic", lineHeight:1.7, color:"rgba(255,255,255,.82)", margin:"0 0 .7rem" }}>
                 "Turning Point has influenced individuals across industries, generations, and geographies — returning to their organisations and communities with renewed clarity, stronger values, and the courage to lead with purpose."
               </p>
-              <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:".46rem", letterSpacing:".18em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", margin:0, fontWeight:600 }}>— LEAD College · Programme Record</p>
+              <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:".74rem", letterSpacing:".18em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", margin:0, fontWeight:600 }}>— LEAD College · Programme Record</p>
             </div>
-            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.44rem,.58vw,.52rem)", letterSpacing:".28em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", fontWeight:700, marginBottom:"1.2rem" }}>Journey Through the Years</p>
+            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", letterSpacing:".28em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", fontWeight:700, marginBottom:"1.2rem" }}>Journey Through the Years</p>
             <div style={{ display:"flex", flexDirection:"column", gap:0 }}>
               {MILESTONES.map((m, i) => (
                 <motion.div key={m.year} initial={{ opacity:0, x:-20 }} whileInView={{ opacity:1, x:0 }} viewport={VP} transition={{ duration:.5, delay:i*.08, ease:"easeOut" }}
@@ -448,8 +448,8 @@ function ImpactSection() {
                   </div>
                   <div>
                     <div style={{ display:"flex", alignItems:"baseline", gap:".5rem", marginBottom:".2rem" }}>
-                      <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.58rem,.72vw,.65rem)", fontWeight:700, color:"rgba(255,255,255,.7)", letterSpacing:".08em" }}>{m.year}</span>
-                      <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.48rem,.6vw,.55rem)", fontWeight:600, textTransform:"uppercase", letterSpacing:".14em", color:"rgba(255,255,255,.35)" }}>{m.label}</span>
+                      <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.72rem,.82vw,.78rem)", fontWeight:700, color:"rgba(255,255,255,.7)", letterSpacing:".08em" }}>{m.year}</span>
+                      <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", fontWeight:600, textTransform:"uppercase", letterSpacing:".14em", color:"rgba(255,255,255,.35)" }}>{m.label}</span>
                     </div>
                     <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.74rem,.84vw,.8rem)", lineHeight:1.55, color:"rgba(255,255,255,.42)", margin:0 }}>{m.desc}</p>
                   </div>
@@ -459,7 +459,7 @@ function ImpactSection() {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={.12}>
-            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.44rem,.58vw,.52rem)", letterSpacing:".28em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", fontWeight:700, marginBottom:"1.2rem" }}>Who Has Been Transformed</p>
+            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", letterSpacing:".28em", textTransform:"uppercase", color:"rgba(255,255,255,.3)", fontWeight:700, marginBottom:"1.2rem" }}>Who Has Been Transformed</p>
             <div style={{ display:"flex", flexDirection:"column", gap:".85rem", marginBottom:"1.6rem" }}>
               {REACH_ITEMS.map(({ icon: Icon, label, desc }, i) => (
                 <motion.div key={label} initial={{ opacity:0, y:16 }} whileInView={{ opacity:1, y:0 }} viewport={VP} transition={{ duration:.5, delay:i*.09, ease:"easeOut" }}
@@ -468,7 +468,7 @@ function ImpactSection() {
                     <Icon size={16} color="rgba(255,255,255,.55)" strokeWidth={1.6} />
                   </div>
                   <div>
-                    <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.52rem,.64vw,.58rem)", fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"rgba(255,255,255,.7)", margin:"0 0 .3rem" }}>{label}</p>
+                    <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.78vw,.74rem)", fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"rgba(255,255,255,.7)", margin:"0 0 .3rem" }}>{label}</p>
                     <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.76rem,.86vw,.82rem)", lineHeight:1.6, color:"rgba(255,255,255,.4)", margin:0 }}>{desc}</p>
                   </div>
                 </motion.div>
@@ -479,7 +479,7 @@ function ImpactSection() {
               <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.8rem,.92vw,.88rem)", lineHeight:1.7, color:"rgba(255,255,255,.55)", margin:"0 0 .8rem" }}>
                 Turning Point runs as a residential programme at LEAD College, Dhoni, Palakkad — open to anyone above 18 who desires meaningful personal growth and transformation.
               </p>
-              <a href="mailto:info@lead.ac.in" style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.5rem,.62vw,.58rem)", letterSpacing:".2em", textTransform:"uppercase", color:"rgba(255,255,255,.65)", fontWeight:700, textDecoration:"none", borderBottom:"1px solid rgba(255,255,255,.25)", paddingBottom:".15rem" }}>
+              <a href="mailto:info@lead.ac.in" style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.76vw,.74rem)", letterSpacing:".2em", textTransform:"uppercase", color:"rgba(255,255,255,.65)", fontWeight:700, textDecoration:"none", borderBottom:"1px solid rgba(255,255,255,.25)", paddingBottom:".15rem" }}>
                 Enquire About the Next Cohort →
               </a>
             </motion.div>
@@ -500,7 +500,7 @@ function TestimonialsSection() {
           <p style={{ fontFamily:cinzel.style.fontFamily, ...TYPE.eyebrow, color:COLORS.primary, marginBottom:".5rem" }}>Voices from Participants</p>
           <h2 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(1.2rem,2.2vw,2.7rem)", fontWeight:800, textTransform:"uppercase", letterSpacing:"-.025em", color:"#0D0D0D", margin:0, lineHeight:1 }}>What They Say</h2>
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(3,1fr)", gap:"1.2rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(3,minmax(0,1fr))", gap:"1.2rem" }}>
           {TESTIMONIALS.map((t, i) => (
             <motion.div key={i} variants={STAGGER_ITEM} style={{ background:t.accent?COLORS.primary:"#fff", borderRadius:16, padding:"1.8rem", display:"flex", flexDirection:"column", border:`1px solid ${t.accent?COLORS.primary:"rgba(0,0,0,.07)"}`, boxShadow:t.accent?"0 16px 40px rgba(0,92,159,.22)":"0 2px 10px rgba(0,0,0,.05)" }}>
               <div style={{ fontFamily:"Georgia,serif", fontSize:"4.4rem", lineHeight:.65, color:t.accent?"rgba(255,255,255,.13)":"rgba(0,92,159,.09)", marginBottom:".9rem", userSelect:"none" }}>"</div>
@@ -509,7 +509,7 @@ function TestimonialsSection() {
                 <div style={{ width:30, height:30, borderRadius:"50%", background:t.accent?"rgba(255,255,255,.14)":"rgba(0,92,159,.07)", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
                   <Users size={12} color={t.accent?"#fff":COLORS.primary} strokeWidth={2} />
                 </div>
-                <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.46rem,.56vw,.52rem)", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:t.accent?"rgba(255,255,255,.52)":"#999" }}>{t.role}</span>
+                <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:t.accent?"rgba(255,255,255,.52)":"#999" }}>{t.role}</span>
               </div>
             </motion.div>
           ))}

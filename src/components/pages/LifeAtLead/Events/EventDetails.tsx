@@ -138,7 +138,7 @@ function EventGallery({ images, title }: { images: string[]; title: string }) {
       {/* header: title (left) + carousel controls (right) */}
       <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap", marginBottom: "clamp(1.1rem,2.4vh,1.6rem)" }}>
         <div>
-          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.5rem,.62vw,.58rem)", letterSpacing: ".26em", textTransform: "uppercase", color: C.blue, fontWeight: 700, margin: "0 0 .35rem" }}>Gallery</p>
+          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.8vw,.74rem)", letterSpacing: ".2em", textTransform: "uppercase", color: C.blue, fontWeight: 700, margin: "0 0 .35rem" }}>Gallery</p>
           <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.02em", color: C.text, margin: 0, lineHeight: 1 }}>Event Photos</h2>
           <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.72rem,.85vw,.8rem)", color: C.faint, margin: ".55rem 0 0" }}>Click any photo to view it full size.</p>
         </div>
@@ -198,7 +198,7 @@ function EventGallery({ images, title }: { images: string[]; title: string }) {
             onClick={(e) => e.stopPropagation()}
             style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", objectFit: "contain", borderRadius: 10, boxShadow: "0 20px 70px rgba(0,0,0,.5)" }}
           />
-          <div style={{ position: "absolute", bottom: 20, left: "50%", transform: "translateX(-50%)", padding: "6px 14px", borderRadius: 100, background: "rgba(255,255,255,.1)", backdropFilter: "blur(4px)", color: "#fff", fontFamily: cinzel.style.fontFamily, fontSize: ".62rem", letterSpacing: ".12em", fontWeight: 700 }}>
+          <div style={{ position: "absolute", bottom: 20, left: "50%", transform: "translateX(-50%)", padding: "6px 14px", borderRadius: 100, background: "rgba(255,255,255,.1)", backdropFilter: "blur(4px)", color: "#fff", fontFamily: cinzel.style.fontFamily, fontSize: ".74rem", letterSpacing: ".12em", fontWeight: 700 }}>
             {lightbox + 1} / {images.length}
           </div>
         </div>

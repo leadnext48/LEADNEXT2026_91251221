@@ -140,7 +140,7 @@ function HeroSection() {
           padding: clamp(.8rem,1.6vh,1.3rem) 0;
           border-top: 1px solid rgba(0,92,159,.10);
           display: grid;
-          grid-template-columns: repeat(3,1fr);
+          grid-template-columns: repeat(3,minmax(0,1fr));
           gap: .5rem;
           margin-top: clamp(1.2rem,2.5vh,2rem);
           width: 100%; min-width: 0;
@@ -154,7 +154,7 @@ function HeroSection() {
         .lot-strip-item:first-child { padding-left: 0; }
         .lot-strip-item:last-child  { border-right: none; }
         .lot-strip-label {
-          display: block; font-size: clamp(.48rem,.6vw,.56rem);
+          display: block; font-size: clamp(.7rem,.75vw,.74rem);
           letter-spacing: .08em; text-transform: uppercase;
           color: #333; font-weight: 700;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -167,7 +167,7 @@ function HeroSection() {
           .lot-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .lot-hero-inner { grid-template-columns: 1fr; }
           .lot-hero-right, .lot-hero-bg-text { display: none; }
-          .lot-hero-strip { grid-template-columns: repeat(3,1fr); gap: .25rem; }
+          .lot-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
           .lot-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
           .lot-strip-item:first-child { padding-left: 0; }
         }
@@ -187,7 +187,7 @@ function HeroSection() {
               style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: "clamp(.6rem,1.3vh,1rem)", overflow: "hidden" }}
             >
               <span style={{ display: "inline-block", width: 24, height: 1.5, flexShrink: 0, background: COLORS.primary }} />
-              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.5rem,.65vw,.58rem)", letterSpacing: "clamp(.08em,.2vw,.2em)", textTransform: "uppercase", color: COLORS.primary, fontWeight: 600, whiteSpace: "nowrap" }}>
+              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.7rem,.75vw,.74rem)", letterSpacing: "clamp(.08em,.2vw,.2em)", textTransform: "uppercase", color: COLORS.primary, fontWeight: 600, whiteSpace: "nowrap" }}>
                 LEAD College — Student-Led Excellence
               </span>
             </motion.div>
@@ -249,7 +249,7 @@ function HeroSection() {
                   background: "rgba(0,92,159,.05)", border: "1px solid rgba(0,92,159,.12)",
                   borderRadius: 100, padding: ".32rem .9rem",
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(.44rem,.54vw,.5rem)", letterSpacing: ".12em",
+                  fontSize: "clamp(.66rem,.7vw,.72rem)", letterSpacing: ".12em",
                   textTransform: "uppercase" as const, color: COLORS.primary, fontWeight: 600,
                 }}>{t}</div>
               ))}
@@ -323,7 +323,7 @@ function AboutSection() {
         {/* Stat bar */}
         <div ref={statsRef as React.RefCallback<HTMLDivElement>} style={{
           borderTop: "1px solid rgba(0,92,159,0.1)", borderBottom: "1px solid rgba(0,92,159,0.1)",
-          display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, 1fr)",
+          display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, minmax(0, 1fr))",
           opacity: statsVisible ? 1 : 0, transform: statsVisible ? "translateY(0)" : "translateY(16px)",
           transition: "opacity 0.7s ease, transform 0.7s ease",
         }}>
@@ -340,7 +340,7 @@ function AboutSection() {
               borderBottom: (isMobile && i < 2) ? "1px solid rgba(0,92,159,0.1)" : "none",
             }}>
               <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(2rem,3.5vw,3.2rem)", fontWeight: 900, color: COLORS.primary, lineHeight: 1, marginBottom: ".4rem", letterSpacing: "-0.02em" }}>{s.value}</div>
-              <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.5rem,.7vw,.62rem)", fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", color: "#0D0D0D", marginBottom: ".35rem" }}>{s.label}</div>
+              <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.7rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", color: "#0D0D0D", marginBottom: ".35rem" }}>{s.label}</div>
               <div style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.75rem,.85vw,.8rem)", color: "#888", lineHeight: 1.4 }}>{s.sub}</div>
             </div>
           ))}
@@ -377,7 +377,7 @@ function LotsSection() {
 
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.04 }}
-          style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)", gap: "1.5rem" }}
+          style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3, minmax(0, 1fr))", gap: "1.5rem" }}
         >
           {LOTS.map((lot, i) => <LotCard key={lot.id} lot={lot} index={i} />)}
         </motion.div>
@@ -421,7 +421,7 @@ function LotCard({ lot, index }: { lot: typeof LOTS[number]; index: number }) {
           <GraduationCap size={16} color={COLORS.primary} strokeWidth={1.9} />
         </div>
         <div>
-          <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(0.44rem,0.54vw,0.5rem)", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(0,92,159,0.5)", marginBottom: "3px" }}>
+          <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(0.66rem,0.7vw,0.72rem)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(0,92,159,0.5)", marginBottom: "3px" }}>
             Faculty In-Charge
           </div>
           <div style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.9rem,1vw,0.95rem)", fontWeight: 600, color: "#0D0D0D", lineHeight: 1.2 }}>
@@ -444,7 +444,7 @@ function ClubsDescSection() {
       <div aria-hidden="true" style={{ position: "absolute", right: "-0.05em", bottom: "-0.15em", fontFamily: cinzel.style.fontFamily, fontSize: "clamp(14rem,28vw,40rem)", fontWeight: 800, lineHeight: 1, color: "rgba(255,255,255,0.04)", pointerEvents: "none", userSelect: "none", letterSpacing: "-0.06em" }}>C</div>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: `0 ${SPACE.sectionX}`, position: "relative", zIndex: 1 }}>
         <div style={{ maxWidth: 760 }}>
-          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.44rem,.68vw,.6rem)", letterSpacing: ".38em", textTransform: "uppercase", color: "rgba(255,255,255,.45)", fontWeight: 600, display: "flex", alignItems: "center", gap: 12, marginBottom: "clamp(.7rem,1.5vh,1.2rem)", opacity: visible ? 1 : 0, transition: "opacity .6s" }}>
+          <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.72vw,.72rem)", letterSpacing: ".3em", textTransform: "uppercase", color: "rgba(255,255,255,.45)", fontWeight: 600, display: "flex", alignItems: "center", gap: 12, marginBottom: "clamp(.7rem,1.5vh,1.2rem)", opacity: visible ? 1 : 0, transition: "opacity .6s" }}>
             <span style={{ display: "inline-block", width: 28, height: 1.5, background: "rgba(255,255,255,.4)" }} />
             Student Clubs
           </p>
@@ -478,7 +478,7 @@ function ClubsSection() {
           </h2>
         </div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.04 }} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, 1fr)", gap: "1.25rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.04 }} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, minmax(0, 1fr))", gap: "1.25rem" }}>
           {CLUBS.map((club, i) => <ClubCard key={club.id} club={club} index={i} />)}
         </motion.div>
       </div>
@@ -518,7 +518,7 @@ function ClubCard({ club, index }: { club: typeof CLUBS[number]; index: number }
           <GraduationCap size={14} color={COLORS.primary} strokeWidth={2} />
         </div>
         <div>
-          <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(0.42rem,0.52vw,0.48rem)", fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(0,92,159,0.45)", marginBottom: "3px" }}>
+          <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(0.66rem,0.7vw,0.72rem)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(0,92,159,0.45)", marginBottom: "3px" }}>
             Faculty In-Charge
           </div>
           <div style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.88rem,0.98vw,0.93rem)", fontWeight: 600, color: "#0D0D0D", lineHeight: 1.2 }}>

@@ -396,8 +396,8 @@ export default function HeroSection() {
         >
           <span style={{
             fontFamily:    'system-ui, sans-serif',
-            fontSize:      '0.5rem',
-            letterSpacing: '0.4em',
+            fontSize:      '0.72rem',
+            letterSpacing: '0.34em',
             textTransform: 'uppercase',
             color:         'rgba(255,255,255,0.22)',
           }}>

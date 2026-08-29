@@ -153,7 +153,7 @@ export default function OriginalThinkersSection() {
         /* ── Card grid — equal height rows via align-items stretch ── */
         .ot-cards-row {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: clamp(0.8rem, 1.6vw, 1.4rem);
           align-items: stretch;   /* all cards same height */
         }
@@ -214,8 +214,8 @@ export default function OriginalThinkersSection() {
             <span
               className={cinzel.className}
               style={{
-                fontSize: "clamp(8px,2.6vw,10px)",
-                letterSpacing: "0.3em",
+                fontSize: "clamp(11px,2.6vw,13px)",
+                letterSpacing: "0.24em",
                 textTransform: "uppercase",
                 color: `${NAVY}90`,
                 fontWeight: 600,
@@ -277,7 +277,7 @@ export default function OriginalThinkersSection() {
             >
               <span
                 className={cinzel.className}
-                style={{ fontSize: "clamp(9px,2.4vw,10px)", letterSpacing: "0.2em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}
+                style={{ fontSize: "clamp(11px,2.4vw,13px)", letterSpacing: "0.16em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}
               >
                 Discover Our Story
               </span>
@@ -319,8 +319,8 @@ export default function OriginalThinkersSection() {
                 <span
                   className={cinzel.className}
                   style={{
-                    fontSize: "clamp(7px,0.52vw,9px)",
-                    letterSpacing: "0.38em",
+                    fontSize: "clamp(11px,0.7vw,13px)",
+                    letterSpacing: "0.32em",
                     textTransform: "uppercase",
                     color: `${NAVY}90`,
                     fontWeight: 600,
@@ -418,7 +418,7 @@ export default function OriginalThinkersSection() {
                 >
                   <span
                     className={cinzel.className}
-                    style={{ fontSize: "clamp(8px,0.62vw,10px)", letterSpacing: "0.2em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}
+                    style={{ fontSize: "clamp(11px,0.7vw,13px)", letterSpacing: "0.16em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}
                   >
                     Discover Our Story
                   </span>

@@ -186,9 +186,9 @@ function FAQRow({ item, index, open, onToggle }: { item: { q: string; a: string 
     bodyRef.current.style.opacity = open ? '1' : '0';
   }, [open]);
   return (
-    <div className="faq-row border-b border-gray-100" style={{ opacity: 0 }}>
+    <div className="faq-row border-b border-gray-100" style={{ opacity: 1 }}>
       <button onClick={onToggle} className="w-full flex items-start gap-4 py-4 text-left focus:outline-none">
-        <span className={cinzel.className} style={{ fontSize: '0.55rem', letterSpacing: '0.2em', color: open ? BLUE2 : '#ccc', transition: 'color .3s', flexShrink: 0, paddingTop: 2 }}>
+        <span className={cinzel.className} style={{ fontSize: '0.72rem', letterSpacing: '0.2em', color: open ? BLUE2 : '#ccc', transition: 'color .3s', flexShrink: 0, paddingTop: 2 }}>
           {String(index + 1).padStart(2, '0')}
         </span>
         <span className={`${cinzel.className} flex-1 font-semibold uppercase tracking-wide`} style={{ fontSize: 'clamp(0.6rem,0.82vw,0.78rem)', color: open ? '#000' : '#333', transition: 'color .3s', lineHeight: 1.5 }}>
@@ -213,8 +213,8 @@ const Btn = ({ href, label, primary, ext }: { href: string; label: string; prima
   <a href={href} target={ext ? '_blank' : undefined} rel="noreferrer"
     className={`inline-flex items-center gap-1.5 ${cinzel.className} px-4 py-2 rounded-full font-semibold transition-all duration-300`}
     style={primary
-      ? { background: BLUE, color: '#fff', fontSize: '0.58rem', textTransform: 'uppercase', letterSpacing: '0.14em' }
-      : { background: 'transparent', color: BLUE, border: `1.5px solid ${BLUE}`, fontSize: '0.58rem', textTransform: 'uppercase', letterSpacing: '0.14em' }}>
+      ? { background: BLUE, color: '#fff', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.14em' }
+      : { background: 'transparent', color: BLUE, border: `1.5px solid ${BLUE}`, fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.14em' }}>
     {label}
     {primary && <span style={{ color: 'rgba(255,255,255,0.7)' }}>{Ico.arrow}</span>}
   </a>
@@ -222,7 +222,7 @@ const Btn = ({ href, label, primary, ext }: { href: string; label: string; prima
 
 /* ─────────── SECTION LABEL ─────────── */
 const Label = ({ text }: { text: string }) => (
-  <span className={cinzel.className} style={{ fontSize: '0.6rem', letterSpacing: '0.3em', color: BLUE2, textTransform: 'uppercase', fontWeight: 600 }}>{text}</span>
+  <span className={cinzel.className} style={{ fontSize: '0.72rem', letterSpacing: '0.24em', color: BLUE2, textTransform: 'uppercase', fontWeight: 600 }}>{text}</span>
 );
 
 /* ─────────── SECTION TITLE ─────────── */
@@ -430,7 +430,7 @@ export default function AdmissionsPage() {
           ════════════════════════════════ */}
           <section ref={heroRef} className="vh relative bg-black">
             <div className="absolute inset-0 z-0">
-              <Image src={IMG.hero} alt="LEAD College campus" fill priority className="object-cover h-img" style={{ opacity: 0 }} />
+              <Image src={IMG.hero} alt="LEAD College campus" fill priority className="object-cover h-img" style={{ opacity: 1 }} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/12" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
             </div>
@@ -441,13 +441,13 @@ export default function AdmissionsPage() {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-14 pt-28 pb-10">
               <h1 className={`${cinzel.className} uppercase font-bold leading-[0.9] mb-5`}
                 style={{ fontSize: 'clamp(2.6rem,7vw,7rem)' }}>
-                <span className="h-line block text-white" style={{ opacity: 0 }}>Begin Your</span>
-                <span className="h-line block text-white" style={{ opacity: 0 }}>Journey</span>
+                <span className="h-line block text-white" style={{ opacity: 1 }}>Begin Your</span>
+                <span className="h-line block text-white" style={{ opacity: 1 }}>Journey</span>
               </h1>
-              <p className="h-sub max-w-lg text-white/72 mb-7" style={{ opacity: 0, fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.8rem,.95vw,.95rem)', lineHeight: 1.72 }}>
+              <p className="h-sub max-w-lg text-white/72 mb-7" style={{ opacity: 1, fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.8rem,.95vw,.95rem)', lineHeight: 1.72 }}>
                 Admission to LEAD College is the first step toward becoming part of a dynamic academic community committed to developing competent professionals, entrepreneurs, and technology specialists.
               </p>
-              <div className="h-btns flex flex-wrap gap-2.5 mb-10" style={{ opacity: 0 }}>
+              <div className="h-btns flex flex-wrap gap-2.5 mb-10" style={{ opacity: 1 }}>
                 {[
                   { label:'Apply for MBA',          href: MBA_URL },
                   { label:'Apply for MCA',          href: MCA_URL },
@@ -463,7 +463,7 @@ export default function AdmissionsPage() {
                       border: '1px solid rgba(255,255,255,0.3)',
                       backdropFilter: 'blur(8px)',
                       WebkitBackdropFilter: 'blur(8px)',
-                      fontSize: 'clamp(0.5rem,.7vw,.68rem)',
+                      fontSize: 'clamp(0.66rem,.8vw,.74rem)',
                       textTransform: 'uppercase',
                       letterSpacing: '0.15em',
                     }}>
@@ -478,9 +478,9 @@ export default function AdmissionsPage() {
                   { val:'95%+',      lbl:'Average Placement Rate' },
                   { val:'219+',      lbl:'Companies Engaged Current Batch' },
                 ].map(s=>(
-                  <div key={s.val} className="h-stat" style={{ opacity: 0 }}>
+                  <div key={s.val} className="h-stat" style={{ opacity: 1 }}>
                     <p className={cinzel.className} style={{ fontSize:'clamp(1.1rem,2vw,1.9rem)', fontWeight:700, color:'#fff', lineHeight:1 }}>{s.val}</p>
-                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.62rem', color:'rgba(255,255,255,0.48)', marginTop:3, maxWidth:140 }}>{s.lbl}</p>
+                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', color:'rgba(255,255,255,0.48)', marginTop:3, maxWidth:140 }}>{s.lbl}</p>
                   </div>
                 ))}
               </div>
@@ -492,7 +492,7 @@ export default function AdmissionsPage() {
           ════════════════════════════════ */}
           <section ref={aboutRef} id="about" className="vh bg-white px-8 md:px-14">
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 items-center">
-              <div className="ab-l" style={{ opacity: 0 }}>
+              <div className="ab-l" style={{ opacity: 1 }}>
                 <Label text="About LEAD" />
                 <Title>Not Your<br />Usual College</Title>
                 <div className="space-y-2.5 mt-4 mb-5">
@@ -504,7 +504,7 @@ export default function AdmissionsPage() {
                   {[{v:'360',l:'MBA Seats'},{v:'2+',l:'PG Programs'},{v:'NBA',l:'Accredited'},{v:'100%',l:'Residential'}].map(s=>(
                     <div key={s.v} className="bg-blue-50/60 rounded-xl p-3 text-center border border-blue-100/50">
                       <p className={cinzel.className} style={{ fontSize:'1.25rem', fontWeight:700, color:BLUE, lineHeight:1 }}>{s.v}</p>
-                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.65rem', color:'#666', marginTop:2 }}>{s.l}</p>
+                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', color:'#666', marginTop:2 }}>{s.l}</p>
                     </div>
                   ))}
                 </div>
@@ -513,7 +513,7 @@ export default function AdmissionsPage() {
                   <Btn href={MCA_URL} label="Apply for MCA" ext />
                 </div>
               </div>
-              <div className="ab-r relative h-[380px]" style={{ opacity: 0 }}>
+              <div className="ab-r relative h-[380px]" style={{ opacity: 1 }}>
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <Image src={IMG.about} alt="LEAD campus life" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -537,36 +537,36 @@ export default function AdmissionsPage() {
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
                 {programs.map(prog => (
-                  <div key={prog.code} className="pc relative rounded-xl overflow-hidden border border-gray-100 shadow-sm bg-white flex flex-col" style={{ opacity:0 }}>
+                  <div key={prog.code} className="pc relative rounded-xl overflow-hidden border border-gray-100 shadow-sm bg-white flex flex-col" style={{ opacity:1 }}>
                     <div className="relative h-28 flex-shrink-0 overflow-hidden">
                       <Image src={prog.img} alt={prog.title} fill className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/68 to-transparent" />
                       <span className={cinzel.className} style={{ position:'absolute', top:8, right:10, fontSize:'2.2rem', fontWeight:800, color:'rgba(255,255,255,0.09)', lineHeight:1 }}>{prog.code}</span>
                       <div className="absolute bottom-2.5 left-2.5">
-                        <span className={cinzel.className} style={{ fontSize:'0.43rem', letterSpacing:'0.15em', textTransform:'uppercase', background:'rgba(255,255,255,0.12)', backdropFilter:'blur(6px)', color:'#fff', padding:'2px 7px', borderRadius:999, border:'1px solid rgba(255,255,255,0.16)' }}>{prog.tag}</span>
+                        <span className={cinzel.className} style={{ fontSize:'0.72rem', letterSpacing:'0.09em', textTransform:'uppercase', background:'rgba(255,255,255,0.12)', backdropFilter:'blur(6px)', color:'#fff', padding:'2px 7px', borderRadius:999, border:'1px solid rgba(255,255,255,0.16)' }}>{prog.tag}</span>
                       </div>
                     </div>
                     <div className="p-3.5 flex flex-col flex-1">
                       <h3 className={cinzel.className} style={{ fontSize:'clamp(0.7rem,1vw,0.92rem)', fontWeight:700, color:'#111', marginBottom:1 }}>{prog.title}</h3>
-                      <p className={cinzel.className} style={{ fontSize:'0.5rem', letterSpacing:'0.16em', color:BLUE2, textTransform:'uppercase', marginBottom:8 }}>{prog.subtitle}</p>
+                      <p className={cinzel.className} style={{ fontSize:'0.72rem', letterSpacing:'0.16em', color:BLUE2, textTransform:'uppercase', marginBottom:8 }}>{prog.subtitle}</p>
                       <div className="w-5 h-0.5 mb-2.5" style={{ background:BLUE }} />
                       <ul className="space-y-1 mb-3.5 flex-1">
                         {prog.bullets.map(b=>(
                           <li key={b} className="flex items-start gap-1.5">
                             <div className="mt-[5px] w-1 h-1 rounded-full flex-shrink-0" style={{ background:BLUE2 }} />
-                            <span style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.67rem', lineHeight:1.6, color:'#555' }}>{b}</span>
+                            <span style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', lineHeight:1.6, color:'#555' }}>{b}</span>
                           </li>
                         ))}
                       </ul>
                       <div className="flex gap-1.5 mt-auto">
                         <a href={prog.applyHref} target="_blank" rel="noreferrer"
                           className={`cb ${cinzel.className} flex-1 text-center py-2 rounded-full font-semibold`}
-                          style={{ background:BLUE, color:'#fff', fontSize:'0.54rem', textTransform:'uppercase', letterSpacing:'0.1em' }}>
+                          style={{ background:BLUE, color:'#fff', fontSize:'0.72rem', textTransform:'uppercase', letterSpacing:'0.1em' }}>
                           Apply Now
                         </a>
                         <a href={prog.viewHref}
                           className={`ob ${cinzel.className} flex-1 text-center py-2 rounded-full font-semibold border`}
-                          style={{ color:BLUE, borderColor:BLUE, fontSize:'0.54rem', textTransform:'uppercase', letterSpacing:'0.1em' }}>
+                          style={{ color:BLUE, borderColor:BLUE, fontSize:'0.72rem', textTransform:'uppercase', letterSpacing:'0.1em' }}>
                           View Course
                         </a>
                       </div>
@@ -590,10 +590,10 @@ export default function AdmissionsPage() {
               <div className="grid lg:grid-cols-3 gap-4">
 
                 {/* Col 1: VLEAD */}
-                <div className="vc bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col gap-3" style={{ opacity:0 }}>
+                <div className="vc bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col gap-3" style={{ opacity:1 }}>
                   <div className="flex items-center gap-2 mb-1">
                     <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background:BLUE, color:'#fff' }}>{Ico.shield}</div>
-                    <h3 className={cinzel.className} style={{ fontSize:'0.7rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>The VLEAD Process</h3>
+                    <h3 className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>The VLEAD Process</h3>
                   </div>
                   <p style={{ ...P, fontSize:'0.74rem' }}>
                     <strong>VLEAD</strong> is LEAD's holistic selection framework — designed to identify candidates with the right attitude and potential, not just academic scores. Our uLEAD cycle begins <strong>December 1st</strong> each year, with multiple rounds over 8 months.
@@ -604,26 +604,26 @@ export default function AdmissionsPage() {
                       <div key={c.label} className="rounded-xl p-2.5 border border-blue-100/60 flex flex-col gap-1" style={{ background:'rgba(30,58,138,0.025)' }}>
                         <div className="flex items-center gap-1.5">
                           <span style={{ color:BLUE }}>{c.icon}</span>
-                          <p className={cinzel.className} style={{ fontSize:'0.52rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111' }}>{c.label}</p>
+                          <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111' }}>{c.label}</p>
                         </div>
-                        <p style={{ ...P, fontSize:'0.68rem' }}>{c.desc}</p>
+                        <p style={{ ...P, fontSize:'0.72rem' }}>{c.desc}</p>
                       </div>
                     ))}
                   </div>
                   <div className="rounded-xl p-3 text-center mt-auto" style={{ background:BLUE }}>
-                    <p className={cinzel.className} style={{ color:'#fff', fontSize:'0.58rem', letterSpacing:'0.08em', lineHeight:1.65 }}>
+                    <p className={cinzel.className} style={{ color:'#fff', fontSize:'0.72rem', letterSpacing:'0.08em', lineHeight:1.65 }}>
                       Potential &amp; mindset matter<br />as much as academic marks.
                     </p>
                   </div>
                 </div>
 
                 {/* Col 2: 5-step wizard */}
-                <div className="wz-s bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col" style={{ opacity:0 }}>
+                <div className="wz-s bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col" style={{ opacity:1 }}>
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background:BLUE, color:'#fff' }}>
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
                     </div>
-                    <h3 className={cinzel.className} style={{ fontSize:'0.7rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>5-Step Application</h3>
+                    <h3 className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>5-Step Application</h3>
                   </div>
                   <div className="w-full h-14 mb-3"><UndrawProcess /></div>
                   <div className="flex-1 space-y-0">
@@ -634,62 +634,62 @@ export default function AdmissionsPage() {
                         )}
                         <div className="w-[22px] h-[22px] rounded-full flex items-center justify-center flex-shrink-0 z-10 mt-1"
                           style={{ background: i===0 ? BLUE : '#f3f4f6', border:`1.5px solid ${i===0 ? BLUE : '#e5e7eb'}` }}>
-                          <span className={cinzel.className} style={{ fontSize:'0.48rem', fontWeight:700, color: i===0 ? '#fff' : '#666' }}>{step.n}</span>
+                          <span className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, color: i===0 ? '#fff' : '#666' }}>{step.n}</span>
                         </div>
                         <div className="pb-3.5">
-                          <p className={cinzel.className} style={{ fontSize:'0.62rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:1 }}>{step.title}</p>
-                          <p style={{ ...P, fontSize:'0.68rem' }}>{step.desc}</p>
+                          <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:1 }}>{step.title}</p>
+                          <p style={{ ...P, fontSize:'0.72rem' }}>{step.desc}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                   <div className="rounded-xl p-3 border border-blue-100 mt-2 mb-3" style={{ background:'rgba(30,58,138,0.03)' }}>
-                    <p className={cinzel.className} style={{ fontSize:'0.55rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:BLUE, marginBottom:4 }}>Program Commencement</p>
+                    <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:BLUE, marginBottom:4 }}>Program Commencement</p>
                     <div className="flex items-center gap-2">
                       <span style={{ color:BLUE }}>{Ico.clock}</span>
-                      <p style={{ ...P, fontSize:'0.7rem' }}>First week of September, preceded by the <em>Turning Point</em> pre-course induction program.</p>
+                      <p style={{ ...P, fontSize:'0.72rem' }}>First week of September, preceded by the <em>Turning Point</em> pre-course induction program.</p>
                     </div>
                   </div>
                   <div className="flex gap-2 mt-auto">
                     <a href={MBA_URL} target="_blank" rel="noreferrer" className={`cb ${cinzel.className} flex-1 text-center py-2.5 rounded-full font-semibold`}
-                      style={{ background:BLUE, color:'#fff', fontSize:'0.54rem', textTransform:'uppercase', letterSpacing:'0.12em' }}>
+                      style={{ background:BLUE, color:'#fff', fontSize:'0.72rem', textTransform:'uppercase', letterSpacing:'0.12em' }}>
                       Start MBA
                     </a>
                     <a href={MCA_URL} target="_blank" rel="noreferrer" className={`ob ${cinzel.className} flex-1 text-center py-2.5 rounded-full font-semibold border`}
-                      style={{ color:BLUE, borderColor:BLUE, fontSize:'0.54rem', textTransform:'uppercase', letterSpacing:'0.12em' }}>
+                      style={{ color:BLUE, borderColor:BLUE, fontSize:'0.72rem', textTransform:'uppercase', letterSpacing:'0.12em' }}>
                       Start MCA
                     </a>
                   </div>
                 </div>
 
                 {/* Col 3: Instructions */}
-                <div className="ic bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col gap-3" style={{ opacity:0 }}>
+                <div className="ic bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col gap-3" style={{ opacity:1 }}>
                   <div className="flex items-center gap-2 mb-1">
                     <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background:BLUE, color:'#fff' }}>{Ico.info}</div>
-                    <h3 className={cinzel.className} style={{ fontSize:'0.7rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>Important Instructions</h3>
+                    <h3 className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>Important Instructions</h3>
                   </div>
                   {instructions.map(ins=>(
                     <div key={ins.title} className="rounded-xl p-3 border border-gray-100 flex gap-3 items-start" style={{ background:'rgba(30,58,138,0.02)' }}>
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background:'rgba(30,58,138,0.07)', color:BLUE }}>{ins.icon}</div>
                       <div>
-                        <p className={cinzel.className} style={{ fontSize:'0.58rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:3 }}>{ins.title}</p>
-                        <p style={{ ...P, fontSize:'0.7rem' }}>{ins.body}</p>
+                        <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:3 }}>{ins.title}</p>
+                        <p style={{ ...P, fontSize:'0.72rem' }}>{ins.body}</p>
                       </div>
                     </div>
                   ))}
                   <div className="rounded-xl p-3.5 border border-blue-100 mt-auto" style={{ background:'rgba(30,58,138,0.035)' }}>
                     <div className="flex items-center gap-2 mb-3">
                       <span style={{ color:BLUE }}>{Ico.msg}</span>
-                      <p className={cinzel.className} style={{ fontSize:'0.58rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:BLUE }}>QMS — How to Use</p>
+                      <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:BLUE }}>QMS — How to Use</p>
                     </div>
                     <div className="w-full h-20 mb-2"><UndrawQMS /></div>
                     <div className="space-y-1.5">
                       {['Register & verify your email','Login → open dashboard','Click "Any Queries? Ask Us"','Select category and submit'].map((s,i)=>(
                         <div key={s} className="flex items-center gap-2">
                           <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ background:BLUE }}>
-                            <span className={cinzel.className} style={{ fontSize:'0.42rem', color:'#fff', fontWeight:700 }}>{i+1}</span>
+                            <span className={cinzel.className} style={{ fontSize:'0.72rem', color:'#fff', fontWeight:700 }}>{i+1}</span>
                           </div>
-                          <p style={{ ...P, fontSize:'0.68rem' }}>{s}</p>
+                          <p style={{ ...P, fontSize:'0.72rem' }}>{s}</p>
                         </div>
                       ))}
                     </div>
@@ -705,20 +705,20 @@ export default function AdmissionsPage() {
           ════════════════════════════════ */}
           <section ref={newsRef} className="vh bg-white px-8 md:px-14">
             <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 items-center">
-              <div className="nw-l relative h-[380px]" style={{ opacity:0 }}>
+              <div className="nw-l relative h-[380px]" style={{ opacity:1 }}>
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
                   <Image src={IMG.news} alt="LEAD campus community" fill className="object-cover hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
                   <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background:BLUE }} />
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="bg-white/14 backdrop-blur-md rounded-xl px-4 py-3 border border-white/18">
-                      <p className={cinzel.className} style={{ color:'#fff', fontSize:'0.6rem', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:2 }}>Fully Residential Campus</p>
+                      <p className={cinzel.className} style={{ color:'#fff', fontSize:'0.72rem', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:2 }}>Fully Residential Campus</p>
                       <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.74rem', color:'rgba(255,255,255,0.78)', lineHeight:1.5 }}>Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="nw-r" style={{ opacity:0 }}>
+              <div className="nw-r" style={{ opacity:1 }}>
                 <Label text="Life at LEAD" />
                 <Title size="clamp(1.44rem,2.7vw,2.52rem)">An Entrepreneurial<br />Learning Community</Title>
                 <div className="space-y-2.5 mt-4 mb-5">
@@ -727,11 +727,11 @@ export default function AdmissionsPage() {
                 </div>
                 <div className="grid grid-cols-2 gap-2.5 mb-5">
                   {newsFeatures.map(f => (
-                    <div key={f.label} className="nf nf-i flex items-start gap-2.5 bg-blue-50/45 rounded-xl p-3 border border-blue-100/45" style={{ opacity:0 }}>
+                    <div key={f.label} className="nf nf-i flex items-start gap-2.5 bg-blue-50/45 rounded-xl p-3 border border-blue-100/45" style={{ opacity:1 }}>
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background:'rgba(30,58,138,0.07)', color:BLUE }}>{f.icon}</div>
                       <div>
-                        <p className={cinzel.className} style={{ fontSize:'0.58rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:2 }}>{f.label}</p>
-                        <p style={{ ...P, fontSize:'0.7rem' }}>{f.desc}</p>
+                        <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:2 }}>{f.label}</p>
+                        <p style={{ ...P, fontSize:'0.72rem' }}>{f.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -751,7 +751,7 @@ export default function AdmissionsPage() {
             <div className={`${cinzel.className} absolute right-0 top-1/2 -translate-y-1/2 select-none pointer-events-none z-0 font-bold uppercase`}
               style={{ fontSize:'clamp(6rem,16vw,16rem)', color:'rgba(30,58,138,0.027)', lineHeight:1, letterSpacing:'-0.04em' }} aria-hidden="true">FAQ</div>
             <div className="relative z-10 max-w-6xl mx-auto w-full grid lg:grid-cols-[210px_1fr] gap-10 items-start">
-              <div className="fq-l lg:sticky lg:top-16 self-start" style={{ opacity:0 }}>
+              <div className="fq-l lg:sticky lg:top-16 self-start" style={{ opacity:1 }}>
                 <Label text="Got Questions?" />
                 <Title size="clamp(1.35rem,2.52vw,2.34rem)">Every<br />Answer<br />Here.</Title>
                 <p style={{ ...P, fontSize:'0.74rem', marginTop:8 }}>Still need help? Reach us via LEAD QMS or call +91 9497713693.</p>
@@ -782,7 +782,7 @@ export default function AdmissionsPage() {
                 </p>
               </div>
 
-              <div className="vw relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio:'16/9', opacity:0 }}>
+              <div className="vw relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio:'16/9', opacity:1 }}>
                 {!videoPlaying ? (
                   <div className="relative w-full h-full">
                     {/* ✅ CHANGED: professor-in-lecture-hall thumbnail — clearly college context */}
@@ -797,7 +797,7 @@ export default function AdmissionsPage() {
                           <path d="M7 5l18 9-18 9V5z" fill={BLUE}/>
                         </svg>
                       </button>
-                      <span className={cinzel.className} style={{ color:'#fff', fontSize:'0.58rem', letterSpacing:'0.3em', textTransform:'uppercase', opacity:0.72 }}>
+                      <span className={cinzel.className} style={{ color:'#fff', fontSize:'0.72rem', letterSpacing:'0.3em', textTransform:'uppercase', opacity:0.72 }}>
                         Click to Play
                       </span>
                     </div>
@@ -831,17 +831,17 @@ export default function AdmissionsPage() {
                     { icon:Ico.phone, label:'Phone Numbers',  lines:['0491-2553693 / 2553663','+91 9497713693  ·  +91 8838095207'] },
                     { icon:Ico.mail,  label:'Email Address',  lines:['info@lead.ac.in','mail@lead.ac.in'] },
                   ].map(card=>(
-                    <div key={card.label} className="cc flex items-start gap-4 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300" style={{ opacity:0 }}>
+                    <div key={card.label} className="cc flex items-start gap-4 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300" style={{ opacity:1 }}>
                       <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background:'rgba(30,58,138,0.06)', color:BLUE }}>{card.icon}</div>
                       <div>
-                        <h4 className={cinzel.className} style={{ fontSize:'0.58rem', letterSpacing:'0.2em', textTransform:'uppercase', color:BLUE2, marginBottom:4, fontWeight:600 }}>{card.label}</h4>
+                        <h4 className={cinzel.className} style={{ fontSize:'0.72rem', letterSpacing:'0.2em', textTransform:'uppercase', color:BLUE2, marginBottom:4, fontWeight:600 }}>{card.label}</h4>
                         {card.lines.map(line=><p key={line} style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.82rem', color:'#444', lineHeight:1.75 }}>{line}</p>)}
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="cc relative h-[390px]" style={{ opacity:0 }}>
+              <div className="cc relative h-[390px]" style={{ opacity:1 }}>
                 <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
                   <Image src={IMG.contact} alt="LEAD College" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/25 to-transparent" />
@@ -863,8 +863,8 @@ export default function AdmissionsPage() {
                           target={href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
                           className={`cb ${cinzel.className} px-3.5 py-1.5 rounded-full font-semibold`}
                           style={p
-                            ? { background:'#fff', color:BLUE, fontSize:'0.55rem', textTransform:'uppercase', letterSpacing:'0.1em' }
-                            : { background:'rgba(255,255,255,0.11)', color:'#fff', border:'1px solid rgba(255,255,255,0.28)', backdropFilter:'blur(4px)', fontSize:'0.55rem', textTransform:'uppercase', letterSpacing:'0.1em' }}>
+                            ? { background:'#fff', color:BLUE, fontSize:'0.72rem', textTransform:'uppercase', letterSpacing:'0.1em' }
+                            : { background:'rgba(255,255,255,0.11)', color:'#fff', border:'1px solid rgba(255,255,255,0.28)', backdropFilter:'blur(4px)', fontSize:'0.72rem', textTransform:'uppercase', letterSpacing:'0.1em' }}>
                           {label}
                         </a>
                       ))}

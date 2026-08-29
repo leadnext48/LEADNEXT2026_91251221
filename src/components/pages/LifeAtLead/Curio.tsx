@@ -42,7 +42,7 @@ const G = {
 
 const TYPE = {
   eyebrow: {
-    fontSize:      "clamp(.4rem,.58vw,.52rem)" as string,
+    fontSize:      "clamp(.7rem,.82vw,.76rem)" as string,
     letterSpacing: ".28em",
     textTransform: "uppercase" as const,
     fontWeight:    600,
@@ -158,7 +158,7 @@ function HeroSection(): React.JSX.Element {
           padding: clamp(.8rem,1.6vh,1.3rem) 0;
           border-top: 1px solid rgba(0,92,159,.1);
           display: grid;
-          grid-template-columns: repeat(3,1fr);
+          grid-template-columns: repeat(3,minmax(0,1fr));
           gap: .5rem;
           margin-top: clamp(1.2rem,2.5vh,2rem);
           width: 100%; min-width: 0;
@@ -174,7 +174,7 @@ function HeroSection(): React.JSX.Element {
         .curio-strip-text { min-width: 0; overflow: hidden; }
         .curio-strip-label {
           display: block;
-          font-size: clamp(.48rem,.6vw,.56rem);
+          font-size: clamp(.68rem,.72vw,.74rem);
           letter-spacing: .08em; text-transform: uppercase;
           color: #333; font-weight: 700;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -189,7 +189,7 @@ function HeroSection(): React.JSX.Element {
           .curio-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .curio-hero-inner { grid-template-columns: 1fr; }
           .curio-hero-right, .curio-hero-bg-text { display: none; }
-          .curio-hero-strip { grid-template-columns: repeat(3,1fr); gap: .25rem; }
+          .curio-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
           .curio-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
           .curio-strip-item:first-child { padding-left: 0; }
         }
@@ -212,7 +212,7 @@ function HeroSection(): React.JSX.Element {
               <span style={{ display:"inline-block", width:24, height:1.5, flexShrink:0, background:C.green }} />
               <span style={{
                 fontFamily:    cinzel.style.fontFamily,
-                fontSize:      "clamp(.5rem,.65vw,.58rem)",
+                fontSize:      "clamp(.68rem,.78vw,.74rem)",
                 letterSpacing: "clamp(.08em,.2vw,.2em)",
                 textTransform: "uppercase",
                 color:         C.green,
@@ -378,7 +378,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display:             "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,1fr)",
+            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
             gap:                 "1rem",
           }}>
           {cards.map((card, i) => {
@@ -505,7 +505,7 @@ function PosterSection(): React.JSX.Element {
                 display:       "flex", alignItems:"center", gap:".6rem",
               }}>
                 <div style={{ width:7, height:7, borderRadius:"50%", background:C.green, flexShrink:0 }} />
-                <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.42rem,.54vw,.5rem)", letterSpacing:".18em", textTransform:"uppercase", color:"rgba(255,255,255,.75)", fontWeight:600 }}>Campus Hangout Hub</span>
+                <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", letterSpacing:".12em", textTransform:"uppercase", color:"rgba(255,255,255,.75)", fontWeight:600 }}>Campus Hangout Hub</span>
               </div>
             </div>
 
@@ -559,7 +559,7 @@ function PosterSection(): React.JSX.Element {
               }}>
                 "Unlike typical campus cafeterias or kiosks, Curio is deeply integrated into the rhythm of student life at LEAD."
               </p>
-              <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:".44rem", letterSpacing:".18em", textTransform:"uppercase", color:C.faint, margin:0, fontWeight:600 }}>
+              <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:".72rem", letterSpacing:".14em", textTransform:"uppercase", color:C.faint, margin:0, fontWeight:600 }}>
                 — Curio, LEAD College
               </p>
             </div>
@@ -674,7 +674,7 @@ function CollaborationSection(): React.JSX.Element {
               color:         "rgba(255,255,255,.07)",
               userSelect:    "none",
             }} aria-hidden="true">06</div>
-            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.44rem,.56vw,.52rem)", letterSpacing:".2em", textTransform:"uppercase", color:`rgba(255,255,255,.22)`, marginTop:".3rem" }}>Ways students use Curio every day</p>
+            <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.74rem)", letterSpacing:".14em", textTransform:"uppercase", color:`rgba(255,255,255,.22)`, marginTop:".3rem" }}>Ways students use Curio every day</p>
           </motion.div>
 
           {/* RIGHT — checklist */}
@@ -696,7 +696,7 @@ function CollaborationSection(): React.JSX.Element {
                   display:"flex", alignItems:"center", justifyContent:"center",
                   marginTop:2,
                 }}>
-                  <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:".44rem", fontWeight:800, color:C.goldLight, letterSpacing:".1em" }}>0{i+1}</span>
+                  <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:".72rem", fontWeight:800, color:C.goldLight, letterSpacing:".1em" }}>0{i+1}</span>
                 </div>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
@@ -774,8 +774,8 @@ function CommunitySection(): React.JSX.Element {
           </h2>
           <p style={{
             fontFamily:    cinzel.style.fontFamily,
-            fontSize:      ".44rem",
-            letterSpacing: ".22em",
+            fontSize:      ".72rem",
+            letterSpacing: ".16em",
             textTransform: "uppercase",
             color:         C.faint,
             fontWeight:    600,
@@ -787,7 +787,7 @@ function CommunitySection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display:             "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(3,1fr)",
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(3,minmax(0,1fr))",
             gap:                 "1rem",
           }}>
           {pillars.map((p, i) => {
@@ -811,7 +811,7 @@ function CommunitySection(): React.JSX.Element {
                 </div>
                 <h3 style={{
                   fontFamily:    cinzel.style.fontFamily,
-                  fontSize:      "clamp(.6rem,.75vw,.7rem)",
+                  fontSize:      "clamp(.68rem,.76vw,.74rem)",
                   fontWeight:    700,
                   textTransform: "uppercase",
                   letterSpacing: ".1em",

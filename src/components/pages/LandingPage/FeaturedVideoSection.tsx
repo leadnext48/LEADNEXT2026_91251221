@@ -38,8 +38,8 @@ export default function FeaturedVideoSection() {
         <p
           style={{
             fontFamily: cinzel.style.fontFamily,
-            fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)',
-            letterSpacing: '0.34em',
+            fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)',
+            letterSpacing: '0.28em',
             textTransform: 'uppercase',
             color: BLUE,
             fontWeight: 600,
@@ -128,7 +128,7 @@ export default function FeaturedVideoSection() {
                 </button>
                 <span
                   className={cinzel.className}
-                  style={{ color: '#fff', fontSize: '0.58rem', letterSpacing: '0.3em', textTransform: 'uppercase', opacity: 0.72 }}
+                  style={{ color: '#fff', fontSize: '0.74rem', letterSpacing: '0.24em', textTransform: 'uppercase', opacity: 0.72 }}
                 >
                   Click to Play
                 </span>

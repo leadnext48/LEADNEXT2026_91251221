@@ -303,7 +303,7 @@ export default function ProgramOfficePage() {
         }
         .po-metrics-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, minmax(0, 1fr));
           gap: 1px;
           background: rgba(255,255,255,0.06);
           border-radius: 12px;
@@ -341,7 +341,7 @@ export default function ProgramOfficePage() {
         }
         .po-cards-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: clamp(1rem, 2vw, 1.5rem);
           margin-top: clamp(2.5rem, 5vh, 4rem);
         }
@@ -401,7 +401,7 @@ export default function ProgramOfficePage() {
         }
         .po-eco-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, minmax(0, 1fr));
           gap: clamp(1rem, 2vw, 1.4rem);
           margin-top: clamp(2.5rem, 5vh, 4rem);
         }
@@ -491,10 +491,10 @@ export default function ProgramOfficePage() {
 
             {/* LEFT */}
             <div>
-              <div className="po-eyebrow" style={{ opacity: 0, marginBottom: 'clamp(0.8rem, 1.6vh, 1.4rem)' }}>
+              <div className="po-eyebrow" style={{ opacity: 1, marginBottom: 'clamp(0.8rem, 1.6vh, 1.4rem)' }}>
                 <span style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: 'clamp(0.46rem, 0.68vw, 0.62rem)',
+                  fontSize: 'clamp(0.68rem, 0.8vw, 0.74rem)',
                   letterSpacing: '0.38em',
                   textTransform: 'uppercase',
                   color: BLUE, fontWeight: 600,
@@ -512,7 +512,7 @@ export default function ProgramOfficePage() {
                 letterSpacing: '-0.02em',
                 textTransform: 'uppercase',
                 margin: '0 0 clamp(0.8rem, 1.6vh, 1.4rem)',
-                opacity: 0,
+                opacity: 1,
               }}>
                 <span style={{ display: 'block', color: '#0D0D0D' }}>The</span>
                 <span style={{ display: 'block', color: '#0D0D0D' }}>Program</span>
@@ -533,7 +533,7 @@ export default function ProgramOfficePage() {
                 transformOrigin: 'left',
               }} />
 
-              <div ref={subRef} style={{ opacity: 0, maxWidth: 540 }}>
+              <div ref={subRef} style={{ opacity: 1, maxWidth: 540 }}>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
                   fontSize: 'clamp(0.85rem, 1.1vw, 1.05rem)',
@@ -550,8 +550,8 @@ export default function ProgramOfficePage() {
                     <span style={{ width: 5, height: 5, borderRadius: '50%', background: BLUE, display: 'inline-block', flexShrink: 0 }} />
                     <span style={{
                       fontFamily: cinzel.style.fontFamily,
-                      fontSize: 'clamp(0.38rem, 0.54vw, 0.48rem)',
-                      letterSpacing: '0.2em',
+                      fontSize: 'clamp(0.66rem, 0.8vw, 0.72rem)',
+                      letterSpacing: '0.14em',
                       textTransform: 'uppercase',
                       color: BLUE, fontWeight: 600,
                     }}>{tag}</span>
@@ -564,22 +564,22 @@ export default function ProgramOfficePage() {
             <div>
               <p style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: 'clamp(0.4rem, 0.58vw, 0.52rem)',
-                letterSpacing: '0.3em',
+                fontSize: 'clamp(0.66rem, 0.8vw, 0.72rem)',
+                letterSpacing: '0.24em',
                 textTransform: 'uppercase',
                 color: 'rgba(0,92,159,0.5)', fontWeight: 600,
                 marginBottom: '1rem',
               }}>Functions Index</p>
               {functions.map((f, i) => (
                 <div key={f.id} className="po-fn-row" style={{
-                  opacity: 0,
+                  opacity: 1,
                   display: 'flex', alignItems: 'center', gap: '0.9rem',
                   padding: 'clamp(0.55rem, 1vh, 0.85rem) 0',
                   borderBottom: i < functions.length - 1 ? '1px solid rgba(0,92,159,0.06)' : 'none',
                 }}>
                   <span style={{
                     fontFamily: cinzel.style.fontFamily,
-                    fontSize: 'clamp(0.44rem, 0.62vw, 0.56rem)',
+                    fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)',
                     fontWeight: 700, color: 'rgba(0,92,159,0.3)',
                     width: 22, flexShrink: 0,
                   }}>{f.num}</span>
@@ -593,7 +593,7 @@ export default function ProgramOfficePage() {
                   <div>
                     <p style={{
                       fontFamily: cinzel.style.fontFamily,
-                      fontSize: 'clamp(0.4rem, 0.58vw, 0.52rem)',
+                      fontSize: 'clamp(0.66rem, 0.8vw, 0.72rem)',
                       fontWeight: 700, letterSpacing: '0.1em',
                       textTransform: 'uppercase', color: '#1a1a1a', margin: 0,
                     }}>{f.short}</p>
@@ -618,8 +618,8 @@ export default function ProgramOfficePage() {
                 }}>{m.val}</p>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)',
-                  letterSpacing: '0.26em', textTransform: 'uppercase',
+                  fontSize: 'clamp(0.68rem, 0.8vw, 0.74rem)',
+                  letterSpacing: '0.2em', textTransform: 'uppercase',
                   color: 'rgba(255,255,255,0.75)',
                   margin: '8px 0 4px', fontWeight: 600,
                 }}>{m.label}</p>
@@ -635,7 +635,7 @@ export default function ProgramOfficePage() {
 
         {/* ═══════════════════════════════════ INTRO BAND */}
         <section className="po-intro-band">
-          <div className="po-intro-text" style={{ opacity: 0 }}>
+          <div className="po-intro-text" style={{ opacity: 1 }}>
             <div style={{
               display: 'grid', gridTemplateColumns: '3px 1fr',
               gap: 'clamp(1.5rem, 3vw, 3rem)', alignItems: 'stretch', maxWidth: 1000,
@@ -644,8 +644,8 @@ export default function ProgramOfficePage() {
               <div>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)',
-                  letterSpacing: '0.34em', textTransform: 'uppercase',
+                  fontSize: 'clamp(0.68rem, 0.8vw, 0.74rem)',
+                  letterSpacing: '0.28em', textTransform: 'uppercase',
                   color: BLUE, fontWeight: 600,
                   marginBottom: 'clamp(0.7rem, 1.4vh, 1.1rem)',
                   display: 'flex', alignItems: 'center', gap: 10,
@@ -677,13 +677,13 @@ export default function ProgramOfficePage() {
 
         {/* ═══════════════════════════════════ FUNCTION CARDS */}
         <section className="po-functions-section">
-          <div className="po-section-hdr" style={{ opacity: 0, marginBottom: 0 }}>
+          <div className="po-section-hdr" style={{ opacity: 1, marginBottom: 0 }}>
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
               <div>
                 <p style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: 'clamp(0.44rem, 0.66vw, 0.6rem)',
-                  letterSpacing: '0.34em', textTransform: 'uppercase',
+                  fontSize: 'clamp(0.68rem, 0.8vw, 0.74rem)',
+                  letterSpacing: '0.28em', textTransform: 'uppercase',
                   color: BLUE, fontWeight: 600, marginBottom: '0.5rem',
                   display: 'flex', alignItems: 'center', gap: 10,
                 }}>
@@ -710,10 +710,10 @@ export default function ProgramOfficePage() {
 
           <div className="po-cards-grid">
             {functions.map((f) => (
-              <div key={f.id} className={`po-card po-card-${f.id}`} style={{ opacity: 0 }}>
+              <div key={f.id} className={`po-card po-card-${f.id}`} style={{ opacity: 1 }}>
                 <div className="po-card-accent" style={{ background: `linear-gradient(90deg, ${f.color}, ${BLUE})` }} />
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 'clamp(0.8rem, 1.5vh, 1.2rem)', paddingTop: 'clamp(0.7rem, 1.3vh, 1rem)' }}>
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.44rem, 0.64vw, 0.58rem)', fontWeight: 700, color: 'rgba(0,92,159,0.3)', letterSpacing: '0.1em' }}>{f.num}</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', fontWeight: 700, color: 'rgba(0,92,159,0.3)', letterSpacing: '0.1em' }}>{f.num}</span>
                   <div style={{ width: 38, height: 38, borderRadius: 10, background: 'rgba(0,92,159,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <f.icon size={17} color={BLUE} strokeWidth={1.5} />
                   </div>

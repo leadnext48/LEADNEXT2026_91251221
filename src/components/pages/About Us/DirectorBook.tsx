@@ -135,7 +135,7 @@ export default function ChairmanBookSection(): JSX.Element {
                 </p>
 
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 bg-gradient-to-br from-yellow-400 to-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-[11px] shadow-sm flex-shrink-0">
+                  <div className="w-7 h-7 bg-gradient-to-br from-yellow-400 to-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-[12px] shadow-sm flex-shrink-0">
                     {testimonials[currentIndex].initials}
                   </div>
 
@@ -143,7 +143,7 @@ export default function ChairmanBookSection(): JSX.Element {
                     <p className="font-semibold text-[12px]">
                       {testimonials[currentIndex].name}
                     </p>
-                    <p className="text-[11px] text-gray-600">
+                    <p className="text-[12px] text-gray-600">
                       {testimonials[currentIndex].role}
                     </p>
                   </div>

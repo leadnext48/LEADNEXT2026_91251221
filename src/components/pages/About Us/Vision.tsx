@@ -133,8 +133,8 @@ function VmHero() {
 
   const init: CSSProperties = {
     transformStyle: "preserve-3d", backfaceVisibility: "hidden",
-    transformOrigin: "center top", opacity: 0,
-    transform: "rotateX(80deg) translateY(-36px) scale(0.86)", filter: "blur(4px)",
+    transformOrigin: "center top", opacity: 1,
+    transform: "none", filter: "none",
   };
 
   return (
@@ -419,7 +419,7 @@ export const VisionMissionPage: React.FC = () => (
       }
       .vmh-eyebrow {
         display:flex; align-items:center; gap:0.8rem;
-        font-size:clamp(0.5rem,0.75vw,0.68rem);
+        font-size:clamp(0.66rem,0.85vw,0.74rem);
         letter-spacing:0.32em; text-transform:uppercase; color:${BLUE};
       }
       .vmh-eyebrow-line { width:28px; height:1px; background:${BLUE}; opacity:0.5; }
@@ -436,7 +436,7 @@ export const VisionMissionPage: React.FC = () => (
       .pillars-header { margin-bottom:clamp(2.5rem,5vh,4rem); }
       .pillars-header-eyebrow {
         display:flex; align-items:center; gap:0.7rem;
-        font-size:clamp(0.5rem,0.7vw,0.62rem);
+        font-size:clamp(0.66rem,0.8vw,0.74rem);
         letter-spacing:0.32em; text-transform:uppercase; color:${BLUE};
       }
       .ph-line { width:28px; height:1px; background:${BLUE}; opacity:0.5; }
@@ -532,7 +532,7 @@ export const VisionMissionPage: React.FC = () => (
       .po2-hdr { position:relative; z-index:1; margin-bottom:clamp(1.5rem,3vh,2.5rem); }
       .po2-eyebrow {
         display:flex; align-items:center; gap:0.7rem; margin-bottom:0.8rem;
-        font-size:clamp(0.5rem,0.7vw,0.62rem);
+        font-size:clamp(0.66rem,0.8vw,0.74rem);
         letter-spacing:0.32em; text-transform:uppercase; color:${BLUE};
       }
       .po2-eyebrow-line { width:28px; height:1px; background:${BLUE}; opacity:0.5; }
@@ -557,7 +557,7 @@ export const VisionMissionPage: React.FC = () => (
       }
       .po2-dept-btn {
         padding:8px 30px; border:none; cursor:pointer; border-radius:100px;
-        font-size:clamp(0.46rem,0.68vw,0.62rem);
+        font-size:clamp(0.66rem,0.82vw,0.74rem);
         font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
         transition:background 0.28s, color 0.28s, box-shadow 0.28s;
       }
@@ -574,7 +574,7 @@ export const VisionMissionPage: React.FC = () => (
       .po2-subtab {
         padding:10px 26px; border:none; background:transparent; cursor:pointer;
         position:relative; color:#aaa;
-        font-size:clamp(0.48rem,0.7vw,0.64rem);
+        font-size:clamp(0.66rem,0.82vw,0.74rem);
         font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
         transition:color 0.22s; white-space:nowrap;
       }
@@ -596,7 +596,7 @@ export const VisionMissionPage: React.FC = () => (
         display:inline-flex; align-items:center; justify-content:center;
         min-width:34px; height:28px; padding:0 8px; border-radius:6px; flex-shrink:0;
         background:rgba(0,92,159,0.08); border:1px solid rgba(0,92,159,0.15);
-        font-size:clamp(0.44rem,0.62vw,0.54rem); font-weight:800;
+        font-size:clamp(0.66rem,0.72vw,0.72rem); font-weight:800;
         letter-spacing:0.06em; color:${BLUE};
       }
       .po2-card-rule {
@@ -614,7 +614,7 @@ export const VisionMissionPage: React.FC = () => (
       }
       .po2-body { font-size:clamp(0.8rem,0.95vw,0.92rem); line-height:1.82; color:#555; margin:0; }
       .po2-grid { position:relative; z-index:1; }
-      .po2-grid--peo { display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(0.75rem,1.5vw,1.1rem); }
+      .po2-grid--peo { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(0.75rem,1.5vw,1.1rem); }
       .po2-peo-card {
         position:relative; overflow:hidden;
         padding:clamp(1.2rem,2vw,1.8rem);
@@ -629,7 +629,7 @@ export const VisionMissionPage: React.FC = () => (
       }
       .po2-peo-card:hover { box-shadow:0 14px 44px rgba(0,92,159,0.10); transform:translateY(-3px); border-color:rgba(0,92,159,0.20); }
       .po2-peo-card:hover::before { transform:scaleX(1); }
-      .po2-grid--po { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(0.75rem,1.5vw,1.1rem); }
+      .po2-grid--po { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(0.75rem,1.5vw,1.1rem); }
       .po2-po-card {
         position:relative; overflow:hidden;
         padding:clamp(1.2rem,2vw,1.8rem);
@@ -647,10 +647,10 @@ export const VisionMissionPage: React.FC = () => (
       .po2-po-card:hover::before { transform:scaleY(1); }
       .po2-po-top { display:flex; align-items:center; gap:0.7rem; margin-bottom:0; }
       .po2-po-title {
-        font-size:clamp(0.5rem,0.72vw,0.64rem); font-weight:700;
+        font-size:clamp(0.66rem,0.82vw,0.74rem); font-weight:700;
         text-transform:uppercase; letter-spacing:0.08em; color:${DARK}; margin:0; line-height:1.25;
       }
-      .po2-grid--pso { display:grid; grid-template-columns:1fr 1fr; gap:clamp(0.75rem,1.5vw,1.3rem); }
+      .po2-grid--pso { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(0.75rem,1.5vw,1.3rem); }
       .po2-pso-card {
         position:relative; overflow:hidden;
         padding:clamp(1.4rem,2.5vw,2.2rem);
@@ -666,10 +666,10 @@ export const VisionMissionPage: React.FC = () => (
         transition:box-shadow 0.28s;
       }
       .po2-pso-card:hover .po2-pso-orb { box-shadow:0 6px 20px rgba(0,92,159,0.18); }
-      .po2-pso-orb-num { font-size:clamp(0.44rem,0.62vw,0.54rem); font-weight:800; letter-spacing:0.06em; }
+      .po2-pso-orb-num { font-size:clamp(0.66rem,0.72vw,0.72rem); font-weight:800; letter-spacing:0.06em; }
       .po2-pso-body { flex:1; min-width:0; }
       .po2-pso-title {
-        font-size:clamp(0.52rem,0.74vw,0.66rem); font-weight:700;
+        font-size:clamp(0.66rem,0.82vw,0.74rem); font-weight:700;
         text-transform:uppercase; letter-spacing:0.08em; color:${DARK}; margin:0; line-height:1.3;
       }
       @media(max-width:1100px) {

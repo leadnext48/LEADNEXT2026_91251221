@@ -141,7 +141,7 @@ function HeroSection() {
             style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: "clamp(.7rem,1.4vh,1.1rem)" }}
           >
             <span style={{ display: "inline-block", width: 28, height: 1.5, background: C.blue, flexShrink: 0 }} />
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.45rem,.6vw,.55rem)", letterSpacing: ".22em", textTransform: "uppercase", color: C.blue, fontWeight: 600 }}>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", letterSpacing: ".16em", textTransform: "uppercase", color: C.blue, fontWeight: 600 }}>
               Life at LEAD — Digital Presence
             </span>
           </motion.div>
@@ -230,7 +230,7 @@ function SocialCard({ card }: { card: SocialCard }) {
           )}
           <div style={{ position: "absolute", top: 10, right: 10, background: meta.gradient, borderRadius: 8, padding: "5px 9px", display: "flex", alignItems: "center", gap: 5, boxShadow: "0 2px 8px rgba(0,0,0,.18)" }}>
             <Icon size={11} strokeWidth={2} color="#fff" />
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.3rem,.38vw,.36rem)", letterSpacing: ".14em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.64rem,.74vw,.7rem)", letterSpacing: ".14em", textTransform: "uppercase", color: "#fff", fontWeight: 700 }}>
               {meta.label}
             </span>
           </div>
@@ -239,22 +239,22 @@ function SocialCard({ card }: { card: SocialCard }) {
         <div style={{ flex: 1, background: "#ffffff", border: `1px solid ${C.border}`, borderTop: "none", borderRadius: "0 0 12px 12px", padding: "1rem 1.1rem 1.15rem", display: "flex", flexDirection: "column", boxShadow: "0 2px 12px rgba(0,92,159,.04)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: ".38rem", marginBottom: ".45rem" }}>
             <Icon size={10} color={meta.color} strokeWidth={1.8} />
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.36rem,.44vw,.42rem)", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.62rem,.72vw,.7rem)", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>
               {card.handle}
             </span>
           </div>
           <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.8vw,.76rem)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em", color: C.text, margin: "0 0 .45rem", lineHeight: 1.35 }}>
             {card.title}
           </h3>
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.62rem,.72vw,.68rem)", lineHeight: 1.65, color: C.faint, margin: "0 0 auto" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.7rem,.78vw,.74rem)", lineHeight: 1.65, color: C.faint, margin: "0 0 auto" }}>
             {card.description}
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: ".85rem" }}>
-            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.32rem,.4vw,.38rem)", letterSpacing: ".1em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>
+            <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.6rem,.68vw,.68rem)", letterSpacing: ".1em", textTransform: "uppercase", color: C.faint, fontWeight: 600 }}>
               {card.followers}
             </span>
             <div
-              style={{ display: "inline-flex", alignItems: "center", gap: ".38rem", fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.36rem,.44vw,.42rem)", letterSpacing: ".18em", textTransform: "uppercase", color: C.blue, fontWeight: 700, borderBottom: `1px solid rgba(0,92,159,.25)`, paddingBottom: "1px", transition: "gap .2s ease" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: ".38rem", fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.62rem,.7vw,.7rem)", letterSpacing: ".18em", textTransform: "uppercase", color: C.blue, fontWeight: 700, borderBottom: `1px solid rgba(0,92,159,.25)`, paddingBottom: "1px", transition: "gap .2s ease" }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.gap = ".6rem"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.gap = ".38rem"; }}
             >
@@ -285,7 +285,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
     <button
       onClick={() => { if (page !== null && !disabled) onChange(page); }}
       disabled={disabled}
-      style={{ width: 32, height: 32, borderRadius: 8, border: active ? "none" : `1px solid ${C.border}`, background: active ? G.blue : "#ffffff", color: active ? "#fff" : disabled ? "#ccc" : C.muted, fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.38rem,.48vw,.44rem)", fontWeight: 700, letterSpacing: ".06em", cursor: disabled ? "not-allowed" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .18s ease", boxShadow: active ? "0 4px 14px rgba(0,92,159,.2)" : "none", flexShrink: 0 }}
+      style={{ width: 32, height: 32, borderRadius: 8, border: active ? "none" : `1px solid ${C.border}`, background: active ? G.blue : "#ffffff", color: active ? "#fff" : disabled ? "#ccc" : C.muted, fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.72rem,.8vw,.8rem)", fontWeight: 700, letterSpacing: ".06em", cursor: disabled ? "not-allowed" : "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "all .18s ease", boxShadow: active ? "0 4px 14px rgba(0,92,159,.2)" : "none", flexShrink: 0 }}
     >
       {children}
     </button>
@@ -296,7 +296,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
       <Btn page={current - 1} disabled={current === 1}><ChevronLeft size={13} strokeWidth={2} /></Btn>
       {pages.map((p, i) =>
         p === "…"
-          ? <span key={`el-${i}`} style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", color: C.faint, padding: "0 .18rem" }}>…</span>
+          ? <span key={`el-${i}`} style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".8rem", color: C.faint, padding: "0 .18rem" }}>…</span>
           : <Btn key={p} page={p} active={p === current}>{p}</Btn>
       )}
       <Btn page={current + 1} disabled={current === total}><ChevronRight size={13} strokeWidth={2} /></Btn>
@@ -338,7 +338,7 @@ function GridSection({ cards }: { cards: SocialCard[] }) {
         >
           <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", flexWrap: "wrap", gap: ".8rem" }}>
             <div>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.4rem,.54vw,.5rem)", letterSpacing: ".26em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", letterSpacing: ".2em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>
                 All Channels
               </p>
               <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2.2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: C.text, margin: 0, lineHeight: 0.95 }}>
@@ -353,8 +353,8 @@ function GridSection({ cards }: { cards: SocialCard[] }) {
         </motion.div>
 
         <style>{`
-          .sm-grid-cards { grid-template-columns: repeat(3, 1fr); }
-          @media (max-width: 900px){ .sm-grid-cards { grid-template-columns: repeat(2, 1fr); } }
+          .sm-grid-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+          @media (max-width: 900px){ .sm-grid-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
           @media (max-width: 600px){ .sm-grid-cards { grid-template-columns: 1fr; } }
         `}</style>
         <AnimatePresence mode="wait">
@@ -382,7 +382,7 @@ function GridSection({ cards }: { cards: SocialCard[] }) {
 /* ─── PAGE EXPORT ─── */
 export default function SocialMediaPage({ channels }: { channels: SocialChannel[] }) {
   return (
-    <div style={{ background: "#ffffff" }}>
+    <div style={{ background: "#ffffff", overflowX: "hidden" }}>
       <HeroSection />
       <GridSection cards={channels} />
     </div>

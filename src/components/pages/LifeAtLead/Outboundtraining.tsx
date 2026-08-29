@@ -27,7 +27,7 @@ const GRADIENTS = {
 
 const TYPE = {
   eyebrow: {
-    fontSize:      "clamp(.4rem,.58vw,.52rem)",
+    fontSize:      "clamp(.66rem,.8vw,.74rem)",
     letterSpacing: ".28em",
     textTransform: "uppercase" as const,
     fontWeight:    600,
@@ -178,7 +178,7 @@ function HeroSection(): React.JSX.Element {
           padding: clamp(.8rem,1.6vh,1.3rem) 0;
           border-top: 1px solid rgba(0,92,159,.10);
           display: grid;
-          grid-template-columns: repeat(3,1fr);
+          grid-template-columns: repeat(3,minmax(0,1fr));
           gap: .5rem;
           margin-top: clamp(1.2rem,2.5vh,2rem);
           width: 100%; min-width: 0;
@@ -193,7 +193,7 @@ function HeroSection(): React.JSX.Element {
         .obt-strip-item:last-child  { border-right: none; }
         .obt-strip-label {
           display: block;
-          font-size: clamp(.48rem,.6vw,.56rem);
+          font-size: clamp(.68rem,.75vw,.74rem);
           letter-spacing: .08em; text-transform: uppercase;
           color: #333; font-weight: 700;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -209,7 +209,7 @@ function HeroSection(): React.JSX.Element {
           .obt-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .obt-hero-inner { grid-template-columns: 1fr; }
           .obt-hero-right, .obt-hero-bg-text { display: none; }
-          .obt-hero-strip { grid-template-columns: repeat(3,1fr); gap: .25rem; }
+          .obt-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
           .obt-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
           .obt-strip-item:first-child { padding-left: 0; }
         }
@@ -230,7 +230,7 @@ function HeroSection(): React.JSX.Element {
               style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: "clamp(.6rem,1.3vh,1rem)", overflow: "hidden" }}
             >
               <span style={{ display: "inline-block", width: 24, height: 1.5, flexShrink: 0, background: COLORS.primary }} />
-              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.5rem,.65vw,.58rem)", letterSpacing: "clamp(.08em,.2vw,.2em)", textTransform: "uppercase", color: COLORS.primary, fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", letterSpacing: "clamp(.08em,.2vw,.2em)", textTransform: "uppercase", color: COLORS.primary, fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                 LEAD College — Experiential Learning
               </span>
             </motion.div>
@@ -278,7 +278,7 @@ function HeroSection(): React.JSX.Element {
                   borderRadius: 100,
                   padding: ".32rem .9rem",
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(.44rem,.54vw,.5rem)",
+                  fontSize: "clamp(.66rem,.8vw,.74rem)",
                   letterSpacing: ".12em", textTransform: "uppercase" as const,
                   color: COLORS.primary, fontWeight: 600,
                 }}>{t}</div>
@@ -383,7 +383,7 @@ function PhilosophySection(): React.JSX.Element {
                 "Students often enter with assumptions about their abilities. The outdoor environment
                 disrupts routine patterns and challenges participants to engage with uncertainty."
               </p>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".46rem", letterSpacing: ".18em", textTransform: "uppercase", color: "#aaa", margin: 0, fontWeight: 600 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "#aaa", margin: 0, fontWeight: 600 }}>
                 — OBT Philosophy, LEAD College
               </p>
             </div>
@@ -404,7 +404,7 @@ function PhilosophySection(): React.JSX.Element {
                   border:       "1px solid rgba(0,92,159,.07)",
                   borderLeft:   `3px solid ${COLORS.primary}`,
                 }}>
-                  <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.5rem,.62vw,.58rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .35rem" }}>{t.title}</p>
+                  <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .35rem" }}>{t.title}</p>
                   <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.74rem,.84vw,.8rem)", lineHeight: 1.65, color: COLORS.muted, margin: 0 }}>{t.desc}</p>
                 </div>
               ))}
@@ -456,7 +456,7 @@ function ObjectivesSection(): React.JSX.Element {
 
         <motion.div
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
-          style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2,1fr)", gap: "1.2rem" }}
+          style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2,minmax(0,1fr))", gap: "1.2rem" }}
         >
           {OBJECTIVES.map((obj, i) => {
             const Icon = obj.icon;
@@ -519,7 +519,7 @@ function ActivitiesSection(): React.JSX.Element {
                 }}>
                   <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(2rem,3.2vw,2.6rem)", fontWeight: 900, color: "rgba(0,92,159,.07)", lineHeight: 1, position: "absolute", top: ".5rem", right: ".8rem", userSelect: "none" }}>{act.number}</div>
                   <div style={{ width: 4, height: 28, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: ".7rem" }} />
-                  <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.58rem,.7vw,.65rem)", fontWeight: 700, color: COLORS.text, margin: "0 0 .45rem", letterSpacing: ".04em", textTransform: "uppercase", lineHeight: 1.35, paddingRight: "1.5rem" }}>{act.title}</h3>
+                  <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, color: COLORS.text, margin: "0 0 .45rem", letterSpacing: ".04em", textTransform: "uppercase", lineHeight: 1.35, paddingRight: "1.5rem" }}>{act.title}</h3>
                   <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.72rem,.82vw,.78rem)", lineHeight: 1.7, color: COLORS.muted, margin: 0 }}>{act.desc}</p>
                 </motion.div>
               ))}
@@ -571,7 +571,7 @@ function ActivitiesSection(): React.JSX.Element {
                 style={{ position: "absolute", top: 30, right: 10, background: COLORS.primary, borderRadius: 12, padding: ".8rem 1.1rem", zIndex: 4, boxShadow: "0 12px 32px rgba(0,92,159,.28)" }}
               >
                 <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "1.4rem", fontWeight: 900, color: "#fff", margin: 0, lineHeight: 1 }}>04</p>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: ".68rem", color: "rgba(255,255,255,.72)", margin: "3px 0 0" }}>Modules</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: ".74rem", color: "rgba(255,255,255,.72)", margin: "3px 0 0" }}>Modules</p>
               </motion.div>
             </motion.div>
           )}
@@ -631,13 +631,13 @@ function MentoringSection(): React.JSX.Element {
             </p>
 
             <div style={{ marginBottom: "1.4rem" }}>
-              <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.52rem,.64vw,.58rem)", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: COLORS.text, marginBottom: ".8rem" }}>
+              <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: COLORS.text, marginBottom: ".8rem" }}>
                 Guided Reflection Questions
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: ".6rem" }}>
                 {REFLECTION_QUESTIONS.map((q, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: ".75rem" }}>
-                    <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".52rem", fontWeight: 700, color: COLORS.primary, opacity: 0.55, letterSpacing: ".1em", flexShrink: 0, marginTop: 3, minWidth: "1.2rem" }}>Q{i + 1}</span>
+                    <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", fontWeight: 700, color: COLORS.primary, opacity: 0.55, letterSpacing: ".1em", flexShrink: 0, marginTop: 3, minWidth: "1.2rem" }}>Q{i + 1}</span>
                     <p style={{ fontFamily: playfair.style.fontFamily, fontStyle: "italic", fontSize: "clamp(.8rem,.9vw,.86rem)", lineHeight: 1.6, color: COLORS.muted, margin: 0 }}>{q}</p>
                   </div>
                 ))}
@@ -645,7 +645,7 @@ function MentoringSection(): React.JSX.Element {
             </div>
 
             <div style={{ background: "#fff", borderRadius: 12, padding: "1.2rem 1.4rem", border: "1px solid rgba(0,92,159,.08)", boxShadow: "0 2px 12px rgba(0,0,0,.04)" }}>
-              <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.52rem,.64vw,.58rem)", fontWeight: 700, letterSpacing: ".16em", textTransform: "uppercase", color: COLORS.text, marginBottom: ".5rem" }}>
+              <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: COLORS.text, marginBottom: ".5rem" }}>
                 Personalized Mentoring
               </h3>
               <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.78rem,.88vw,.84rem)", lineHeight: 1.75, color: "#666", margin: 0 }}>
@@ -686,7 +686,7 @@ function ClosingSection(): React.JSX.Element {
               <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.9rem,1.05vw,1rem)", fontWeight: 600, fontStyle: "italic", lineHeight: 1.65, color: COLORS.text, margin: "0 0 .5rem" }}>
                 "OBT is not merely an outdoor activity — it is a leadership laboratory where students experience the realities of teamwork, decision-making, and resilience in action."
               </p>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".46rem", letterSpacing: ".18em", textTransform: "uppercase", color: "#aaa", margin: 0, fontWeight: 600 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "#aaa", margin: 0, fontWeight: 600 }}>
                 — LEAD College OBT Program
               </p>
             </div>
@@ -714,7 +714,7 @@ function ClosingSection(): React.JSX.Element {
                     <Icon size={16} color={COLORS.primary} strokeWidth={1.7} />
                   </div>
                   <div>
-                    <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.52rem,.62vw,.58rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .3rem" }}>{item.label}</h4>
+                    <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .3rem" }}>{item.label}</h4>
                     <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.76rem,.86vw,.82rem)", lineHeight: 1.65, color: "#666", margin: 0 }}>{item.desc}</p>
                   </div>
                 </motion.div>

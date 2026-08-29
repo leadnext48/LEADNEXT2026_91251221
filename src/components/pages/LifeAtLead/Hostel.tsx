@@ -42,8 +42,8 @@ const G = {
 
 const TYPE = {
   eyebrow: {
-    fontSize:      "clamp(.4rem,.58vw,.52rem)" as string,
-    letterSpacing: ".28em",
+    fontSize:      "clamp(.68rem,.78vw,.74rem)" as string,
+    letterSpacing: ".2em",
     textTransform: "uppercase" as const,
     fontWeight:    600,
   },
@@ -147,7 +147,7 @@ function HeroSection(): React.JSX.Element {
           padding: clamp(.8rem,1.6vh,1.3rem) 0;
           border-top: 1px solid rgba(0,92,159,.1);
           display: grid;
-          grid-template-columns: repeat(3,1fr);
+          grid-template-columns: repeat(3,minmax(0,1fr));
           gap: .5rem;
           margin-top: clamp(1.2rem,2.5vh,2rem);
           width: 100%; min-width: 0;
@@ -163,7 +163,7 @@ function HeroSection(): React.JSX.Element {
         .hostel-strip-text { min-width: 0; overflow: hidden; }
         .hostel-strip-label {
           display: block;
-          font-size: clamp(.48rem,.6vw,.56rem);
+          font-size: clamp(.68rem,.72vw,.74rem);
           letter-spacing: .08em; text-transform: uppercase;
           color: #333; font-weight: 700;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -178,7 +178,7 @@ function HeroSection(): React.JSX.Element {
           .hostel-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .hostel-hero-inner { grid-template-columns: 1fr; }
           .hostel-hero-right, .hostel-hero-bg-text { display: none; }
-          .hostel-hero-strip { grid-template-columns: repeat(3,1fr); gap: .25rem; }
+          .hostel-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
           .hostel-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
           .hostel-strip-item:first-child { padding-left: 0; }
         }
@@ -200,7 +200,7 @@ function HeroSection(): React.JSX.Element {
               <span style={{ display: "inline-block", width: 24, height: 1.5, flexShrink: 0, background: C.green }} />
               <span style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(.5rem,.65vw,.58rem)",
+                fontSize: "clamp(.68rem,.78vw,.74rem)",
                 letterSpacing: "clamp(.08em,.2vw,.2em)",
                 textTransform: "uppercase",
                 color: C.green,
@@ -355,7 +355,7 @@ function PosterSection(): React.JSX.Element {
                   display: "flex", alignItems: "center", gap: ".55rem",
                 }}>
                   <div style={{ width: 6, height: 6, borderRadius: "50%", background: C.green, flexShrink: 0 }} />
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.4rem,.52vw,.48rem)", letterSpacing: ".16em", textTransform: "uppercase", color: "rgba(255,255,255,.75)", fontWeight: 600 }}>Comfortable Living Spaces</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.7vw,.72rem)", letterSpacing: ".1em", textTransform: "uppercase", color: "rgba(255,255,255,.75)", fontWeight: 600 }}>Comfortable Living Spaces</span>
                 </div>
               </div>
 
@@ -445,7 +445,7 @@ function PosterSection(): React.JSX.Element {
               }}>
                 "Our hostels are more than accommodation — they are where futures are shaped, friendships forged, and character quietly built, one shared evening at a time."
               </p>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", letterSpacing: ".18em", textTransform: "uppercase", color: C.faint, margin: 0, fontWeight: 600 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".74rem", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, margin: 0, fontWeight: 600 }}>
                 — Residential Life, LEAD College
               </p>
             </div>
@@ -550,7 +550,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,1fr)",
+            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {cards.map((card, i) => {
@@ -707,7 +707,7 @@ function CollaborationSection(): React.JSX.Element {
                 color: "transparent",
                 userSelect: "none",
               }} aria-hidden="true">06</div>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.42rem,.54vw,.5rem)", letterSpacing: ".2em", textTransform: "uppercase", color: C.faint, margin: 0, lineHeight: 1.5 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.7vw,.72rem)", letterSpacing: ".14em", textTransform: "uppercase", color: C.faint, margin: 0, lineHeight: 1.5 }}>
                 Ways students<br />grow through<br />residential life
               </p>
             </div>
@@ -733,7 +733,7 @@ function CollaborationSection(): React.JSX.Element {
                   display: "flex", alignItems: "center", justifyContent: "center",
                   marginTop: 1,
                 }}>
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".44rem", fontWeight: 800, color: C.green, letterSpacing: ".1em" }}>0{i + 1}</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", fontWeight: 800, color: C.green, letterSpacing: ".1em" }}>0{i + 1}</span>
                 </div>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
@@ -811,8 +811,8 @@ function CommunitySection(): React.JSX.Element {
           </h2>
           <p style={{
             fontFamily: cinzel.style.fontFamily,
-            fontSize: ".44rem",
-            letterSpacing: ".22em",
+            fontSize: ".74rem",
+            letterSpacing: ".16em",
             textTransform: "uppercase",
             color: C.faint,
             fontWeight: 600,
@@ -857,7 +857,7 @@ function CommunitySection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(3,1fr)",
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {pillars.map((p, i) => {
@@ -881,7 +881,7 @@ function CommunitySection(): React.JSX.Element {
                 </div>
                 <h3 style={{
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(.6rem,.75vw,.7rem)",
+                  fontSize: "clamp(.68rem,.76vw,.74rem)",
                   fontWeight: 700,
                   textTransform: "uppercase",
                   letterSpacing: ".1em",

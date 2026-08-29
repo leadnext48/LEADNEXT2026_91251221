@@ -185,7 +185,7 @@ function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceTy
         <div className="min-w-0">
           <p className={`${playfair.className} text-gray-800 text-sm font-medium truncate group-hover:text-blue-900 transition-colors`}>{title}</p>
         </div>
-        <span className={`${cinzel.className} text-[10px] font-bold px-2 py-0.5 border rounded-full flex-shrink-0 ${colors[type]}`}>{labels[type]}</span>
+        <span className={`${cinzel.className} text-[12px] font-bold px-2 py-0.5 border rounded-full flex-shrink-0 ${colors[type]}`}>{labels[type]}</span>
       </div>
       <div className="flex items-center gap-2 ml-4 flex-shrink-0">
         {fileUrl ? (
@@ -195,7 +195,7 @@ function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceTy
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`${cinzel.className} text-[10px] font-semibold tracking-widest px-4 py-2 text-white hover:bg-blue-700 transition-all duration-200 flex items-center gap-1`}
+            className={`${cinzel.className} text-[12px] font-semibold tracking-widest px-4 py-2 text-white hover:bg-blue-700 transition-all duration-200 flex items-center gap-1`}
             style={{ backgroundColor: COLOR_ONE }}
           >
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -205,7 +205,7 @@ function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceTy
             DOWNLOAD
           </motion.a>
         ) : (
-          <span className={`${cinzel.className} text-[10px] font-semibold tracking-widest px-4 py-2 text-gray-400 border border-gray-200 flex items-center`}>
+          <span className={`${cinzel.className} text-[12px] font-semibold tracking-widest px-4 py-2 text-gray-400 border border-gray-200 flex items-center`}>
             AWAITING FILE
           </span>
         )}
@@ -229,7 +229,7 @@ function Pagination({ current, total, onChange }: { current: number; total: numb
         <button
           key={p}
           onClick={() => onChange(p)}
-          className={`w-6 h-6 flex items-center justify-center transition-all duration-200 ${cinzel.className} text-[10px] font-bold tracking-wide
+          className={`w-6 h-6 flex items-center justify-center transition-all duration-200 ${cinzel.className} text-[12px] font-bold tracking-wide
             ${p === current
               ? "bg-[#020818] text-white"
               : "text-gray-400 hover:text-gray-700"
@@ -332,7 +332,7 @@ export default function ExaminationsPage({
               <div className="h-px bg-[#0a2463]" style={{ width: "clamp(24px,2.5vw,44px)" }} />
               <span
                 className={`${cinzel.className} text-[#0a2463] uppercase font-medium tracking-widest`}
-                style={{ fontSize: "clamp(8px,0.72vw,13px)" }}
+                style={{ fontSize: "clamp(11px,0.72vw,13px)" }}
               >
                 Academic Affairs
               </span>
@@ -394,7 +394,7 @@ export default function ExaminationsPage({
               {["Fairness", "Transparency", "Technology-Enabled"].map((tag) => (
                 <span
                   key={tag}
-                  className={`${cinzel.className} text-[10px] tracking-widest px-4 py-2 border border-blue-200 text-blue-700 bg-blue-50`}
+                  className={`${cinzel.className} text-[12px] tracking-widest px-4 py-2 border border-blue-200 text-blue-700 bg-blue-50`}
                 >
                   {tag}
                 </span>
@@ -468,7 +468,7 @@ export default function ExaminationsPage({
               <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: "linear-gradient(180deg, #0a2463, #1d4ed8)" }} />
               <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: "linear-gradient(to top, rgba(2,8,24,0.6), transparent)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className={`${cinzel.className} text-white/50 text-[9px] tracking-[0.28em] uppercase mb-1`}>Office of Examinations</p>
+                <p className={`${cinzel.className} text-white/50 text-[12px] tracking-[0.22em] uppercase mb-1`}>Office of Examinations</p>
                 <p className={`${playfair.className} text-white text-sm font-semibold`}>LEAD College</p>
               </div>
             </div>
@@ -566,7 +566,7 @@ export default function ExaminationsPage({
               </p>
             </motion.div>
 
-            <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-2 gap-4">
+            <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { title: "Hall Tickets", desc: "Download & queries", icon: <Ticket size={28} strokeWidth={1.5} /> },
                 { title: "Results", desc: "Viewing & understanding", icon: <BarChart2 size={28} strokeWidth={1.5} /> },
