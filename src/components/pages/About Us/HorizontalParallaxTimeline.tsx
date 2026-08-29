@@ -73,7 +73,7 @@ const FontStyle = () => (
     .appear-title .lw:nth-child(3) .li { transition-delay: 0.2s; }
 
     /* ── Section ─────────────────────────────────────────── */
-    .ls-section { background: #fff; }
+    .ls-section { background: #fff; overflow-x: hidden; }
 
     /* ═══════════════════════════════════════════════════════
        HERO LAYOUT
@@ -95,10 +95,18 @@ const FontStyle = () => (
       .ls-hero {
         grid-template-columns: 1fr;
         padding: 5rem 6vw 4rem;
+        text-align: center;
       }
-      .ls-hero-image-wrap { grid-row: auto; margin-top: 3rem; }
+      .ls-hero-left { align-items: center; }
+      .ls-label { justify-content: center; }
+      .ls-body { max-width: 60ch; margin-left: auto; margin-right: auto; }
+      .ls-hero-image-wrap { grid-row: auto; margin-top: 3.5rem; width: 100%; max-width: 460px; margin-left: auto; margin-right: auto; }
       /* Hide the small accent photo on mobile — it shrinks too much to look good */
       .ls-hero-accent-sq { display: none !important; }
+      /* Keep the decorative badge/frame INSIDE the image on mobile so they don't
+         stick out past the screen edge (was causing horizontal overflow). */
+      .ls-img-badge { left: 0.75rem; top: 0.75rem; }
+      .ls-img-frame { display: none; }
     }
 
     /* Left column: label + heading stacked */
@@ -121,8 +129,8 @@ const FontStyle = () => (
     /* ── Label ─────────────────────────────────────────── */
     .ls-label {
       font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.35em;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--blue);
       margin-bottom: 1.75rem;
@@ -157,10 +165,10 @@ const FontStyle = () => (
     /* ── Body copy — sits BELOW heading in the same left col ── */
     .ls-body {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(0.82rem, 1vw, 0.95rem);
+      font-size: clamp(0.92rem, 1.05vw, 1.02rem);
       line-height: 1.9;
       color: #555;
-      max-width: 52ch;
+      max-width: 56ch;
     }
 
 
@@ -219,8 +227,8 @@ const FontStyle = () => (
     }
     .ls-img-badge-txt {
       font-family: 'Cinzel', serif;
-      font-size: 0.5rem;
-      letter-spacing: 0.2em;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       opacity: 0.75;
       display: block;
@@ -250,8 +258,8 @@ const FontStyle = () => (
     }
     .ls-tl-eyebrow {
       font-family: 'Cinzel', serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.35em;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--blue);
       display: flex; align-items: center; gap: 0.75rem;
@@ -324,19 +332,19 @@ const FontStyle = () => (
     }
     .ls-tl-ct {
       font-family: 'Cinzel', serif;
-      font-size: 0.92rem;
+      font-size: 1.02rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       color: #0D0D0D;
       margin-bottom: 0.7rem;
       line-height: 1.4;
     }
     .ls-tl-text {
       font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      line-height: 1.85;
-      color: #555;
-      max-width: 44ch;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #4a5563;
+      max-width: 46ch;
       display: inline-block;
     }
 

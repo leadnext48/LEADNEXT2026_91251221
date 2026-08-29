@@ -112,8 +112,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           className="relative h-[38vh] w-full bg-cover bg-center md:hidden"
           style={{
             backgroundImage: `url(${backgroundImage})`,
-            opacity: 0,
-            transform: "scale(1.05)",
+            opacity: 1,
+            transform: "scale(1)",
           }}
         />
 
@@ -133,8 +133,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
             {/* Eyebrow */}
             <p style={{
               fontFamily: "'Cinzel', serif",
-              fontSize: "0.6rem",
-              letterSpacing: "0.32em",
+              fontSize: "0.72rem",
+              letterSpacing: "0.26em",
               textTransform: "uppercase",
               color: "#1e3a8a",
               marginBottom: "0.9rem",
@@ -156,16 +156,15 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               className={cn("font-bold leading-[1.1]", cinzel.className)}
               style={{
                 fontSize: "clamp(2.25rem, 5vw, 4.75rem)",
-                whiteSpace: "nowrap",
                 transformStyle: "preserve-3d",
                 backfaceVisibility: "hidden",
                 background: "linear-gradient(90deg, #000000 0%, #1e3a8a 60%, #1e3a8a 100%)",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 color: "transparent",
-                opacity: 0,
-                transform: "rotateX(80deg) translateY(-36px) scale(0.86)",
-                filter: "blur(4px)",
+                opacity: 1,
+                transform: "none",
+                filter: "none",
                 transformOrigin: "center top",
               }}
             >
@@ -181,9 +180,9 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                 background: "#1e3a8a", borderRadius: 2,
                 transformStyle: "preserve-3d",
                 backfaceVisibility: "hidden",
-                opacity: 0,
-                transform: "rotateX(80deg) translateY(-36px) scale(0.86)",
-                filter: "blur(4px)",
+                opacity: 1,
+                transform: "none",
+                filter: "none",
                 transformOrigin: "center top",
               }}
             />
@@ -193,14 +192,14 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
               ref={subtitleRef}
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(0.82rem, 1vw, 0.95rem)",
+                fontSize: "clamp(0.92rem, 1.1vw, 1.02rem)",
                 lineHeight: 1.9,
                 color: "#555",
                 transformStyle: "preserve-3d",
                 backfaceVisibility: "hidden",
-                opacity: 0,
-                transform: "rotateX(80deg) translateY(-36px) scale(0.86)",
-                filter: "blur(4px)",
+                opacity: 1,
+                transform: "none",
+                filter: "none",
                 transformOrigin: "center top",
               }}
             >
@@ -241,8 +240,8 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
                   display: "flex",
                   flexDirection: "column",
                   gap: "0.3rem",
-                  opacity: 0,
-                  transform: "translateY(30px)",
+                  opacity: 1,
+                  transform: "none",
                   /* first stat: no left border (it already starts at the text edge).
                      rest: thin separator that aligns cleanly within the row. */
                   paddingLeft: i === 0 ? 0 : "1.5rem",
@@ -281,7 +280,7 @@ const HeroSection = React.forwardRef<HTMLElement, HeroSectionProps>(
           className="relative hidden w-full bg-cover bg-center md:block md:w-1/2 lg:w-2/5"
           style={{
             backgroundImage: `url(${backgroundImage})`,
-            clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
           }}
         />
 
