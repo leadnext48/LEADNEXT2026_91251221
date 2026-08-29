@@ -12,8 +12,9 @@ const SITE_NAME = "LEAD College"
 // ("LEAD College of Management") still find the site. Not shown to users.
 const FORMER_NAME = "LEAD College of Management"
 const TITLE = "LEAD College | MBA & MCA in Palakkad, Kerala"
+// Kept to ~150–160 characters so search engines don't truncate it.
 const DESCRIPTION =
-  "LEAD College (Autonomous) is an AICTE-approved institution in Dhoni, Palakkad offering industry-integrated MBA and MCA programmes — internships every semester, a strong 90%+ placement record, and mentorship from seasoned professionals. Affiliated to the University of Calicut."
+  "LEAD College (Autonomous), Palakkad — AICTE-approved MBA & MCA affiliated to the University of Calicut, with semester internships and 90%+ placements."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
