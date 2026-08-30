@@ -26,7 +26,7 @@ const IMG = {
 /* ─────────── STYLE HELPERS ─────────── */
 const P: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 'clamp(0.75rem, 0.88vw, 0.88rem)',
+  fontSize: 'clamp(0.92rem, 1vw, 1rem)',
   lineHeight: 1.8,
   color: '#555',
 };
@@ -436,7 +436,7 @@ export default function MCAPage() {
                       <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 4 }}>
                         Fully Residential Campus
                       </p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.78rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.55 }}>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.92rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.55 }}>
                         Dhoni, Palakkad — a serene environment built for focus, growth &amp; innovation.
                       </p>
                     </div>
@@ -559,7 +559,7 @@ export default function MCAPage() {
                       </svg>
                     </div>
                     <h3 className={cinzel.className} style={{ fontSize: 'clamp(0.66rem,0.8vw,0.74rem)', fontWeight: 700, color: '#111', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.04em', lineHeight: 1.3 }}>{title}</h3>
-                    <p style={{ ...P, fontSize: '0.72rem' }}>{desc}</p>
+                    <p style={{ ...P, fontSize: '0.95rem' }}>{desc}</p>
                   </div>
                 ))}
               </div>

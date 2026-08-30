@@ -292,7 +292,7 @@ export default function ProgramsSection() {
             <p
               className={playfair.className}
               style={{
-                fontSize: "clamp(12px, 0.9vw, 15px)",
+                fontSize: "clamp(14px, 0.9vw, 16px)",
                 color: "rgba(10,36,99,0.5)",
                 maxWidth: 560,
                 margin: "0 auto",
@@ -339,7 +339,7 @@ export default function ProgramsSection() {
               marginTop: "clamp(2rem, 4vh, 3rem)",
               paddingTop: "clamp(1.2rem, 2vh, 1.8rem)",
               borderTop: `1px solid rgba(10,36,99,0.08)`,
-              fontSize: "clamp(11px, 0.82vw, 13.5px)",
+              fontSize: "clamp(14px, 0.82vw, 16px)",
               color: "#999",
               textAlign: "center",
             }}
@@ -530,7 +530,7 @@ const ProgramCard = memo(function ProgramCard({
         <p
           className={playfair.className}
           style={{
-            fontSize: "clamp(12px, 0.88vw, 14.5px)",
+            fontSize: "clamp(14px, 0.9vw, 16px)",
             color: "#555",
             margin: 0,
             lineHeight: 1.78,

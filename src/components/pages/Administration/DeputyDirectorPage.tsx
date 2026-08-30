@@ -494,10 +494,10 @@ export default function DeputyDirectorPage() {
                   </h2>
                 </div>
 
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
                   The Deputy Director supports the Director in executing institutional strategy and managing day-to-day operations. This role ensures effective coordination across academic, administrative, student services, and infrastructure functions.
                 </p>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
                   The Deputy Director plays a critical role in operational efficiency, policy implementation, student experience management, and the seamless functioning of academic and co-curricular activities.
                 </p>
 
@@ -511,7 +511,7 @@ export default function DeputyDirectorPage() {
                   ].map((item) => (
                     <div key={item} className="dd-role-item flex items-start gap-3">
                       <div className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: BLUE }} />
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.93rem)', lineHeight: 1.8, color: '#555' }}>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.8, color: '#555' }}>
                         {item}
                       </p>
                     </div>
@@ -562,7 +562,7 @@ export default function DeputyDirectorPage() {
                     <h3 className={`${cinzel.className} text-base font-bold uppercase tracking-wide`} style={{ color: '#111' }}>
                       {p.label}
                     </h3>
-                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.80rem, 1vw, 0.88rem)', lineHeight: 1.85, color: '#666' }}>
+                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.85, color: '#666' }}>
                       {p.desc}
                     </p>
                   </div>
@@ -640,7 +640,7 @@ export default function DeputyDirectorPage() {
                     <p
                       key={i}
                       className="dd-msg-para"
-                      style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}
+                      style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}
                     >
                       {para}
                     </p>

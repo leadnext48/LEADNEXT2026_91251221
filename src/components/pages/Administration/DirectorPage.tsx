@@ -321,17 +321,17 @@ export default function DirectorPage() {
                     The Office of<br />the Director
                   </h2>
                 </div>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
                   The Director provides the strategic vision and overall leadership for LEAD College, ensuring that the institution remains aligned with its mission of developing ethical, industry-ready, and socially responsible leaders.
                 </p>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
                   The office oversees academic excellence, institutional growth, industry partnerships, global collaborations, and the integration of innovation into learning. With a strong focus on outcome-based education and employability, the Director guides the college toward continuous academic and institutional advancement.
                 </p>
                 <div className="dir-role-items space-y-3 pt-2">
                   {['Strategic vision and institutional direction','Academic oversight and quality assurance','Industry and global partnership development','Outcome-based education and employability','Innovation and entrepreneurship integration'].map(item => (
                     <div key={item} className="dir-role-item flex items-start gap-3">
                       <div className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: BLUE }} />
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.93rem)', lineHeight: 1.8, color: '#555' }}>{item}</p>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.8, color: '#555' }}>{item}</p>
                     </div>
                   ))}
                 </div>
@@ -357,7 +357,7 @@ export default function DirectorPage() {
                   <div className="relative z-10 space-y-3">
                     <div className="w-8 h-0.5" style={{ background: BLUE }} />
                     <h3 className={`${cinzel.className} text-base font-bold uppercase tracking-wide`} style={{ color: '#111' }}>{p.label}</h3>
-                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.80rem, 1vw, 0.88rem)', lineHeight: 1.85, color: '#666' }}>{p.desc}</p>
+                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.85, color: '#666' }}>{p.desc}</p>
                   </div>
                   <div className="absolute left-0 top-6 bottom-6 w-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" style={{ background: BLUE }} />
                 </div>
@@ -389,7 +389,7 @@ export default function DirectorPage() {
                 </blockquote>
                 <div className="dir-msg-body space-y-5">
                   {messageParagraphs.map((para, i) => (
-                    <p key={i} className="dir-msg-para" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.82rem, 1vw, 0.95rem)', lineHeight: 1.9, color: '#555' }}>{para}</p>
+                    <p key={i} className="dir-msg-para" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>{para}</p>
                   ))}
                 </div>
                 <div className="border-t border-gray-200 pt-8 mt-8">

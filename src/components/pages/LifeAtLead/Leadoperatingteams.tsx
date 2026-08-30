@@ -421,7 +421,7 @@ function LotCard({ lot, index }: { lot: typeof LOTS[number]; index: number }) {
       <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.25vw,1.15rem)", fontWeight: 700, color: "#0D0D0D", margin: "0 0 0.65rem", letterSpacing: "0.01em", lineHeight: 1.2 }}>
         {lot.name}
       </h3>
-      <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.85rem,0.95vw,0.9rem)", lineHeight: 1.75, color: "#666", margin: "0 0 auto", paddingBottom: "1.25rem", flex: 1 }}>
+      <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,0.95vw,1rem)", lineHeight: 1.75, color: "#666", margin: "0 0 auto", paddingBottom: "1.25rem", flex: 1 }}>
         {lot.desc}
       </p>
       <div style={{ paddingTop: "1.1rem", borderTop: "1px solid rgba(0,92,159,0.1)", display: "flex", alignItems: "center", gap: "0.7rem" }}>

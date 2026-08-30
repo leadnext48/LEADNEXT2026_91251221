@@ -174,10 +174,10 @@ function HeroSection() {
             <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.86rem,1vw,.96rem)", lineHeight: 1.82, color: "#666", margin: "0 0 .9rem" }}>
               LEAD maintains an active social media presence to engage students, alumni, industry partners, and prospective applicants. Regular updates highlight achievements, events, academic initiatives, and campus life.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.8rem,.92vw,.88rem)", lineHeight: 1.75, color: "#999", margin: "0 0 .9rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,.95vw,1rem)", lineHeight: 1.75, color: "#999", margin: "0 0 .9rem" }}>
               Digital engagement ensures transparency, connectivity, and extended community interaction beyond the physical campus.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.8rem,.92vw,.88rem)", lineHeight: 1.75, color: "#999", margin: 0 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,.95vw,1rem)", lineHeight: 1.75, color: "#999", margin: 0 }}>
               Life at LEAD continues both on campus and across digital platforms, building a strong and connected academic community.
             </p>
           </motion.div>
@@ -246,7 +246,7 @@ function SocialCard({ card }: { card: SocialCard }) {
           <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.8vw,.76rem)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em", color: C.text, margin: "0 0 .45rem", lineHeight: 1.35 }}>
             {card.title}
           </h3>
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.7rem,.78vw,.74rem)", lineHeight: 1.65, color: C.faint, margin: "0 0 auto" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,.85vw,1rem)", lineHeight: 1.65, color: C.faint, margin: "0 0 auto" }}>
             {card.description}
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: ".85rem" }}>

@@ -256,7 +256,7 @@ function BioSection() {
 
         .bio-body p {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(0.82rem, 1vw, 0.95rem);
+          font-size: clamp(0.92rem, 1vw, 1rem);
           line-height: 1.9;
           color: #555;
           margin: 0 0 1.2em;
@@ -558,7 +558,7 @@ function AwardsSection() {
         }
 
         .aw2-subtitle {
-          font-size: clamp(0.72rem, 0.9vw, 0.85rem);
+          font-size: clamp(0.92rem, 0.9vw, 1rem);
           line-height: 1.75;
           color: #888;
           max-width: 320px;
@@ -696,7 +696,7 @@ function AwardsSection() {
 
         /* ── desc ── */
         .aw2-card-desc {
-          font-size: clamp(0.68rem, 0.82vw, 0.78rem);
+          font-size: clamp(0.9rem, 0.82vw, 1rem);
           line-height: 1.72;
           color: #777;
           margin: 0;

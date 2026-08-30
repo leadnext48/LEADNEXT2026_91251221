@@ -384,7 +384,7 @@ export default function EventDetailPage({ event }: { event: EventDetailData; rel
                 {rest.map((para, i) => (
                   <p key={i} style={{
                     fontFamily: playfair.style.fontFamily,
-                    fontSize: "clamp(.84rem,.98vw,.92rem)",
+                    fontSize: "clamp(.92rem,.98vw,1rem)",
                     lineHeight: 1.88, color: C.muted,
                     margin: "0 0 1.4rem",
                   }}>{para}</p>

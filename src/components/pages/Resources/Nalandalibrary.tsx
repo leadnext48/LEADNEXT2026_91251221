@@ -49,9 +49,9 @@ const SZ = {
   heroH1:    "clamp(2rem,3.8vw,5rem)",
   heroSub:   "clamp(1rem,1.8vw,2.4rem)",   // tagline — roughly 48% of heroH1
   body:      "clamp(.9rem,1.05vw,1.02rem)",
-  bodySmall: "clamp(.85rem,.98vw,.95rem)",
+  bodySmall: "clamp(.9rem,.98vw,1rem)",
   cardTitle: "clamp(.72rem,.88vw,.84rem)",
-  cardBody:  "clamp(.82rem,.96vw,.9rem)",
+  cardBody:  "clamp(.9rem,.96vw,1rem)",
   label:     "clamp(.66rem,.74vw,.72rem)",
 } as const;
 

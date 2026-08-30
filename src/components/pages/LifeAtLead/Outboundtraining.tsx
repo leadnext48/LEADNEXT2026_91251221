@@ -393,7 +393,7 @@ function PhilosophySection(): React.JSX.Element {
               </p>
             </div>
 
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1.4rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1.4rem" }}>
               The OBT program is rooted in experiential learning principles — learning by doing,
               reflecting, and applying insights to real-life contexts. Students begin to understand
               important leadership truths:
@@ -410,7 +410,7 @@ function PhilosophySection(): React.JSX.Element {
                   borderLeft:   `3px solid ${COLORS.primary}`,
                 }}>
                   <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .35rem" }}>{t.title}</p>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.74rem,.84vw,.8rem)", lineHeight: 1.65, color: COLORS.muted, margin: 0 }}>{t.desc}</p>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.65, color: COLORS.muted, margin: 0 }}>{t.desc}</p>
                 </div>
               ))}
             </div>
@@ -454,7 +454,7 @@ function ObjectivesSection(): React.JSX.Element {
           <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1.2rem,2.2vw,2.7rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: COLORS.text, margin: 0, lineHeight: 1 }}>
             Learning Objectives
           </h2>
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.8rem,.92vw,.88rem)", color: "#888", maxWidth: 440, margin: ".8rem auto 0", lineHeight: 1.65 }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", color: "#888", maxWidth: 440, margin: ".8rem auto 0", lineHeight: 1.65 }}>
             Four core dimensions of growth that OBT is specifically designed to activate.
           </p>
         </motion.div>
@@ -476,7 +476,7 @@ function ObjectivesSection(): React.JSX.Element {
                 </div>
                 <div>
                   <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.72rem,.84vw,.8rem)", fontWeight: 700, color: COLORS.text, margin: "0 0 .55rem", letterSpacing: ".03em", textTransform: "uppercase", lineHeight: 1.3 }}>{obj.title}</h3>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.8rem,.9vw,.86rem)", lineHeight: 1.78, color: COLORS.muted, margin: 0 }}>{obj.desc}</p>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.78, color: COLORS.muted, margin: 0 }}>{obj.desc}</p>
                 </div>
               </motion.div>
             );
@@ -508,7 +508,7 @@ function ActivitiesSection(): React.JSX.Element {
               transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
               style={{ width: 36, height: 2, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: "1.1rem", transformOrigin: "left" }}
             />
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.78, color: "#666", margin: "0 0 1.6rem", maxWidth: 400 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.78, color: "#666", margin: "0 0 1.6rem", maxWidth: 400 }}>
               Four carefully designed training modules — each targeting a distinct dimension of leadership, teamwork, and personal development.
             </p>
 
@@ -525,7 +525,7 @@ function ActivitiesSection(): React.JSX.Element {
                   <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(2rem,3.2vw,2.6rem)", fontWeight: 900, color: "rgba(0,92,159,.07)", lineHeight: 1, position: "absolute", top: ".5rem", right: ".8rem", userSelect: "none" }}>{act.number}</div>
                   <div style={{ width: 4, height: 28, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: ".7rem" }} />
                   <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, color: COLORS.text, margin: "0 0 .45rem", letterSpacing: ".04em", textTransform: "uppercase", lineHeight: 1.35, paddingRight: "1.5rem" }}>{act.title}</h3>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.72rem,.82vw,.78rem)", lineHeight: 1.7, color: COLORS.muted, margin: 0 }}>{act.desc}</p>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.7, color: COLORS.muted, margin: 0 }}>{act.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -631,7 +631,7 @@ function MentoringSection(): React.JSX.Element {
               transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
               style={{ width: 36, height: 2, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: "1.2rem", transformOrigin: "left" }}
             />
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1.2rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1.2rem" }}>
               A structured mentoring and reflection process accompanies each activity. Faculty mentors and facilitators guide students in interpreting their experiences and connecting them to real-life leadership principles.
             </p>
 
@@ -643,7 +643,7 @@ function MentoringSection(): React.JSX.Element {
                 {REFLECTION_QUESTIONS.map((q, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: ".75rem" }}>
                     <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", fontWeight: 700, color: COLORS.primary, opacity: 0.55, letterSpacing: ".1em", flexShrink: 0, marginTop: 3, minWidth: "1.2rem" }}>Q{i + 1}</span>
-                    <p style={{ fontFamily: playfair.style.fontFamily, fontStyle: "italic", fontSize: "clamp(.8rem,.9vw,.86rem)", lineHeight: 1.6, color: COLORS.muted, margin: 0 }}>{q}</p>
+                    <p style={{ fontFamily: playfair.style.fontFamily, fontStyle: "italic", fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.6, color: COLORS.muted, margin: 0 }}>{q}</p>
                   </div>
                 ))}
               </div>
@@ -653,7 +653,7 @@ function MentoringSection(): React.JSX.Element {
               <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: COLORS.text, marginBottom: ".5rem" }}>
                 Personalized Mentoring
               </h3>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.78rem,.88vw,.84rem)", lineHeight: 1.75, color: "#666", margin: 0 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.75, color: "#666", margin: 0 }}>
                 Faculty mentors observe participation and provide individual feedback on leadership style, teamwork, and decision-making — helping students identify areas for improvement and develop actionable strategies for growth.
               </p>
             </div>
@@ -695,10 +695,10 @@ function ClosingSection(): React.JSX.Element {
                 — LEAD College OBT Program
               </p>
             </div>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1rem" }}>
               Outbound Training embodies LEAD College's broader educational philosophy that meaningful learning must combine knowledge, experience, and reflection. By integrating physical challenges with intellectual reflection and mentoring, OBT creates a holistic learning experience.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.8, color: "#666", margin: 0 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: 0 }}>
               The program strengthens both personal character and professional competence — helping students transition from passive learners to active contributors and responsible leaders.
             </p>
           </motion.div>
@@ -720,7 +720,7 @@ function ClosingSection(): React.JSX.Element {
                   </div>
                   <div>
                     <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .3rem" }}>{item.label}</h4>
-                    <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.76rem,.86vw,.82rem)", lineHeight: 1.65, color: "#666", margin: 0 }}>{item.desc}</p>
+                    <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.65, color: "#666", margin: 0 }}>{item.desc}</p>
                   </div>
                 </motion.div>
               );

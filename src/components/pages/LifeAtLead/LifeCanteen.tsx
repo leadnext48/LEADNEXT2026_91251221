@@ -451,7 +451,7 @@ function PosterSection(): React.JSX.Element {
               </p>
             </div>
 
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.82rem,.92vw,.88rem)", lineHeight: 1.82, color: C.muted, margin: "0 0 1.4rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,.92vw,1rem)", lineHeight: 1.82, color: C.muted, margin: "0 0 1.4rem" }}>
               The LEAD canteen prioritises freshness and variety in equal measure. With a menu
               spanning local favourites and diverse cuisines, and ingredients drawn directly
               from the institution's own farm, every meal is both a nutritious choice and a
@@ -476,7 +476,7 @@ function PosterSection(): React.JSX.Element {
                   }}>
                     <Star size={10} color={C.gold} strokeWidth={1.8} fill={C.gold} />
                   </div>
-                  <span style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.78rem,.88vw,.84rem)", color: C.muted, lineHeight: 1.4 }}>{p.t}</span>
+                  <span style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.9rem,.88vw,1rem)", color: C.muted, lineHeight: 1.4 }}>{p.t}</span>
                 </div>
               ))}
             </div>
@@ -595,9 +595,9 @@ function HighlightsSection(): React.JSX.Element {
                 }}>{card.label}</h3>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(.74rem,.82vw,.78rem)",
+                  fontSize: "clamp(.9rem,.82vw,1rem)",
                   lineHeight: 1.72,
-                  color: card.dark ? "rgba(255,255,255,.62)" : C.muted,
+                  color: card.dark ? "rgba(255,255,255,.9)" : C.muted,
                   margin: 0,
                 }}>{card.desc}</p>
               </motion.div>
@@ -665,7 +665,7 @@ function CollaborationSection(): React.JSX.Element {
 
             <p style={{
               fontFamily: playfair.style.fontFamily,
-              fontSize: "clamp(.82rem,.92vw,.88rem)",
+              fontSize: "clamp(.92rem,.92vw,1rem)",
               lineHeight: 1.82, color: C.muted,
               margin: "0 0 1.6rem",
             }}>
@@ -737,7 +737,7 @@ function CollaborationSection(): React.JSX.Element {
                 </div>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(.82rem,.92vw,.88rem)",
+                  fontSize: "clamp(.92rem,.92vw,1rem)",
                   lineHeight: 1.7,
                   color: C.muted,
                   margin: 0,
@@ -890,7 +890,7 @@ function CommunitySection(): React.JSX.Element {
                 }}>{p.title}</h3>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(.76rem,.86vw,.82rem)",
+                  fontSize: "clamp(.9rem,.86vw,1rem)",
                   lineHeight: 1.7,
                   color: C.muted,
                   margin: 0,
@@ -907,7 +907,7 @@ function CommunitySection(): React.JSX.Element {
           <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
           <p style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize: "clamp(.78rem,.88vw,.84rem)",
+            fontSize: "clamp(.9rem,.88vw,1rem)",
             color: C.faint,
             margin: 0,
             textAlign: "center",

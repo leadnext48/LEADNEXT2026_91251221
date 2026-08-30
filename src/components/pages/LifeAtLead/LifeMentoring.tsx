@@ -583,7 +583,7 @@ function AcademicGuidanceSection() {
                   <pt.icon size={17} color={COLORS.primary} strokeWidth={2} />
                 </div>
                 <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.85rem", fontWeight: 700, color: COLORS.dark, margin: "0 0 0.5rem", letterSpacing: "0.02em" }}>{pt.title}</h4>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "0.88rem", lineHeight: 1.75, color: COLORS.textMuted, margin: 0 }}>{pt.body}</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "1rem", lineHeight: 1.75, color: COLORS.textMuted, margin: 0 }}>{pt.body}</p>
               </div>
             ))}
           </div>
@@ -627,7 +627,7 @@ function FeedbackReflectionSection() {
               )}
               <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "2.5rem", fontWeight: 800, color: "rgba(0,92,159,0.07)", lineHeight: 1, marginBottom: "0.75rem" }}>{step.num}</div>
               <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "1rem", fontWeight: 700, color: COLORS.dark, margin: "0 0 0.5rem" }}>{step.title}</h4>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "0.9rem", lineHeight: 1.75, color: COLORS.textMuted, margin: 0 }}>{step.body}</p>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "1rem", lineHeight: 1.75, color: COLORS.textMuted, margin: 0 }}>{step.body}</p>
             </div>
           ))}
         </div>
@@ -639,7 +639,7 @@ function FeedbackReflectionSection() {
             <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1.2rem,2vw,1.6rem)", fontWeight: 700, color: "#fff", margin: "0 0 0.75rem", lineHeight: 1.3 }}>
               "Through this cycle of reflection and guidance, mentoring becomes a transformative experience for students."
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "0.95rem", color: "rgba(255,255,255,0.6)", margin: 0 }}>Constructive feedback cultivates self-discipline, accountability, and a growth-oriented mindset.</p>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "0.95rem", color: "rgba(255,255,255,0.9)", margin: 0 }}>Constructive feedback cultivates self-discipline, accountability, and a growth-oriented mindset.</p>
           </div>
         </div>
       </div>

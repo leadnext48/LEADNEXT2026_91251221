@@ -140,7 +140,7 @@ function HeroSection() {
             <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.86rem,1vw,.96rem)", lineHeight: 1.82, color: "#666", margin: "0 0 .9rem" }}>
               LEAD hosts a wide range of academic, cultural, entrepreneurial, and social events throughout the year — workshops, seminars, industry talks, competitions, festivals, and leadership programmes that keep the campus calendar dynamic and engaging.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.8rem,.92vw,.88rem)", lineHeight: 1.75, color: "#999", margin: 0 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,1vw,1rem)", lineHeight: 1.75, color: "#999", margin: 0 }}>
               Many events are organised and managed entirely by students through the LOTs framework, providing real exposure to planning, coordination, and execution well before graduation.
             </p>
           </motion.div>

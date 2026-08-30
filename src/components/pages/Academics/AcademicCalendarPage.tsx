@@ -150,7 +150,7 @@ export default function AcademicCalendarPage() {
               className={`${playfair.className}`}
               style={{
                 color: "#555",
-                fontSize: "clamp(10px,0.82vw,13px)",
+                fontSize: "clamp(14px,0.82vw,16px)",
                 lineHeight: 2.0,
                 maxWidth: "clamp(300px,36vw,580px)",
               }}
@@ -436,7 +436,7 @@ export default function AcademicCalendarPage() {
                   className={`${playfair.className}`}
                   style={{
                     color: "#555",
-                    fontSize: "clamp(10px,0.78vw,12px)",
+                    fontSize: "clamp(14px,0.9vw,16px)",
                     lineHeight: 2.0,
                     marginBottom: "clamp(16px,2vh,30px)",
                   }}

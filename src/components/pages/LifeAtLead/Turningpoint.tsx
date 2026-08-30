@@ -207,7 +207,7 @@ function AboutSection() {
             ].map((item, i) => (
               <div key={i} style={{ marginBottom:".9rem" }}>
                 <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.76vw,.74rem)", fontWeight:700, letterSpacing:".2em", textTransform:"uppercase", color:COLORS.primary, marginBottom:".3rem" }}>{item.label}</h3>
-                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.82rem,.9vw,.88rem)", lineHeight:1.75, color:"#555", margin:0 }}>{item.text}</p>
+                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.95vw,1rem)", lineHeight:1.75, color:"#555", margin:0 }}>{item.text}</p>
               </div>
             ))}
           </motion.div>
@@ -242,12 +242,12 @@ function VisionSection() {
           <motion.div initial={{ scaleX:0 }} whileInView={{ scaleX:1 }} viewport={VP} transition={{ duration:.4, ease:"easeOut" }} style={{ width:36, height:2, background:"rgba(255,255,255,.28)", marginBottom:"clamp(.6rem,1.2vh,1rem)", transformOrigin:"left" }} />
           <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={.1}>
             <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.78rem,1.15vw,1.08rem)", fontWeight:700, letterSpacing:".05em", textTransform:"uppercase", lineHeight:1.3, margin:"0 0 clamp(.7rem,1.2vh,1rem)", color:"#fff" }}>A Space for Honest Transformation.</h3>
-            <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.8rem,.92vw,.88rem)", lineHeight:1.85, marginBottom:"1.4rem", color:"rgba(255,255,255,.66)" }}>Modern education and professional environments often emphasise knowledge and skills, but rarely address the deeper dimensions of personal transformation — mindset, values, discipline, and self-awareness. Turning Point creates a space where participants confront their beliefs, examine their habits, and discover the courage to act on what truly matters.</p>
+            <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.95vw,1rem)", lineHeight:1.85, marginBottom:"1.4rem", color:"rgba(255,255,255,.9)" }}>Modern education and professional environments often emphasise knowledge and skills, but rarely address the deeper dimensions of personal transformation — mindset, values, discipline, and self-awareness. Turning Point creates a space where participants confront their beliefs, examine their habits, and discover the courage to act on what truly matters.</p>
             <div style={{ display:"flex", flexDirection:"column", gap:".65rem" }}>
               {["Confront deeply-held beliefs, habits, and attitudes","Examine fears, aspirations, strengths, and limitations","Shift from passive learning to active personal transformation","Align personal ambitions with social responsibility and purpose"].map((pt, i) => (
                 <div key={i} style={{ display:"flex", alignItems:"flex-start", gap:".7rem" }}>
                   <div style={{ width:17, height:17, borderRadius:"50%", border:"1.5px solid rgba(255,255,255,.24)", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0, marginTop:2 }}><CheckCircle size={8} color="rgba(255,255,255,.48)" strokeWidth={2.5} /></div>
-                  <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.78rem,.88vw,.84rem)", margin:0, lineHeight:1.6, color:"rgba(255,255,255,.6)" }}>{pt}</p>
+                  <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.9rem,.9vw,1rem)", margin:0, lineHeight:1.6, color:"rgba(255,255,255,.9)" }}>{pt}</p>
                 </div>
               ))}
             </div>
@@ -267,7 +267,7 @@ function JourneySection() {
         <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0} style={{ textAlign:"center", marginBottom:"clamp(2rem,4vh,3.5rem)" }}>
           <p style={{ fontFamily:cinzel.style.fontFamily, ...TYPE.eyebrow, color:COLORS.primary, marginBottom:".5rem" }}>The Experience</p>
           <h2 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(1.2rem,2.2vw,2.7rem)", fontWeight:800, textTransform:"uppercase", letterSpacing:"-.025em", color:"#0D0D0D", margin:"0 0 .8rem", lineHeight:1 }}>The 7-Day Journey</h2>
-          <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.82rem,.92vw,.88rem)", color:"#888", maxWidth:440, margin:"0 auto", lineHeight:1.65 }}>Each day builds deliberately on the last — from self-awareness through to committed, purposeful action.</p>
+          <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.95vw,1rem)", color:"#888", maxWidth:440, margin:"0 auto", lineHeight:1.65 }}>Each day builds deliberately on the last — from self-awareness through to committed, purposeful action.</p>
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(4,minmax(0,1fr))", gap:"1rem", marginBottom:"1rem" }}>
           {DAYS.slice(0,4).map((day) => { const Icon = day.icon; return (
@@ -281,7 +281,7 @@ function JourneySection() {
                 <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:COLORS.primary, opacity:.25 }} />
                 <div style={{ width:30, height:30, borderRadius:8, background:"rgba(0,92,159,.08)", display:"flex", alignItems:"center", justifyContent:"center", marginBottom:".7rem" }}><Icon size={14} color={COLORS.primary} strokeWidth={1.8} /></div>
                 <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.72rem,.82vw,.78rem)", fontWeight:700, color:"#0D0D0D", margin:"0 0 .55rem", letterSpacing:".03em", lineHeight:1.35, textTransform:"uppercase", whiteSpace:"pre-line" }}>{day.theme}</h3>
-                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.74rem,.82vw,.78rem)", lineHeight:1.68, color:"#777", margin:0 }}>{day.desc}</p>
+                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.9rem,.9vw,1rem)", lineHeight:1.68, color:"#777", margin:0 }}>{day.desc}</p>
               </div>
             </motion.div>
           ); })}
@@ -299,7 +299,7 @@ function JourneySection() {
                   <div style={{ width:30, height:30, borderRadius:8, background:"rgba(0,92,159,.08)", display:"flex", alignItems:"center", justifyContent:"center" }}><Icon size={14} color={COLORS.primary} strokeWidth={1.8} /></div>
                 </div>
                 <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.78rem,.88vw,.84rem)", fontWeight:700, color:"#0D0D0D", margin:"0 0 .6rem", letterSpacing:".025em", lineHeight:1.3, textTransform:"uppercase", whiteSpace:"pre-line" }}>{day.theme}</h3>
-                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.76rem,.86vw,.82rem)", lineHeight:1.7, color:"#666", margin:0 }}>{day.desc}</p>
+                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.9rem,.9vw,1rem)", lineHeight:1.7, color:"#666", margin:0 }}>{day.desc}</p>
               </div>
             </motion.div>
           ); })}
@@ -329,7 +329,7 @@ function ParticipantsSection() {
             ].map((item, i) => (
               <div key={i} style={{ marginBottom:"1.1rem", paddingBottom:"1.1rem", borderBottom:i<3?"1px solid rgba(0,92,159,.08)":"none" }}>
                 <h3 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.78vw,.74rem)", fontWeight:700, letterSpacing:".14em", textTransform:"uppercase", color:"#0D0D0D", marginBottom:".4rem" }}>{item.title}</h3>
-                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.8rem,.88vw,.86rem)", lineHeight:1.78, color:"#666", margin:0 }}>{item.body}</p>
+                <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.95vw,1rem)", lineHeight:1.78, color:"#666", margin:0 }}>{item.body}</p>
               </div>
             ))}
           </motion.div>
@@ -366,7 +366,7 @@ function OutcomesSection() {
                 {o.points.map((pt, j) => (
                   <div key={j} style={{ display:"flex", alignItems:"center", gap:".65rem" }}>
                     <div style={{ width:5, height:5, borderRadius:"50%", background:COLORS.primary, opacity:.4, flexShrink:0 }} />
-                    <span style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.78rem,.86vw,.82rem)", color:"#555", lineHeight:1.5 }}>{pt}</span>
+                    <span style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.9rem,.9vw,1rem)", color:"#555", lineHeight:1.5 }}>{pt}</span>
                   </div>
                 ))}
               </div>
@@ -451,7 +451,7 @@ function ImpactSection() {
                       <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.72rem,.82vw,.78rem)", fontWeight:700, color:"rgba(255,255,255,.7)", letterSpacing:".08em" }}>{m.year}</span>
                       <span style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.66rem,.72vw,.72rem)", fontWeight:600, textTransform:"uppercase", letterSpacing:".14em", color:"rgba(255,255,255,.35)" }}>{m.label}</span>
                     </div>
-                    <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.74rem,.84vw,.8rem)", lineHeight:1.55, color:"rgba(255,255,255,.42)", margin:0 }}>{m.desc}</p>
+                    <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.9rem,.9vw,1rem)", lineHeight:1.55, color:"rgba(255,255,255,.9)", margin:0 }}>{m.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -469,14 +469,14 @@ function ImpactSection() {
                   </div>
                   <div>
                     <p style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.78vw,.74rem)", fontWeight:700, letterSpacing:".12em", textTransform:"uppercase", color:"rgba(255,255,255,.7)", margin:"0 0 .3rem" }}>{label}</p>
-                    <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.76rem,.86vw,.82rem)", lineHeight:1.6, color:"rgba(255,255,255,.4)", margin:0 }}>{desc}</p>
+                    <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.9rem,.9vw,1rem)", lineHeight:1.6, color:"rgba(255,255,255,.9)", margin:0 }}>{desc}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
             <motion.div initial={{ opacity:0, y:12 }} whileInView={{ opacity:1, y:0 }} viewport={VP} transition={{ duration:.5, delay:.4, ease:"easeOut" }}
               style={{ padding:"1.2rem 1.4rem", background:"rgba(255,255,255,.06)", border:"1px solid rgba(255,255,255,.1)", borderRadius:10 }}>
-              <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.8rem,.92vw,.88rem)", lineHeight:1.7, color:"rgba(255,255,255,.55)", margin:"0 0 .8rem" }}>
+              <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.95vw,1rem)", lineHeight:1.7, color:"rgba(255,255,255,.9)", margin:"0 0 .8rem" }}>
                 Turning Point runs as a residential programme at LEAD College, Dhoni, Palakkad — open to anyone above 18 who desires meaningful personal growth and transformation.
               </p>
               <a href="mailto:info@lead.ac.in" style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(.68rem,.76vw,.74rem)", letterSpacing:".2em", textTransform:"uppercase", color:"rgba(255,255,255,.65)", fontWeight:700, textDecoration:"none", borderBottom:"1px solid rgba(255,255,255,.25)", paddingBottom:".15rem" }}>
@@ -504,7 +504,7 @@ function TestimonialsSection() {
           {TESTIMONIALS.map((t, i) => (
             <motion.div key={i} variants={STAGGER_ITEM} style={{ background:t.accent?COLORS.primary:"#fff", borderRadius:16, padding:"1.8rem", display:"flex", flexDirection:"column", border:`1px solid ${t.accent?COLORS.primary:"rgba(0,0,0,.07)"}`, boxShadow:t.accent?"0 16px 40px rgba(0,92,159,.22)":"0 2px 10px rgba(0,0,0,.05)" }}>
               <div style={{ fontFamily:"Georgia,serif", fontSize:"4.4rem", lineHeight:.65, color:t.accent?"rgba(255,255,255,.13)":"rgba(0,92,159,.09)", marginBottom:".9rem", userSelect:"none" }}>"</div>
-              <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.8rem,.9vw,.86rem)", lineHeight:1.78, color:t.accent?"rgba(255,255,255,.82)":"#555", margin:"0 0 auto", flex:1, paddingBottom:"1.2rem" }}>{t.quote}</p>
+              <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.95vw,1rem)", lineHeight:1.78, color:t.accent?"rgba(255,255,255,.82)":"#555", margin:"0 0 auto", flex:1, paddingBottom:"1.2rem" }}>{t.quote}</p>
               <div style={{ paddingTop:"1rem", borderTop:`1px solid ${t.accent?"rgba(255,255,255,.14)":"rgba(0,92,159,.09)"}`, display:"flex", alignItems:"center", gap:".7rem" }}>
                 <div style={{ width:30, height:30, borderRadius:"50%", background:t.accent?"rgba(255,255,255,.14)":"rgba(0,92,159,.07)", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
                   <Users size={12} color={t.accent?"#fff":COLORS.primary} strokeWidth={2} />

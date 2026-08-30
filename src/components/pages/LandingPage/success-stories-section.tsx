@@ -99,7 +99,7 @@ export default function SuccessStoriesSection() {
             variants={fadeUp}
             className={cn(
               "mt-4 max-w-3xl leading-relaxed text-black/70",
-              "text-base sm:text-lg lg:text-sm xl:text-lg",
+              "text-base sm:text-lg lg:text-base xl:text-lg",
               playfair.className,
             )}
           >

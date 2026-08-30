@@ -626,8 +626,8 @@ export default function ProgramOfficePage() {
                 }}>{m.label}</p>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: 'clamp(0.7rem, 0.88vw, 0.82rem)',
-                  color: 'rgba(255,255,255,0.38)', margin: 0, lineHeight: 1.5,
+                  fontSize: 'clamp(0.92rem, 0.88vw, 1rem)',
+                  color: 'rgba(255,255,255,0.9)', margin: 0, lineHeight: 1.5,
                 }}>{m.sub}</p>
               </div>
             ))}
@@ -721,7 +721,7 @@ export default function ProgramOfficePage() {
                 </div>
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.68rem, 0.96vw, 0.88rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: DARK, lineHeight: 1.3, margin: '0 0 clamp(0.5rem, 1vh, 0.8rem)' }}>{f.title}</h3>
                 <div style={{ width: 28, height: 2, background: f.color, marginBottom: 'clamp(0.7rem, 1.3vh, 1rem)', borderRadius: 1 }} />
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.7rem, 0.86vw, 0.8rem)', lineHeight: 1.78, color: '#666', marginBottom: 'clamp(0.8rem, 1.5vh, 1.2rem)' }}>{f.description}</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.86vw, 1rem)', lineHeight: 1.78, color: '#666', marginBottom: 'clamp(0.8rem, 1.5vh, 1.2rem)' }}>{f.description}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                   {f.points.slice(0, 3).map((pt) => (
                     <div key={pt} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.55rem' }}>

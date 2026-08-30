@@ -469,7 +469,7 @@ export const VisionMissionPage: React.FC = () => (
       .pcard:hover .pcard-divider { width:56px; }
 
       /* prose body */
-      .pcard-body { font-size:clamp(0.82rem,1vw,0.95rem); line-height:1.85; color:#666; margin:0; max-width:560px; }
+      .pcard-body { font-size:clamp(0.92rem,1vw,1rem); line-height:1.85; color:#666; margin:0; max-width:560px; }
 
       /* bullet list body */
       .pcard-bullets {
@@ -623,7 +623,7 @@ export const VisionMissionPage: React.FC = () => (
         color:${BLUE}; opacity:0.032; pointer-events:none; user-select:none;
         letter-spacing:-0.04em;
       }
-      .po2-body { font-size:clamp(0.8rem,0.95vw,0.92rem); line-height:1.82; color:#555; margin:0; }
+      .po2-body { font-size:clamp(0.92rem,0.95vw,1rem); line-height:1.82; color:#555; margin:0; }
       .po2-grid { position:relative; z-index:1; }
       .po2-grid--peo { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(0.75rem,1.5vw,1.1rem); }
       .po2-peo-card {

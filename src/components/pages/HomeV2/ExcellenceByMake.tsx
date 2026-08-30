@@ -100,5 +100,5 @@ const EBM_CSS = `
 .ebm-card:hover .ebm-icon{background:linear-gradient(135deg,rgba(10,36,99,.12),rgba(30,58,138,.08));border-color:rgba(10,36,99,.28);}
 .ebm-t{font-size:clamp(11px,.8vw,13px);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:${NAVY};margin:0;line-height:1.2;}
 .ebm-hair{height:1px;background:linear-gradient(90deg,rgba(10,36,99,.18) 0%,transparent 100%);}
-.ebm-b{font-size:clamp(12px,.9vw,14px);color:#4a5568;margin:0;line-height:1.74;}
+.ebm-b{font-size:clamp(14px,1vw,16px);color:#4a5568;margin:0;line-height:1.74;}
 `;

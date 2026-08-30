@@ -161,7 +161,7 @@ export default function ChairmanBookSection(): JSX.Element {
                 fade ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-[13px] text-gray-700 leading-6 mb-6 pt-3">
+              <p className="text-base text-gray-700 leading-6 mb-6 pt-3">
                 {testimonials[currentIndex].text}
               </p>
 

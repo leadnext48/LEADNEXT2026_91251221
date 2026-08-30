@@ -119,7 +119,7 @@ function Hero() {
               </m.div>
 
               <m.p className={`${playfair.className} mb-5`}
-                style={{ color:"#555", fontSize:"clamp(12px,0.9vw,15px)", lineHeight:1.8,
+                style={{ color:"#555", fontSize:"clamp(14px,0.9vw,16px)", lineHeight:1.8,
                   maxWidth:"clamp(300px,36vw,540px)", ...GPU }}
                 initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }}
                 transition={{ type:"tween", duration:0.5, delay:0.5, ease:E }}>
@@ -216,10 +216,10 @@ function About() {
             </div>
           </motion.div>
           <motion.div initial={{ opacity:0, y:36 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:0.85, delay:0.18, ease:E }} style={GPU}>
-            <p className={`${playfair.className} leading-relaxed mb-6`} style={{ fontSize:"clamp(12px,0.9vw,15px)", color:"rgba(255,255,255,0.72)", lineHeight:1.75 }}>
+            <p className={`${playfair.className} leading-relaxed mb-6`} style={{ fontSize:"clamp(14px,0.9vw,16px)", color:"rgba(255,255,255,0.72)", lineHeight:1.75 }}>
               LEADER is a prestigious peer-reviewed academic journal dedicated to publishing high-quality research in business management and related disciplines. We provide a platform for researchers, academicians, and practitioners to share original findings and scholarly insights that advance global business knowledge.
             </p>
-            <p className={`${playfair.className} leading-relaxed mb-10`} style={{ fontSize:"clamp(12px,0.9vw,15px)", color:"rgba(255,255,255,0.72)", lineHeight:1.75 }}>
+            <p className={`${playfair.className} leading-relaxed mb-10`} style={{ fontSize:"clamp(14px,0.9vw,16px)", color:"rgba(255,255,255,0.72)", lineHeight:1.75 }}>
               We maintain rigorous peer-review standards and international publishing practices — ensuring publication of only the most impactful and methodologically sound research, maintaining the highest standards of scholarly communication.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -278,7 +278,7 @@ function WhyPublish() {
                 <Icon size={14} strokeWidth={1.5} color={NAVY} />
               </div>
               <h4 className={`${cinzel.className} uppercase tracking-wider font-bold mb-2`} style={{ fontSize:"12px", color:NAVY }}>{title}</h4>
-              <p className={`${playfair.className} leading-relaxed`} style={{ fontSize:"clamp(12px,0.9vw,14px)", color:MUTED }}>{desc}</p>
+              <p className={`${playfair.className} leading-relaxed`} style={{ fontSize:"clamp(14px,0.9vw,16px)", color:MUTED }}>{desc}</p>
             </motion.div>
           ))}
         </div>
@@ -309,7 +309,7 @@ function ResearchAreas() {
               <span className={`${cinzel.className} uppercase tracking-[0.38em]`} style={{ fontSize:"12px", color:"rgba(255,255,255,0.5)" }}>03 / Scope</span>
             </div>
             <h2 className={`${cinzel.className} font-black uppercase text-white leading-none mb-6`} style={{ fontSize:"clamp(30px,4.5vw,68px)", letterSpacing:"-0.025em" }}>RESEARCH<br />AREAS</h2>
-            <p className={`${playfair.className} mb-8`} style={{ fontSize:"clamp(12px,0.9vw,15px)", color:"rgba(255,255,255,0.55)", lineHeight:1.78 }}>
+            <p className={`${playfair.className} mb-8`} style={{ fontSize:"clamp(14px,0.9vw,16px)", color:"rgba(255,255,255,0.9)", lineHeight:1.78 }}>
               LEADER welcomes original research across six core disciplines of business and management. Each domain encompasses a broad spectrum of sub-topics, encouraging interdisciplinary approaches and comparative studies that contribute meaningfully to global academic discourse.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -419,7 +419,7 @@ function Guidelines() {
                 </div>
                 <div>
                   <p className={`${cinzel.className} uppercase tracking-wider font-bold mb-0.5`} style={{ fontSize:"12px", color:"rgba(255,255,255,0.8)" }}>{s.label}</p>
-                  <p className={`${playfair.className} leading-relaxed`} style={{ fontSize:"clamp(12px,0.9vw,14px)", color:"rgba(255,255,255,0.5)", lineHeight:1.75 }}>{s.desc}</p>
+                  <p className={`${playfair.className} leading-relaxed`} style={{ fontSize:"clamp(14px,0.9vw,16px)", color:"rgba(255,255,255,0.9)", lineHeight:1.75 }}>{s.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -453,7 +453,7 @@ function CTA() {
               READY TO<br />PUBLISH YOUR<br />RESEARCH?
             </h2>
             <p className={`${playfair.className} leading-relaxed max-w-md`}
-              style={{ fontSize:"clamp(12px,0.9vw,15px)", color:"rgba(255,255,255,0.4)", lineHeight:1.75 }}>
+              style={{ fontSize:"clamp(14px,0.9vw,16px)", color:"rgba(255,255,255,0.9)", lineHeight:1.75 }}>
               Join hundreds of researchers who have published in LEADER Journal. Share your findings with the global academic community.
             </p>
           </motion.div>

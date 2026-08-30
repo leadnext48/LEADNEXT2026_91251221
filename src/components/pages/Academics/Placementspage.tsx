@@ -46,7 +46,7 @@ const h2Style = (sz = "clamp(2rem,3.5vw,3.2rem)"): CSSProperties => ({
   letterSpacing: "0.01em", margin: "0 0 1.2rem",
 });
 const bodyStyle: CSSProperties = {
-  fontFamily: PF, fontSize: "clamp(0.82rem,1vw,0.95rem)",
+  fontFamily: PF, fontSize: "clamp(0.92rem,1vw,1rem)",
   lineHeight: 1.9, color: "#555",
 };
 const rule = (light = false) => (
@@ -457,7 +457,7 @@ function HeroSection() {
               ...bodyStyle,
               maxWidth: "52ch",
               marginBottom: "1.8rem",
-              fontSize: "clamp(0.72rem,0.85vw,0.85rem)", // slightly reduced
+              fontSize: "clamp(0.92rem,0.9vw,1rem)", // enlarged for readability
               opacity: vis ? 1 : 0,
               transform: vis ? "none" : "translateY(14px)",
               transition:
@@ -575,7 +575,7 @@ function TrajectorySection() {
           </h2>
 
           <p style={{
-            ...bodyStyle, fontSize: "clamp(0.75rem,0.9vw,0.88rem)", maxWidth: "58ch", margin: "0 auto",
+            ...bodyStyle, fontSize: "clamp(0.92rem,0.9vw,1rem)", maxWidth: "58ch", margin: "0 auto",
             opacity: hdrVis ? 1 : 0, transition: "opacity .8s .2s",
           }}>
             Median salary has grown from ₹3 LPA to ₹5 LPA across seven graduating batches.
@@ -589,7 +589,7 @@ function TrajectorySection() {
 
         <div style={{ marginTop: "5rem", marginBottom: "1.5rem" }}>
           <div style={{ fontFamily: C, fontSize: "clamp(1rem,1.6vw,1.4rem)", fontWeight: 700, letterSpacing: "0.04em", color: "#0D0D0D", marginBottom: "0.6rem" }}>Year-wise Placement Summary</div>
-          <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "clamp(0.8rem,1vw,0.92rem)", color: "#888", marginBottom: "1.5rem", maxWidth: "52ch" }}>
+          <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "clamp(0.92rem,1vw,1rem)", color: "#888", marginBottom: "1.5rem", maxWidth: "52ch" }}>
             Select a graduating batch to view detailed salary, placement rate, and company data for that academic year.
           </div>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
@@ -1007,7 +1007,7 @@ function InternshipSection() {
                     </div>
                   </div>
 
-                  <p style={{ fontFamily: PF, fontSize: "0.83rem", lineHeight: 1.9, color: "#666", margin: 0 }}>{ph.note}</p>
+                  <p style={{ fontFamily: PF, fontSize: "1rem", lineHeight: 1.9, color: "#666", margin: 0 }}>{ph.note}</p>
                 </div>
               </div>
             ))}
@@ -1173,7 +1173,7 @@ function ProcessSection() {
           }}>Achievement is not accidental.<br />
             <span style={{ color: "rgba(150,190,255,.8)" }}>It is a structured outcome.</span>
           </h2>
-          <p style={{ ...bodyStyle, color: "rgba(255,255,255,.4)", maxWidth: "52ch", margin: "0 auto", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
+          <p style={{ ...bodyStyle, color: "rgba(255,255,255,0.9)", maxWidth: "52ch", margin: "0 auto", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
             LEAD's placement preparation begins on Day 1 of the programme — not a week before the interviews open.
             Every student passes through five deliberate stages before an offer arrives.
           </p>
@@ -1188,7 +1188,7 @@ function ProcessSection() {
             }}>
               <div style={{ fontFamily: C, fontSize: "2.8rem", fontWeight: 700, color: "rgba(255,255,255,0.28)", lineHeight: 1, marginBottom: "1.25rem" }}>{s.n}</div>
               <h3 style={{ fontFamily: C, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,.72)", margin: "0 0 0.75rem" }}>{s.t}</h3>
-              <p style={{ fontFamily: PF, fontSize: "clamp(0.78rem,.9vw,.9rem)", lineHeight: 1.85, color: "rgba(255,255,255,.38)", margin: 0 }}>{s.b}</p>
+              <p style={{ fontFamily: PF, fontSize: "clamp(0.92rem,.9vw,1rem)", lineHeight: 1.85, color: "rgba(255,255,255,0.9)", margin: 0 }}>{s.b}</p>
             </div>
           ))}
         </div>
@@ -1261,7 +1261,7 @@ function VoicesSection() {
             }}>
               <div style={{ position: "absolute", top: "0.75rem", right: "1.25rem", fontFamily: PF, fontSize: "4.5rem", color: "rgba(30,58,138,.05)", lineHeight: 1, userSelect: "none" }}>"</div>
 
-              <p style={{ fontFamily: PF, fontStyle: "italic", fontSize: "clamp(.82rem,.95vw,.9rem)", lineHeight: 1.9, color: "#444", margin: "0 0 1.75rem", minHeight: "6em" }}>{t.q}</p>
+              <p style={{ fontFamily: PF, fontStyle: "italic", fontSize: "clamp(0.92rem,.95vw,1rem)", lineHeight: 1.9, color: "#444", margin: "0 0 1.75rem", minHeight: "6em" }}>{t.q}</p>
 
               <div style={{ width: 24, height: 1, background: "rgba(30,58,138,.15)", marginBottom: "1rem" }} />
 
@@ -1338,7 +1338,7 @@ function HireSection() {
             }}>
               <ChevronRight size={14} color={BLUE} style={{ marginBottom: "1rem", opacity: 0.5 }} />
               <h4 style={{ fontFamily: C, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#0D0D0D", margin: "0 0 0.6rem" }}>{item.t}</h4>
-              <p style={{ fontFamily: PF, fontSize: "0.85rem", lineHeight: 1.8, color: "#666", margin: 0 }}>{item.d}</p>
+              <p style={{ fontFamily: PF, fontSize: "1rem", lineHeight: 1.8, color: "#666", margin: 0 }}>{item.d}</p>
             </div>
           ))}
         </div>

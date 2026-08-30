@@ -410,7 +410,7 @@ export default function FacultyPage() {
         .fac-tab--active:hover { color: #fff; }
         .fac-dept-desc {
           max-width: 1200px; margin: 0 auto clamp(1.5rem,3vh,2.5rem); width: 100%;
-          font-size: clamp(0.83rem,0.98vw,0.94rem); line-height: 1.78; color: #666;
+          font-size: clamp(0.92rem,1vw,1rem); line-height: 1.78; color: #666;
         }
 
         /* ── Faculty Grid ───────────────────────────────────── */

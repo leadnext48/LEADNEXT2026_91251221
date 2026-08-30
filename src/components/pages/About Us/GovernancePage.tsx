@@ -391,7 +391,7 @@ export default function GovernancePage() {
           -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
         }
         .gov-section-desc {
-          font-size: clamp(0.82rem,0.98vw,0.94rem);
+          font-size: clamp(0.92rem,0.98vw,1rem);
           line-height: 1.78; color: #666; margin: 0;
           max-width: 420px;
           text-align: left;

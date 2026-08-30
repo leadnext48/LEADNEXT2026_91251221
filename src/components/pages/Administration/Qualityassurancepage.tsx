@@ -642,10 +642,10 @@ export default function QualityAssurancePage({
                 <span style={{ display: 'block' }}>Trusted.</span>
               </h2>
               <div style={{ width: 36, height: 2, background: BLUE, marginBottom: 'clamp(1rem, 2vh, 1.6rem)', borderRadius: 1 }} />
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.8rem, 0.95vw, 0.92rem)', lineHeight: 1.85, color: '#555', margin: '0 0 clamp(1rem, 2vh, 1.6rem)', maxWidth: 460 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', lineHeight: 1.85, color: '#555', margin: '0 0 clamp(1rem, 2vh, 1.6rem)', maxWidth: 460 }}>
                 The Quality &amp; Accreditation function ensures that LEAD College maintains the highest academic and institutional standards. The unit oversees outcome-based education, continuous assessment systems, academic audits, stakeholder feedback, and compliance with regulatory and accreditation requirements.
               </p>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.9vw, 0.88rem)', lineHeight: 1.82, color: '#777', margin: 0, maxWidth: 460 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', lineHeight: 1.82, color: '#777', margin: 0, maxWidth: 460 }}>
                 Through data-driven monitoring and periodic reviews, this office drives continuous improvement — ensuring programs remain current, effective, and aligned with national and international quality benchmarks.
               </p>
             </div>
@@ -703,7 +703,7 @@ export default function QualityAssurancePage({
                     <span style={{ width: 5, height: 5, borderRadius: '50%', background: BLUE, display: 'inline-block' }} />
                     <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.78vw, 0.72rem)', letterSpacing: '0.18em', textTransform: 'uppercase', color: BLUE, fontWeight: 600 }}>{p.tag}</span>
                   </div>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.8rem, 0.95vw, 0.9rem)', lineHeight: 1.82, color: '#555', margin: 0 }}>{p.description}</p>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', lineHeight: 1.82, color: '#555', margin: 0 }}>{p.description}</p>
                 </div>
               </div>
             ))}
@@ -717,7 +717,7 @@ export default function QualityAssurancePage({
               <div>
                 <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.74rem)', letterSpacing: '0.34em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', fontWeight: 600, marginBottom: '0.5rem' }}>IQAC Documentation</p>
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(1.1rem, 2.2vw, 2.2rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: '#fff', margin: 0, lineHeight: 1.1 }}>IQAC Formation Letter</h3>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.76rem, 0.93vw, 0.88rem)', color: 'rgba(255,255,255,0.40)', margin: 'clamp(0.5rem, 1vh, 0.8rem) 0 0', lineHeight: 1.6 }}>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', color: 'rgba(255,255,255,0.9)', margin: 'clamp(0.5rem, 1vh, 0.8rem) 0 0', lineHeight: 1.6 }}>
                   Official formation document establishing the Internal Quality Assurance Cell at LEAD College.
                 </p>
               </div>
@@ -739,7 +739,7 @@ export default function QualityAssurancePage({
             </p>
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
               <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(1.3rem, 2.5vw, 2.8rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: DARK, margin: 0, lineHeight: 1.1 }}>Mandatory Disclosures.</h2>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.95vw, 0.9rem)', color: '#777', margin: 0, maxWidth: 400, lineHeight: 1.7 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', color: '#777', margin: 0, maxWidth: 400, lineHeight: 1.7 }}>
                 All statutory disclosure documents as required by AICTE, NBA, NAAC, NIRF, and governing bodies.
               </p>
             </div>
@@ -869,13 +869,13 @@ export default function QualityAssurancePage({
                   Institutional Commitment to Pedagogical Innovation
                 </h3>
                 <div style={{ width: 36, height: 2, background: BLUE, marginBottom: 'clamp(1rem, 2vh, 1.6rem)', borderRadius: 1 }} />
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.8rem, 0.95vw, 0.92rem)', lineHeight: 1.85, color: '#555', margin: '0 0 clamp(0.8rem, 1.5vh, 1.1rem)' }}>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', lineHeight: 1.85, color: '#555', margin: '0 0 clamp(0.8rem, 1.5vh, 1.1rem)' }}>
                   LEAD College has institutionalised a culture of pedagogical innovation — a strategic move beyond traditional lecture-based delivery to a dynamic, learner-centric model aligned with Outcome-Based Education (OBE) principles.
                 </p>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.92vw, 0.88rem)', lineHeight: 1.82, color: '#777', margin: '0 0 clamp(0.8rem, 1.5vh, 1.1rem)' }}>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', lineHeight: 1.82, color: '#777', margin: '0 0 clamp(0.8rem, 1.5vh, 1.1rem)' }}>
                   Over the past three academic years, our faculty have systematically designed, implemented, and refined a portfolio of diverse instructional strategies that promote experiential learning, critical thinking, and real-world application.
                 </p>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.92vw, 0.88rem)', lineHeight: 1.82, color: '#777', margin: 0 }}>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', lineHeight: 1.82, color: '#777', margin: 0 }}>
                   Each initiative is reproducible across courses and faculty, and serves as a foundation developed further through iterative feedback and technological integration — ensuring our curriculum remains responsive to industry needs.
                 </p>
                 <div style={{ display: 'flex', gap: '1.5rem', marginTop: 'clamp(1.4rem, 2.5vh, 2rem)', paddingTop: 'clamp(1.2rem, 2vh, 1.6rem)', borderTop: '1px solid rgba(0,92,159,0.08)' }}>
@@ -895,7 +895,7 @@ export default function QualityAssurancePage({
                     </div>
                     <div>
                       <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.82vw, 0.74rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: DARK, margin: '0 0 0.4rem', lineHeight: 1.3 }}>{item.title}</p>
-                      <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.7rem, 0.84vw, 0.8rem)', lineHeight: 1.72, color: '#666', margin: 0 }}>{item.body}</p>
+                      <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.9vw, 1rem)', lineHeight: 1.72, color: '#666', margin: 0 }}>{item.body}</p>
                     </div>
                   </div>
                 ))}
@@ -904,7 +904,7 @@ export default function QualityAssurancePage({
             <div className="qa-fi-cta">
               <div>
                 <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.72rem)', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#aaa', fontWeight: 600, marginBottom: '0.3rem' }}>Comprehensive Summary</p>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.82rem, 0.98vw, 0.94rem)', lineHeight: 1.6, color: '#555', margin: 0, maxWidth: 560 }}>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.98vw, 1rem)', lineHeight: 1.6, color: '#555', margin: 0, maxWidth: 560 }}>
                   A detailed, comprehensive overview of the innovative teaching methodologies implemented by our faculty — sorted chronologically and alphabetically, covering 2022–2025.
                 </p>
               </div>

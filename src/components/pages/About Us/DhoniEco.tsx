@@ -164,7 +164,7 @@ const DhoniInteractiveSelector = () => {
                     {option.title}
                   </div>
                   <div 
-                    className="sub text-xs md:text-sm text-gray-300 font-normal mt-1"
+                    className="sub text-sm md:text-base text-gray-300 font-normal mt-1"
                     style={{
                       opacity: activeIndex === index ? 1 : 0,
                       whiteSpace: 'normal',

@@ -31,7 +31,7 @@ const IMG = {
 /* ─────────── STYLE HELPERS ─────────── */
 const P: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 'clamp(0.75rem, 0.88vw, 0.88rem)',
+  fontSize: 'clamp(0.92rem, 0.95vw, 1rem)',
   lineHeight: 1.8,
   color: '#555',
 };
@@ -202,7 +202,7 @@ function FAQRow({ item, index, open, onToggle }: { item: { q: string; a: string 
         </span>
       </button>
       <div ref={bodyRef} style={{ maxHeight: 0, overflow: 'hidden', opacity: 0, transition: 'max-height 0.35s ease, opacity 0.3s ease' }}>
-        <div className="pb-3 pl-9 pr-6"><p style={{ ...P, fontSize: '0.78rem' }}>{item.a}</p></div>
+        <div className="pb-3 pl-9 pr-6"><p style={{ ...P, fontSize: '1rem' }}>{item.a}</p></div>
       </div>
     </div>
   );
@@ -533,7 +533,7 @@ export default function AdmissionsPage() {
                   <Label text="Programs Offered" />
                   <Title size="clamp(1.44rem,2.52vw,2.25rem)">Choose Your Pathway</Title>
                 </div>
-                <p style={{ ...P, fontSize:'0.78rem', maxWidth:260 }}>Four programs for industry, entrepreneurship, technology &amp; academia.</p>
+                <p style={{ ...P, fontSize:'0.95rem', maxWidth:260 }}>Four programs for industry, entrepreneurship, technology &amp; academia.</p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
                 {programs.map(prog => (
@@ -595,7 +595,7 @@ export default function AdmissionsPage() {
                     <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background:BLUE, color:'#fff' }}>{Ico.shield}</div>
                     <h3 className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.12em', color:'#111' }}>The VLEAD Process</h3>
                   </div>
-                  <p style={{ ...P, fontSize:'0.74rem' }}>
+                  <p style={{ ...P, fontSize:'1rem' }}>
                     <strong>VLEAD</strong> is LEAD's holistic selection framework — designed to identify candidates with the right attitude and potential, not just academic scores. Our uLEAD cycle begins <strong>December 1st</strong> each year, with multiple rounds over 8 months.
                   </p>
                   <div className="w-full h-20"><UndrawGraduation /></div>
@@ -606,7 +606,7 @@ export default function AdmissionsPage() {
                           <span style={{ color:BLUE }}>{c.icon}</span>
                           <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111' }}>{c.label}</p>
                         </div>
-                        <p style={{ ...P, fontSize:'0.72rem' }}>{c.desc}</p>
+                        <p style={{ ...P, fontSize:'0.95rem' }}>{c.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -638,7 +638,7 @@ export default function AdmissionsPage() {
                         </div>
                         <div className="pb-3.5">
                           <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:1 }}>{step.title}</p>
-                          <p style={{ ...P, fontSize:'0.72rem' }}>{step.desc}</p>
+                          <p style={{ ...P, fontSize:'0.95rem' }}>{step.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -647,7 +647,7 @@ export default function AdmissionsPage() {
                     <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:BLUE, marginBottom:4 }}>Program Commencement</p>
                     <div className="flex items-center gap-2">
                       <span style={{ color:BLUE }}>{Ico.clock}</span>
-                      <p style={{ ...P, fontSize:'0.72rem' }}>First week of September, preceded by the <em>Turning Point</em> pre-course induction program.</p>
+                      <p style={{ ...P, fontSize:'0.95rem' }}>First week of September, preceded by the <em>Turning Point</em> pre-course induction program.</p>
                     </div>
                   </div>
                   <div className="flex gap-2 mt-auto">
@@ -673,7 +673,7 @@ export default function AdmissionsPage() {
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background:'rgba(30,58,138,0.07)', color:BLUE }}>{ins.icon}</div>
                       <div>
                         <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:3 }}>{ins.title}</p>
-                        <p style={{ ...P, fontSize:'0.72rem' }}>{ins.body}</p>
+                        <p style={{ ...P, fontSize:'0.95rem' }}>{ins.body}</p>
                       </div>
                     </div>
                   ))}
@@ -689,7 +689,7 @@ export default function AdmissionsPage() {
                           <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0" style={{ background:BLUE }}>
                             <span className={cinzel.className} style={{ fontSize:'0.72rem', color:'#fff', fontWeight:700 }}>{i+1}</span>
                           </div>
-                          <p style={{ ...P, fontSize:'0.72rem' }}>{s}</p>
+                          <p style={{ ...P, fontSize:'0.95rem' }}>{s}</p>
                         </div>
                       ))}
                     </div>
@@ -713,7 +713,7 @@ export default function AdmissionsPage() {
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="bg-white/14 backdrop-blur-md rounded-xl px-4 py-3 border border-white/18">
                       <p className={cinzel.className} style={{ color:'#fff', fontSize:'0.72rem', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:2 }}>Fully Residential Campus</p>
-                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.74rem', color:'rgba(255,255,255,0.78)', lineHeight:1.5 }}>Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.</p>
+                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.95rem', color:'rgba(255,255,255,0.78)', lineHeight:1.5 }}>Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.</p>
                     </div>
                   </div>
                 </div>
@@ -731,7 +731,7 @@ export default function AdmissionsPage() {
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background:'rgba(30,58,138,0.07)', color:BLUE }}>{f.icon}</div>
                       <div>
                         <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:'#111', marginBottom:2 }}>{f.label}</p>
-                        <p style={{ ...P, fontSize:'0.72rem' }}>{f.desc}</p>
+                        <p style={{ ...P, fontSize:'0.95rem' }}>{f.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -777,7 +777,7 @@ export default function AdmissionsPage() {
               <div className="text-center mb-6">
                 <Label text="Discover LEAD" />
                 <Title size="clamp(1.44rem,2.7vw,2.52rem)">Watch Our Admissions Story</Title>
-                <p className="mt-2.5 max-w-md mx-auto" style={{ ...P, fontSize:'0.8rem' }}>
+                <p className="mt-2.5 max-w-md mx-auto" style={{ ...P, fontSize:'1rem' }}>
                   Learn about our programs, campus life, and what makes LEAD a truly unique learning community.
                 </p>
               </div>
@@ -849,7 +849,7 @@ export default function AdmissionsPage() {
                     <h3 className={cinzel.className} style={{ color:'#fff', fontSize:'clamp(1rem,1.7vw,1.5rem)', fontWeight:700, lineHeight:1.1, marginBottom:8, textTransform:'uppercase' }}>
                       Ready to Begin<br />Your Journey?
                     </h3>
-                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.78rem', color:'rgba(255,255,255,0.7)', marginBottom:14, lineHeight:1.65 }}>
+                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'1rem', color:'rgba(255,255,255,0.7)', marginBottom:14, lineHeight:1.65 }}>
                       Join LEAD — where learning is practical, growth is continuous, and leadership is a way of life.
                     </p>
                     <div className="flex flex-wrap gap-2">

@@ -31,14 +31,14 @@ const gradientTitle: React.CSSProperties = {
 // Standard paragraph: Playfair, #555, clamp size, 1.75 line-height
 const paraStyle: React.CSSProperties = {
   color: "#555",
-  fontSize: "clamp(12px, 0.9vw, 15px)",
+  fontSize: "clamp(14px, 0.9vw, 16px)",
   lineHeight: 1.75,
 };
 
 // Dark-bg paragraph (navy sections): same size, white-ish
 const paraLightStyle: React.CSSProperties = {
   color: "rgba(255,255,255,0.72)",
-  fontSize: "clamp(12px, 0.9vw, 15px)",
+  fontSize: "clamp(14px, 0.9vw, 16px)",
   lineHeight: 1.75,
 };
 
@@ -386,7 +386,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       <span className={`${cinzel.className} font-bold flex-shrink-0 mt-0.5`} style={{ fontSize: "12px", color: "rgba(10,36,99,0.3)", letterSpacing: "0.08em" }}>{item.n}</span>
                       <div>
                         <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "12px", color: NAVY, letterSpacing: "0.06em" }}>{item.title}</p>
-                        <p className={`${playfair.className}`} style={{ fontSize: "13px", color: "#555", lineHeight: 1.7 }}>{item.desc}</p>
+                        <p className={`${playfair.className}`} style={{ fontSize: "16px", color: "#555", lineHeight: 1.7 }}>{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -494,7 +494,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       </span>
                       <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "clamp(28px,3.5vw,42px)", letterSpacing: "-0.02em", color: isActive ? "#ffffff" : NAVY, lineHeight: 1 }}>{title}</p>
                       <p className={`${cinzel.className} uppercase mb-4`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: isActive ? "rgba(255,255,255,0.5)" : "rgba(10,36,99,0.48)" }}>{subtitle}</p>
-                      <p className={`${playfair.className} leading-relaxed mb-5`} style={{ fontSize: "14px", color: isActive ? "rgba(255,255,255,0.78)" : "#2c3e5e", lineHeight: 1.75 }}>{desc}</p>
+                      <p className={`${playfair.className} leading-relaxed mb-5`} style={{ fontSize: "16px", color: isActive ? "rgba(255,255,255,0.78)" : "#2c3e5e", lineHeight: 1.75 }}>{desc}</p>
 
                       {/* CTA row */}
                       <div className="flex items-center justify-between px-4 py-3" style={{
@@ -609,7 +609,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
                 ].map((item, i) => (
                   <div key={i} className="flex gap-3 items-start p-4" style={{ background: "#f7f9fc", border: "1px solid rgba(10,36,99,0.07)" }}>
                     <span className={`${cinzel.className} flex-shrink-0 mt-0.5`} style={{ fontSize: "11px", color: NAVY, opacity: 0.5 }}>{item.icon}</span>
-                    <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "13px" }}>{item.text}</p>
+                    <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "16px" }}>{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -682,7 +682,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
             <div className="px-10 py-12">
               <p className={`${cinzel.className} font-black leading-none mb-3`} style={{ fontSize: "clamp(44px,5vw,70px)", color: NAVY }}><Counter to={s.val} suffix={s.suffix} /></p>
               <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.5)" }}>{s.label}</p>
-              <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "13px" }}>{s.sub}</p>
+              <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "16px" }}>{s.sub}</p>
             </div>
           </Reveal>
         ))}
@@ -811,7 +811,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                     <span className={`${cinzel.className} flex-shrink-0 font-bold`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.28)", minWidth: 22, marginTop: 2 }}>{item.n}</span>
                     <div>
                       <p className={`${cinzel.className} uppercase mb-1`} style={{ fontSize: "12px", letterSpacing: "0.14em", color: "rgba(255,255,255,0.65)", fontWeight: 600 }}>{item.title}</p>
-                      <p className={`${playfair.className}`} style={{ ...paraLightStyle, fontSize: "13px" }}>{item.desc}</p>
+                      <p className={`${playfair.className}`} style={{ ...paraLightStyle, fontSize: "16px" }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -864,7 +864,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
             <div className="px-10 py-12">
               <p className={`${cinzel.className} font-black leading-none mb-3`} style={{ fontSize: "clamp(44px,5vw,70px)", color: NAVY }}><Counter to={s.val} suffix={s.suffix} /></p>
               <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: "rgba(10,36,99,0.5)" }}>{s.label}</p>
-              <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "13px" }}>{s.sub}</p>
+              <p className={`${playfair.className}`} style={{ ...paraStyle, fontSize: "16px" }}>{s.sub}</p>
             </div>
           </Reveal>
         ))}
@@ -962,7 +962,7 @@ const ServiceGrid: FC<{ services: ServiceItem[] }> = ({ services }) => (
             <Icon size={14} strokeWidth={1.5} color={NAVY} />
           </div>
           <p className={`${cinzel.className} font-semibold uppercase mb-3`} style={{ fontSize: "12px", letterSpacing: "0.15em", color: NAVY }}>{title}</p>
-          <p className={`${playfair.className} leading-relaxed`} style={{ ...paraStyle, fontSize: "13.5px" }}>{desc}</p>
+          <p className={`${playfair.className} leading-relaxed`} style={{ ...paraStyle, fontSize: "16px" }}>{desc}</p>
         </div>
       </Reveal>
     ))}

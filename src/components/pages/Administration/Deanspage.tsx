@@ -753,7 +753,7 @@ export default function DeansPage() {
 
                   <p style={{
                     fontFamily: playfair.style.fontFamily,
-                    fontSize: 'clamp(0.72rem, 0.88vw, 0.84rem)',
+                    fontSize: 'clamp(0.92rem, 0.95vw, 1rem)',
                     lineHeight: 1.75,
                     color: '#555',
                     marginBottom: 'clamp(0.5rem, 1vh, 0.8rem)',
@@ -763,7 +763,7 @@ export default function DeansPage() {
 
                   <p style={{
                     fontFamily: playfair.style.fontFamily,
-                    fontSize: 'clamp(0.72rem, 0.88vw, 0.84rem)',
+                    fontSize: 'clamp(0.92rem, 0.95vw, 1rem)',
                     lineHeight: 1.75,
                     color: '#555',
                     marginBottom: 'clamp(0.8rem, 1.6vh, 1.4rem)',
@@ -798,7 +798,7 @@ export default function DeansPage() {
                         </span>
                         <p style={{
                           fontFamily: playfair.style.fontFamily,
-                          fontSize: 'clamp(0.69rem, 0.84vw, 0.8rem)',
+                          fontSize: 'clamp(0.9rem, 0.9vw, 1rem)',
                           lineHeight: 1.6,
                           color: '#555',
                           margin: 0,
