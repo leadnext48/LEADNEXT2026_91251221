@@ -189,8 +189,8 @@ function HeroSection(): React.JSX.Element {
           .curio-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .curio-hero-inner { grid-template-columns: 1fr; }
           .curio-hero-right, .curio-hero-bg-text { display: none; }
-          .curio-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
-          .curio-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
+          .curio-hero-strip { display: flex; flex-direction: column; flex-wrap: wrap; gap: .6rem; }
+          .curio-strip-item { padding: 0; gap: 10px; flex-direction: row; align-items: center; border-right: none; }
           .curio-strip-item:first-child { padding-left: 0; }
         }
         @media(min-width:768px) and (max-width:1100px){
@@ -378,7 +378,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display:             "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
+            gridTemplateColumns: isMobile ? "minmax(0,1fr)" : "repeat(3,minmax(0,1fr))",
             gap:                 "1rem",
           }}>
           {cards.map((card, i) => {

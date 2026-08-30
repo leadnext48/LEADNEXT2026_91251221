@@ -164,12 +164,20 @@ function HeroSection() {
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media (max-width: 767px) {
-          .lot-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
-          .lot-hero-inner { grid-template-columns: 1fr; }
+          .lot-hero { padding: 5rem 1.25rem 2.5rem; height: auto; min-height: 100svh; overflow-x: hidden; }
+          .lot-hero-inner { grid-template-columns: 1fr; align-items: start; }
           .lot-hero-right, .lot-hero-bg-text { display: none; }
-          .lot-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
-          .lot-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
-          .lot-strip-item:first-child { padding-left: 0; }
+          .lot-hero h1 { white-space: normal !important; }
+          .lot-hero-strip { grid-template-columns: 1fr; gap: .5rem; }
+          .lot-strip-item {
+            padding: .55rem 0; gap: 10px;
+            flex-direction: row; align-items: center;
+            border-right: none; border-bottom: 1px solid rgba(0,92,159,.10);
+            overflow: visible;
+          }
+          .lot-strip-item:first-child { padding-left: 0; padding-top: 0; }
+          .lot-strip-item:last-child { border-bottom: none; }
+          .lot-strip-label, .lot-strip-sub { white-space: normal; overflow: visible; text-overflow: clip; }
         }
       `}</style>
 
@@ -478,7 +486,7 @@ function ClubsSection() {
           </h2>
         </div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.04 }} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, minmax(0, 1fr))", gap: "1.25rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.04 }} style={{ display: "grid", gridTemplateColumns: isMobile ? "minmax(0, 1fr)" : "repeat(4, minmax(0, 1fr))", gap: "1.25rem" }}>
           {CLUBS.map((club, i) => <ClubCard key={club.id} club={club} index={i} />)}
         </motion.div>
       </div>

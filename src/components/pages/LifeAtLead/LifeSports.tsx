@@ -61,11 +61,20 @@ export default function LifeSports() {
           </h2>
         </div>
 
-        <LifeSectionGrid columns={2}>
-          {FEATURES.map((f) => (
-            <LifeFeatureCard key={f.title} icon={f.icon} title={f.title} description={f.description} />
-          ))}
-        </LifeSectionGrid>
+        <div className="lifesports-features">
+          <style>{`
+            @media (max-width: 640px) {
+              .lifesports-features > div {
+                grid-template-columns: minmax(0, 1fr) !important;
+              }
+            }
+          `}</style>
+          <LifeSectionGrid columns={2}>
+            {FEATURES.map((f) => (
+              <LifeFeatureCard key={f.title} icon={f.icon} title={f.title} description={f.description} />
+            ))}
+          </LifeSectionGrid>
+        </div>
       </section>
 
       {/* Gallery */}

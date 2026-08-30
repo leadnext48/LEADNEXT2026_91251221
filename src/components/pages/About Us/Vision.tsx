@@ -505,6 +505,13 @@ export const VisionMissionPage: React.FC = () => (
         .pcard-label { font-size:clamp(2rem,8vw,3rem); }
         .pcard-index { font-size:clamp(3.5rem,14vw,5rem); }
       }
+      @media(max-width:640px) {
+        /* paragraphs full width — drop narrower-column cap so left edge aligns with heading */
+        .pcard-body, .pcard-bullets { max-width:none; }
+        /* images square on mobile */
+        .pcard-img-wrap { aspect-ratio:1/1; }
+        .pcard-img { object-fit:cover; }
+      }
 
       /* ══ PROGRAMME OUTCOMES ══ */
       .po2-section {

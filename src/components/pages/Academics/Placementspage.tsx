@@ -1204,6 +1204,18 @@ function VoicesSection() {
   const [ref, vis] = useInView(0.1);
   const trackRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  // Mobile: tapping the carousel toggles pause; tapping anywhere outside resumes.
+  useEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        setIsPaused(false);
+      }
+    };
+    document.addEventListener("click", onDocClick);
+    return () => document.removeEventListener("click", onDocClick);
+  }, []);
 
   const items = [...TESTIMONIALS, ...TESTIMONIALS];
 
@@ -1222,9 +1234,11 @@ function VoicesSection() {
       </div>
 
       <div
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        style={{ overflow: "hidden" }}>
+        ref={wrapRef}
+        onPointerEnter={(e) => { if (e.pointerType === "mouse") setIsPaused(true); }}
+        onPointerLeave={(e) => { if (e.pointerType === "mouse") setIsPaused(false); }}
+        onClick={() => setIsPaused((p) => !p)}
+        style={{ overflow: "hidden", cursor: "pointer", WebkitTapHighlightColor: "transparent" }}>
         <div
           ref={trackRef}
           style={{
@@ -1271,7 +1285,7 @@ function VoicesSection() {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1.5rem", padding: "0 clamp(2rem,5vw,5rem)" }}>
-        <span style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#ccc" }}>Hover to pause · 9 alumni stories</span>
+        <span style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#ccc" }}>Tap or hover to pause · 9 alumni stories</span>
       </div>
 
       <style>{`

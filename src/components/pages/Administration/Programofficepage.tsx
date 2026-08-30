@@ -453,6 +453,7 @@ export default function ProgramOfficePage() {
         }
         @media (max-width: 640px) {
           .po-cards-grid { grid-template-columns: 1fr; }
+          .po-intro-cols { grid-template-columns: minmax(0, 1fr) !important; }
           .po-metrics-grid { grid-template-columns: 1fr 1fr; }
           .po-eco-grid { grid-template-columns: 1fr 1fr; }
           .po-corner-tl { top: 14px; left: 14px; width: 32px; height: 32px; }
@@ -662,7 +663,7 @@ export default function ProgramOfficePage() {
                 }}>
                   The Operational Backbone<br />of Academic Delivery.
                 </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(1rem, 2vw, 2.5rem)' }}>
+                <div className="po-intro-cols" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(1rem, 2vw, 2.5rem)' }}>
                   <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.82rem, 1vw, 0.96rem)', lineHeight: 1.85, color: '#555', margin: 0 }}>
                     The Program Office at LEAD College ensures that every program is executed smoothly, efficiently, and in alignment with the institution's academic standards and industry orientation. It is the invisible force that keeps the academic engine running.
                   </p>

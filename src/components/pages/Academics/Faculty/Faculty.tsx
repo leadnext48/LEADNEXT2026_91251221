@@ -530,13 +530,20 @@ export default function FacultyPage() {
 
         /* ── Responsive ─────────────────────────────────────── */
         @media(max-width:900px) {
-          .fac-section-hdr-row { flex-direction: column; }
+          .fac-section-hdr-row { flex-direction: column; align-items: flex-start; text-align: left; }
+          .fac-section-title { text-align: left; }
           .faculty-grid { grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); }
         }
         @media(max-width:580px) {
           .faculty-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
           .fac-grid-section { padding: 3rem 1.2rem 4rem; }
           .fac-hero { padding: 3rem 1.5rem 3.5rem; }
+          .fac-hero-stats { justify-content: center; gap: 10px 4px; }
+          .fac-stat {
+            border-right: none;
+            padding: clamp(0.3rem,0.5vh,0.5rem) 12px;
+          }
+          .fac-stat:first-child { padding-left: 12px; }
         }
         @media(prefers-reduced-motion:reduce) {
           .fac-marquee-track { animation: none; }

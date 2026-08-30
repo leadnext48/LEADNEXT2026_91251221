@@ -175,12 +175,13 @@ function HeroSection(): React.JSX.Element {
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media(max-width:767px){
-          .canteen-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
+          .canteen-hero { padding: 5rem 1.25rem 2rem; height: auto; min-height: 100svh; }
           .canteen-hero-inner { grid-template-columns: 1fr; }
           .canteen-hero-right, .canteen-hero-bg-text { display: none; }
-          .canteen-hero-strip { grid-template-columns: repeat(3,1fr); gap: .25rem; }
-          .canteen-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
+          .canteen-hero-strip { grid-template-columns: 1fr; gap: .6rem; }
+          .canteen-strip-item { padding: 0; gap: 10px; flex-direction: row; align-items: center; border-right: none; }
           .canteen-strip-item:first-child { padding-left: 0; }
+          .canteen-strip-label, .canteen-strip-sub { white-space: normal; overflow: visible; text-overflow: clip; }
         }
         @media(min-width:768px) and (max-width:1100px){
           .canteen-hero { padding-left: 3rem; padding-right: 3rem; }
@@ -549,7 +550,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
+            gridTemplateColumns: isMobile ? "minmax(0,1fr)" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {cards.map((card, i) => {

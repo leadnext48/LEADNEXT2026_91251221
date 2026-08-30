@@ -205,8 +205,25 @@ function HeroSection() {
         .mh-marquee-item { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
         @media (max-width: 600px) {
           .mh-marquee-wrap { display: none; }
-          .mh-strip { overflow-x: auto; flex-wrap: nowrap; }
-          .mh-strip-item { min-width: 140px; }
+          .mh-section {
+            height: auto;
+            max-height: none;
+            min-height: 100svh;
+            justify-content: flex-start;
+            gap: 1.5rem;
+          }
+          .mh-strip {
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 0.5rem;
+          }
+          .mh-strip::-webkit-scrollbar { display: none; }
+          .mh-strip-item {
+            flex: 0 0 auto;
+            min-width: 150px;
+          }
         }
         @media (prefers-reduced-motion: reduce) {
           .mh-marquee-track { animation: none; }

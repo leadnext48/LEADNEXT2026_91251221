@@ -535,7 +535,7 @@ export default function AdmissionsPage() {
                 </div>
                 <p style={{ ...P, fontSize:'0.78rem', maxWidth:260 }}>Four programs for industry, entrepreneurship, technology &amp; academia.</p>
               </div>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
                 {programs.map(prog => (
                   <div key={prog.code} className="pc relative rounded-xl overflow-hidden border border-gray-100 shadow-sm bg-white flex flex-col" style={{ opacity:1 }}>
                     <div className="relative h-28 flex-shrink-0 overflow-hidden">
@@ -725,7 +725,7 @@ export default function AdmissionsPage() {
                   <p style={P}>With a strong legacy in management and professional education, LEAD is driven by an entrepreneurial culture and a commitment to developing industry-ready and socially responsible professionals.</p>
                   <p style={P}>Our unique teaching–learning philosophy emphasises application-based learning, skill development, and strong industry alignment — cultivating professionals who lead with purpose and act with integrity.</p>
                 </div>
-                <div className="grid grid-cols-2 gap-2.5 mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
                   {newsFeatures.map(f => (
                     <div key={f.label} className="nf nf-i flex items-start gap-2.5 bg-blue-50/45 rounded-xl p-3 border border-blue-100/45" style={{ opacity:1 }}>
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background:'rgba(30,58,138,0.07)', color:BLUE }}>{f.icon}</div>

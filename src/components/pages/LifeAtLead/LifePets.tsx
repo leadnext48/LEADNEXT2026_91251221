@@ -178,9 +178,11 @@ function HeroSection(): React.JSX.Element {
           .pets-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .pets-hero-inner { grid-template-columns: 1fr; }
           .pets-hero-right, .pets-hero-bg-text { display: none; }
-          .pets-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
-          .pets-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
+          .pets-hero-strip { grid-template-columns: 1fr; gap: .75rem; }
+          .pets-strip-item { padding: 0; gap: 10px; flex-direction: row; align-items: center; border-right: none; overflow: visible; }
           .pets-strip-item:first-child { padding-left: 0; }
+          .pets-strip-text { overflow: visible; }
+          .pets-strip-label, .pets-strip-sub { white-space: normal; overflow: visible; text-overflow: clip; }
         }
         @media(min-width:768px) and (max-width:1100px){
           .pets-hero { padding-left: 3rem; padding-right: 3rem; }
@@ -518,7 +520,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
+            gridTemplateColumns: isMobile ? "minmax(0,1fr)" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {cards.map((card, i) => {

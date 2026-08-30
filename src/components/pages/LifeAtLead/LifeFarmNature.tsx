@@ -178,9 +178,11 @@ function HeroSection(): React.JSX.Element {
           .farm-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .farm-hero-inner { grid-template-columns: 1fr; }
           .farm-hero-right, .farm-hero-bg-text { display: none; }
-          .farm-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
-          .farm-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
-          .farm-strip-item:first-child { padding-left: 0; }
+          .farm-hero-strip { grid-template-columns: 1fr; gap: .6rem; }
+          .farm-strip-item { padding: .55rem 0; gap: 10px; flex-direction: row; align-items: center; border-right: none; border-bottom: 1px solid rgba(0,92,159,.1); }
+          .farm-strip-item:first-child { padding-left: 0; padding-top: 0; }
+          .farm-strip-item:last-child { border-bottom: none; padding-bottom: 0; }
+          .farm-strip-label, .farm-strip-sub { white-space: normal; overflow: visible; text-overflow: clip; }
         }
         @media(min-width:768px) and (max-width:1100px){
           .farm-hero { padding-left: 3rem; padding-right: 3rem; }
@@ -522,7 +524,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
+            gridTemplateColumns: isMobile ? "minmax(0,1fr)" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {cards.map((card, i) => {

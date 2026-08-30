@@ -126,7 +126,7 @@ function HeroSection() {
         .tp-strip-sub { display:block; font-size:clamp(.6rem,.75vw,.72rem); color:#777; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         .tp-hero-right { position:relative; align-self:flex-end; display:flex; align-items:flex-end; justify-content:center; height:100%; }
         .tp-thomman-img { position:relative; width:100%; height:100%; max-height:88svh; }
-        @media (max-width:767px) { .tp-hero { padding:5rem 1.25rem 0; height:auto; min-height:100svh; } .tp-hero-inner { grid-template-columns:1fr; } .tp-hero-right, .tp-hero-bg-text { display:none; } .tp-hero-strip { grid-template-columns:repeat(3,minmax(0,1fr)); gap:.25rem; } .tp-strip-item { padding:0 .4rem; gap:6px; flex-direction:column; align-items:flex-start; } .tp-strip-item:first-child { padding-left:0; } }
+        @media (max-width:767px) { .tp-hero { padding:5rem 1.25rem 2.5rem; height:auto; min-height:100svh; } .tp-hero-inner { grid-template-columns:1fr; } .tp-hero-right, .tp-hero-bg-text { display:none; } .tp-hero-strip { display:flex; flex-wrap:wrap; justify-content:center; gap:.9rem 1.1rem; } .tp-strip-item { padding:0; gap:8px; flex:0 1 auto; border-right:none; flex-direction:row; align-items:center; } .tp-strip-item:first-child { padding-left:0; } }
         @media (min-width:768px) and (max-width:1100px) { .tp-hero { padding-left:3rem; padding-right:3rem; } }
       `}</style>
       <section className={`tp-hero ${cinzel.className}`}>
@@ -269,7 +269,7 @@ function JourneySection() {
           <h2 style={{ fontFamily:cinzel.style.fontFamily, fontSize:"clamp(1.2rem,2.2vw,2.7rem)", fontWeight:800, textTransform:"uppercase", letterSpacing:"-.025em", color:"#0D0D0D", margin:"0 0 .8rem", lineHeight:1 }}>The 7-Day Journey</h2>
           <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.82rem,.92vw,.88rem)", color:"#888", maxWidth:440, margin:"0 auto", lineHeight:1.65 }}>Each day builds deliberately on the last — from self-awareness through to committed, purposeful action.</p>
         </motion.div>
-        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr 1fr":"repeat(4,minmax(0,1fr))", gap:"1rem", marginBottom:"1rem" }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER} style={{ display:"grid", gridTemplateColumns:isMobile?"1fr":"repeat(4,minmax(0,1fr))", gap:"1rem", marginBottom:"1rem" }}>
           {DAYS.slice(0,4).map((day) => { const Icon = day.icon; return (
             <motion.div key={day.day} variants={STAGGER_ITEM} style={{ background:"#fff", borderRadius:14, overflow:"hidden", border:"1px solid rgba(0,0,0,.06)", boxShadow:"0 2px 14px rgba(0,0,0,.05)", display:"flex", flexDirection:"column" }}>
               <div style={{ height:118, overflow:"hidden", flexShrink:0, position:"relative" }}>

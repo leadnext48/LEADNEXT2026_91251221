@@ -275,19 +275,38 @@ function BioSection() {
         }
 
         /* Mobile */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+          .bio-section { overflow-x: hidden; }
           .bio-inner {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
+            gap: clamp(2rem, 5vw, 3rem);
           }
           .bio-image-col {
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 1rem;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1.2rem;
+            width: 100%;
+            max-width: 100%;
           }
           .bio-image-frame {
-            width: 140px;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
             flex-shrink: 0;
             aspect-ratio: 3/4;
+          }
+          /* neutralize decorative negative offset so it can't poke past the edge */
+          .bio-image-frame::before {
+            inset: 0;
+          }
+          .bio-text-col {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+          }
+          .bio-body p {
+            overflow-wrap: break-word;
+            word-break: break-word;
           }
           .bio-stats { flex-direction: column; }
         }

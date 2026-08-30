@@ -95,12 +95,12 @@ const FontStyle = () => (
       .ls-hero {
         grid-template-columns: 1fr;
         padding: 5rem 6vw 4rem;
-        text-align: center;
+        text-align: left;
       }
-      .ls-hero-left { align-items: center; }
-      .ls-label { justify-content: center; }
-      .ls-body { max-width: 60ch; margin-left: auto; margin-right: auto; }
-      .ls-hero-image-wrap { grid-row: auto; margin-top: 3.5rem; width: 100%; max-width: 460px; margin-left: auto; margin-right: auto; }
+      /* Reset explicit desktop grid placement so children stack in flow */
+      .ls-hero-left { grid-column: auto; grid-row: auto; align-items: stretch; }
+      .ls-body { max-width: none; margin-left: 0; margin-right: 0; }
+      .ls-hero-image-wrap { grid-column: auto; grid-row: auto; margin-top: 3.5rem; width: 100%; max-width: 460px; margin-left: auto; margin-right: auto; }
       /* Hide the small accent photo on mobile — it shrinks too much to look good */
       .ls-hero-accent-sq { display: none !important; }
       /* Keep the decorative badge/frame INSIDE the image on mobile so they don't

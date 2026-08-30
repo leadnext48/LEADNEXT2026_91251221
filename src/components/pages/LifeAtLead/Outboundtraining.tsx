@@ -395,7 +395,7 @@ function PhilosophySection(): React.JSX.Element {
             </p>
 
             {/* 2×2 truth grid */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: ".85rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: ".85rem" }}>
               {truths.map((t, i) => (
                 <div key={i} style={{
                   background:   "#ffffff",
@@ -509,7 +509,7 @@ function ActivitiesSection(): React.JSX.Element {
 
             <motion.div
               initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
-              style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: ".85rem" }}
+              style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: ".85rem" }}
             >
               {ACTIVITIES.map((act, i) => (
                 <motion.div key={i} variants={STAGGER_ITEM} style={{

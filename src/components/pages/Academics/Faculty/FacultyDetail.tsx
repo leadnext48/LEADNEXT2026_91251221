@@ -154,7 +154,7 @@ export default function FacultyDetailPage() {
           <div className="fd-identity">
 
             <Link href="/faculty" className="fd-back">
-              <ArrowLeft size={13} strokeWidth={2} /><span>All Faculty</span>
+              <ArrowLeft size={14} strokeWidth={2.2} /><span>Back to Faculty</span>
             </Link>
 
             <div className="fd-name-wrap">
@@ -463,11 +463,21 @@ export default function FacultyDetailPage() {
           font-weight: 700;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          opacity: 0.65;
-          transition: gap 0.2s, opacity 0.2s;
+          padding: 7px 15px;
+          border: 1px solid rgba(0,92,159,.3);
+          border-radius: 100px;
+          background: rgba(0,92,159,.05);
+          opacity: 1;
+          transition: gap 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
           align-self: flex-start;
         }
-        .fd-back:hover { gap: 12px; opacity: 1; }
+        .fd-back:hover {
+          gap: 12px;
+          background: rgba(0,92,159,.1);
+          border-color: ${BLUE};
+          box-shadow: 0 2px 8px rgba(0,92,159,.12);
+        }
+        .fd-back:hover span { text-decoration: underline; text-underline-offset: 3px; }
 
         .fd-name-wrap { display: flex; flex-direction: column; gap: 6px; }
 
@@ -779,9 +789,19 @@ export default function FacultyDetailPage() {
           .fd-sidebar {
             position: relative;
             width: 100%;
-            height: 60vw;
-            max-height: 420px;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            max-height: 80vh;
+            background: #eef4fb;
           }
+          /* Show the ENTIRE photo on mobile (no cropping) instead of object-fit:cover */
+          .fd-sidebar img {
+            object-fit: contain !important;
+            object-position: center !important;
+          }
+          /* The bottom-fade overlay is meant for a cover crop; drop it so a
+             contained portrait isn't darkened over its own edges */
+          .fd-sidebar-overlay { display: none; }
           .fd-identity {
             min-height: auto;
             padding: 2rem 1.5rem 2.5rem;
