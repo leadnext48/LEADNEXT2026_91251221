@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Footer from "@/components/pages/Footer"
 import "./globals.css"
 import ScrollHeader from "@/components/layout/ScrollHeader"
+import FooterGate from "@/components/layout/FooterGate"
 
 // ── Site-wide SEO constants ──────────────────────────────────────────────
 // NOTE: SITE_URL is the canonical production domain. Update it if the site
@@ -173,7 +174,9 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
 
         {/* Sticky Footer */}
-        <Footer />
+        <FooterGate>
+          <Footer />
+        </FooterGate>
       </body>
     </html>
   )
