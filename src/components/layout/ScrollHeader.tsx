@@ -8,8 +8,7 @@ export default function ScrollHeader() {
 
   // The homepage at "/" renders its own always-visible header (blue strip +
   // Header) inside the page, so suppress this one there to avoid a double nav.
-  // The /home-v3 preview also ships its own custom nav, so suppress it there too.
-  if (pathname === "/" || pathname === "/home-v3") return null;
+  if (pathname === "/") return null;
 
   // Every other page: render the header as a normal sticky header that is
   // ALWAYS visible and stays in the document flow. Because it is sticky (not
