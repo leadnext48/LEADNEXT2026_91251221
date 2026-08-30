@@ -263,7 +263,7 @@ export default function GovernancePage() {
           .gov-hero-lottie { display: none; }
           .gov-hero-eyebrow { flex-wrap: wrap; letter-spacing: 0.22em; }
           .gov-hero-stats { flex-wrap: wrap; overflow: visible; gap: 0.85rem 0; }
-          .gov-stat { border-right: none; padding-left: 0; padding-right: clamp(1rem,4vw,2rem); }
+          .gov-stat { flex: 0 0 50%; box-sizing: border-box; border-right: none; padding-left: 0; padding-right: clamp(1rem,4vw,2rem); }
         }
 
         .gov-hero-eyebrow {

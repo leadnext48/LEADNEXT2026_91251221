@@ -639,7 +639,7 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
           font-size: 0.95rem;
           letter-spacing: 0.02em;
           color: var(--muted);
-          font-style: italic;
+          font-style: normal;
         }
 
         .hsv-scroll { position: relative; }
@@ -746,6 +746,11 @@ export const HeroScrollVideo: React.FC<HeroScrollVideoProps> = ({
           .hsv-overlay {
             padding: clamp(50px, 6vw, 80px) clamp(12px, 3vw, 24px) clamp(12px, 3vw, 24px);
           }
+        }
+
+        /* Hide the scroll-driven video section on mobile/tablet — show only on laptop+ */
+        @media (max-width: 1023px) {
+          .hsv-scroll { display: none; }
         }
       `}</style>
     </div>
