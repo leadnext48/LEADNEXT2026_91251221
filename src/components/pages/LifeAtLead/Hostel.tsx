@@ -178,9 +178,10 @@ function HeroSection(): React.JSX.Element {
           .hostel-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
           .hostel-hero-inner { grid-template-columns: 1fr; }
           .hostel-hero-right, .hostel-hero-bg-text { display: none; }
-          .hostel-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
-          .hostel-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
+          .hostel-hero-strip { grid-template-columns: 1fr; gap: .85rem; }
+          .hostel-strip-item { padding: 0; gap: 10px; flex-direction: row; align-items: center; border-right: none; overflow: visible; }
           .hostel-strip-item:first-child { padding-left: 0; }
+          .hostel-strip-label, .hostel-strip-sub { white-space: normal; overflow: visible; text-overflow: clip; }
         }
         @media(min-width:768px) and (max-width:1100px){
           .hostel-hero { padding-left: 3rem; padding-right: 3rem; }
@@ -550,7 +551,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={STAGGER_CONTAINER}
           style={{
             display: "grid",
-            gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(3,minmax(0,1fr))",
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(3,minmax(0,1fr))",
             gap: "1rem",
           }}>
           {cards.map((card, i) => {
