@@ -114,10 +114,12 @@ function HeroSection() {
     <>
       <style>{`
         .griev-hero {
-          width: 100%; height: 100vh;
+          width: 100%; height: auto; min-height: 100vh;
           background: #ffffff;
           position: relative; overflow: hidden;
-          padding: 0 ${SECTIONX};
+          /* top padding clears the sticky header so the title isn't on the
+             borderline; grows with content so nothing is clipped on mobile. */
+          padding: clamp(5.5rem,11vh,8rem) ${SECTIONX} clamp(3rem,6vh,4.5rem);
           box-sizing: border-box;
           display: flex; flex-direction: column; justify-content: center;
         }

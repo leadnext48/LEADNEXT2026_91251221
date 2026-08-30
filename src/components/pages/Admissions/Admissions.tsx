@@ -500,7 +500,7 @@ export default function AdmissionsPage() {
                   <p style={P}>We are a fully residential college focused on building stellar careers through our unique ABCDE teaching-learning concept. Our admission process, <strong>VLEAD</strong>, is designed for holistic evaluation — marks are only one element of the selection criteria.</p>
                   <p style={P}>Our teaching philosophy emphasises application-based learning, skill development, and strong industry alignment — producing graduates who are industry-ready and socially responsible.</p>
                 </div>
-                <div className="grid grid-cols-4 gap-2.5 mb-5">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 mb-5">
                   {[{v:'360',l:'MBA Seats'},{v:'2+',l:'PG Programs'},{v:'NBA',l:'Accredited'},{v:'100%',l:'Residential'}].map(s=>(
                     <div key={s.v} className="bg-blue-50/60 rounded-xl p-3 text-center border border-blue-100/50">
                       <p className={cinzel.className} style={{ fontSize:'1.25rem', fontWeight:700, color:BLUE, lineHeight:1 }}>{s.v}</p>
@@ -599,7 +599,7 @@ export default function AdmissionsPage() {
                     <strong>VLEAD</strong> is LEAD's holistic selection framework — designed to identify candidates with the right attitude and potential, not just academic scores. Our uLEAD cycle begins <strong>December 1st</strong> each year, with multiple rounds over 8 months.
                   </p>
                   <div className="w-full h-20"><UndrawGraduation /></div>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 gap-2">
                     {vleadCriteria.map(c=>(
                       <div key={c.label} className="rounded-xl p-2.5 border border-blue-100/60 flex flex-col gap-1" style={{ background:'rgba(30,58,138,0.025)' }}>
                         <div className="flex items-center gap-1.5">

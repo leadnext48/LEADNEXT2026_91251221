@@ -135,9 +135,11 @@ function HeroSection() {
     <>
       <style>{`
         .lib-hero {
-          width: 100%; height: 100vh; min-height: 600px;
+          width: 100%; height: auto; min-height: 100vh;
           background: #ffffff; position: relative; overflow: hidden;
-          padding: 0 ${SECTIONX}; box-sizing: border-box;
+          /* top padding clears the sticky header so NALANDA isn't cut off; grows
+             with content so nothing is clipped on mobile. */
+          padding: clamp(5.5rem,11vh,8rem) ${SECTIONX} clamp(3rem,6vh,4.5rem); box-sizing: border-box;
           display: flex; flex-direction: column; justify-content: center;
         }
         .lib-hero::before {
@@ -764,6 +766,18 @@ function EResourcesSection() {
             </p>
           </div>
 
+          {/* Mobile dropdown — replaces the tab bar on small screens */}
+          <select
+            className="lib-eres-select"
+            value={activeTab}
+            onChange={(e) => setActiveTab(e.target.value as ETab)}
+            aria-label="Select an e-resource category"
+          >
+            {E_TABS.map((tab) => (
+              <option key={tab.id} value={tab.id}>{tab.label}</option>
+            ))}
+          </select>
+
           {/* Tab bar */}
           <div className="lib-tabbar" style={{ display: "flex", gap: ".5rem", flexWrap: "wrap", marginBottom: "2.2rem", borderBottom: `1px solid ${C.border}`, paddingBottom: 0 }}>
             {E_TABS.map(tab => {
@@ -831,6 +845,17 @@ function EResourcesSection() {
 
       <style>{`
         .lib-tab-short { display: none; }
+        .lib-eres-select {
+          display: none; width: 100%; padding: .8rem 1rem; margin-bottom: 2rem;
+          border: 1px solid #E8EEF4; border-radius: 8px; background: #fff;
+          font-family: var(--font-cinzel, serif); font-size: .8rem;
+          letter-spacing: .08em; text-transform: uppercase; color: #005C9F; font-weight: 700;
+          cursor: pointer;
+        }
+        @media(max-width:700px){
+          .lib-tabbar { display: none !important; }
+          .lib-eres-select { display: block; }
+        }
         @media(max-width:960px){ .lib-panel-grid { grid-template-columns: 1fr !important; } }
         @media(max-width:600px){
           .lib-tab-full { display: none; }
