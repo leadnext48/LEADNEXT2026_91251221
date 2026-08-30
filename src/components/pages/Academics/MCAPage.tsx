@@ -179,7 +179,7 @@ export default function MCAPage() {
           @media (max-width: 1023px) {
             .vh { height: auto; min-height: 100vh; overflow: visible; padding-top: 5.5rem; padding-bottom: 4rem; }
             /* Full-bleed image sections (hero, CTA) keep their clip so parallax stays contained */
-            .vh.bg-black { overflow: hidden; padding-top: 0; padding-bottom: 0; }
+            .vh.bg-black { overflow: hidden; padding-top: 6rem; padding-bottom: 5rem; }
           }
 
           .h-line   { opacity: 0; transform: rotateX(80deg) translateY(-30px) scale(0.88); filter: blur(4px); transform-style: preserve-3d; backface-visibility: hidden; }
@@ -550,7 +550,7 @@ export default function MCAPage() {
               </div>
 
               {/* Right: 4×2 career grid */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {CAREER_PATHS.map(({ title, desc, path }) => (
                   <div key={title} className="ca-item bg-white rounded-2xl p-4 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center" style={{ opacity: 1 }}>
                     <div className="w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3" style={{ background: BLUE }}>

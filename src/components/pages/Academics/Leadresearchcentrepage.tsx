@@ -247,35 +247,7 @@ function Hero() {
               access to research infrastructure, and mentorship from KUFOS-approved guides,
               we remove every barrier between you and your research goals.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.1, ease: E }}
-              className="flex items-stretch border-t pt-4"
-              style={{ borderColor: "rgba(255,255,255,0.08)", maxWidth: "480px" }}
-            >
-              {[
-                { val: 15,  suf: "K", pre: "₹", label: "Monthly Stipend"   },
-                { val: 100, suf: "%", pre: "",   label: "Free Accommodation" },
-                { val: 3,   suf: "",  pre: "",   label: "Ph.D. Guides"       },
-              ].map((s, i) => (
-                <div
-                  key={s.label}
-                  className="flex-1 flex flex-col justify-center pt-4 pb-1"
-                  style={{
-                    borderRight: i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none",
-                    paddingLeft: i === 0 ? 0 : "1.5rem",
-                    paddingRight: i < 2 ? "1.5rem" : 0,
-                  }}
-                >
-                  <span className={`${cinzel.className} font-bold text-white leading-none`} style={{ fontSize: "clamp(20px,2.4vw,36px)", letterSpacing: "-0.02em" }}>
-                    <Num to={s.val} prefix={s.pre} suffix={s.suf} />
-                  </span>
-                  <span className={`${cinzel.className} uppercase mt-1.5`} style={{ fontSize: "11px", letterSpacing: "0.2em", color: "rgba(255,255,255,0.3)", lineHeight: 1.4 }}>
-                    {s.label}
-                  </span>
-                </div>
-              ))}
-            </motion.div>
+            {/* Hero stat strip removed per request */}
           </div>
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}

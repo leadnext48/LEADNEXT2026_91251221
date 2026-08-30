@@ -172,8 +172,8 @@ const labels: Record<ResourceType, string> = {
 
 function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceType; fileUrl?: string | null }) {
   return (
-    <div className="group flex items-center justify-between p-5 border-b border-gray-100 last:border-b-0 hover:bg-blue-50/30 transition-colors duration-200">
-      <div className="flex items-center gap-4 flex-1 min-w-0">
+    <div className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 p-5 border-b border-gray-100 last:border-b-0 hover:bg-blue-50/30 transition-colors duration-200">
+      <div className="flex items-center gap-4 w-full sm:flex-1 min-w-0">
         <div className="flex-shrink-0 w-8 h-10 bg-white border border-gray-200 flex items-center justify-center group-hover:border-blue-300 transition-colors">
           <svg width="14" height="16" viewBox="0 0 24 28" fill="none" stroke="#9ca3af" strokeWidth="1.5" className="group-hover:stroke-blue-500 transition-colors">
             <path d="M4 2h10l6 6v18H4z" />
@@ -182,12 +182,12 @@ function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceTy
             <line x1="8" y1="18" x2="14" y2="18" />
           </svg>
         </div>
-        <div className="min-w-0">
+        <div className="flex-1 min-w-0">
           <p className={`${playfair.className} text-[#111] text-base font-medium truncate group-hover:text-blue-900 transition-colors`}>{title}</p>
         </div>
         <span className={`${cinzel.className} text-[12px] font-bold px-2 py-0.5 border rounded-full flex-shrink-0 ${colors[type]}`}>{labels[type]}</span>
       </div>
-      <div className="flex items-center gap-2 ml-4 flex-shrink-0">
+      <div className="flex items-center gap-2 ml-0 sm:ml-4 flex-shrink-0 self-end sm:self-auto">
         {fileUrl ? (
           <motion.a
             href={fileUrl}
@@ -309,8 +309,7 @@ export default function ExaminationsPage({
       <section ref={heroRef} className="relative h-screen flex flex-col overflow-hidden bg-white">
         {/* Parallax background — grid removed */}
         <motion.div style={{ y: heroY }} className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[700px] rounded-full bg-blue-50/70 blur-[100px]" />
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-blue-100/40 blur-[80px]" />
+          {/* Background kept clean white to match other sections */}
         </motion.div>
 
         {/* Hero Content — left ~55%, illustration right ~45% */}
@@ -346,7 +345,7 @@ export default function ExaminationsPage({
                 transition={{ duration: 1, ease: EASE, delay: 0.1 }}
                 className={`${cinzel.className} font-black leading-none tracking-tight`}
                 style={{
-                  fontSize: "clamp(2.6rem,5vw,4.2rem)",
+                  fontSize: "clamp(1.85rem,6vw,4.2rem)",
                   ...gradientTextStyle,
                 }}
               >
@@ -525,7 +524,7 @@ export default function ExaminationsPage({
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <SectionReveal className="text-center mb-16">
             <span className={`${cinzel.className} text-blue-600 text-xs tracking-[0.4em] uppercase block mb-4`}>What We Do</span>
-            <h2 className={`${cinzel.className} text-4xl font-bold`} style={gradientTextStyle}>KEY RESPONSIBILITIES</h2>
+            <h2 className={`${cinzel.className} text-2xl sm:text-4xl font-bold break-words`} style={gradientTextStyle}>KEY RESPONSIBILITIES</h2>
             <div className="w-12 h-0.5 bg-blue-700 mx-auto mt-6" />
           </SectionReveal>
 

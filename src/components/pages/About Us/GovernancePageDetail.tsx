@@ -232,12 +232,13 @@ export default function GovernanceDetailPage() {
 
         /* ── Hero ── */
         .hero-section {
-          height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
+          overflow: visible;
           display: flex;
           align-items: center;
           justify-content: center;
           box-sizing: border-box;
+          padding: 6.5rem 1.5rem 3rem;
         }
 
         .hero-inner {
@@ -442,11 +443,13 @@ height: clamp(96px, 11vw, 140px);
         }
 
         @media (max-width: 900px) {
+          .hero-section { align-items: flex-start; }
           .hero-inner,
           .composition-inner {
             width: 86%;
             max-width: none;
           }
+          .hero-inner { margin-top: 0; }
         }
 
         @media (max-width: 600px) {
