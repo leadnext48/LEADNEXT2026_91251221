@@ -110,7 +110,7 @@ function ResponsibilityCard({ icon, title, desc, delay }: { icon: React.ReactNod
           <span className="text-blue-700 group-hover:text-white transition-colors duration-300">{icon}</span>
         </div>
         <h4 className={`${cinzel.className} text-sm font-bold tracking-widest text-gray-900 mb-3 uppercase`}>{title}</h4>
-        <p className={`${playfair.className} text-gray-600 text-base leading-relaxed`}>{desc}</p>
+        <p className={`${playfair.className} text-[#111] text-base leading-relaxed`}>{desc}</p>
       </div>
     </motion.div>
   );
@@ -142,8 +142,8 @@ function FacultyCard({ name, role, qualifications, email, initials, delay }: { n
         </div>
         <div className="text-center">
           <h4 className={`${cinzel.className} text-base font-bold tracking-wide text-gray-900 mb-2`}>{name}</h4>
-          <p className={`${playfair.className} text-blue-700 font-semibold text-sm mb-3 italic`}>{role}</p>
-          {qualifications && <p className={`${playfair.className} text-gray-500 text-xs mb-4 tracking-wide`}>{qualifications}</p>}
+          <p className={`${playfair.className} text-blue-700 font-semibold text-sm mb-3`}>{role}</p>
+          {qualifications && <p className={`${playfair.className} text-[#111] text-xs mb-4 tracking-wide`}>{qualifications}</p>}
           <a href={`mailto:${email}`} className={`${playfair.className} text-xs text-gray-400 hover:text-blue-700 transition-colors duration-200 flex items-center justify-center gap-2`}>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
             {email}
@@ -183,7 +183,7 @@ function ResourceRow({ title, type, fileUrl }: { title: string; type: ResourceTy
           </svg>
         </div>
         <div className="min-w-0">
-          <p className={`${playfair.className} text-gray-800 text-sm font-medium truncate group-hover:text-blue-900 transition-colors`}>{title}</p>
+          <p className={`${playfair.className} text-[#111] text-base font-medium truncate group-hover:text-blue-900 transition-colors`}>{title}</p>
         </div>
         <span className={`${cinzel.className} text-[12px] font-bold px-2 py-0.5 border rounded-full flex-shrink-0 ${colors[type]}`}>{labels[type]}</span>
       </div>
@@ -260,7 +260,7 @@ function PaginatedResourceGroup({ label, items }: { label: string; items: Resour
     <div className="mb-10">
       <h3 className={`${cinzel.className} text-xs font-bold tracking-[0.3em] text-gray-400 mb-4 uppercase`}>— {label}</h3>
       {items.length === 0 ? (
-        <div className={`${playfair.className} border border-gray-200 p-5 text-base text-gray-400 italic`}>
+        <div className={`${playfair.className} border border-gray-200 p-5 text-base text-[#111]`}>
           No documents published yet.
         </div>
       ) : (
@@ -371,7 +371,7 @@ export default function ExaminationsPage({
               animate="visible"
               className={`${playfair.className}`}
               style={{
-                color: "#555",
+                color: "#111",
                 fontSize: "clamp(14px,0.9vw,16px)",
                 lineHeight: 1.75,
                 maxWidth: "clamp(300px,34vw,520px)",
@@ -502,7 +502,7 @@ export default function ExaminationsPage({
 
             <p
               className={`${playfair.className} mb-5`}
-              style={{ color: "#555", fontSize: "clamp(14px,0.9vw,16px)", lineHeight: 1.75 }}
+              style={{ color: "#111", fontSize: "clamp(14px,0.9vw,16px)", lineHeight: 1.75 }}
             >
               The Office of Examinations at LEAD College is dedicated to maintaining the highest
               standards of academic integrity and ensuring fair, transparent, and efficient
@@ -510,7 +510,7 @@ export default function ExaminationsPage({
             </p>
             <p
               className={`${playfair.className} mb-8`}
-              style={{ color: "#555", fontSize: "clamp(14px,0.9vw,16px)", lineHeight: 1.75 }}
+              style={{ color: "#111", fontSize: "clamp(14px,0.9vw,16px)", lineHeight: 1.75 }}
             >
               Our mission is to facilitate a seamless examination process that upholds the
               institution's commitment to excellence in education — supported by technology-enabled
@@ -591,7 +591,7 @@ export default function ExaminationsPage({
             <span className={`${cinzel.className} text-blue-600 text-xs tracking-[0.4em] uppercase block mb-4`}>Leadership</span>
             <h2 className={`${cinzel.className} text-4xl font-bold`} style={gradientTextStyle}>EXAMINATION CONTROLLERS</h2>
             <div className="w-12 h-0.5 bg-blue-700 mx-auto mt-6 mb-4" />
-            <p className={`${playfair.className} text-gray-500 max-w-xl mx-auto italic`} style={{ fontSize: "clamp(14px,0.9vw,16px)" }}>
+            <p className={`${playfair.className} text-[#111] max-w-xl mx-auto`} style={{ fontSize: "clamp(14px,0.9vw,16px)" }}>
               Our experienced examination faculty ensure the highest standards of academic integrity and institutional excellence.
             </p>
           </SectionReveal>
@@ -613,7 +613,7 @@ export default function ExaminationsPage({
                 <h2 className={`${cinzel.className} text-4xl font-bold`} style={gradientTextStyle}>RESULTS & NOTICES</h2>
                 <div className="w-12 h-0.5 bg-blue-700 mt-6" />
               </div>
-              <p className={`${playfair.className} text-gray-500 max-w-sm italic`} style={{ fontSize: "clamp(14px,0.9vw,16px)" }}>
+              <p className={`${playfair.className} text-[#111] max-w-sm`} style={{ fontSize: "clamp(14px,0.9vw,16px)" }}>
                 All documents are available for download. Click Download for official copies.
               </p>
             </div>
@@ -629,7 +629,7 @@ export default function ExaminationsPage({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`${playfair.className} text-gray-400 text-base italic mt-6 text-center`}
+            className={`${playfair.className} text-[#111] text-base mt-6 text-center`}
           >
             Documents are updated regularly. For archived results, please contact the Office of Examinations.
           </motion.p>
@@ -650,7 +650,7 @@ export default function ExaminationsPage({
               YOUR <span className="text-blue-400">EXAMINATION?</span>
             </h2>
             <div className="w-16 h-0.5 bg-blue-600 mx-auto mb-8" />
-            <p className={`${playfair.className} text-gray-300 max-w-xl mx-auto mb-10`} style={{ fontSize: "clamp(14px,0.9vw,16px)", lineHeight: 1.75 }}>
+            <p className={`${playfair.className} text-white max-w-xl mx-auto mb-10`} style={{ fontSize: "clamp(14px,0.9vw,16px)", lineHeight: 1.75 }}>
               Our examination office team is here to assist you. Reach out for any queries
               regarding hall tickets, results, schedules, or revaluation.
             </p>

@@ -30,8 +30,8 @@ const C = {
   sand:       "#EEF2F8",
   parchment:  "#DBEAFE",
   text:       "#0D0D0D",
-  muted:      "#555",
-  faint:      "#888",
+  muted:      "#111",
+  faint:      "#111",
 } as const;
 
 const G = {
@@ -171,7 +171,7 @@ function HeroSection(): React.JSX.Element {
         .farm-strip-sub {
           display: block;
           font-size: clamp(.6rem,.75vw,.72rem);
-          color: #777;
+          color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media(max-width:767px){
@@ -238,9 +238,9 @@ function HeroSection(): React.JSX.Element {
               transition={{ duration: .55, delay: .3, ease: "easeOut" }}
               style={{
                 fontFamily: playfair.style.fontFamily,
-                fontSize: "clamp(.88rem,1.05vw,.98rem)",
+                fontSize: "clamp(0.92rem,1.05vw,1rem)",
                 lineHeight: 1.8,
-                color: "#666",
+                color: "#111",
                 margin: 0,
               }}>
               Spread across 24 acres of lush green landscape, LEAD College integrates sustainability into the very fabric of daily campus life. The farm cultivates vegetables and poultry that supply the campus canteen — making self-reliance, environmental consciousness, and responsible living not just values taught, but values lived.
@@ -510,7 +510,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0.1}
           style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize: "clamp(.86rem,1vw,.96rem)",
+            fontSize: "clamp(0.92rem,1vw,1rem)",
             lineHeight: 1.85, color: C.muted,
             maxWidth: 780, margin: "0 0 clamp(2.5rem,5vh,4rem)",
           }}>
@@ -562,7 +562,7 @@ function HighlightsSection(): React.JSX.Element {
                   fontFamily: playfair.style.fontFamily,
                   fontSize: "clamp(0.92rem,.85vw,1rem)",
                   lineHeight: 1.72,
-                  color: card.dark ? "rgba(255,255,255,.9)" : C.muted,
+                  color: card.dark ? "#fff" : C.muted,
                   margin: 0,
                 }}>{card.desc}</p>
               </motion.div>

@@ -86,7 +86,7 @@ function FeatureItem({
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-8%" });
   const tc = light ? "white" : NAVY;
-  const mc = light ? "rgba(255,255,255,0.70)" : MUTED;
+  const mc = light ? "#fff" : "#111";
   const bc = light ? "rgba(255,255,255,0.10)" : `${NAVY}10`;
 
   return (
@@ -126,7 +126,7 @@ function FeatureItem({
             />
             <span
               className={`${playfair.className} leading-relaxed`}
-              style={{ fontSize: "clamp(12px,0.9vw,14px)", color: mc, lineHeight: 1.65 }}
+              style={{ fontSize: "clamp(15px,0.9vw,16px)", color: mc, lineHeight: 1.65 }}
             >
               {item}
             </span>
@@ -236,7 +236,7 @@ function Hero() {
               className={`${playfair.className} mb-6`}
               style={{
                 fontSize: "clamp(0.92rem,0.9vw,1rem)",
-                color: "rgba(255,255,255,0.9)",
+                color: "#fff",
                 lineHeight: 1.78,
                 maxWidth: "clamp(300px,34vw,500px)",
               }}
@@ -305,8 +305,8 @@ function About() {
   const inView = useInView(ref, { once: true, margin: "-12%" });
 
   const paraStyle: React.CSSProperties = {
-    fontSize: "clamp(13.5px,1vw,16px)",
-    color: "#3a4560",
+    fontSize: "clamp(15px,1vw,16px)",
+    color: "#111",
     lineHeight: 1.82,
   };
 
@@ -327,7 +327,7 @@ function About() {
             <motion.div initial={{ opacity: 0, y: 14 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4, ease: E }} className="p-5 mb-8" style={{ border: `1px solid ${NAVY}14`, backgroundColor: OFF }}>
               <p className={`${cinzel.className} uppercase tracking-widest mb-1`} style={{ fontSize: "12px", color: MUTED }}>University Affiliation</p>
               <p className={`${cinzel.className} font-bold uppercase`} style={{ fontSize: "12px", color: NAVY }}>KUFOS</p>
-              <p className={`${playfair.className} mt-0.5`} style={{ fontSize: "12px", color: MUTED }}>Kerala University of Fisheries and Ocean Studies</p>
+              <p className={`${playfair.className} mt-0.5`} style={{ fontSize: "12px", color: "#111" }}>Kerala University of Fisheries and Ocean Studies</p>
             </motion.div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
@@ -361,7 +361,7 @@ function About() {
               meaningfully to academic knowledge and societal development.
             </p>
             <div className="mt-10 pl-6 border-l-2" style={{ borderColor: `${NAVY}20` }}>
-              <p className={`${playfair.className}`} style={{ fontSize: "clamp(13px,1vw,16px)", color: `${NAVY}90`, lineHeight: 1.75 }}>
+              <p className={`${playfair.className}`} style={{ fontSize: "clamp(15px,1vw,16px)", color: "#111", lineHeight: 1.75 }}>
                 "A thriving research ecosystem that fosters innovation and produces
                 high-quality scholarly work contributing to societal development."
               </p>
@@ -400,7 +400,7 @@ function Unique() {
               WHAT MAKES<br />US UNIQUE?
             </h2>
           </motion.div>
-          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.3 }} className={`${playfair.className} max-w-xs leading-relaxed`} style={{ fontSize: "1rem", color: "rgba(255,255,255,0.9)" }}>
+          <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.7, delay: 0.3 }} className={`${playfair.className} max-w-xs leading-relaxed`} style={{ fontSize: "1rem", color: "#fff" }}>
             Comprehensive support system designed for research excellence.
           </motion.p>
         </div>
@@ -461,7 +461,7 @@ function Faculty() {
             >
               DISTINGUISHED<br />PH.D. GUIDES
             </h2>
-            <p className={`${playfair.className} max-w-xs leading-relaxed`} style={{ fontSize: "1rem", color: MUTED }}>
+            <p className={`${playfair.className} max-w-xs leading-relaxed`} style={{ fontSize: "1rem", color: "#111" }}>
               Approved by KUFOS — Kerala University of Fisheries and Ocean Studies.
             </p>
           </div>
@@ -500,14 +500,14 @@ function Faculty() {
                 >
                   {g.name}
                 </h3>
-                <p className={`${playfair.className} text-center mt-1.5`} style={{ fontSize: "13px", color: MUTED }}>{g.role}</p>
+                <p className={`${playfair.className} text-center mt-1.5`} style={{ fontSize: "13px", color: "#111" }}>{g.role}</p>
               </div>
 
               {/* Body */}
               <div className="flex-1 p-8">
                 <p
                   className={`${playfair.className} leading-relaxed mb-6`}
-                  style={{ fontSize: "clamp(0.92rem,0.92vw,1rem)", color: MUTED, lineHeight: 1.8 }}
+                  style={{ fontSize: "clamp(0.92rem,0.92vw,1rem)", color: "#111", lineHeight: 1.8 }}
                 >
                   {g.bio}
                 </p>
@@ -571,7 +571,7 @@ function ResearchAreas() {
           <motion.div initial={{ opacity: 0, x: -24 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, ease: E }} className="lg:sticky lg:top-24">
             <Eyebrow n="05" label="Scope" light />
             <h2 className={`${cinzel.className} font-bold uppercase text-white leading-none mb-6`} style={{ fontSize: "clamp(28px,4vw,62px)", letterSpacing: "-0.025em" }}>RESEARCH<br />AREAS</h2>
-            <p className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.92rem,0.9vw,1rem)", color: "rgba(255,255,255,0.9)", lineHeight: 1.75 }}>
+            <p className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.92rem,0.9vw,1rem)", color: "#fff", lineHeight: 1.75 }}>
               Diverse fields of doctoral research under KUFOS spanning science, technology, management, and sustainability.
             </p>
             <div className="mt-10 pt-8 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
@@ -587,7 +587,7 @@ function ResearchAreas() {
                   <Icon size={16} strokeWidth={1.5} color="rgba(255,255,255,0.55)" />
                 </div>
                 <h4 className={`${cinzel.className} uppercase tracking-wider font-bold mb-3 text-white`} style={{ fontSize: "11px" }}>{title}</h4>
-                <p className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.9rem,0.9vw,1rem)", color: "rgba(255,255,255,0.9)", lineHeight: 1.75 }}>{desc}</p>
+                <p className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.9rem,0.9vw,1rem)", color: "#fff", lineHeight: 1.75 }}>{desc}</p>
               </motion.div>
             ))}
           </div>
@@ -627,7 +627,7 @@ function Benefits() {
               </div>
               <p className={`${cinzel.className} font-black leading-none mb-2`} style={{ fontSize: "clamp(28px,3.5vw,52px)", color: NAVY }}>{value}</p>
               <h4 className={`${cinzel.className} uppercase tracking-wider font-bold mb-3`} style={{ fontSize: "11px", color: NAVY }}>{label}</h4>
-              <p className={`${playfair.className} leading-relaxed`} style={{ fontSize: "1rem", color: MUTED }}>{desc}</p>
+              <p className={`${playfair.className} leading-relaxed`} style={{ fontSize: "1rem", color: "#111" }}>{desc}</p>
             </motion.div>
           ))}
         </div>
@@ -691,7 +691,7 @@ function Eligibility() {
         <motion.div initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, ease: E }} className="mb-12">
           <Eyebrow n="07" label="Apply" light />
           <h2 className={`${cinzel.className} font-bold uppercase text-white leading-none`} style={{ fontSize: "clamp(28px,4.5vw,68px)", letterSpacing: "-0.025em" }}>ELIGIBILITY &<br />APPLICATION</h2>
-          <p className={`${playfair.className} mt-4 max-w-xl`} style={{ fontSize: "clamp(0.92rem,0.9vw,1rem)", color: "rgba(255,255,255,0.9)", lineHeight: 1.75 }}>
+          <p className={`${playfair.className} mt-4 max-w-xl`} style={{ fontSize: "clamp(0.92rem,0.9vw,1rem)", color: "#fff", lineHeight: 1.75 }}>
             Now accepting applications for full-time Ph.D. positions under KUFOS. Limited seats available for the upcoming academic year.
           </p>
         </motion.div>
@@ -707,7 +707,7 @@ function Eligibility() {
               {criteria.map((c, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: -16 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.3 + i * 0.07, ease: E }} className="flex items-start gap-3 py-3 border-b" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
                   <div className="w-1 h-1 rounded-full flex-shrink-0 mt-2" style={{ backgroundColor: "rgba(255,255,255,0.25)" }} />
-                  <span className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.9rem,0.88vw,1rem)", color: "rgba(255,255,255,0.9)", lineHeight: 1.75 }}>{c}</span>
+                  <span className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.9rem,0.88vw,1rem)", color: "#fff", lineHeight: 1.75 }}>{c}</span>
                 </motion.div>
               ))}
             </div>
@@ -723,7 +723,7 @@ function Eligibility() {
               {documents.map((d, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: 16 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.3 + i * 0.06, ease: E }} className="flex items-start gap-3 py-3 border-b" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
                   <span className={`${cinzel.className} font-black flex-shrink-0 mt-0.5`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.18)" }}>{String(i + 1).padStart(2, "0")}</span>
-                  <span className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.9rem,0.88vw,1rem)", color: "rgba(255,255,255,0.9)", lineHeight: 1.75 }}>{d}</span>
+                  <span className={`${playfair.className} leading-relaxed`} style={{ fontSize: "clamp(0.9rem,0.88vw,1rem)", color: "#fff", lineHeight: 1.75 }}>{d}</span>
                 </motion.div>
               ))}
             </div>
@@ -754,7 +754,7 @@ function CTA() {
           <motion.div initial={{ opacity: 0, y: 36 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.85, ease: E }} className="text-left">
             <Eyebrow n="08" label="Begin" />
             <h2 className={`${cinzel.className} font-bold uppercase leading-none mb-6`} style={{ fontSize: "clamp(36px,6vw,92px)", color: NAVY, letterSpacing: "-0.03em", lineHeight: 0.93, textAlign: "left" }}>BEGIN YOUR<br />RESEARCH<br />JOURNEY</h2>
-            <p className={`${playfair.className} leading-relaxed max-w-md mb-10`} style={{ fontSize: "clamp(0.92rem,0.9vw,1rem)", color: MUTED, lineHeight: 1.75 }}>
+            <p className={`${playfair.className} leading-relaxed max-w-md mb-10`} style={{ fontSize: "clamp(0.92rem,0.9vw,1rem)", color: "#111", lineHeight: 1.75 }}>
               Join LEAD Research Centre and pursue your doctoral degree under the expert guidance of distinguished faculty. Limited positions available for committed researchers ready to make meaningful academic contributions.
             </p>
             <div className="space-y-4">
@@ -765,7 +765,7 @@ function CTA() {
                 <div>
                   <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize: "12px", color: MUTED }}>Email</p>
                   <p className={`${playfair.className} font-medium`} style={{ fontSize: "14px", color: NAVY }}>research@lead.ac.in</p>
-                  <p className={`${playfair.className}`} style={{ fontSize: "13px", color: MUTED }}>info@lead.ac.in</p>
+                  <p className={`${playfair.className}`} style={{ fontSize: "13px", color: "#111" }}>info@lead.ac.in</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4" style={{ border: `1px solid ${NAVY}0e`, backgroundColor: OFF }}>
@@ -783,7 +783,7 @@ function CTA() {
             <div id="apply" className="p-8 mb-2" style={{ border: `1px solid ${NAVY}12`, backgroundColor: NAVY }}>
               <p className={`${cinzel.className} uppercase tracking-widest mb-2`} style={{ fontSize: "12px", color: "rgba(255,255,255,0.35)" }}>Full-Time Ph.D. Position</p>
               <h3 className={`${cinzel.className} font-bold uppercase text-white leading-none mb-4`} style={{ fontSize: "clamp(18px,2vw,28px)", letterSpacing: "-0.02em" }}>APPLY NOW</h3>
-              <p className={`${playfair.className} mb-6`} style={{ fontSize: "1rem", color: "rgba(255,255,255,0.9)", lineHeight: 1.7 }}>
+              <p className={`${playfair.className} mb-6`} style={{ fontSize: "1rem", color: "#fff", lineHeight: 1.7 }}>
                 Submit your application for full-time Research Scholar positions. Limited seats for the upcoming academic year.
               </p>
               <a

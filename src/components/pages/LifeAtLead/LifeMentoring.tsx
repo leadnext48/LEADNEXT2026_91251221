@@ -288,7 +288,7 @@ function HeroSection() {
             <p style={{
               fontFamily: playfair.style.fontFamily,
               fontSize: "clamp(0.88rem,1.05vw,1rem)",
-              lineHeight: 1.85, color: "#666", margin: 0, maxWidth: 520,
+              lineHeight: 1.85, color: "#111", margin: 0, maxWidth: 520,
             }}>
               Each student is guided by a dedicated faculty mentor who closely monitors academic progress,
               personal development, career direction, and overall well-being — ensuring continuous growth
@@ -323,7 +323,7 @@ function HeroSection() {
                 }}>{b.label}</p>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(0.7rem,0.85vw,0.8rem)", color: "#777", margin: 0, lineHeight: 1.35,
+                  fontSize: "clamp(0.85rem,1vw,1rem)", color: "#111", margin: 0, lineHeight: 1.35,
                 }}>{b.sub}</p>
               </div>
             </div>
@@ -371,10 +371,10 @@ function PhilosophySection() {
             Beyond Academics,<br />Building Leaders
           </h2>
           <div style={{ width: 48, height: 2, borderRadius: 2, background: GRADIENTS.primary90, marginBottom: "1.5rem", opacity: visible ? 1 : 0, transform: visible ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left", transition: "opacity 0.5s 0.25s ease, transform 0.5s 0.25s ease" }} />
-          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, marginBottom: "1.25rem", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: "opacity 0.7s 0.2s ease, transform 0.7s 0.2s ease" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", marginBottom: "1.25rem", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: "opacity 0.7s 0.2s ease, transform 0.7s 0.2s ease" }}>
             Beyond academics, mentors help students develop clarity in career goals, improve interpersonal effectiveness, and strengthen professional behavior. Regular mentoring interactions foster accountability, reflection, and personal growth.
           </p>
-          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, margin: 0, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: "opacity 0.7s 0.3s ease, transform 0.7s 0.3s ease" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", margin: 0, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: "opacity 0.7s 0.3s ease, transform 0.7s 0.3s ease" }}>
             The mentoring culture at LEAD reflects the institution's belief that leadership development requires personalized attention, consistent guidance, and value-based engagement.
           </p>
         </div>
@@ -454,7 +454,7 @@ function FrameworkCard({ icon: Icon, title, description, index }: { icon: typeof
         <Icon size={20} color={COLORS.primary} strokeWidth={2} />
       </div>
       <h3 style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.heading, color: COLORS.primary, margin: "0 0 0.75rem", letterSpacing: "0.02em" }}>{title}</h3>
-      <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, margin: 0 }}>{description}</p>
+      <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", margin: 0 }}>{description}</p>
     </motion.div>
   );
 }
@@ -541,7 +541,7 @@ function TimelineItem({ icon: Icon, title, description, index, isMobile }: { ico
         transition: TRANS.lift,
       }}>
         <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.5vw,1.2rem)", fontWeight: 700, color: COLORS.dark, margin: "0 0 0.75rem", letterSpacing: "0.02em" }}>{title}</h3>
-        <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.9rem,1.1vw,1.05rem)", lineHeight: 1.8, color: COLORS.textMuted, margin: 0 }}>{description}</p>
+        <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.9rem,1.1vw,1.05rem)", lineHeight: 1.8, color: "#111", margin: 0 }}>{description}</p>
       </div>
     </div>
   );
@@ -569,10 +569,10 @@ function AcademicGuidanceSection() {
             <h2 style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.display3, color: COLORS.dark, margin: "0 0 1.5rem", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.7s 0.1s ease, transform 0.7s 0.1s ease" }}>
               Academic Progress,<br />Personally Tracked
             </h2>
-            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, marginBottom: "1.25rem", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", marginBottom: "1.25rem", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
               Mentors play an active role in tracking the academic progress of students and ensuring that they remain aligned with program expectations and learning outcomes. Through regular interactions, faculty mentors help students understand their strengths, identify areas of improvement, and adopt effective learning strategies.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.3s ease" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.3s ease" }}>
               By fostering disciplined academic habits and intellectual curiosity, mentoring helps students develop a strong foundation for professional success.
             </p>
           </div>
@@ -583,7 +583,7 @@ function AcademicGuidanceSection() {
                   <pt.icon size={17} color={COLORS.primary} strokeWidth={2} />
                 </div>
                 <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "0.85rem", fontWeight: 700, color: COLORS.dark, margin: "0 0 0.5rem", letterSpacing: "0.02em" }}>{pt.title}</h4>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "1rem", lineHeight: 1.75, color: COLORS.textMuted, margin: 0 }}>{pt.body}</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "1rem", lineHeight: 1.75, color: "#111", margin: 0 }}>{pt.body}</p>
               </div>
             ))}
           </div>
@@ -613,7 +613,7 @@ function FeedbackReflectionSection() {
         <div style={{ textAlign: "center", marginBottom: SPACE.colGapLg }}>
           <p style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.eyebrow, color: COLORS.primary, marginBottom: "0.75rem", opacity: visible ? 1 : 0, transition: "opacity 0.6s ease" }}>Continuous Improvement</p>
           <h2 style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.display3, color: COLORS.dark, margin: "0 0 1rem", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: "opacity 0.7s 0.1s ease, transform 0.7s 0.1s ease" }}>Feedback &amp; Reflection Cycle</h2>
-          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, maxWidth: "52ch", margin: "0 auto", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", maxWidth: "52ch", margin: "0 auto", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
             Mentors facilitate discussions that help students assess achievements, learn from mistakes, and set meaningful goals for improvement.
           </p>
         </div>
@@ -627,7 +627,7 @@ function FeedbackReflectionSection() {
               )}
               <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "2.5rem", fontWeight: 800, color: "rgba(0,92,159,0.07)", lineHeight: 1, marginBottom: "0.75rem" }}>{step.num}</div>
               <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "1rem", fontWeight: 700, color: COLORS.dark, margin: "0 0 0.5rem" }}>{step.title}</h4>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "1rem", lineHeight: 1.75, color: COLORS.textMuted, margin: 0 }}>{step.body}</p>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "1rem", lineHeight: 1.75, color: "#111", margin: 0 }}>{step.body}</p>
             </div>
           ))}
         </div>
@@ -639,7 +639,7 @@ function FeedbackReflectionSection() {
             <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1.2rem,2vw,1.6rem)", fontWeight: 700, color: "#fff", margin: "0 0 0.75rem", lineHeight: 1.3 }}>
               "Through this cycle of reflection and guidance, mentoring becomes a transformative experience for students."
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "0.95rem", color: "rgba(255,255,255,0.9)", margin: 0 }}>Constructive feedback cultivates self-discipline, accountability, and a growth-oriented mindset.</p>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "0.95rem", color: "#fff", margin: 0 }}>Constructive feedback cultivates self-discipline, accountability, and a growth-oriented mindset.</p>
           </div>
         </div>
       </div>
@@ -662,7 +662,7 @@ function StorytellingSection() {
           Guidance today shapes<br />leaders tomorrow.
         </blockquote>
         <div style={{ width: 64, height: 1, background: "rgba(255,255,255,0.25)", marginBottom: "2.5rem", opacity: visible ? 1 : 0, transition: "opacity 0.6s 0.35s ease" }} />
-        <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,1.4vw,1.25rem)", lineHeight: 1.85, color: "rgba(255,255,255,0.72)", maxWidth: "60ch", margin: 0, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(18px)", transition: "opacity 0.7s 0.45s ease, transform 0.7s 0.45s ease" }}>
+        <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,1.4vw,1.25rem)", lineHeight: 1.85, color: "#fff", maxWidth: "60ch", margin: 0, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(18px)", transition: "opacity 0.7s 0.45s ease, transform 0.7s 0.45s ease" }}>
           At LEAD, the mentor–student relationship extends far beyond office hours and academic reviews. It is a continuous, trust-based partnership where mentors invest in understanding each student's unique potential. Through regular conversations, guided reflection, and real-time support, mentoring becomes the thread that connects academic experience with personal transformation.
         </p>
       </div>
@@ -712,10 +712,10 @@ function LeadershipCultureSection() {
               Building a Culture<br />of Leadership
             </h2>
             <div style={{ width: 48, height: 2, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: "1.5rem", opacity: visible ? 1 : 0, transform: visible ? "scaleX(1)" : "scaleX(0)", transformOrigin: "left", transition: "opacity 0.5s 0.25s ease, transform 0.5s 0.25s ease" }} />
-            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, marginBottom: "1.25rem", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", marginBottom: "1.25rem", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
               The mentoring culture at LEAD is deeply connected to the institution's broader mission of developing ethical and socially responsible leaders. Faculty mentors encourage students to explore their potential, challenge themselves, and develop the courage to take initiative.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.3s ease" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.3s ease" }}>
               Students are guided to think beyond personal success and to understand the importance of contributing positively to organizations and society. Mentors emphasize values such as integrity, empathy, teamwork, and responsible leadership — grounded in ethical awareness and social responsibility.
             </p>
           </div>
@@ -745,7 +745,7 @@ function ImpactSection() {
         <div style={{ textAlign: "center", marginBottom: SPACE.colGapLg }}>
           <p style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.eyebrow, color: COLORS.primary, marginBottom: "0.75rem", opacity: visible ? 1 : 0, transition: "opacity 0.6s ease" }}>Impact</p>
           <h2 style={{ fontFamily: cinzel.style.fontFamily, ...TYPE.display3, color: COLORS.dark, margin: "0 0 1rem", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: "opacity 0.7s 0.1s ease, transform 0.7s 0.1s ease" }}>The Mentoring Difference</h2>
-          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: COLORS.textMuted, maxWidth: "50ch", margin: "0 auto", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, ...TYPE.body, color: "#111", maxWidth: "50ch", margin: "0 auto", opacity: visible ? 1 : 0, transition: "opacity 0.7s 0.2s ease" }}>
             Every number represents a student whose journey was shaped by personalized, consistent, and committed mentorship.
           </p>
         </div>

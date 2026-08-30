@@ -245,9 +245,9 @@ export default function OriginalThinkersSection() {
           <p
             className={playfair.className}
             style={{
-              fontSize: "clamp(14px,3.6vw,16px)",
+              fontSize: "clamp(16px,3.6vw,16px)",
               lineHeight: 1.85,
-              color: "#555",
+              color: "#111",
               margin: "0 0 1.5rem",
               textAlign: "center",
             }}
@@ -383,9 +383,9 @@ export default function OriginalThinkersSection() {
                 <p
                   className={playfair.className}
                   style={{
-                    fontSize: "clamp(14px,1vw,16px)",
+                    fontSize: "clamp(16px,1vw,16px)",
                     lineHeight: 1.88,
-                    color: "#555",
+                    color: "#111",
                     margin: 0,
                     maxWidth: 680,
                   }}
@@ -572,8 +572,8 @@ function BigCard({
               key={bi}
               className={playfair.className}
               style={{
-                fontSize: "clamp(14px,0.92vw,16px)",
-                color: "#4a5568",
+                fontSize: "clamp(16px,0.92vw,16px)",
+                color: "#111",
                 margin: 0,
                 lineHeight: 1.78,
               }}
@@ -588,8 +588,8 @@ function BigCard({
                   <span
                     className={playfair.className}
                     style={{
-                      fontSize: "clamp(14px,0.92vw,16px)",
-                      color: "#4a5568",
+                      fontSize: "clamp(16px,0.92vw,16px)",
+                      color: "#111",
                     }}
                   >
                     {item}

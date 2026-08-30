@@ -284,9 +284,9 @@ const DescCard = React.memo<DescCardProps>(function DescCard({ visible, delay, t
 
       <p style={{
         fontFamily: playfair.style.fontFamily,
-        fontSize: "clamp(0.82rem, 1vw, 0.95rem)",
+        fontSize: "clamp(0.9rem, 1vw, 1rem)",
         lineHeight: 1.9,
-        color: "#555",
+        color: "#111",
         margin: 0,
       }}>{text}</p>
     </div>
@@ -439,9 +439,9 @@ export default function GatewaySection() {
 
           <p style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize: "clamp(0.82rem, 1vw, 0.95rem)",
+            fontSize: "clamp(0.9rem, 1vw, 1rem)",
             lineHeight: 1.9,
-            color: "#555",
+            color: "#111",
             maxWidth: "52ch",
             margin: 0,
             opacity: headerVisible ? 1 : 0,
@@ -481,9 +481,9 @@ export default function GatewaySection() {
                 }}>{s.num}</div>
                 <div style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontStyle: "italic",
+                  fontStyle: "normal",
                   fontSize: "clamp(0.7rem, 0.8vw, 0.8rem)",
-                  color: "#888",
+                  color: "#111",
                   marginTop: "0.3rem",
                 }}>{s.label}</div>
               </div>
@@ -618,7 +618,7 @@ export default function GatewaySection() {
                   fontSize: "0.73rem",
                   letterSpacing: "0.22em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.7)",
+                  color: "#fff",
                   margin: "0 0 0.3rem",
                 }}>Western Ghats</p>
                 <p style={{
@@ -626,7 +626,7 @@ export default function GatewaySection() {
                   fontSize: "1rem",
                   color: "#fff",
                   margin: 0,
-                  fontStyle: "italic",
+                  fontStyle: "normal",
                 }}>Nature surrounds you</p>
               </div>
             </div>

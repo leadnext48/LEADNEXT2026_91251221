@@ -380,7 +380,7 @@ export default function AcademicAdministratorPage() {
                       fontFamily: cinzel.style.fontFamily,
                       fontSize: 'clamp(0.5rem, 0.85vw, 0.9rem)',
                       letterSpacing: '0.08em',
-                      color: '#222',
+                      color: '#111',
                       opacity: 1,
                     }}
                   >
@@ -453,7 +453,7 @@ export default function AcademicAdministratorPage() {
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-white border border-gray-100 shadow-xl rounded-xl px-6 py-4 z-10">
                   <p className={`${cinzel.className} text-2xl font-bold`} style={{ color: BLUE }}>32+</p>
-                  <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#555' }}>
+                  <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', color: '#111' }}>
                     Years of Combined Experience
                   </p>
                 </div>
@@ -480,10 +480,10 @@ export default function AcademicAdministratorPage() {
                   </h2>
                 </div>
 
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#111' }}>
                   The Registrar plays a central role in process facilitation, quality assurance, and institutional compliance, ensuring that the academic and administrative functions of LEAD College operate efficiently, transparently, and in alignment with regulatory and institutional requirements.
                 </p>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#111' }}>
                   The office is responsible for liaison and coordination with the LEAD Development Council (LDC), the affiliating University, and relevant Government and regulatory bodies, while overseeing the conduct of apex body meetings including the Governing Body, Academic Council, and Board of Studies.
                 </p>
 
@@ -498,7 +498,7 @@ export default function AcademicAdministratorPage() {
                   ].map((item) => (
                     <div key={item} className="aa-role-item flex items-start gap-3">
                       <div className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: BLUE }} />
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.8, color: '#555' }}>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.8, color: '#111' }}>
                         {item}
                       </p>
                     </div>
@@ -551,7 +551,7 @@ export default function AcademicAdministratorPage() {
                     <h3 className={`${cinzel.className} text-base font-bold uppercase tracking-wide`} style={{ color: '#111' }}>
                       {p.label}
                     </h3>
-                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.85, color: '#666' }}>
+                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.85, color: '#111' }}>
                       {p.desc}
                     </p>
                   </div>

@@ -30,7 +30,7 @@ const C = {
   sand:       "#EEF2F8",
   parchment:  "#DBEAFE",
   text:       "#0D0D0D",
-  muted:      "#555",
+  muted:      "#111",
   faint:      "#888",
 } as const;
 
@@ -171,7 +171,7 @@ function HeroSection(): React.JSX.Element {
         .canteen-strip-sub {
           display: block;
           font-size: clamp(.6rem,.75vw,.72rem);
-          color: #777;
+          color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media(max-width:767px){
@@ -239,7 +239,7 @@ function HeroSection(): React.JSX.Element {
                 fontFamily: playfair.style.fontFamily,
                 fontSize: "clamp(.88rem,1.05vw,.98rem)",
                 lineHeight: 1.8,
-                color: "#666",
+                color: "#111",
                 margin: 0,
               }}>
               At LEAD College, the canteen is more than a place to eat — it is where students recharge, connect, and find a moment of warmth in a busy academic day. Hygienic, nutritious, and thoughtfully prepared, every meal here is a reflection of LEAD's commitment to holistic student well-being.
@@ -597,7 +597,7 @@ function HighlightsSection(): React.JSX.Element {
                   fontFamily: playfair.style.fontFamily,
                   fontSize: "clamp(.9rem,.82vw,1rem)",
                   lineHeight: 1.72,
-                  color: card.dark ? "rgba(255,255,255,.9)" : C.muted,
+                  color: card.dark ? "#fff" : C.muted,
                   margin: 0,
                 }}>{card.desc}</p>
               </motion.div>
@@ -908,7 +908,7 @@ function CommunitySection(): React.JSX.Element {
           <p style={{
             fontFamily: playfair.style.fontFamily,
             fontSize: "clamp(.9rem,.88vw,1rem)",
-            color: C.faint,
+            color: "#111",
             margin: 0,
             textAlign: "center",
             maxWidth: 480,

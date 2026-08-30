@@ -294,8 +294,8 @@ export default function GovernancePage() {
           border-radius: 1px;
         }
         .gov-hero-sub p {
-          font-size: clamp(0.88rem,1.05vw,1rem);
-          line-height: 1.85; color: #666; margin: 0;
+          font-size: clamp(1rem,1.05vw,1rem);
+          line-height: 1.85; color: #111; margin: 0;
           max-width: 520px;
         }
 
@@ -325,7 +325,7 @@ export default function GovernancePage() {
         }
         .gov-stat-label {
           font-size: clamp(0.7rem,0.85vw,0.8rem);
-          color: #777; line-height: 1.35;
+          color: #111; line-height: 1.35;
         }
         .gov-stat-sep { display: none; }
 
@@ -391,8 +391,8 @@ export default function GovernancePage() {
           -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
         }
         .gov-section-desc {
-          font-size: clamp(0.92rem,0.98vw,1rem);
-          line-height: 1.78; color: #666; margin: 0;
+          font-size: clamp(1rem,0.98vw,1rem);
+          line-height: 1.78; color: #111; margin: 0;
           max-width: 420px;
           text-align: left;
         }
@@ -464,7 +464,7 @@ export default function GovernancePage() {
         }
         .governance-tile:hover .tile-title { color: ${BLUE}; }
         .tile-label {
-          font-size: clamp(11px,0.82vw,12.5px); color: #6b7280;
+          font-size: clamp(11px,0.82vw,12.5px); color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .tile-arrow {

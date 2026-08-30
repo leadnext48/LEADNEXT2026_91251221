@@ -292,7 +292,7 @@ export default function ProgramsSection() {
             <p
               className={playfair.className}
               style={{
-                fontSize: "clamp(14px, 0.9vw, 16px)",
+                fontSize: "1rem",
                 color: "rgba(10,36,99,0.5)",
                 maxWidth: 560,
                 margin: "0 auto",
@@ -339,8 +339,8 @@ export default function ProgramsSection() {
               marginTop: "clamp(2rem, 4vh, 3rem)",
               paddingTop: "clamp(1.2rem, 2vh, 1.8rem)",
               borderTop: `1px solid rgba(10,36,99,0.08)`,
-              fontSize: "clamp(14px, 0.82vw, 16px)",
-              color: "#999",
+              fontSize: "1rem",
+              color: "#111",
               textAlign: "center",
             }}
           >
@@ -454,10 +454,10 @@ const ProgramCard = memo(function ProgramCard({
           <p
             className={playfair.className}
             style={{
-              fontSize: "clamp(10px, 0.75vw, 12px)",
-              color: "rgba(255,255,255,0.72)",
+              fontSize: "1rem",
+              color: "#fff",
               margin: "2px 0 0",
-              fontStyle: "italic",
+              fontStyle: "normal",
             }}
           >
             {prog.tagline}
@@ -530,8 +530,8 @@ const ProgramCard = memo(function ProgramCard({
         <p
           className={playfair.className}
           style={{
-            fontSize: "clamp(14px, 0.9vw, 16px)",
-            color: "#555",
+            fontSize: "1rem",
+            color: "#111",
             margin: 0,
             lineHeight: 1.78,
           }}
@@ -603,7 +603,7 @@ const ProgramCard = memo(function ProgramCard({
                   </span>
                   <p
                     className={playfair.className}
-                    style={{ fontSize: "clamp(11px, 0.8vw, 13px)", color: "#4a5568", margin: 0, lineHeight: 1.55 }}
+                    style={{ fontSize: "1rem", color: "#111", margin: 0, lineHeight: 1.55 }}
                   >
                     {h}
                   </p>

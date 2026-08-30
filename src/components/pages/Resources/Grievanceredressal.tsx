@@ -27,8 +27,8 @@ import { cinzel, playfair } from "@/app/fonts";
 const C = {
   blue:   "#005C9F",
   text:   "#0D0D0D",
-  muted:  "#444",
-  faint:  "#666",
+  muted:  "#111",
+  faint:  "#111",
   border: "#E8EEF4",
 } as const;
 
@@ -51,10 +51,10 @@ const SZ = {
   eyebrow:    "clamp(.66rem,.8vw,.74rem)",   // was .42rem → .52rem
   heading:    "clamp(1.6rem,3vw,3.8rem)",      // was 1.1rem → 1.6rem
   heroH1:     "clamp(2rem,3.8vw,5rem)",        // hero specific
-  body:       "clamp(.9rem,1.05vw,1.02rem)",   // was .86rem → .9rem
-  bodySmall:  "clamp(.85rem,.98vw,.95rem)",     // secondary body
+  body:       "clamp(.95rem,1.05vw,1.02rem)",   // was .86rem → .9rem
+  bodySmall:  "clamp(.9rem,1vw,1rem)",          // secondary body
   cardTitle:  "clamp(.72rem,.88vw,.84rem)",     // was .62rem → .72rem
-  cardBody:   "clamp(.82rem,.96vw,.9rem)",      // was .74rem → .82rem
+  cardBody:   "clamp(.9rem,1vw,1rem)",      // was .74rem → .82rem
   label:      "clamp(.66rem,.72vw,.72rem)",     // badge / step labels
 } as const;
 
@@ -180,7 +180,7 @@ function HeroSection() {
             <motion.p
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: .5, delay: .3 }}
-              style={{ fontFamily: playfair.style.fontFamily, fontSize: SZ.body, lineHeight: 1.85, color: "#666", maxWidth: 560, margin: "0 0 clamp(2rem,4vh,3rem)" }}>
+              style={{ fontFamily: playfair.style.fontFamily, fontSize: SZ.body, lineHeight: 1.85, color: "#111", maxWidth: 560, margin: "0 0 clamp(2rem,4vh,3rem)" }}>
               LEAD has an open communication system where each student belongs to a mentoring group mentored by a faculty member. The mentor is the guardian of the student in the college — ensuring every concern is heard, addressed, and resolved with care and accountability.
             </motion.p>
 
@@ -196,7 +196,7 @@ function HeroSection() {
               ].map(({ icon: Icon, label }) => (
                 <div key={label} style={{ display: "flex", alignItems: "center", gap: ".5rem", padding: ".55rem 1rem", border: `1px solid ${C.border}`, borderRadius: 100, background: "#fff" }}>
                   <Icon size={13} color={C.blue} strokeWidth={1.8} />
-                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: SZ.label, letterSpacing: ".14em", textTransform: "uppercase", color: C.muted, fontWeight: 600 }}>{label}</span>
+                  <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: SZ.label, letterSpacing: ".14em", textTransform: "uppercase", color: "#444", fontWeight: 600 }}>{label}</span>
                 </div>
               ))}
             </motion.div>

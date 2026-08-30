@@ -130,7 +130,7 @@ function TestimonialsColumn({
                 <blockquote>
                   <p
                     className={cn(
-                      "text-neutral-700 leading-relaxed",
+                      "text-[#111] leading-relaxed",
                       playfair.className,
                     )}
                   >
@@ -156,7 +156,7 @@ function TestimonialsColumn({
                       <cite className="text-[15px] font-semibold not-italic text-neutral-900">
                         {name}
                       </cite>
-                      <span className="text-sm text-neutral-500 mt-0.5">
+                      <span className="text-base text-[#111] mt-0.5">
                         {role}
                       </span>
                     </div>
@@ -198,7 +198,7 @@ export function TestimonialsV2() {
 
           <p
             className={cn(
-              "mt-5 text-center text-lg leading-relaxed text-neutral-600 max-w-xl",
+              "mt-5 text-center text-lg leading-relaxed text-[#111] max-w-xl",
               playfair.className,
             )}
           >

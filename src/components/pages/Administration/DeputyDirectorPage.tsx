@@ -467,7 +467,7 @@ export default function DeputyDirectorPage() {
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-white border border-gray-100 shadow-xl rounded-xl px-6 py-4 z-10">
                   <p className={`${cinzel.className} text-2xl font-bold`} style={{ color: BLUE }}>27+</p>
-                  <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#555' }}>
+                  <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', color: '#111' }}>
                     Years of Teaching Experience
                   </p>
                 </div>
@@ -494,10 +494,10 @@ export default function DeputyDirectorPage() {
                   </h2>
                 </div>
 
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1rem, 1.05vw, 1.05rem)', lineHeight: 1.9, color: '#111' }}>
                   The Deputy Director supports the Director in executing institutional strategy and managing day-to-day operations. This role ensures effective coordination across academic, administrative, student services, and infrastructure functions.
                 </p>
-                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1rem, 1.05vw, 1.05rem)', lineHeight: 1.9, color: '#111' }}>
                   The Deputy Director plays a critical role in operational efficiency, policy implementation, student experience management, and the seamless functioning of academic and co-curricular activities.
                 </p>
 
@@ -511,7 +511,7 @@ export default function DeputyDirectorPage() {
                   ].map((item) => (
                     <div key={item} className="dd-role-item flex items-start gap-3">
                       <div className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: BLUE }} />
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.8, color: '#555' }}>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1rem, 1.05vw, 1.05rem)', lineHeight: 1.8, color: '#111' }}>
                         {item}
                       </p>
                     </div>
@@ -562,7 +562,7 @@ export default function DeputyDirectorPage() {
                     <h3 className={`${cinzel.className} text-base font-bold uppercase tracking-wide`} style={{ color: '#111' }}>
                       {p.label}
                     </h3>
-                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.85, color: '#666' }}>
+                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1rem, 1.05vw, 1.05rem)', lineHeight: 1.85, color: '#111' }}>
                       {p.desc}
                     </p>
                   </div>
@@ -628,8 +628,8 @@ export default function DeputyDirectorPage() {
                     style={{ color: 'rgba(0,92,159,0.15)' }}
                   >"</div>
                   <p
-                    className="relative z-10 italic"
-                    style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.9rem, 1.1vw, 1.05rem)', lineHeight: 1.9, color: '#444' }}
+                    className="relative z-10"
+                    style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1rem, 1.1vw, 1.05rem)', lineHeight: 1.9, color: '#111' }}
                   >
                     The future will not belong to those who simply possess knowledge, but to those who can think critically, learn continuously, adapt quickly, and innovate responsibly.
                   </p>
@@ -640,7 +640,7 @@ export default function DeputyDirectorPage() {
                     <p
                       key={i}
                       className="dd-msg-para"
-                      style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(0.92rem, 1vw, 1rem)', lineHeight: 1.9, color: '#555' }}
+                      style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1rem, 1.05vw, 1.05rem)', lineHeight: 1.9, color: '#111' }}
                     >
                       {para}
                     </p>
@@ -661,7 +661,7 @@ export default function DeputyDirectorPage() {
                       />
                     </div>
                     <div className="space-y-1">
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontStyle: 'italic', fontWeight: 600, color: '#111' }}>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontStyle: 'normal', fontWeight: 600, color: '#111' }}>
                         Prof. Rajkishan S. S.
                       </p>
                       <p
@@ -670,7 +670,7 @@ export default function DeputyDirectorPage() {
                       >
                         Deputy Director, LEAD College
                       </p>
-                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '0.78rem', color: '#888' }}>
+                      <p style={{ fontFamily: "'Playfair Display', serif", fontSize: '1rem', color: '#111' }}>
                         LEAD College (Autonomous), Palakkad
                       </p>
                     </div>

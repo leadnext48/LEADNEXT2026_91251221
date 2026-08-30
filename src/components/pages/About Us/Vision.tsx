@@ -429,7 +429,7 @@ export const VisionMissionPage: React.FC = () => (
         background:linear-gradient(90deg,#0d0d0d 0%,${BLUE} 100%);
         -webkit-background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
       }
-      .vmh-subtitle { margin:0; max-width:560px; font-size:clamp(0.82rem,1.1vw,1rem); line-height:1.8; color:#555; }
+      .vmh-subtitle { margin:0; max-width:560px; font-size:clamp(1rem,1.1vw,1rem); line-height:1.8; color:#111; }
 
       /* ══ PILLARS ══ */
       .pillars-section { background:#ffffff; padding:clamp(4rem,8vh,7rem) clamp(2rem,10vw,10rem); }
@@ -469,7 +469,7 @@ export const VisionMissionPage: React.FC = () => (
       .pcard:hover .pcard-divider { width:56px; }
 
       /* prose body */
-      .pcard-body { font-size:clamp(0.92rem,1vw,1rem); line-height:1.85; color:#666; margin:0; max-width:560px; }
+      .pcard-body { font-size:clamp(1rem,1vw,1rem); line-height:1.85; color:#111; margin:0; max-width:560px; }
 
       /* bullet list body */
       .pcard-bullets {
@@ -623,7 +623,7 @@ export const VisionMissionPage: React.FC = () => (
         color:${BLUE}; opacity:0.032; pointer-events:none; user-select:none;
         letter-spacing:-0.04em;
       }
-      .po2-body { font-size:clamp(0.92rem,0.95vw,1rem); line-height:1.82; color:#555; margin:0; }
+      .po2-body { font-size:clamp(1rem,0.95vw,1rem); line-height:1.82; color:#111; margin:0; }
       .po2-grid { position:relative; z-index:1; }
       .po2-grid--peo { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(0.75rem,1.5vw,1.1rem); }
       .po2-peo-card {

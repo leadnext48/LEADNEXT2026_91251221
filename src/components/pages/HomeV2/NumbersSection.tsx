@@ -75,7 +75,7 @@ const NB_CSS = `
 .nb-h2{font-size:clamp(1.4rem,2.9vw,2.35rem);line-height:1.05;font-weight:700;margin:0;letter-spacing:-.01em;
   background:linear-gradient(90deg,#0D0D0D 0%,#005C9F 62%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
 .nb-h3{font-size:clamp(.98rem,1.5vw,1.3rem);font-weight:600;color:#0e1524;margin:.55rem 0 0;}
-.nb-p{font-size:clamp(.92rem,1.1vw,1rem);line-height:1.75;color:rgba(14,21,36,.7);margin:.75rem 0 0;max-width:36rem;}
+.nb-p{font-size:clamp(1rem,1.1vw,1rem);line-height:1.75;color:#111;margin:.75rem 0 0;max-width:36rem;}
 .nb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem 1.6rem;margin:2rem 0 0;max-width:560px;}
 .nb-v{font-size:clamp(1.25rem,2.1vw,1.9rem);font-weight:700;color:#0e1524;letter-spacing:.01em;line-height:1;}
 .nb-l{font-size:clamp(.68rem,.8vw,.76rem);letter-spacing:.04em;text-transform:uppercase;font-weight:600;color:rgba(14,21,36,.62);margin-top:.5rem;}

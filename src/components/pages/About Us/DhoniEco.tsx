@@ -74,7 +74,7 @@ const DhoniInteractiveSelector = () => {
         <h1 className={`${cinzel.className} text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-wide drop-shadow-lg animate-fadeInTop delay-300`}>
           {sectionData.title}
         </h1>
-        <p className={`${playfair.className} text-base md:text-lg lg:text-xl text-gray-300 font-normal max-w-xl mx-auto animate-fadeInTop delay-600`}>
+        <p className={`${playfair.className} text-base md:text-lg lg:text-xl text-white font-normal max-w-xl mx-auto animate-fadeInTop delay-600`}>
           {sectionData.subtitle}
         </p>
       </div>
@@ -164,7 +164,7 @@ const DhoniInteractiveSelector = () => {
                     {option.title}
                   </div>
                   <div 
-                    className="sub text-sm md:text-base text-gray-300 font-normal mt-1"
+                    className="sub text-base md:text-base text-white font-normal mt-1"
                     style={{
                       opacity: activeIndex === index ? 1 : 0,
                       whiteSpace: 'normal',

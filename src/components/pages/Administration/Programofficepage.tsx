@@ -538,7 +538,7 @@ export default function ProgramOfficePage() {
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
                   fontSize: 'clamp(0.85rem, 1.1vw, 1.05rem)',
-                  lineHeight: 1.85, color: '#555',
+                  lineHeight: 1.85, color: '#111',
                   marginBottom: 'clamp(1.2rem, 2.4vh, 2rem)',
                 }}>
                   The operational backbone of academic delivery at LEAD College — the primary interface between students, faculty, academic leadership, and all administrative units. Seven integrated functions. One unified purpose: a structured, responsive, and student-centric learning environment.
@@ -627,7 +627,7 @@ export default function ProgramOfficePage() {
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
                   fontSize: 'clamp(0.92rem, 0.88vw, 1rem)',
-                  color: 'rgba(255,255,255,0.9)', margin: 0, lineHeight: 1.5,
+                  color: '#fff', margin: 0, lineHeight: 1.5,
                 }}>{m.sub}</p>
               </div>
             ))}
@@ -664,10 +664,10 @@ export default function ProgramOfficePage() {
                   The Operational Backbone<br />of Academic Delivery.
                 </h2>
                 <div className="po-intro-cols" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(1rem, 2vw, 2.5rem)' }}>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.82rem, 1vw, 0.96rem)', lineHeight: 1.85, color: '#555', margin: 0 }}>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.95rem, 1vw, 1rem)', lineHeight: 1.85, color: '#111', margin: 0 }}>
                     The Program Office at LEAD College ensures that every program is executed smoothly, efficiently, and in alignment with the institution's academic standards and industry orientation. It is the invisible force that keeps the academic engine running.
                   </p>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.82rem, 1vw, 0.96rem)', lineHeight: 1.85, color: '#555', margin: 0 }}>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.95rem, 1vw, 1rem)', lineHeight: 1.85, color: '#111', margin: 0 }}>
                     Serving as the primary interface between students, faculty, academic leadership, and administrative units, the office plays a vital role in creating a structured, responsive, and student-centric learning environment that allows every stakeholder to perform at their best.
                   </p>
                 </div>
@@ -721,12 +721,12 @@ export default function ProgramOfficePage() {
                 </div>
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.68rem, 0.96vw, 0.88rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: DARK, lineHeight: 1.3, margin: '0 0 clamp(0.5rem, 1vh, 0.8rem)' }}>{f.title}</h3>
                 <div style={{ width: 28, height: 2, background: f.color, marginBottom: 'clamp(0.7rem, 1.3vh, 1rem)', borderRadius: 1 }} />
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.86vw, 1rem)', lineHeight: 1.78, color: '#666', marginBottom: 'clamp(0.8rem, 1.5vh, 1.2rem)' }}>{f.description}</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.86vw, 1rem)', lineHeight: 1.78, color: '#111', marginBottom: 'clamp(0.8rem, 1.5vh, 1.2rem)' }}>{f.description}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                   {f.points.slice(0, 3).map((pt) => (
                     <div key={pt} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.55rem' }}>
                       <span style={{ display: 'inline-block', width: 5, height: 5, borderRadius: '50%', background: BLUE, flexShrink: 0, marginTop: 6 }} />
-                      <span style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.66rem, 0.8vw, 0.75rem)', lineHeight: 1.6, color: '#777' }}>{pt}</span>
+                      <span style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.9rem, 0.8vw, 1rem)', lineHeight: 1.6, color: '#111' }}>{pt}</span>
                     </div>
                   ))}
                 </div>

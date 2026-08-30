@@ -162,9 +162,9 @@ const FontStyle = () => (
     /* ── Body copy — sits BELOW heading in the same left col ── */
     .ls-body {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+      font-size: clamp(1rem, 1.05vw, 1.02rem);
       line-height: 1.9;
-      color: #555;
+      color: #111;
       max-width: 56ch;
     }
 
@@ -340,7 +340,7 @@ const FontStyle = () => (
       font-family: 'Playfair Display', serif;
       font-size: 1.02rem;
       line-height: 1.8;
-      color: #4a5563;
+      color: #111;
       max-width: 46ch;
       display: inline-block;
     }

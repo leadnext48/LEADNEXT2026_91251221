@@ -23,8 +23,8 @@ if (typeof window !== "undefined") {
 const C = {
   blue:   "#005C9F",
   text:   "#0D0D0D",
-  muted:  "#555",
-  faint:  "#888",
+  muted:  "#111",
+  faint:  "#111",
   border: "#E8EEF4",
 } as const;
 const G = { blue: "linear-gradient(90deg,#005C9F 0%,#1e3a8a 100%)" } as const;
@@ -48,10 +48,10 @@ const SZ = {
   heading:   "clamp(1.6rem,3vw,3.8rem)",
   heroH1:    "clamp(2rem,3.8vw,5rem)",
   heroSub:   "clamp(1rem,1.8vw,2.4rem)",   // tagline — roughly 48% of heroH1
-  body:      "clamp(.9rem,1.05vw,1.02rem)",
-  bodySmall: "clamp(.9rem,.98vw,1rem)",
+  body:      "clamp(1rem,1.05vw,1.02rem)",
+  bodySmall: "clamp(1rem,.98vw,1rem)",
   cardTitle: "clamp(.72rem,.88vw,.84rem)",
-  cardBody:  "clamp(.9rem,.96vw,1rem)",
+  cardBody:  "clamp(1rem,.96vw,1rem)",
   label:     "clamp(.66rem,.74vw,.72rem)",
 } as const;
 
@@ -238,7 +238,7 @@ function HeroSection() {
                 letterSpacing: ".01em",
                 lineHeight: 1.3,
                 marginTop: "clamp(.3rem,.5vw,.6rem)",
-                color: "#444",
+                color: "#111",
               }}>
                 The Library &amp; Resource Centre
               </span>
@@ -254,7 +254,7 @@ function HeroSection() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: .5, delay: .3 }}
-              style={{ fontFamily: playfair.style.fontFamily, fontSize: SZ.body, lineHeight: 1.85, color: "#666", fontStyle: "italic", maxWidth: 520, margin: "0 0 clamp(2rem,4vh,3rem)" }}>
+              style={{ fontFamily: playfair.style.fontFamily, fontSize: SZ.body, lineHeight: 1.85, color: "#111", fontStyle: "normal", maxWidth: 520, margin: "0 0 clamp(2rem,4vh,3rem)" }}>
               Where Knowledge Knows No Bounds — a gateway to endless possibilities where curiosity meets discovery and minds are nurtured to think beyond limits.
             </motion.p>
 

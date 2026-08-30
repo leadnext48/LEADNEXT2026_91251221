@@ -82,7 +82,8 @@ export default function LifeStudio() {
             style={{
               fontFamily: playfair.style.fontFamily,
               ...TYPE.body,
-              color: COLORS.textMuted,
+              fontSize: "1rem",
+              color: "#111",
               maxWidth: "60ch",
               margin: "0 auto",
             }}

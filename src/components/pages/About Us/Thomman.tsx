@@ -69,7 +69,7 @@ export const MinimalistHero = ({
           transition={{ duration: 0.6, delay: 1 }}
           className="z-20 order-2 md:order-1 text-center md:text-left"
         >
-          <p className="mx-auto max-w-xs text-base leading-relaxed text-foreground/80 md:mx-0">{mainText}</p>
+          <p className="mx-auto max-w-xs text-base leading-relaxed text-[#111] md:mx-0">{mainText}</p>
           <a href={readMoreLink} className="mt-4 inline-block text-sm font-medium text-foreground underline decoration-from-font">
             Read More
           </a>

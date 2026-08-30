@@ -31,9 +31,9 @@ const IMG = {
 /* ─────────── STYLE HELPERS ─────────── */
 const P: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 'clamp(0.92rem, 0.95vw, 1rem)',
+  fontSize: '1rem',
   lineHeight: 1.8,
-  color: '#555',
+  color: '#111',
 };
 const TG: React.CSSProperties = {
   background: 'linear-gradient(90deg, #000 0%, #1e3a8a 60%, #1e3a8a 100%)',
@@ -444,7 +444,7 @@ export default function AdmissionsPage() {
                 <span className="h-line block text-white" style={{ opacity: 1 }}>Begin Your</span>
                 <span className="h-line block text-white" style={{ opacity: 1 }}>Journey</span>
               </h1>
-              <p className="h-sub max-w-lg text-white/72 mb-7" style={{ opacity: 1, fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.8rem,.95vw,.95rem)', lineHeight: 1.72 }}>
+              <p className="h-sub max-w-lg text-white mb-7" style={{ opacity: 1, fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.95rem,1vw,1rem)', lineHeight: 1.72 }}>
                 Admission to LEAD College is the first step toward becoming part of a dynamic academic community committed to developing competent professionals, entrepreneurs, and technology specialists.
               </p>
               <div className="h-btns flex flex-wrap gap-2.5 mb-10" style={{ opacity: 1 }}>
@@ -480,7 +480,7 @@ export default function AdmissionsPage() {
                 ].map(s=>(
                   <div key={s.val} className="h-stat" style={{ opacity: 1 }}>
                     <p className={cinzel.className} style={{ fontSize:'clamp(1.1rem,2vw,1.9rem)', fontWeight:700, color:'#fff', lineHeight:1 }}>{s.val}</p>
-                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', color:'rgba(255,255,255,0.48)', marginTop:3, maxWidth:140 }}>{s.lbl}</p>
+                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', color:'#fff', marginTop:3, maxWidth:140 }}>{s.lbl}</p>
                   </div>
                 ))}
               </div>
@@ -504,7 +504,7 @@ export default function AdmissionsPage() {
                   {[{v:'360',l:'MBA Seats'},{v:'2+',l:'PG Programs'},{v:'NBA',l:'Accredited'},{v:'100%',l:'Residential'}].map(s=>(
                     <div key={s.v} className="bg-blue-50/60 rounded-xl p-3 text-center border border-blue-100/50">
                       <p className={cinzel.className} style={{ fontSize:'1.25rem', fontWeight:700, color:BLUE, lineHeight:1 }}>{s.v}</p>
-                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', color:'#666', marginTop:2 }}>{s.l}</p>
+                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', color:'#111', marginTop:2 }}>{s.l}</p>
                     </div>
                   ))}
                 </div>
@@ -554,7 +554,7 @@ export default function AdmissionsPage() {
                         {prog.bullets.map(b=>(
                           <li key={b} className="flex items-start gap-1.5">
                             <div className="mt-[5px] w-1 h-1 rounded-full flex-shrink-0" style={{ background:BLUE2 }} />
-                            <span style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.72rem', lineHeight:1.6, color:'#555' }}>{b}</span>
+                            <span style={{ fontFamily:"'Playfair Display',serif", fontSize:'1rem', lineHeight:1.6, color:'#111' }}>{b}</span>
                           </li>
                         ))}
                       </ul>
@@ -647,7 +647,7 @@ export default function AdmissionsPage() {
                     <p className={cinzel.className} style={{ fontSize:'0.72rem', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.1em', color:BLUE, marginBottom:4 }}>Program Commencement</p>
                     <div className="flex items-center gap-2">
                       <span style={{ color:BLUE }}>{Ico.clock}</span>
-                      <p style={{ ...P, fontSize:'0.95rem' }}>First week of September, preceded by the <em>Turning Point</em> pre-course induction program.</p>
+                      <p style={{ ...P, fontSize:'0.95rem' }}>First week of September, preceded by the <em style={{ fontStyle:'normal' }}>Turning Point</em> pre-course induction program.</p>
                     </div>
                   </div>
                   <div className="flex gap-2 mt-auto">
@@ -713,7 +713,7 @@ export default function AdmissionsPage() {
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="bg-white/14 backdrop-blur-md rounded-xl px-4 py-3 border border-white/18">
                       <p className={cinzel.className} style={{ color:'#fff', fontSize:'0.72rem', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:2 }}>Fully Residential Campus</p>
-                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.95rem', color:'rgba(255,255,255,0.78)', lineHeight:1.5 }}>Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.</p>
+                      <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.95rem', color:'#fff', lineHeight:1.5 }}>Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.</p>
                     </div>
                   </div>
                 </div>
@@ -754,7 +754,7 @@ export default function AdmissionsPage() {
               <div className="fq-l lg:sticky lg:top-16 self-start" style={{ opacity:1 }}>
                 <Label text="Got Questions?" />
                 <Title size="clamp(1.35rem,2.52vw,2.34rem)">Every<br />Answer<br />Here.</Title>
-                <p style={{ ...P, fontSize:'0.74rem', marginTop:8 }}>Still need help? Reach us via LEAD QMS or call +91 9497713693.</p>
+                <p style={{ ...P, fontSize:'1rem', marginTop:8 }}>Still need help? Reach us via LEAD QMS or call +91 9497713693.</p>
                 <div className="mt-4 w-full max-w-[160px]"><UndrawFAQ /></div>
                 <div className="mt-4 space-y-2">
                   <Btn href={MBA_URL} label="Apply for MBA" primary ext />
@@ -835,7 +835,7 @@ export default function AdmissionsPage() {
                       <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background:'rgba(30,58,138,0.06)', color:BLUE }}>{card.icon}</div>
                       <div>
                         <h4 className={cinzel.className} style={{ fontSize:'0.72rem', letterSpacing:'0.2em', textTransform:'uppercase', color:BLUE2, marginBottom:4, fontWeight:600 }}>{card.label}</h4>
-                        {card.lines.map(line=><p key={line} style={{ fontFamily:"'Playfair Display',serif", fontSize:'0.82rem', color:'#444', lineHeight:1.75 }}>{line}</p>)}
+                        {card.lines.map(line=><p key={line} style={{ fontFamily:"'Playfair Display',serif", fontSize:'1rem', color:'#111', lineHeight:1.75 }}>{line}</p>)}
                       </div>
                     </div>
                   ))}
@@ -849,7 +849,7 @@ export default function AdmissionsPage() {
                     <h3 className={cinzel.className} style={{ color:'#fff', fontSize:'clamp(1rem,1.7vw,1.5rem)', fontWeight:700, lineHeight:1.1, marginBottom:8, textTransform:'uppercase' }}>
                       Ready to Begin<br />Your Journey?
                     </h3>
-                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'1rem', color:'rgba(255,255,255,0.7)', marginBottom:14, lineHeight:1.65 }}>
+                    <p style={{ fontFamily:"'Playfair Display',serif", fontSize:'1rem', color:'#fff', marginBottom:14, lineHeight:1.65 }}>
                       Join LEAD — where learning is practical, growth is continuous, and leadership is a way of life.
                     </p>
                     <div className="flex flex-wrap gap-2">

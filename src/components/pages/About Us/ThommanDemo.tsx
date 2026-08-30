@@ -303,8 +303,8 @@ export default function ChairmanSection() {
             <div ref={labelRef} style={{ opacity: 1, marginBottom: "clamp(0.6rem,1.2vh,1.2rem)" }}>
               <span style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(0.55rem, 0.9vw, 1rem)",
-                letterSpacing: "0.32em",
+                fontSize: "clamp(0.72rem, 0.9vw, 1rem)",
+                letterSpacing: "0.28em",
                 textTransform: "uppercase",
                 color: BLUE,
                 display: "flex", alignItems: "center", gap: "0.7rem",
@@ -339,20 +339,20 @@ export default function ChairmanSection() {
             <div ref={nameRef} style={{ opacity: 1, marginBottom: "clamp(1rem,2vh,2rem)" }}>
               <p style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(0.75rem, 1.2vw, 1.4rem)",
+                fontSize: "clamp(1rem, 1.3vw, 1.5rem)",
                 fontWeight: 600, margin: 0,
               }}>
                 Dr. Thomas George K
                 <span style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontStyle: "italic", color: "#777",
-                  marginLeft: 8, fontSize: "0.85em",
+                  color: "#111",
+                  marginLeft: 8, fontSize: "0.9em",
                 }}>(Thomman)</span>
               </p>
               <p style={{
                 fontFamily: cinzel.style.fontFamily,
-                fontSize: "clamp(0.42rem, 0.7vw, 0.75rem)",
-                letterSpacing: "0.25em", textTransform: "uppercase",
+                fontSize: "clamp(0.72rem, 0.9vw, 0.85rem)",
+                letterSpacing: "0.2em", textTransform: "uppercase",
                 color: BLUE, marginTop: 4,
               }}>
                 Chairman &amp; Director
@@ -370,8 +370,8 @@ export default function ChairmanSection() {
                 <div key={text} className="cred-item" style={{
                   display: "flex", alignItems: "center", gap: "0.75rem",
                   fontFamily: cinzel.style.fontFamily,
-                  fontSize: "clamp(0.5rem, 0.85vw, 0.9rem)",
-                  letterSpacing: "0.08em", color: "#222", opacity: 1,
+                  fontSize: "clamp(0.82rem, 0.9vw, 0.95rem)",
+                  letterSpacing: "0.06em", color: "#111", opacity: 1,
                 }}>
                   <span style={{ color: BLUE, flexShrink: 0 }}><Icon /></span>
                   <span style={{ position: "relative", paddingBottom: 5 }}>

@@ -47,7 +47,7 @@ const h2Style = (sz = "clamp(2rem,3.5vw,3.2rem)"): CSSProperties => ({
 });
 const bodyStyle: CSSProperties = {
   fontFamily: PF, fontSize: "clamp(0.92rem,1vw,1rem)",
-  lineHeight: 1.9, color: "#555",
+  lineHeight: 1.9, color: "#111",
 };
 const rule = (light = false) => (
   <span style={{
@@ -211,7 +211,7 @@ function Donut() {
         {slices.map(sl => (
           <div key={sl.name} style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
             <div style={{ width: 9, height: 9, borderRadius: 2, background: sl.color, flexShrink: 0 }} />
-            <span style={{ fontFamily: PF, fontSize: "0.83rem", color: "#444", flex: 1, lineHeight: 1.8 }}>{sl.name}</span>
+            <span style={{ fontFamily: PF, fontSize: "0.83rem", color: "#111", flex: 1, lineHeight: 1.8 }}>{sl.name}</span>
             <span style={{ fontFamily: C, fontSize: "0.78rem", fontWeight: 700, color: BLUE }}>{sl.pct.toFixed(1)}%</span>
           </div>
         ))}
@@ -308,7 +308,7 @@ function LineChart() {
           <svg width="26" height="8">
             <line x1="0" y1="4" x2="26" y2="4" stroke={BLUE} strokeWidth="2.5" />
           </svg>
-          <span style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#bbb" }}>Median Salary (LPA) — 7 Graduating Batches</span>
+          <span style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: "#111" }}>Median Salary (LPA) — 7 Graduating Batches</span>
         </div>
       </div>
     </div>
@@ -504,9 +504,9 @@ function HeroSection() {
                 <div
                   style={{
                     fontFamily: PF,
-                    fontStyle: "italic",
+                    fontStyle: "normal",
                     fontSize: "0.74rem",
-                    color: "#aaa",
+                    color: "#111",
                     marginTop: "0.25rem",
                     whiteSpace: "pre-line",
                     lineHeight: 1.4,
@@ -589,7 +589,7 @@ function TrajectorySection() {
 
         <div style={{ marginTop: "5rem", marginBottom: "1.5rem" }}>
           <div style={{ fontFamily: C, fontSize: "clamp(1rem,1.6vw,1.4rem)", fontWeight: 700, letterSpacing: "0.04em", color: "#0D0D0D", marginBottom: "0.6rem" }}>Year-wise Placement Summary</div>
-          <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "clamp(0.92rem,1vw,1rem)", color: "#888", marginBottom: "1.5rem", maxWidth: "52ch" }}>
+          <div style={{ fontFamily: PF, fontStyle: "normal", fontSize: "clamp(0.92rem,1vw,1rem)", color: "#111", marginBottom: "1.5rem", maxWidth: "52ch" }}>
             Select a graduating batch to view detailed salary, placement rate, and company data for that academic year.
           </div>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
@@ -634,7 +634,7 @@ function TrajectorySection() {
               </div>
               <div style={{ fontFamily: C, fontWeight: 700, fontSize: "clamp(1rem,1.5vw,1.4rem)", color: BLUE, marginBottom: "0.3rem" }}>{item.val}</div>
               <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#bbb", marginBottom: "0.2rem" }}>{item.label}</div>
-              <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#ccc", lineHeight: 1.4 }}>{item.sub}</div>
+              <div style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: "#111", lineHeight: 1.4 }}>{item.sub}</div>
             </div>
           ))}
 
@@ -679,7 +679,7 @@ function SectorSection() {
             opacity: vis ? 1 : 0, transform: vis ? "none" : "translateY(20px)",
             transition: "opacity .8s .1s, transform .8s .1s cubic-bezier(.22,1,.36,1)",
           }}>Every industry<br />has a LEAD alumni.</h2>
-          <p style={{ ...bodyStyle, color: "#666", maxWidth: "42ch", marginBottom: "2.5rem", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
+          <p style={{ ...bodyStyle, color: "#111", maxWidth: "42ch", marginBottom: "2.5rem", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
             Marketing & Sales commands 58% of all placed roles. BFSI, Analytics, and HR follow —
             reflecting the breadth of LEAD's MBA specialisations and the diversity of recruiting companies.
           </p>
@@ -950,7 +950,7 @@ function InternshipSection() {
             }}>
               <div style={{ fontFamily: C, fontWeight: 700, fontSize: "clamp(1.5rem,2.5vw,2.2rem)", color: c.dark ? WHITE : BLUE, lineHeight: 1, marginBottom: "0.5rem" }}>{c.v}</div>
               <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: c.dark ? "rgba(255,255,255,.45)" : "#bbb", marginBottom: "0.2rem" }}>{c.l}</div>
-              <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: c.dark ? "rgba(255,255,255,.35)" : "#ccc" }}>{c.sub}</div>
+              <div style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: c.dark ? "#fff" : "#111" }}>{c.sub}</div>
             </div>
           ))}
         </div>
@@ -1007,7 +1007,7 @@ function InternshipSection() {
                     </div>
                   </div>
 
-                  <p style={{ fontFamily: PF, fontSize: "1rem", lineHeight: 1.9, color: "#666", margin: 0 }}>{ph.note}</p>
+                  <p style={{ fontFamily: PF, fontSize: "1rem", lineHeight: 1.9, color: "#111", margin: 0 }}>{ph.note}</p>
                 </div>
               </div>
             ))}
@@ -1024,7 +1024,7 @@ function InternshipSection() {
                   <s.Icon size={12} color={BLUE} strokeWidth={1.5} />
                 </div>
                 <div style={{ width: 128, flexShrink: 0 }}>
-                  <span style={{ fontFamily: PF, fontSize: "0.83rem", color: "#555" }}>{s.n}</span>
+                  <span style={{ fontFamily: PF, fontSize: "0.83rem", color: "#111" }}>{s.n}</span>
                 </div>
                 <div style={{ flex: 1, height: 2, background: "rgba(30,58,138,.07)", position: "relative", overflow: "hidden" }}>
                   <div style={{
@@ -1063,7 +1063,7 @@ function InternshipSection() {
                   <div style={{ fontFamily: C, fontWeight: 700, fontSize: "2.2rem", color: BLUE, lineHeight: 1, flexShrink: 0, minWidth: 72 }}>{loc.p}%</div>
                   <div style={{ width: 1, height: 40, background: "rgba(30,58,138,.1)", flexShrink: 0 }} />
                   <div>
-                    <div style={{ fontFamily: PF, fontSize: "0.95rem", color: "#333", fontWeight: 600, marginBottom: "0.2rem" }}>{loc.l}</div>
+                    <div style={{ fontFamily: PF, fontSize: "1rem", color: "#111", fontWeight: 600, marginBottom: "0.2rem" }}>{loc.l}</div>
                     <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "#aaa" }}>{loc.c} students</div>
                   </div>
                 </div>
@@ -1071,7 +1071,7 @@ function InternshipSection() {
             </div>
 
             {/* Bottom note — pinned to bottom, aligns with right side note */}
-            <p style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#aaa", marginTop: "0.75rem", lineHeight: 1.6, marginBottom: 0 }}>
+            <p style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: "#111", marginTop: "0.75rem", lineHeight: 1.6, marginBottom: 0 }}>
               47% of students interned outside their home state — building cross-market exposure and professional resilience.
             </p>
           </div>
@@ -1145,7 +1145,7 @@ function InternshipSection() {
             </div>
 
             {/* Bottom note — pinned to bottom, aligns with left side note */}
-            <p style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#aaa", marginTop: "0.75rem", lineHeight: 1.6, marginBottom: 0 }}>
+            <p style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: "#111", marginTop: "0.75rem", lineHeight: 1.6, marginBottom: 0 }}>
               Decathlon · Kirloskar Brothers · Sheenlac Paints · Bigbasket · Westside · Aster · Van Heusen · Allen Solly and more.
             </p>
           </div>
@@ -1173,7 +1173,7 @@ function ProcessSection() {
           }}>Achievement is not accidental.<br />
             <span style={{ color: "rgba(150,190,255,.8)" }}>It is a structured outcome.</span>
           </h2>
-          <p style={{ ...bodyStyle, color: "rgba(255,255,255,0.9)", maxWidth: "52ch", margin: "0 auto", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
+          <p style={{ ...bodyStyle, color: "#fff", maxWidth: "52ch", margin: "0 auto", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
             LEAD's placement preparation begins on Day 1 of the programme — not a week before the interviews open.
             Every student passes through five deliberate stages before an offer arrives.
           </p>
@@ -1188,7 +1188,7 @@ function ProcessSection() {
             }}>
               <div style={{ fontFamily: C, fontSize: "2.8rem", fontWeight: 700, color: "rgba(255,255,255,0.28)", lineHeight: 1, marginBottom: "1.25rem" }}>{s.n}</div>
               <h3 style={{ fontFamily: C, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,.72)", margin: "0 0 0.75rem" }}>{s.t}</h3>
-              <p style={{ fontFamily: PF, fontSize: "clamp(0.92rem,.9vw,1rem)", lineHeight: 1.85, color: "rgba(255,255,255,0.9)", margin: 0 }}>{s.b}</p>
+              <p style={{ fontFamily: PF, fontSize: "clamp(0.92rem,.9vw,1rem)", lineHeight: 1.85, color: "#fff", margin: 0 }}>{s.b}</p>
             </div>
           ))}
         </div>
@@ -1261,7 +1261,7 @@ function VoicesSection() {
             }}>
               <div style={{ position: "absolute", top: "0.75rem", right: "1.25rem", fontFamily: PF, fontSize: "4.5rem", color: "rgba(30,58,138,.05)", lineHeight: 1, userSelect: "none" }}>"</div>
 
-              <p style={{ fontFamily: PF, fontStyle: "italic", fontSize: "clamp(0.92rem,.95vw,1rem)", lineHeight: 1.9, color: "#444", margin: "0 0 1.75rem", minHeight: "6em" }}>{t.q}</p>
+              <p style={{ fontFamily: PF, fontStyle: "normal", fontSize: "clamp(0.92rem,.95vw,1rem)", lineHeight: 1.9, color: "#111", margin: "0 0 1.75rem", minHeight: "6em" }}>{t.q}</p>
 
               <div style={{ width: 24, height: 1, background: "rgba(30,58,138,.15)", marginBottom: "1rem" }} />
 
@@ -1269,7 +1269,7 @@ function VoicesSection() {
                 <div>
                   <div style={{ fontFamily: C, fontSize: "0.72rem", fontWeight: 700, color: "#0D0D0D", letterSpacing: "0.04em", marginBottom: "0.2rem" }}>{t.name}</div>
                   <div style={{ fontFamily: C, fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: BLUE, opacity: 0.7, marginBottom: "0.15rem" }}>{t.placed}</div>
-                  <div style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#bbb" }}>{t.role} · Batch {t.batch}</div>
+                  <div style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: "#111" }}>{t.role} · Batch {t.batch}</div>
                 </div>
                 <div style={{
                   flexShrink: 0, padding: "0.3rem 0.65rem",
@@ -1285,7 +1285,7 @@ function VoicesSection() {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1.5rem", padding: "0 clamp(2rem,5vw,5rem)" }}>
-        <span style={{ fontFamily: PF, fontStyle: "italic", fontSize: "0.72rem", color: "#ccc" }}>Tap or hover to pause · 9 alumni stories</span>
+        <span style={{ fontFamily: PF, fontStyle: "normal", fontSize: "0.72rem", color: "#111" }}>Tap or hover to pause · 9 alumni stories</span>
       </div>
 
       <style>{`
@@ -1317,7 +1317,7 @@ function HireSection() {
             Hire from LEAD.<br />
             <span style={GRAD_TEXT}>Build tomorrow's leaders.</span>
           </h2>
-          <p style={{ ...bodyStyle, color: "#666", maxWidth: "54ch", margin: "0 auto", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
+          <p style={{ ...bodyStyle, color: "#111", maxWidth: "54ch", margin: "0 auto", opacity: vis ? 1 : 0, transition: "opacity .8s .2s" }}>
             LEAD's placement cell provides end-to-end recruitment support — from job description alignment to Day 1 onboarding.
             Whether you are a first-time recruiter or a returning partner, connect with any member of our team directly below.
           </p>
@@ -1338,7 +1338,7 @@ function HireSection() {
             }}>
               <ChevronRight size={14} color={BLUE} style={{ marginBottom: "1rem", opacity: 0.5 }} />
               <h4 style={{ fontFamily: C, fontSize: "0.74rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#0D0D0D", margin: "0 0 0.6rem" }}>{item.t}</h4>
-              <p style={{ fontFamily: PF, fontSize: "1rem", lineHeight: 1.8, color: "#666", margin: 0 }}>{item.d}</p>
+              <p style={{ fontFamily: PF, fontSize: "1rem", lineHeight: 1.8, color: "#111", margin: 0 }}>{item.d}</p>
             </div>
           ))}
         </div>
@@ -1358,11 +1358,11 @@ function HireSection() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                   <a href={`mailto:${c.email}`} style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
                     <Mail size={12} color="#aaa" />
-                    <span style={{ fontFamily: PF, fontSize: "0.82rem", color: "#555", lineHeight: 1.9 }}>{c.email}</span>
+                    <span style={{ fontFamily: PF, fontSize: "0.82rem", color: "#111", lineHeight: 1.9 }}>{c.email}</span>
                   </a>
                   <a href={`tel:${c.phone.replace(/\s/g, "")}`} style={{ display: "flex", alignItems: "center", gap: "0.6rem", textDecoration: "none" }}>
                     <Phone size={12} color="#aaa" />
-                    <span style={{ fontFamily: PF, fontSize: "0.82rem", color: "#555", lineHeight: 1.9 }}>{c.phone}</span>
+                    <span style={{ fontFamily: PF, fontSize: "0.82rem", color: "#111", lineHeight: 1.9 }}>{c.phone}</span>
                   </a>
                 </div>
               </div>

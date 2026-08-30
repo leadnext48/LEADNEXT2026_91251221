@@ -61,7 +61,7 @@ const RQ_CSS = `
 .rq-dash{display:inline-block;width:24px;height:1.5px;background:#005C9F;}
 .rq-title{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.02;font-weight:700;letter-spacing:-.015em;margin:0;
   background:linear-gradient(90deg,#0D0D0D 0%,#005C9F 64%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
-.rq-sub{font-size:clamp(.9rem,1.05vw,1.02rem);line-height:1.75;color:#46505f;margin:1rem auto 0;max-width:44rem;}
+.rq-sub{font-size:clamp(1rem,1.05vw,1.02rem);line-height:1.75;color:#111;margin:1rem auto 0;max-width:44rem;}
 
 /* moving logo rows */
 .rq-marquee{margin:clamp(2.4rem,4.5vw,3.4rem) 0 0;display:flex;flex-direction:column;gap:1rem;

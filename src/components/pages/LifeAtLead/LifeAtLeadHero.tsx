@@ -243,9 +243,9 @@ export default function LifeAtLeadHero({
             style={{
               opacity: 1,
               fontFamily: playfair.style.fontFamily,
-              fontSize: "clamp(0.82rem, 0.98vw, 0.96rem)",
+              fontSize: "clamp(0.95rem, 0.98vw, 1rem)",
               lineHeight: 1.8,
-              color: "rgba(255,255,255,0.68)",
+              color: "#fff",
               maxWidth: 560,
               margin: "0 0 clamp(1.4rem, 2.8vh, 2.4rem)",
             }}

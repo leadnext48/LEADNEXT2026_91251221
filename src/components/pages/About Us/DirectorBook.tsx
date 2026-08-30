@@ -92,7 +92,7 @@ export default function ChairmanBookSection(): JSX.Element {
 
             {/* Description fade in */}
             <motion.p
-              className="text-md text-gray-700 leading-relaxed mt-4 max-w-xl"
+              className="text-md text-[#111] leading-relaxed mt-4 max-w-xl"
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.6 }}
@@ -161,7 +161,7 @@ export default function ChairmanBookSection(): JSX.Element {
                 fade ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-base text-gray-700 leading-6 mb-6 pt-3">
+              <p className="text-base text-[#111] leading-6 mb-6 pt-3">
                 {testimonials[currentIndex].text}
               </p>
 
@@ -174,7 +174,7 @@ export default function ChairmanBookSection(): JSX.Element {
                   <p className="font-semibold text-[12px]">
                     {testimonials[currentIndex].name}
                   </p>
-                  <p className="text-[12px] text-gray-600">
+                  <p className="text-[#111] text-[12px]">
                     {testimonials[currentIndex].role}
                   </p>
                 </div>

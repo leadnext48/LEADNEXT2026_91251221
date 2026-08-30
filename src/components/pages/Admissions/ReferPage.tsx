@@ -110,7 +110,7 @@ export default function ReferPage() {
             </h1>
             <div className="ref-hero-sub">
               <div style={{ width: 40, height: 2, background: `linear-gradient(90deg, ${BLUE}, #1e3a8a)`, marginBottom: 'clamp(1rem, 2vh, 1.6rem)' }} />
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.88rem, 1.05vw, 1rem)', lineHeight: 1.85, color: '#666', margin: 0 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.88rem, 1.05vw, 1rem)', lineHeight: 1.85, color: '#111', margin: 0 }}>
                 Know a future MBA or MCA student? Refer them to LEAD College and help them begin their journey. Submit the details below and our admissions team will take it forward &mdash; every referral is tracked to your Mentor Group (MG) for your claim.
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function ReferPage() {
                 <div key={s.title} className="ref-step">
                   <span className="ref-step-icon"><s.icon size={18} color={BLUE} strokeWidth={1.6} /></span>
                   <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(0.6rem, 0.8vw, 0.72rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: DARK, margin: 0 }}>{s.title}</p>
-                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.9vw, 1rem)', lineHeight: 1.7, color: '#666', margin: 0 }}>{s.body}</p>
+                  <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.9vw, 1rem)', lineHeight: 1.7, color: '#111', margin: 0 }}>{s.body}</p>
                 </div>
               ))}
             </div>
@@ -137,7 +137,7 @@ export default function ReferPage() {
             <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(1.3rem, 2.5vw, 2.8rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: DARK, margin: 0, lineHeight: 1.1 }}>
               Referral Form
             </h2>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', color: '#777', margin: '0.8rem auto 0', maxWidth: 480, lineHeight: 1.7 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.92rem, 0.95vw, 1rem)', color: '#111', margin: '0.8rem auto 0', maxWidth: 480, lineHeight: 1.7 }}>
               Fill in the details below. All information is submitted securely to the LEAD admissions team.
             </p>
           </div>

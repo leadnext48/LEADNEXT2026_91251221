@@ -30,9 +30,9 @@ const IMG = {
 /* ─────────── STYLE HELPERS ─────────── */
 const P: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 'clamp(0.88rem, 0.98vw, 0.98rem)',
+  fontSize: 'clamp(0.95rem, 1vw, 1rem)',
   lineHeight: 1.8,
-  color: '#555',
+  color: '#111',
 };
 const TG: React.CSSProperties = {
   background: 'linear-gradient(90deg, #000 0%, #1e3a8a 60%, #1e3a8a 100%)',
@@ -235,7 +235,7 @@ export default function MBAPage() {
                 ].map(s => (
                   <div key={s.val} className="h-stat">
                     <p className={cinzel.className} style={{ fontSize: 'clamp(1rem,1.8vw,1.7rem)', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{s.val}</p>
-                    <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>{s.lbl}</p>
+                    <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: '#fff', marginTop: 3 }}>{s.lbl}</p>
                   </div>
                 ))}
               </div>
@@ -259,7 +259,7 @@ export default function MBAPage() {
                   ].map(s => (
                     <div key={s.l} className="bg-blue-50/60 rounded-xl p-3 border border-blue-100/50">
                       <p className={cinzel.className} style={{ fontSize: '1.25rem', fontWeight: 700, color: BLUE, lineHeight: 1 }}>{s.v}</p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: '#666', marginTop: 2 }}>{s.l}</p>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.74rem', color: '#111', marginTop: 2 }}>{s.l}</p>
                     </div>
                   ))}
                 </div>
@@ -367,7 +367,7 @@ export default function MBAPage() {
                   <div className="absolute bottom-5 left-5 right-5">
                     <div className="backdrop-blur-md rounded-xl px-4 py-3 border border-white/18" style={{ background: 'rgba(255,255,255,0.1)' }}>
                       <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.74rem', letterSpacing: '0.16em', textTransform: 'uppercase', marginBottom: 2 }}>Learning with Purpose</p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.5 }}>Real communities. Real challenges. Real management.</p>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '1rem', color: '#fff', lineHeight: 1.5 }}>Real communities. Real challenges. Real management.</p>
                     </div>
                   </div>
                 </div>
@@ -517,7 +517,7 @@ export default function MBAPage() {
                       <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.74rem', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 4 }}>
                         Fully Residential Campus
                       </p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.9rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.55 }}>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '1rem', color: '#fff', lineHeight: 1.55 }}>
                         Dhoni, Palakkad — a serene environment built for focus, growth &amp; leadership.
                       </p>
                     </div>
@@ -568,7 +568,7 @@ export default function MBAPage() {
                     </div>
                   ))}
                 </div>
-                <p style={{ ...P, fontStyle: 'italic' }}>This approach ensures graduates possess demonstrable skills, not just academic knowledge.</p>
+                <p style={{ ...P, fontStyle: 'normal' }}>This approach ensures graduates possess demonstrable skills, not just academic knowledge.</p>
               </div>
 
               {/* Right: image */}
@@ -638,7 +638,7 @@ export default function MBAPage() {
                       </svg>
                     </div>
                     <h3 className={cinzel.className} style={{ fontSize: 'clamp(0.68rem,0.82vw,0.78rem)', fontWeight: 700, color: '#111', marginBottom: '0.35rem', textTransform: 'uppercase', letterSpacing: '0.04em', lineHeight: 1.3 }}>{title}</h3>
-                    <p style={{ ...P, fontSize: '0.88rem' }}>{desc}</p>
+                    <p style={{ ...P, fontSize: '1rem' }}>{desc}</p>
                   </div>
                 ))}
               </div>
@@ -660,7 +660,7 @@ export default function MBAPage() {
               </h2>
 
               <p className="cta-sub max-w-2xl mx-auto mb-10"
-                style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.9rem,1.1vw,1.05rem)', lineHeight: 1.85, color: 'rgba(255,255,255,0.88)', opacity: 1 }}>
+                style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(1rem,1.1vw,1.05rem)', lineHeight: 1.85, color: '#fff', opacity: 1 }}>
                 Join the next generation of business leaders, innovators, and change-makers at LEAD. Our MBA programme has been shaping industry-ready professionals since 2010 — through rigorous academics, real-world internships, and a fully residential campus that builds character alongside competence. Whether you aspire to lead a corporation, launch a venture, or drive meaningful social change, LEAD gives you the foundation, the network, and the mindset to do it. Your journey begins here.
               </p>
 

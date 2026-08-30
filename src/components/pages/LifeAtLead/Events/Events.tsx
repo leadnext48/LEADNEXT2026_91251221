@@ -137,10 +137,10 @@ function HeroSection() {
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .5, delay: .28 }}
             style={{ maxWidth: 780 }}>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.86rem,1vw,.96rem)", lineHeight: 1.82, color: "#666", margin: "0 0 .9rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,1vw,1rem)", lineHeight: 1.82, color: "#111", margin: "0 0 .9rem" }}>
               LEAD hosts a wide range of academic, cultural, entrepreneurial, and social events throughout the year — workshops, seminars, industry talks, competitions, festivals, and leadership programmes that keep the campus calendar dynamic and engaging.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,1vw,1rem)", lineHeight: 1.75, color: "#999", margin: 0 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.92rem,1vw,1rem)", lineHeight: 1.75, color: "#111", margin: 0 }}>
               Many events are organised and managed entirely by students through the LOTs framework, providing real exposure to planning, coordination, and execution well before graduation.
             </p>
           </motion.div>
@@ -258,7 +258,7 @@ function GridSection({ events }: { events: EventCardItem[] }) {
               <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.72rem,.8vw,.78rem)", letterSpacing: ".2em", textTransform: "uppercase", fontWeight: 600, color: C.blue, margin: "0 0 .28rem" }}>All Events</p>
               <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2.2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: C.text, margin: 0, lineHeight: .95 }}>LEAD Event Space</h2>
             </div>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.7rem,.8vw,.76rem)", color: C.faint, margin: 0, alignSelf: "flex-end" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.9rem,1vw,1rem)", color: "#111", margin: 0, alignSelf: "flex-end" }}>
               Showing {start + 1}–{Math.min(start + PER_PAGE, events.length)} of {events.length} events
             </p>
           </div>

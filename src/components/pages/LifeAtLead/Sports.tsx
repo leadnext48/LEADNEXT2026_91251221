@@ -30,7 +30,7 @@ const C = {
   sand:       "#EEF2F8",
   parchment:  "#DBEAFE",
   text:       "#0D0D0D",
-  muted:      "#555",
+  muted:      "#111",
   faint:      "#888",
 } as const;
 
@@ -171,7 +171,7 @@ function HeroSection(): React.JSX.Element {
         .sports-strip-sub {
           display: block;
           font-size: clamp(.6rem,.75vw,.72rem);
-          color: #777;
+          color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media(max-width:767px){
@@ -239,7 +239,7 @@ function HeroSection(): React.JSX.Element {
                 fontFamily: playfair.style.fontFamily,
                 fontSize: "clamp(.88rem,1.05vw,.98rem)",
                 lineHeight: 1.8,
-                color: "#666",
+                color: "#111",
                 margin: 0,
               }}>
               At LEAD College, we believe a healthy body is the foundation for a sound mind. Our state-of-the-art sports facilities are designed to foster physical fitness, teamwork, and holistic development — for competitive athletes and casual movers alike.
@@ -597,7 +597,7 @@ function HighlightsSection(): React.JSX.Element {
                   fontFamily: playfair.style.fontFamily,
                   fontSize: "clamp(.9rem,.9vw,1rem)",
                   lineHeight: 1.72,
-                  color: card.dark ? "rgba(255,255,255,.9)" : C.muted,
+                  color: card.dark ? "#fff" : C.muted,
                   margin: 0,
                 }}>{card.desc}</p>
               </motion.div>
@@ -906,7 +906,7 @@ function CommunitySection(): React.JSX.Element {
           <p style={{
             fontFamily: playfair.style.fontFamily,
             fontSize: "clamp(.9rem,.95vw,1rem)",
-            color: C.faint,
+            color: "#111",
             margin: 0,
             textAlign: "center",
             maxWidth: 480,

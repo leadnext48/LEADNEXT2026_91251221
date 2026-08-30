@@ -372,8 +372,8 @@ export default function WhyChooseLead() {
         <div ref={centerContentRef} className="wcl-center-content">
           <div style={{ width: 36, height: 1.5, background: 'rgba(255,255,255,0.28)', marginBottom: '1.1rem' }}/>
           <p className={playfair.className} style={{
-            fontSize: 'clamp(0.85rem,1.05vw,1.05rem)',
-            color: 'rgba(255,255,255,0.90)', lineHeight: 1.84,
+            fontSize: 'clamp(1rem,1.05vw,1.05rem)',
+            color: '#fff', lineHeight: 1.84,
             margin: '0 0 clamp(1.8rem,3.5vh,2.8rem)',
           }}>
             Empowering students through innovation, global exposure, and personalised
@@ -552,8 +552,8 @@ function Card({
       }}/>
 
       <p className={playfair.className} style={{
-        fontSize: 'clamp(14px,0.90vw,16px)',
-        color: '#4a5568', margin: 0, lineHeight: 1.74, flex: 1,
+        fontSize: 'clamp(16px,0.90vw,16px)',
+        color: '#111', margin: 0, lineHeight: 1.74, flex: 1,
       }}>{body}</p>
     </div>
   );

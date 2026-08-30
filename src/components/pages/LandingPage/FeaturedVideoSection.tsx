@@ -79,8 +79,8 @@ export default function FeaturedVideoSection() {
         <p
           style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize: 'clamp(0.92rem, 1vw, 1rem)',
-            color: '#777',
+            fontSize: 'clamp(1rem, 1vw, 1rem)',
+            color: '#111',
             margin: '0.8rem 0 0',
             maxWidth: 560,
             lineHeight: 1.7,

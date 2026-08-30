@@ -30,15 +30,15 @@ const gradientTitle: React.CSSProperties = {
 
 // Standard paragraph: Playfair, #555, clamp size, 1.75 line-height
 const paraStyle: React.CSSProperties = {
-  color: "#555",
-  fontSize: "clamp(14px, 0.9vw, 16px)",
+  color: "#111",
+  fontSize: "clamp(16px, 1vw, 16px)",
   lineHeight: 1.75,
 };
 
 // Dark-bg paragraph (navy sections): same size, white-ish
 const paraLightStyle: React.CSSProperties = {
-  color: "rgba(255,255,255,0.72)",
-  fontSize: "clamp(14px, 0.9vw, 16px)",
+  color: "#fff",
+  fontSize: "clamp(16px, 1vw, 16px)",
   lineHeight: 1.75,
 };
 
@@ -347,7 +347,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
 
             <Reveal direction="right" delay={150}>
               <div className="pt-8">
-                <p className={`${playfair.className} mb-5`} style={{ ...paraStyle, fontSize: "clamp(13px,1vw,16px)" }}>
+                <p className={`${playfair.className} mb-5`} style={{ ...paraStyle, fontSize: "clamp(16px,1vw,16px)" }}>
                   Entrepreneurship is a core focus area at LEAD College. The institution nurtures entrepreneurial thinking through specialised academic tracks, experiential learning, mentoring, and startup-oriented projects.
                 </p>
                 <p className={`${playfair.className} mb-10`} style={{ ...paraStyle }}>
@@ -365,7 +365,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       className="bg-white px-5 py-5 hover:bg-[#f0f4fb] transition-colors duration-300"
                     >
                       <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "12px", color: NAVY, letterSpacing: "0.1em" }}>{a.label}</p>
-                      <p className={`${playfair.className}`} style={{ fontSize: "12px", color: "#5a6d8a" }}>{a.sub}</p>
+                      <p className={`${playfair.className}`} style={{ fontSize: "12px", color: "#111" }}>{a.sub}</p>
                     </div>
                   ))}
                 </div>
@@ -386,7 +386,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       <span className={`${cinzel.className} font-bold flex-shrink-0 mt-0.5`} style={{ fontSize: "12px", color: "rgba(10,36,99,0.3)", letterSpacing: "0.08em" }}>{item.n}</span>
                       <div>
                         <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "12px", color: NAVY, letterSpacing: "0.06em" }}>{item.title}</p>
-                        <p className={`${playfair.className}`} style={{ fontSize: "16px", color: "#555", lineHeight: 1.7 }}>{item.desc}</p>
+                        <p className={`${playfair.className}`} style={{ fontSize: "16px", color: "#111", lineHeight: 1.7 }}>{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -494,7 +494,7 @@ export default function EntrepreneurshipPage(): JSX.Element {
                       </span>
                       <p className={`${cinzel.className} font-bold mb-1`} style={{ fontSize: "clamp(28px,3.5vw,42px)", letterSpacing: "-0.02em", color: isActive ? "#ffffff" : NAVY, lineHeight: 1 }}>{title}</p>
                       <p className={`${cinzel.className} uppercase mb-4`} style={{ fontSize: "12px", letterSpacing: "0.22em", color: isActive ? "rgba(255,255,255,0.5)" : "rgba(10,36,99,0.48)" }}>{subtitle}</p>
-                      <p className={`${playfair.className} leading-relaxed mb-5`} style={{ fontSize: "16px", color: isActive ? "rgba(255,255,255,0.78)" : "#2c3e5e", lineHeight: 1.75 }}>{desc}</p>
+                      <p className={`${playfair.className} leading-relaxed mb-5`} style={{ fontSize: "16px", color: isActive ? "#fff" : "#111", lineHeight: 1.75 }}>{desc}</p>
 
                       {/* CTA row */}
                       <div className="flex items-center justify-between px-4 py-3" style={{
@@ -624,7 +624,7 @@ const BIPanel: FC<BIPanelProps> = ({ stats, services, pillars }) => (
             <div className="grid lg:grid-cols-[auto_1fr] gap-8 items-center">
               <div>
                 <p className={`${cinzel.className} uppercase mb-2`} style={{ fontSize: "11px", letterSpacing: "0.3em", color: "rgba(255,255,255,0.35)" }}>Our Promise</p>
-                <p className={`${playfair.className} leading-snug`} style={{ fontSize: "clamp(17px,1.5vw,24px)", color: "rgba(255,255,255,0.92)", maxWidth: 480, fontWeight: 600 }}>
+                <p className={`${playfair.className} leading-snug`} style={{ fontSize: "clamp(17px,1.5vw,24px)", color: "#fff", maxWidth: 480, fontWeight: 600 }}>
                   "From B-School fame to E-School excellence — crafting vibrant entrepreneurs."
                 </p>
                 <p className={`${cinzel.className} uppercase mt-3`} style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(255,255,255,0.3)" }}>Dr P Rajan · LEAD BI Foundation</p>
@@ -791,7 +791,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 This platform serves as an optimal starting point for students venturing into entrepreneurship — providing access to cutting-edge technology, superior infrastructure, outstanding mentorship, initial funding, and exposure on a global scale.
               </p>
               <p className={`${playfair.className} mb-8`} style={{ ...paraLightStyle }}>
-                Supported by <strong style={{ color: "rgba(255,255,255,0.85)", fontWeight: 600 }}>Kerala Startup Mission</strong> — a flagship initiative fostering innovation culture in academic institutions across Kerala.
+                Supported by <strong style={{ color: "#fff", fontWeight: 600 }}>Kerala Startup Mission</strong> — a flagship initiative fostering innovation culture in academic institutions across Kerala.
               </p>
 
               {/* Content to fill the empty space in the navy bg column */}
@@ -896,7 +896,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
               <Eyebrow text="Our Mission" />
               <h3 className={`${cinzel.className} font-bold leading-none tracking-tight mb-7`} style={{ fontSize: "clamp(22px,3vw,42px)", ...gradientTitle }}>PREMIER<br />ENTREPRENEUR<br />SCHOOL</h3>
               {/* All paragraphs same style */}
-              <p className={`${playfair.className} mb-5`} style={{ ...paraStyle, fontSize: "clamp(13px,1vw,16px)" }}>
+              <p className={`${playfair.className} mb-5`} style={{ ...paraStyle, fontSize: "clamp(16px,1vw,16px)" }}>
                 Lead aspires to establish itself as the premier entrepreneurship school in India. With a student population exceeding 700, a dynamic entrepreneurial community, and LEAD IEDC organising impactful programmes, we are dedicated to nurturing entrepreneurs with passion and energy.
               </p>
               <p className={`${playfair.className} mb-6`} style={{ ...paraStyle }}>
@@ -928,7 +928,7 @@ const IEDCPanel: FC<IEDCPanelProps> = ({ stats, services, amenities, programs })
                 {programs.map((p, i) => (
                   <div key={p} className="flex items-center gap-3 px-5 py-4 hover:bg-[#f7f9fc] transition-colors duration-250" style={{ borderBottom: i < programs.length - 1 ? "1px solid rgba(10,36,99,0.06)" : "none" }}>
                     <ChevronRight size={11} strokeWidth={1.5} color="rgba(10,36,99,0.35)" style={{ flexShrink: 0 }} />
-                    <span className={`${playfair.className} font-medium`} style={{ fontSize: "14px", color: "#2c3e5e", lineHeight: 1.75 }}>{p}</span>
+                    <span className={`${playfair.className} font-medium`} style={{ fontSize: "16px", color: "#111", lineHeight: 1.75 }}>{p}</span>
                   </div>
                 ))}
               </div>

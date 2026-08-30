@@ -26,9 +26,9 @@ const IMG = {
 /* ─────────── STYLE HELPERS ─────────── */
 const P: React.CSSProperties = {
   fontFamily: "'Playfair Display', serif",
-  fontSize: 'clamp(0.92rem, 1vw, 1rem)',
+  fontSize: 'clamp(1rem, 1vw, 1rem)',
   lineHeight: 1.8,
-  color: '#555',
+  color: '#111',
 };
 const TG: React.CSSProperties = {
   background: 'linear-gradient(90deg, #000 0%, #1e3a8a 60%, #1e3a8a 100%)',
@@ -250,7 +250,7 @@ export default function MCAPage() {
                 ].map(s => (
                   <div key={s.val} className="h-stat">
                     <p className={cinzel.className} style={{ fontSize: 'clamp(1rem,1.8vw,1.7rem)', fontWeight: 700, color: '#fff', lineHeight: 1 }}>{s.val}</p>
-                    <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', marginTop: 3 }}>{s.lbl}</p>
+                    <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.72rem', color: '#fff', marginTop: 3 }}>{s.lbl}</p>
                   </div>
                 ))}
               </div>
@@ -274,7 +274,7 @@ export default function MCAPage() {
                   ].map(s => (
                     <div key={s.l} className="bg-blue-50/60 rounded-xl p-3 border border-blue-100/50">
                       <p className={cinzel.className} style={{ fontSize: '1.25rem', fontWeight: 700, color: BLUE, lineHeight: 1 }}>{s.v}</p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.72rem', color: '#666', marginTop: 2 }}>{s.l}</p>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.72rem', color: '#111', marginTop: 2 }}>{s.l}</p>
                     </div>
                   ))}
                 </div>
@@ -319,7 +319,7 @@ export default function MCAPage() {
                     {CURRICULUM_POINTS.map(pt => (
                       <div key={pt} className="cu-pt flex items-start gap-2.5" style={{ opacity: 1 }}>
                         <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2" style={{ background: BLUE }} />
-                        <p style={{ ...P, margin: 0, fontSize: '0.8rem' }}>{pt}</p>
+                        <p style={{ ...P, margin: 0, fontSize: '1rem' }}>{pt}</p>
                       </div>
                     ))}
                   </div>
@@ -436,7 +436,7 @@ export default function MCAPage() {
                       <p className={cinzel.className} style={{ color: '#fff', fontSize: '0.72rem', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 4 }}>
                         Fully Residential Campus
                       </p>
-                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '0.92rem', color: 'rgba(255,255,255,0.82)', lineHeight: 1.55 }}>
+                      <p style={{ fontFamily: "'Playfair Display',serif", fontSize: '1rem', color: '#fff', lineHeight: 1.55 }}>
                         Dhoni, Palakkad — a serene environment built for focus, growth &amp; innovation.
                       </p>
                     </div>
@@ -491,7 +491,7 @@ export default function MCAPage() {
                     </div>
                   ))}
                 </div>
-                <p style={{ ...P, fontStyle: 'italic' }}>This approach ensures measurable attainment of both technical and professional competencies.</p>
+                <p style={{ ...P, fontStyle: 'normal' }}>This approach ensures measurable attainment of both technical and professional competencies.</p>
               </div>
 
               {/* Right: image */}
@@ -559,7 +559,7 @@ export default function MCAPage() {
                       </svg>
                     </div>
                     <h3 className={cinzel.className} style={{ fontSize: 'clamp(0.66rem,0.8vw,0.74rem)', fontWeight: 700, color: '#111', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.04em', lineHeight: 1.3 }}>{title}</h3>
-                    <p style={{ ...P, fontSize: '0.95rem' }}>{desc}</p>
+                    <p style={{ ...P, fontSize: '1rem' }}>{desc}</p>
                   </div>
                 ))}
               </div>
@@ -581,7 +581,7 @@ export default function MCAPage() {
               </h2>
 
               <p className="cta-sub max-w-2xl mx-auto mb-10"
-                style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(0.9rem,1.1vw,1.05rem)', lineHeight: 1.85, color: 'rgba(255,255,255,0.88)', opacity: 1 }}>
+                style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(1rem,1.1vw,1.05rem)', lineHeight: 1.85, color: '#fff', opacity: 1 }}>
                 Join the next generation of technology professionals, innovators, and digital architects at LEAD. Our MCA programme has been shaping computing careers since 2010 and comprehensively redesigned in 2024 to meet the demands of an AI-driven world. Whether you aspire to build software, engineer intelligent systems, or launch a technology venture, LEAD gives you the foundation, the skills, and the environment to do it. Your digital future begins here.
               </p>
 

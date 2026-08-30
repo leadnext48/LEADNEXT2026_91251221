@@ -98,7 +98,7 @@ export default function SuccessStoriesSection() {
           <motion.p
             variants={fadeUp}
             className={cn(
-              "mt-4 max-w-3xl leading-relaxed text-black/70",
+              "mt-4 max-w-3xl leading-relaxed text-[#111]",
               "text-base sm:text-lg lg:text-base xl:text-lg",
               playfair.className,
             )}

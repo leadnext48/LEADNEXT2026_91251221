@@ -17,7 +17,7 @@ const COLORS = {
   primaryDark: "#1e3a8a",
   bg:          "#F7F9FC",
   text:        "#0D0D0D",
-  muted:       "#555",
+  muted:       "#111",
   faint:       "#888",
 } as const;
 
@@ -201,7 +201,7 @@ function HeroSection(): React.JSX.Element {
         .obt-strip-sub {
           display: block;
           font-size: clamp(.6rem,.75vw,.72rem);
-          color: #777;
+          color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
 
@@ -263,7 +263,7 @@ function HeroSection(): React.JSX.Element {
             <motion.p
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.3, ease: "easeOut" }}
-              style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.88rem,1.05vw,.98rem)", lineHeight: 1.8, color: "#666", margin: 0 }}
+              style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.88rem,1.05vw,.98rem)", lineHeight: 1.8, color: "#111", margin: 0 }}
             >
               An immersive outdoor leadership programme that moves learning beyond the conventional
               classroom — placing students in dynamic environments where they apply teamwork,
@@ -384,16 +384,16 @@ function PhilosophySection(): React.JSX.Element {
             />
 
             <div style={{ borderLeft: `3px solid ${COLORS.primary}`, paddingLeft: "1.2rem", marginBottom: "1.6rem" }}>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.88rem,1vw,.96rem)", fontWeight: 600, fontStyle: "italic", lineHeight: 1.65, color: COLORS.text, margin: "0 0 .5rem" }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.88rem,1vw,.96rem)", fontWeight: 600, fontStyle: "normal", lineHeight: 1.65, color: COLORS.text, margin: "0 0 .5rem" }}>
                 "Students often enter with assumptions about their abilities. The outdoor environment
                 disrupts routine patterns and challenges participants to engage with uncertainty."
               </p>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "#aaa", margin: 0, fontWeight: 600 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "#111", margin: 0, fontWeight: 600 }}>
                 — OBT Philosophy, LEAD College
               </p>
             </div>
 
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1.4rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#111", margin: "0 0 1.4rem" }}>
               The OBT program is rooted in experiential learning principles — learning by doing,
               reflecting, and applying insights to real-life contexts. Students begin to understand
               important leadership truths:
@@ -454,7 +454,7 @@ function ObjectivesSection(): React.JSX.Element {
           <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1.2rem,2.2vw,2.7rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.025em", color: COLORS.text, margin: 0, lineHeight: 1 }}>
             Learning Objectives
           </h2>
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", color: "#888", maxWidth: 440, margin: ".8rem auto 0", lineHeight: 1.65 }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", color: "#111", maxWidth: 440, margin: ".8rem auto 0", lineHeight: 1.65 }}>
             Four core dimensions of growth that OBT is specifically designed to activate.
           </p>
         </motion.div>
@@ -508,7 +508,7 @@ function ActivitiesSection(): React.JSX.Element {
               transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
               style={{ width: 36, height: 2, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: "1.1rem", transformOrigin: "left" }}
             />
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.78, color: "#666", margin: "0 0 1.6rem", maxWidth: 400 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.78, color: "#111", margin: "0 0 1.6rem", maxWidth: 400 }}>
               Four carefully designed training modules — each targeting a distinct dimension of leadership, teamwork, and personal development.
             </p>
 
@@ -576,7 +576,7 @@ function ActivitiesSection(): React.JSX.Element {
                 style={{ position: "absolute", top: 30, right: 10, background: COLORS.primary, borderRadius: 12, padding: ".8rem 1.1rem", zIndex: 4, boxShadow: "0 12px 32px rgba(0,92,159,.28)" }}
               >
                 <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "1.4rem", fontWeight: 900, color: "#fff", margin: 0, lineHeight: 1 }}>04</p>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: ".74rem", color: "rgba(255,255,255,.72)", margin: "3px 0 0" }}>Modules</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: ".74rem", color: "#fff", margin: "3px 0 0" }}>Modules</p>
               </motion.div>
             </motion.div>
           )}
@@ -616,7 +616,7 @@ function MentoringSection(): React.JSX.Element {
                 style={{ position: "absolute", bottom: -20, right: -20, background: "#fff", border: "1px solid rgba(0,0,0,.07)", boxShadow: "0 16px 40px rgba(0,0,0,.12)", borderRadius: 12, padding: ".9rem 1.2rem", zIndex: 10 }}
               >
                 <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "1.4rem", fontWeight: 800, color: COLORS.primary, margin: 0, lineHeight: 1 }}>1:1</p>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: ".72rem", color: "#777", margin: "4px 0 0" }}>Personal Mentoring</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: ".72rem", color: "#111", margin: "4px 0 0" }}>Personal Mentoring</p>
               </motion.div>
             </motion.div>
           )}
@@ -631,7 +631,7 @@ function MentoringSection(): React.JSX.Element {
               transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
               style={{ width: 36, height: 2, background: GRADIENTS.primary90, borderRadius: 2, marginBottom: "1.2rem", transformOrigin: "left" }}
             />
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1.2rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#111", margin: "0 0 1.2rem" }}>
               A structured mentoring and reflection process accompanies each activity. Faculty mentors and facilitators guide students in interpreting their experiences and connecting them to real-life leadership principles.
             </p>
 
@@ -643,7 +643,7 @@ function MentoringSection(): React.JSX.Element {
                 {REFLECTION_QUESTIONS.map((q, i) => (
                   <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: ".75rem" }}>
                     <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", fontWeight: 700, color: COLORS.primary, opacity: 0.55, letterSpacing: ".1em", flexShrink: 0, marginTop: 3, minWidth: "1.2rem" }}>Q{i + 1}</span>
-                    <p style={{ fontFamily: playfair.style.fontFamily, fontStyle: "italic", fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.6, color: COLORS.muted, margin: 0 }}>{q}</p>
+                    <p style={{ fontFamily: playfair.style.fontFamily, fontStyle: "normal", fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.6, color: COLORS.muted, margin: 0 }}>{q}</p>
                   </div>
                 ))}
               </div>
@@ -653,7 +653,7 @@ function MentoringSection(): React.JSX.Element {
               <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: COLORS.text, marginBottom: ".5rem" }}>
                 Personalized Mentoring
               </h3>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.75, color: "#666", margin: 0 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.75, color: "#111", margin: 0 }}>
                 Faculty mentors observe participation and provide individual feedback on leadership style, teamwork, and decision-making — helping students identify areas for improvement and develop actionable strategies for growth.
               </p>
             </div>
@@ -688,17 +688,17 @@ function ClosingSection(): React.JSX.Element {
 
           <motion.div initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0}>
             <div style={{ borderLeft: `3px solid ${COLORS.primary}`, paddingLeft: "1.2rem", marginBottom: "1.6rem" }}>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.9rem,1.05vw,1rem)", fontWeight: 600, fontStyle: "italic", lineHeight: 1.65, color: COLORS.text, margin: "0 0 .5rem" }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.9rem,1.05vw,1rem)", fontWeight: 600, fontStyle: "normal", lineHeight: 1.65, color: COLORS.text, margin: "0 0 .5rem" }}>
                 "OBT is not merely an outdoor activity — it is a leadership laboratory where students experience the realities of teamwork, decision-making, and resilience in action."
               </p>
-              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "#aaa", margin: 0, fontWeight: 600 }}>
+              <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "#111", margin: 0, fontWeight: 600 }}>
                 — LEAD College OBT Program
               </p>
             </div>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: "0 0 1rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#111", margin: "0 0 1rem" }}>
               Outbound Training embodies LEAD College's broader educational philosophy that meaningful learning must combine knowledge, experience, and reflection. By integrating physical challenges with intellectual reflection and mentoring, OBT creates a holistic learning experience.
             </p>
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#666", margin: 0 }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.8, color: "#111", margin: 0 }}>
               The program strengthens both personal character and professional competence — helping students transition from passive learners to active contributors and responsible leaders.
             </p>
           </motion.div>
@@ -720,7 +720,7 @@ function ClosingSection(): React.JSX.Element {
                   </div>
                   <div>
                     <h4 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: COLORS.text, margin: "0 0 .3rem" }}>{item.label}</h4>
-                    <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.65, color: "#666", margin: 0 }}>{item.desc}</p>
+                    <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,1vw,1rem)", lineHeight: 1.65, color: "#111", margin: 0 }}>{item.desc}</p>
                   </div>
                 </motion.div>
               );

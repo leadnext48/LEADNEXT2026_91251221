@@ -160,7 +160,7 @@ function HeroSection() {
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .lot-strip-sub {
-          display: block; font-size: clamp(.6rem,.75vw,.72rem); color: #777;
+          display: block; font-size: clamp(.6rem,.75vw,.72rem); color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media (max-width: 767px) {
@@ -238,7 +238,7 @@ function HeroSection() {
             <motion.p
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: .55, delay: .3, ease: "easeOut" }}
-              style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.88rem,1.05vw,.98rem)", lineHeight: 1.8, color: "#666", margin: 0 }}
+              style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,1.05vw,1rem)", lineHeight: 1.8, color: "#111", margin: 0 }}
             >
               15 student-led functional units managing every facet of campus life — from admissions
               and placements to arts, research, and sustainability. Each team is a real leadership
@@ -324,7 +324,7 @@ function AboutSection() {
             "These teams manage areas such as events, communication, operations, innovation, social outreach, and more. Through active participation in LOTs, students gain hands-on experience in planning, coordination, and leadership — with real outcomes.",
             "The LOT system transforms campus activities into leadership laboratories, enabling students to learn management by practising it in real time. Every decision has weight. Every outcome is owned.",
           ].map((para, i) => (
-            <p key={i} style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.93rem,1.05vw,1rem)", lineHeight: 1.88, color: "#555", margin: 0, opacity: visible ? 1 : 0, transition: `opacity 0.7s ${0.2 + i * 0.1}s ease` }}>{para}</p>
+            <p key={i} style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,1.05vw,1rem)", lineHeight: 1.88, color: "#111", margin: 0, opacity: visible ? 1 : 0, transition: `opacity 0.7s ${0.2 + i * 0.1}s ease` }}>{para}</p>
           ))}
         </div>
 
@@ -349,7 +349,7 @@ function AboutSection() {
             }}>
               <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(2rem,3.5vw,3.2rem)", fontWeight: 900, color: COLORS.primary, lineHeight: 1, marginBottom: ".4rem", letterSpacing: "-0.02em" }}>{s.value}</div>
               <div style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.7rem,.8vw,.74rem)", fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", color: "#0D0D0D", marginBottom: ".35rem" }}>{s.label}</div>
-              <div style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.75rem,.85vw,.8rem)", color: "#888", lineHeight: 1.4 }}>{s.sub}</div>
+              <div style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,.85vw,1rem)", color: "#111", lineHeight: 1.4 }}>{s.sub}</div>
             </div>
           ))}
         </div>
@@ -421,7 +421,7 @@ function LotCard({ lot, index }: { lot: typeof LOTS[number]; index: number }) {
       <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.25vw,1.15rem)", fontWeight: 700, color: "#0D0D0D", margin: "0 0 0.65rem", letterSpacing: "0.01em", lineHeight: 1.2 }}>
         {lot.name}
       </h3>
-      <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,0.95vw,1rem)", lineHeight: 1.75, color: "#666", margin: "0 0 auto", paddingBottom: "1.25rem", flex: 1 }}>
+      <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,0.95vw,1rem)", lineHeight: 1.75, color: "#111", margin: "0 0 auto", paddingBottom: "1.25rem", flex: 1 }}>
         {lot.desc}
       </p>
       <div style={{ paddingTop: "1.1rem", borderTop: "1px solid rgba(0,92,159,0.1)", display: "flex", alignItems: "center", gap: "0.7rem" }}>
@@ -460,7 +460,7 @@ function ClubsDescSection() {
             Clubs at<br />LEAD.
           </h2>
           <div style={{ width: 40, height: 2, background: "rgba(255,255,255,.4)", marginBottom: "clamp(1rem,2vh,1.6rem)", opacity: visible ? 1 : 0, transition: "opacity .5s .3s" }} />
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.9rem,1.1vw,1.05rem)", lineHeight: 1.85, color: "rgba(255,255,255,.7)", margin: 0, opacity: visible ? 1 : 0, transition: "opacity .7s .35s" }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,1.1vw,1.05rem)", lineHeight: 1.85, color: "#fff", margin: 0, opacity: visible ? 1 : 0, transition: "opacity .7s .35s" }}>
             Clubs at LEAD provide vibrant platforms to explore interests, develop new skills, and engage creatively beyond the classroom. These student-driven groups organise activities, discussions, competitions, and collaborative projects in management, innovation, culture, communication, and social initiatives — guided by faculty mentors who foster leadership, teamwork, and community.
           </p>
         </div>

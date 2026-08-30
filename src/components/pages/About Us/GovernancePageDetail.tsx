@@ -296,7 +296,7 @@ export default function GovernanceDetailPage() {
         }
 
         .description-text {
-          font-size: clamp(13px, 1.3vw, 16px);
+          font-size: clamp(16px, 1.3vw, 16px);
           line-height: 1.85;
           color: var(--text);
           text-align: justify;
@@ -325,9 +325,9 @@ export default function GovernanceDetailPage() {
         }
 
         .info-card-text {
-          font-size: clamp(12px, 1.1vw, 15px);
+          font-size: clamp(16px, 1.1vw, 16px);
           line-height: 1.7;
-          color: var(--muted);
+          color: #111;
           margin: 0;
         }
 
@@ -336,7 +336,7 @@ export default function GovernanceDetailPage() {
           text-align: center;
           margin: clamp(20px, 2vw, 28px) 0 0 0;
           font-size: clamp(11px, 1vw, 13px);
-          color: var(--muted);
+          color: #111;
           letter-spacing: 0.08em;
           opacity: 0.6;
           animation: fadeUpDown 2.2s ease-in-out infinite;
@@ -428,7 +428,7 @@ height: clamp(96px, 11vw, 140px);
         .member-designation {
           font-size: clamp(11px, 1.1vw, 14px);
           line-height: 1.5;
-          color: var(--muted);
+          color: #111;
           margin: 0 0 clamp(3px, 0.3vw, 6px) 0;
         }
 
@@ -438,7 +438,7 @@ height: clamp(96px, 11vw, 140px);
           color: var(--gradient-end);
           font-weight: 500;
           margin: 0;
-          font-style: italic;
+          font-style: normal;
         }
 
         @media (max-width: 900px) {

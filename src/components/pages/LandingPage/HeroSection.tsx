@@ -335,7 +335,7 @@ export default function HeroSection() {
               fontSize:      'clamp(0.65rem, 1vw, 0.85rem)',
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color:         'rgba(255,255,255,0.38)',
+              color:         '#fff',
             }}
           >
             Learn &nbsp;·&nbsp; Excel &nbsp;·&nbsp; Achieve &nbsp;·&nbsp; Dream
@@ -369,9 +369,9 @@ export default function HeroSection() {
             style={{
               fontWeight:    400,
               fontStyle:     'normal',
-              fontSize:      'clamp(0.68rem, 1.05vw, 0.9rem)',
+              fontSize:      'clamp(0.68rem, 1.05vw, 1rem)',
               letterSpacing: '0.06em',
-              color:         'rgba(255,255,255,0.32)',
+              color:         '#fff',
               marginTop:     '0.2rem',
             }}
           >

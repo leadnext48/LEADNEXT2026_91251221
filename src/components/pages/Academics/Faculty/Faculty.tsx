@@ -320,8 +320,8 @@ export default function FacultyPage() {
           margin-bottom: clamp(1rem,2vh,1.6rem); border-radius: 1px;
         }
         .fac-hero-sub p {
-          font-size: clamp(0.88rem,1.05vw,1rem);
-          line-height: 1.85; color: #666; margin: 0; max-width: 520px;
+          font-size: clamp(1rem,1.05vw,1rem);
+          line-height: 1.85; color: #111; margin: 0; max-width: 520px;
         }
         .fac-hero-stats {
           display: flex; align-items: center; flex-wrap: wrap; gap: 0;
@@ -410,7 +410,7 @@ export default function FacultyPage() {
         .fac-tab--active:hover { color: #fff; }
         .fac-dept-desc {
           max-width: 1200px; margin: 0 auto clamp(1.5rem,3vh,2.5rem); width: 100%;
-          font-size: clamp(0.92rem,1vw,1rem); line-height: 1.78; color: #666;
+          font-size: clamp(1rem,1vw,1rem); line-height: 1.78; color: #111;
         }
 
         /* ── Faculty Grid ───────────────────────────────────── */
@@ -422,7 +422,7 @@ export default function FacultyPage() {
         }
         .fac-empty {
           grid-column: 1/-1; text-align: center;
-          color: #9ca3af; font-style: italic; padding: 3rem 0; font-size: 1rem;
+          color: #111; font-style: normal; padding: 3rem 0; font-size: 1rem;
         }
 
         /* ── Faculty Card ───────────────────────────────────── */
@@ -505,7 +505,7 @@ export default function FacultyPage() {
         .faculty-card:hover .fc-name { color: ${BLUE}; }
 
         .fc-desig {
-          font-size: clamp(10.5px,0.95vw,12.5px); color: #6b7280;
+          font-size: clamp(10.5px,0.95vw,12.5px); color: #111;
           margin: 0; line-height: 1.5;
         }
 

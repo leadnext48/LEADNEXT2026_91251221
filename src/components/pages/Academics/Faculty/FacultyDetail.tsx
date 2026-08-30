@@ -504,7 +504,7 @@ export default function FacultyDetailPage() {
         }
         .fd-designation {
           font-size: clamp(0.88rem, 1.15vw, 1.05rem);
-          color: #374151;
+          color: #111;
           font-weight: 500;
           font-style: normal;
           line-height: 1.4;
@@ -689,9 +689,9 @@ export default function FacultyDetailPage() {
         }
 
         .fd-bio {
-          font-size: clamp(0.84rem, 0.98vw, 0.96rem);
+          font-size: clamp(0.9rem, 0.98vw, 1rem);
           line-height: 1.9;
-          color: #374151;
+          color: #111;
           text-align: justify;
           margin: 0;
         }
@@ -717,7 +717,7 @@ export default function FacultyDetailPage() {
         }
         .fd-qual-inst {
           font-size: clamp(0.68rem, 0.8vw, 0.76rem);
-          color: #6b7280;
+          color: #111;
           line-height: 1.5;
           margin: 0;
         }
@@ -747,8 +747,8 @@ export default function FacultyDetailPage() {
 
         .fd-nil {
           font-size: clamp(0.72rem, 0.84vw, 0.82rem);
-          color: #9ca3af;
-          font-style: italic;
+          color: #111;
+          font-style: normal;
           letter-spacing: 0.05em;
           margin: 0;
         }

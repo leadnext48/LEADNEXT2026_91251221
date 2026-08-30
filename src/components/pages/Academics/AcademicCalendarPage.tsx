@@ -149,8 +149,8 @@ export default function AcademicCalendarPage() {
               transition={{ duration: 0.7, delay: 0.85 }}
               className={`${playfair.className}`}
               style={{
-                color: "#555",
-                fontSize: "clamp(14px,0.82vw,16px)",
+                color: "#111",
+                fontSize: "clamp(16px,0.82vw,16px)",
                 lineHeight: 2.0,
                 maxWidth: "clamp(300px,36vw,580px)",
               }}
@@ -400,7 +400,7 @@ export default function AcademicCalendarPage() {
                     >
                       PDF Document
                     </span>
-                    <p className={`${playfair.className} text-gray-400`} style={{ fontSize: "clamp(11px,0.72vw,13px)", lineHeight: 1.9 }}>
+                    <p className={`${playfair.className} text-[#111]`} style={{ fontSize: "clamp(11px,0.72vw,13px)", lineHeight: 1.9 }}>
                       Published by Office of Academic Affairs
                     </p>
                   </div>
@@ -435,8 +435,8 @@ export default function AcademicCalendarPage() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className={`${playfair.className}`}
                   style={{
-                    color: "#555",
-                    fontSize: "clamp(14px,0.9vw,16px)",
+                    color: "#111",
+                    fontSize: "clamp(16px,0.9vw,16px)",
                     lineHeight: 2.0,
                     marginBottom: "clamp(16px,2vh,30px)",
                   }}
@@ -477,7 +477,7 @@ export default function AcademicCalendarPage() {
 
                 {/* Meta line */}
                 <p
-                  className={`${playfair.className} text-gray-400 tracking-wide italic`}
+                  className={`${playfair.className} text-[#111] tracking-wide`}
                   style={{ fontSize: "clamp(11px,0.7vw,13px)", marginTop: "clamp(6px,0.7vh,10px)", lineHeight: 1.9 }}
                 >
                   PDF · 2.4 MB · Last updated: July {session.start}

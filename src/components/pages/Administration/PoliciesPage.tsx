@@ -245,7 +245,7 @@ export default function PoliciesPage() {
             </h1>
             <div className="pol-hero-sub">
               <div style={{ width: 40, height: 2, background: `linear-gradient(90deg, ${BLUE}, #1e3a8a)`, marginBottom: 'clamp(1rem, 2vh, 1.6rem)' }} />
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.88rem, 1.05vw, 1rem)', lineHeight: 1.85, color: '#666', margin: 0 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.88rem, 1.05vw, 1rem)', lineHeight: 1.85, color: '#111', margin: 0 }}>
                 A consolidated library of LEAD College&apos;s institutional policies — spanning academic, student, human-resource, and governance matters — that define our standards, safeguard our community, and guide day-to-day operations.
               </p>
             </div>
@@ -263,7 +263,7 @@ export default function PoliciesPage() {
               <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: 'clamp(1.3rem, 2.5vw, 2.8rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-0.01em', color: DARK, margin: 0, lineHeight: 1.1 }}>
                 Institutional Policies.
               </h2>
-              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.95vw, 0.9rem)', color: '#777', margin: 0, maxWidth: 400, lineHeight: 1.7 }}>
+              <p style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.9rem, 1.05vw, 1rem)', color: '#111', margin: 0, maxWidth: 400, lineHeight: 1.7 }}>
                 Browse by category. All documents open in a new tab for viewing or download.
               </p>
             </div>
@@ -315,7 +315,7 @@ export default function PoliciesPage() {
                     <span className="pol-dl-icon">
                       <FileText size={14} color={BLUE} strokeWidth={1.6} />
                     </span>
-                    <span className="pol-dl-label" style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.78rem, 0.92vw, 0.88rem)', color: '#334', lineHeight: 1.5 }}>
+                    <span className="pol-dl-label" style={{ fontFamily: playfair.style.fontFamily, fontSize: 'clamp(0.9rem, 1vw, 1rem)', color: '#111', lineHeight: 1.5 }}>
                       {item.label}
                     </span>
                     <span className="pol-dl-badge">PDF</span>

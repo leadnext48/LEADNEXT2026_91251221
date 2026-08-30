@@ -30,7 +30,7 @@ const C = {
   sand:       "#EEF2F8",   /* light blue-grey — replaces warm sand    */
   parchment:  "#DBEAFE",   /* blue-tinted border — replaces parchment */
   text:       "#0D0D0D",   /* same near-black as OBT                  */
-  muted:      "#555",      /* same muted as OBT                       */
+  muted:      "#111",      /* body text — black on light bg          */
   faint:      "#888",      /* same faint as OBT                       */
 } as const;
 
@@ -182,7 +182,7 @@ function HeroSection(): React.JSX.Element {
         .curio-strip-sub {
           display: block;
           font-size: clamp(.6rem,.75vw,.72rem);
-          color: #777;
+          color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media(max-width:767px){
@@ -251,9 +251,9 @@ function HeroSection(): React.JSX.Element {
               transition={{ duration:.55, delay:.3, ease:"easeOut" }}
               style={{
                 fontFamily: playfair.style.fontFamily,
-                fontSize:   "clamp(.88rem,1.05vw,.98rem)",
+                fontSize:   "clamp(.95rem,1.05vw,1rem)",
                 lineHeight: 1.8,
-                color:      "#666",
+                color:      "#111",
                 margin:     0,
               }}>
               The vibrant refreshment and social hub at the heart of LEAD campus — where students recharge, connect, and build ideas together over every cup of tea.
@@ -362,7 +362,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0.1}
           style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize:   "clamp(.86rem,1vw,.96rem)",
+            fontSize:   "clamp(.95rem,1vw,1rem)",
             lineHeight: 1.85, color:C.muted,
             maxWidth:   780, margin:"0 0 clamp(2.5rem,5vh,4rem)",
           }}>
@@ -430,9 +430,9 @@ function HighlightsSection(): React.JSX.Element {
 
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize:   "clamp(.92rem,.82vw,1rem)",
+                  fontSize:   "clamp(.95rem,.82vw,1rem)",
                   lineHeight: 1.72,
-                  color:      card.dark ? "rgba(255,255,255,.9)" : C.muted,
+                  color:      card.dark ? "#fff" : C.muted,
                   margin:     0,
                 }}>{card.desc}</p>
               </motion.div>
@@ -553,7 +553,7 @@ function PosterSection(): React.JSX.Element {
             <div style={{ borderLeft:`3px solid ${C.green}55`, paddingLeft:"1.2rem", marginBottom:"1.6rem" }}>
               <p style={{
                 fontFamily: playfair.style.fontFamily,
-                fontSize:   "clamp(.9rem,1.05vw,1.02rem)",
+                fontSize:   "clamp(.95rem,1.05vw,1.02rem)",
                 fontWeight: 600, 
                 lineHeight: 1.65, color:C.text, margin:"0 0 .4rem",
               }}>
@@ -564,7 +564,7 @@ function PosterSection(): React.JSX.Element {
               </p>
             </div>
 
-            <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.92vw,1rem)", lineHeight:1.82, color:C.muted, margin:"0 0 1.4rem" }}>
+            <p style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.95rem,.92vw,1rem)", lineHeight:1.82, color:C.muted, margin:"0 0 1.4rem" }}>
               The informal nature of Curio allows students to express themselves freely —
               making it a hub of conversation, creativity, and community bonding where
               friendships across batches and programs are naturally formed.
@@ -589,7 +589,7 @@ function PosterSection(): React.JSX.Element {
                   }}>
                     <Star size={10} color={C.gold} strokeWidth={1.8} fill={C.gold} />
                   </div>
-                  <span style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.92rem,.88vw,1rem)", color:C.muted, lineHeight:1.4 }}>{p.t}</span>
+                  <span style={{ fontFamily:playfair.style.fontFamily, fontSize:"clamp(.95rem,.88vw,1rem)", color:C.muted, lineHeight:1.4 }}>{p.t}</span>
                 </div>
               ))}
             </div>
@@ -655,8 +655,8 @@ function CollaborationSection(): React.JSX.Element {
             <div style={{ width:36, height:2.5, background:G.goldH, marginBottom:"1.2rem", borderRadius:2 }} />
             <p style={{
               fontFamily: playfair.style.fontFamily,
-              fontSize:   "clamp(.92rem,.92vw,1rem)",
-              lineHeight: 1.82, color:"rgba(255,255,255,.9)",
+              fontSize:   "clamp(.95rem,.92vw,1rem)",
+              lineHeight: 1.82, color:"#fff",
               margin:"0 0 2rem",
             }}>
               Many important discussions that shape student learning begin in informal settings.
@@ -700,9 +700,9 @@ function CollaborationSection(): React.JSX.Element {
                 </div>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize:   "clamp(.92rem,.92vw,1rem)",
+                  fontSize:   "clamp(.95rem,.92vw,1rem)",
                   lineHeight: 1.7,
-                  color:      "rgba(255,255,255,.9)",
+                  color:      "#fff",
                   margin:     0,
                 }}>{pt}</p>
               </motion.div>
@@ -820,7 +820,7 @@ function CommunitySection(): React.JSX.Element {
                 }}>{p.title}</h3>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize:   "clamp(.92rem,.86vw,1rem)",
+                  fontSize:   "clamp(.95rem,.86vw,1rem)",
                   lineHeight: 1.7,
                   color:      C.muted,
                   margin:     0,
@@ -837,8 +837,8 @@ function CommunitySection(): React.JSX.Element {
           <div style={{ flex:1, height:1, background:"rgba(0,92,159,.1)" }} />
           <p style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize:   "clamp(.92rem,.88vw,1rem)",
-            color:      C.faint,
+            fontSize:   "clamp(.95rem,.88vw,1rem)",
+            color:      "#111",
             margin:     0,
             textAlign:  "center",
             maxWidth:   480,

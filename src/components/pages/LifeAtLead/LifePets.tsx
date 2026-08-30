@@ -30,8 +30,8 @@ const C = {
   sand:       "#EEF2F8",
   parchment:  "#DBEAFE",
   text:       "#0D0D0D",
-  muted:      "#555",
-  faint:      "#888",
+  muted:      "#111",
+  faint:      "#111",
 } as const;
 
 const G = {
@@ -165,13 +165,13 @@ function HeroSection(): React.JSX.Element {
           display: block;
           font-size: clamp(.68rem,.72vw,.74rem);
           letter-spacing: .08em; text-transform: uppercase;
-          color: #333; font-weight: 700;
+          color: #111; font-weight: 700;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .pets-strip-sub {
           display: block;
           font-size: clamp(.6rem,.75vw,.72rem);
-          color: #777;
+          color: #111;
           white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         @media(max-width:767px){
@@ -238,9 +238,9 @@ function HeroSection(): React.JSX.Element {
               transition={{ duration: .55, delay: .3, ease: "easeOut" }}
               style={{
                 fontFamily: playfair.style.fontFamily,
-                fontSize: "clamp(.88rem,1.05vw,.98rem)",
+                fontSize: "clamp(1rem,1.05vw,1.05rem)",
                 lineHeight: 1.8,
-                color: "#666",
+                color: "#111",
                 margin: 0,
               }}>
               LEAD College is home to a remarkable variety of animals — snakes, cats, emus, birds, fish, and dogs — making it one of the most distinctive campuses in the country. This living, breathing ecosystem reflects a deep institutional belief in coexistence with nature and the values it quietly teaches every student.
@@ -411,7 +411,7 @@ function PosterSection(): React.JSX.Element {
             <div style={{ borderLeft: `3px solid ${C.green}55`, paddingLeft: "1.2rem", marginBottom: "1.6rem" }}>
               <p style={{
                 fontFamily: playfair.style.fontFamily,
-                fontSize: "clamp(.9rem,1.05vw,1.02rem)",
+                fontSize: "clamp(1rem,1.05vw,1.05rem)",
                 fontWeight: 600, lineHeight: 1.65, color: C.text, margin: "0 0 .4rem",
               }}>
                 "No two days on the LEAD campus feel the same — because our campus is home to creatures that make every morning a small wonder."
@@ -421,7 +421,7 @@ function PosterSection(): React.JSX.Element {
               </p>
             </div>
 
-            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,.92vw,1rem)", lineHeight: 1.82, color: C.muted, margin: "0 0 1.4rem" }}>
+            <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,.92vw,1rem)", lineHeight: 1.82, color: C.muted, margin: "0 0 1.4rem" }}>
               The animals at LEAD are not a novelty — they are a deliberate part of the campus
               philosophy. Living alongside such a diverse range of species teaches students
               patience, empathy, and a grounded sense of responsibility that no classroom
@@ -446,7 +446,7 @@ function PosterSection(): React.JSX.Element {
                   }}>
                     <Star size={10} color={C.gold} strokeWidth={1.8} fill={C.gold} />
                   </div>
-                  <span style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,.88vw,1rem)", color: C.muted, lineHeight: 1.4 }}>{p.t}</span>
+                  <span style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,.88vw,1rem)", color: C.muted, lineHeight: 1.4 }}>{p.t}</span>
                 </div>
               ))}
             </div>
@@ -506,7 +506,7 @@ function HighlightsSection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0.1}
           style={{
             fontFamily: playfair.style.fontFamily,
-            fontSize: "clamp(.86rem,1vw,.96rem)",
+            fontSize: "clamp(1rem,1vw,1.05rem)",
             lineHeight: 1.85, color: C.muted,
             maxWidth: 780, margin: "0 0 clamp(2.5rem,5vh,4rem)",
           }}>
@@ -556,9 +556,9 @@ function HighlightsSection(): React.JSX.Element {
                 }}>{card.label}</h3>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(0.92rem,.82vw,1rem)",
+                  fontSize: "clamp(1rem,.82vw,1rem)",
                   lineHeight: 1.72,
-                  color: card.dark ? "rgba(255,255,255,.9)" : C.muted,
+                  color: card.dark ? "#fff" : C.muted,
                   margin: 0,
                 }}>{card.desc}</p>
               </motion.div>
@@ -626,7 +626,7 @@ function CollaborationSection(): React.JSX.Element {
 
             <p style={{
               fontFamily: playfair.style.fontFamily,
-              fontSize: "clamp(0.92rem,.92vw,1rem)",
+              fontSize: "clamp(1rem,.92vw,1rem)",
               lineHeight: 1.82, color: C.muted,
               margin: "0 0 1.6rem",
             }}>
@@ -685,7 +685,7 @@ function CollaborationSection(): React.JSX.Element {
                 }}>
                   <span style={{ fontFamily: cinzel.style.fontFamily, fontSize: ".72rem", fontWeight: 800, color: C.green, letterSpacing: ".1em" }}>0{i + 1}</span>
                 </div>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,.92vw,1rem)", lineHeight: 1.7, color: C.muted, margin: 0 }}>{pt}</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,.92vw,1rem)", lineHeight: 1.7, color: C.muted, margin: 0 }}>{pt}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -790,7 +790,7 @@ function CommunitySection(): React.JSX.Element {
                   <Icon size={16} color={C.green} strokeWidth={1.7} />
                 </div>
                 <h3 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.68rem,.75vw,.74rem)", fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em", color: C.text, margin: "0 0 .4rem" }}>{p.title}</h3>
-                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,.86vw,1rem)", lineHeight: 1.7, color: C.muted, margin: 0 }}>{p.desc}</p>
+                <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,.86vw,1rem)", lineHeight: 1.7, color: C.muted, margin: 0 }}>{p.desc}</p>
               </motion.div>
             );
           })}
@@ -800,7 +800,7 @@ function CommunitySection(): React.JSX.Element {
           initial="hidden" whileInView="visible" viewport={VP} variants={FADE_UP} custom={0.2}
           style={{ marginTop: "clamp(1.8rem,3.5vh,2.8rem)", display: "flex", alignItems: "center", gap: "1.5rem" }}>
           <div style={{ flex: 1, height: 1, background: "rgba(0,92,159,.1)" }} />
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(0.92rem,.88vw,1rem)", color: C.faint, margin: 0, textAlign: "center", maxWidth: 480 }}>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(1rem,.88vw,1rem)", color: C.faint, margin: 0, textAlign: "center", maxWidth: 480 }}>
             Life at LEAD is shared with creatures great and small —
             a campus that is as alive as the students who call it home.
           </p>

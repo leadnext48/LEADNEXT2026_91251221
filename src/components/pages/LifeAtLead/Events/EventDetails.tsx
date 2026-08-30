@@ -32,7 +32,7 @@ export interface EventDetailData {
 const C = {
   blue:   "#005C9F",
   text:   "#0D0D0D",
-  muted:  "#555",
+  muted:  "#111",
   faint:  "#888",
   border: "#E8EEF4",
 } as const;
@@ -140,7 +140,7 @@ function EventGallery({ images, title }: { images: string[]; title: string }) {
         <div>
           <p style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(.66rem,.8vw,.74rem)", letterSpacing: ".2em", textTransform: "uppercase", color: C.blue, fontWeight: 700, margin: "0 0 .35rem" }}>Gallery</p>
           <h2 style={{ fontFamily: cinzel.style.fontFamily, fontSize: "clamp(1rem,1.9vw,2rem)", fontWeight: 800, textTransform: "uppercase", letterSpacing: "-.02em", color: C.text, margin: 0, lineHeight: 1 }}>Event Photos</h2>
-          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.72rem,.85vw,.8rem)", color: C.faint, margin: ".55rem 0 0" }}>Click any photo to view it full size.</p>
+          <p style={{ fontFamily: playfair.style.fontFamily, fontSize: "clamp(.95rem,.85vw,1rem)", color: "#111", margin: ".55rem 0 0" }}>Click any photo to view it full size.</p>
         </div>
         {scrollable && (
           <div style={{ display: "flex", gap: ".55rem", flexShrink: 0 }}>
@@ -320,7 +320,7 @@ export default function EventDetailPage({ event }: { event: EventDetailData; rel
             transition={{ duration: .45, delay: .28 }}
             style={{
               fontFamily: playfair.style.fontFamily,
-              fontSize: "clamp(.88rem,1.05vw,.98rem)",
+              fontSize: "clamp(.95rem,1.05vw,1rem)",
               lineHeight: 1.75, color: C.muted,
               maxWidth: 720,
               margin: "0 0 clamp(2.5rem,5vh,4rem)",
@@ -356,7 +356,7 @@ export default function EventDetailPage({ event }: { event: EventDetailData; rel
               {first.map((para, i) => (
                 <p key={i} style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: "clamp(.86rem,1vw,.96rem)",
+                  fontSize: "clamp(.95rem,1vw,1rem)",
                   lineHeight: 1.86, color: C.muted,
                   margin: i < first.length - 1 ? "0 0 1.4rem" : 0,
                 }}>{para}</p>
@@ -384,7 +384,7 @@ export default function EventDetailPage({ event }: { event: EventDetailData; rel
                 {rest.map((para, i) => (
                   <p key={i} style={{
                     fontFamily: playfair.style.fontFamily,
-                    fontSize: "clamp(.92rem,.98vw,1rem)",
+                    fontSize: "clamp(.95rem,.98vw,1rem)",
                     lineHeight: 1.88, color: C.muted,
                     margin: "0 0 1.4rem",
                   }}>{para}</p>

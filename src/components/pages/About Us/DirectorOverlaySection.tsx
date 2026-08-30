@@ -256,9 +256,9 @@ function BioSection() {
 
         .bio-body p {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(0.92rem, 1vw, 1rem);
+          font-size: clamp(1rem, 1vw, 1rem);
           line-height: 1.9;
-          color: #555;
+          color: #111;
           margin: 0 0 1.2em;
         }
         .bio-body p:last-child { margin-bottom: 0; }
@@ -268,9 +268,9 @@ function BioSection() {
           border-left: 2px solid ${BLUE};
           margin: 1.8rem 0;
           padding: 0.6rem 0 0.6rem 1.4rem;
-          font-size: clamp(0.9rem, 1.2vw, 1.1rem) !important;
-          font-style: italic !important;
-          color: #333 !important;
+          font-size: clamp(1rem, 1.2vw, 1.1rem) !important;
+          font-style: normal !important;
+          color: #111 !important;
           line-height: 1.6 !important;
         }
 
@@ -558,14 +558,14 @@ function AwardsSection() {
         }
 
         .aw2-subtitle {
-          font-size: clamp(0.92rem, 0.9vw, 1rem);
+          font-size: clamp(1rem, 0.9vw, 1rem);
           line-height: 1.75;
-          color: #888;
+          color: #111;
           max-width: 320px;
           text-align: right;
           margin: 0;
           flex-shrink: 0;
-          font-style: italic;
+          font-style: normal;
         }
 
         /* ── Bento grid
@@ -696,14 +696,14 @@ function AwardsSection() {
 
         /* ── desc ── */
         .aw2-card-desc {
-          font-size: clamp(0.9rem, 0.82vw, 1rem);
+          font-size: clamp(1rem, 0.82vw, 1rem);
           line-height: 1.72;
-          color: #777;
+          color: #111;
           margin: 0;
-          font-style: italic;
+          font-style: normal;
           transition: color 0.3s;
         }
-        .aw2-card:hover .aw2-card-desc { color: #555; }
+        .aw2-card:hover .aw2-card-desc { color: #111; }
 
         /* ── Mobile ── */
         @media (max-width: 768px) {

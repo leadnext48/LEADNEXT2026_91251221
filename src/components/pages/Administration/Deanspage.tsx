@@ -433,9 +433,9 @@ export default function DeansPage() {
               <div ref={introRef} style={{ opacity: 1 }}>
                 <p style={{
                   fontFamily: playfair.style.fontFamily,
-                  fontSize: 'clamp(0.8rem, 1vw, 0.95rem)',
+                  fontSize: 'clamp(0.95rem, 1vw, 1rem)',
                   lineHeight: 1.85,
-                  color: '#555',
+                  color: '#111',
                   maxWidth: 430,
                   marginBottom: 'clamp(1rem, 2vh, 1.8rem)',
                 }}>
@@ -509,7 +509,7 @@ export default function DeansPage() {
                     fontSize: 'clamp(0.88rem, 1.2vw, 1.1rem)',
                     fontStyle: 'normal',
                     lineHeight: 1.72,
-                    color: '#333',
+                    color: '#111',
                     margin: '0 0 0.9rem',
                   }}>
                     Through continuous monitoring, mentoring, and coordination, the Deans ensure that LEAD maintains high academic standards while nurturing responsible, industry-ready, and value-driven professionals.
@@ -666,7 +666,7 @@ export default function DeansPage() {
                         fontSize: 'clamp(0.62rem, 0.7vw, 0.7rem)',
                         letterSpacing: '0.26em',
                         textTransform: 'uppercase',
-                        color: 'rgba(255,255,255,0.68)',
+                        color: '#fff',
                         margin: '0 0 3px',
                       }}>
                         {d.prefix}
@@ -755,7 +755,7 @@ export default function DeansPage() {
                     fontFamily: playfair.style.fontFamily,
                     fontSize: 'clamp(0.92rem, 0.95vw, 1rem)',
                     lineHeight: 1.75,
-                    color: '#555',
+                    color: '#111',
                     marginBottom: 'clamp(0.5rem, 1vh, 0.8rem)',
                   }}>
                     {d.description}
@@ -765,7 +765,7 @@ export default function DeansPage() {
                     fontFamily: playfair.style.fontFamily,
                     fontSize: 'clamp(0.92rem, 0.95vw, 1rem)',
                     lineHeight: 1.75,
-                    color: '#555',
+                    color: '#111',
                     marginBottom: 'clamp(0.8rem, 1.6vh, 1.4rem)',
                   }}>
                     {d.description2}
@@ -800,7 +800,7 @@ export default function DeansPage() {
                           fontFamily: playfair.style.fontFamily,
                           fontSize: 'clamp(0.9rem, 0.9vw, 1rem)',
                           lineHeight: 1.6,
-                          color: '#555',
+                          color: '#111',
                           margin: 0,
                         }}>
                           {r}
