@@ -28,7 +28,6 @@ const governanceBodies = [
 const HERO_STATS = [
   { val: "9",    label: "Statutory Bodies"  },
   { val: "2010", label: "Established"       },
-  { val: "NBA",  label: "Accredited"        },
 ];
 
 export default function GovernancePage() {
