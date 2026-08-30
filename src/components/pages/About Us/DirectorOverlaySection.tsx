@@ -383,7 +383,7 @@ function BioSection() {
                 edupreneur, international trainer, TEDx speaker, and Guinness World
                 Record holder with over three decades of experience in higher
                 education, leadership development, and corporate training. As the
-                Founder, Chairman, and Director of LEAD College,
+                Founder and Chairman of LEAD College,
                 Palakkad, he has played a transformative role in redefining management
                 education in Kerala and beyond.
               </p>

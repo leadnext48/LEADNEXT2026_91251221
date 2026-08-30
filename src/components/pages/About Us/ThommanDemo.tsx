@@ -35,7 +35,7 @@ const IconHeart = () => (
 
 const credentials = [
     { Icon: IconHeart,     text: "Chairman — Prompt Charitable Trust" },
-  { Icon: IconBriefcase, text: "Director of LEAD College (Autonomous)" },
+  { Icon: IconBriefcase, text: "Chairman of LEAD College (Autonomous)" },
   { Icon: IconShield,    text: "Chairman — NIPM Palakkad Chapter" },
   { Icon: IconStar,      text: "Guinness World Record Holder" },
 
@@ -355,7 +355,7 @@ export default function ChairmanSection() {
                 letterSpacing: "0.2em", textTransform: "uppercase",
                 color: BLUE, marginTop: 4,
               }}>
-                Chairman &amp; Director
+                Chairman
               </p>
             </div>
 
