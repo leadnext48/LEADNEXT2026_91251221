@@ -100,13 +100,10 @@ const FontStyle = () => (
       /* Reset explicit desktop grid placement so children stack in flow */
       .ls-hero-left { grid-column: auto; grid-row: auto; align-items: stretch; }
       .ls-body { max-width: none; margin-left: 0; margin-right: 0; }
-      .ls-hero-image-wrap { grid-column: auto; grid-row: auto; margin-top: 3.5rem; width: 100%; max-width: 460px; margin-left: auto; margin-right: auto; }
-      /* Hide the small accent photo on mobile — it shrinks too much to look good */
-      .ls-hero-accent-sq { display: none !important; }
-      /* Keep the decorative badge/frame INSIDE the image on mobile so they don't
-         stick out past the screen edge (was causing horizontal overflow). */
-      .ls-img-badge { left: 0.75rem; top: 0.75rem; }
-      .ls-img-frame { display: none; }
+      /* Mobile: drop the image entirely so the heading + paragraph get the FULL
+         width (was squeezing the title to one word per line). */
+      .ls-hero-image-wrap { display: none !important; }
+      .ls-heading { margin-bottom: 1.5rem; }
     }
 
     /* Left column: label + heading stacked */

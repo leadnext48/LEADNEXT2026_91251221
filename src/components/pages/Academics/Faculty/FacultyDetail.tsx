@@ -369,6 +369,10 @@ export default function FacultyDetailPage() {
         .fd-root {
           background: #fff;
           width: 100%;
+          /* clip (NOT hidden) any stray wide content so it can't create a
+             horizontal scroll / right-side white space; clip keeps the sticky
+             sidebar working (overflow:hidden would break sticky). */
+          overflow-x: clip;
           visibility: visible;
           /* No min-height / height — let the global page layout (body flex-col)
              control document height. Setting min-height:100vh here would squish
@@ -438,6 +442,10 @@ export default function FacultyDetailPage() {
           min-width: 0;
           display: flex;
           flex-direction: column;
+          /* break long unbroken tokens (URLs / IDs) so they can't push the
+             page wider than the viewport. */
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
 
         /* ── IDENTITY BLOCK ───────────────────────────────────── */

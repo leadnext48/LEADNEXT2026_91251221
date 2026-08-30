@@ -501,9 +501,13 @@ export const VisionMissionPage: React.FC = () => (
       @media(max-width:700px) {
         .pillars-section { padding:3rem 1.5rem; }
         .pcard { flex-direction:column; gap:1.5rem; }
+        /* Stack the big index number ABOVE the text so the label + paragraph
+           take the FULL width (were indented to the right of the number). */
+        .pcard-left { flex-direction:column; gap:clamp(0.4rem,1.5vw,0.9rem); }
+        .pcard-index { font-size:clamp(2.6rem,11vw,3.6rem); margin-top:0; }
+        .pcard-text-wrap { width:100%; }
         .pcard-img-wrap { width:100%; aspect-ratio:16/7; }
         .pcard-label { font-size:clamp(2rem,8vw,3rem); }
-        .pcard-index { font-size:clamp(3.5rem,14vw,5rem); }
       }
       @media(max-width:640px) {
         /* paragraphs full width — drop narrower-column cap so left edge aligns with heading */

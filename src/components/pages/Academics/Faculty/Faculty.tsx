@@ -538,12 +538,14 @@ export default function FacultyPage() {
           .faculty-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
           .fac-grid-section { padding: 3rem 1.2rem 4rem; }
           .fac-hero { padding: 3rem 1.5rem 3.5rem; }
-          .fac-hero-stats { justify-content: center; gap: 10px 4px; }
+          /* Left-align the stats so a wrapped tag (e.g. NBA Accredited) sits
+             directly under the first stat, not centered like an inverted triangle. */
+          .fac-hero-stats { justify-content: flex-start; gap: 8px 18px; }
           .fac-stat {
             border-right: none;
-            padding: clamp(0.3rem,0.5vh,0.5rem) 12px;
+            padding: clamp(0.3rem,0.5vh,0.5rem) 0;
           }
-          .fac-stat:first-child { padding-left: 12px; }
+          .fac-stat:first-child { padding-left: 0; }
         }
         @media(prefers-reduced-motion:reduce) {
           .fac-marquee-track { animation: none; }
