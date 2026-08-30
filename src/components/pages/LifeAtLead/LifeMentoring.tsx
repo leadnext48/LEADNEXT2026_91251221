@@ -176,8 +176,14 @@ function HeroSection() {
           margin-top: clamp(1rem,2.5vh,2.5rem);
           padding-top: clamp(0.8rem,1.5vh,1.5rem);
           border-top: 1px solid rgba(0,92,159,0.10);
-          display: flex; align-items: stretch; gap: 0; flex-wrap: wrap;
+          overflow: hidden;
         }
+        .mh-strip-track {
+          display: flex; align-items: stretch; gap: 0; flex-wrap: wrap; width: 100%;
+        }
+        /* Items are rendered twice for the seamless mobile loop; the duplicate
+           half is hidden on desktop where the strip is a static row. */
+        .mh-strip-track > .mh-strip-item:nth-child(n+6) { display: none; }
         .mh-strip-item {
           display: flex; align-items: center; gap: 14px;
           padding: 0 clamp(1.5rem,3vw,2.5rem);
@@ -212,21 +218,25 @@ function HeroSection() {
             justify-content: flex-start;
             gap: 1.5rem;
           }
-          .mh-strip {
-            overflow-x: auto;
+          /* Mobile: seamless infinite auto-loop so users don't have to guess
+             the strip is swipeable. */
+          .mh-strip { overflow: hidden; }
+          .mh-strip-track {
             flex-wrap: nowrap;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            padding-bottom: 0.5rem;
+            width: max-content;
+            animation: mhStripScroll 24s linear infinite;
           }
-          .mh-strip::-webkit-scrollbar { display: none; }
-          .mh-strip-item {
-            flex: 0 0 auto;
-            min-width: 150px;
-          }
+          .mh-strip-track > .mh-strip-item:nth-child(n+6) { display: flex; }
+          .mh-strip-item { flex: 0 0 auto; min-width: 0; }
+        }
+        @keyframes mhStripScroll {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
         }
         @media (prefers-reduced-motion: reduce) {
           .mh-marquee-track { animation: none; }
+          .mh-strip-track { animation: none; flex-wrap: wrap; width: 100%; }
+          .mh-strip-track > .mh-strip-item:nth-child(n+6) { display: none; }
         }
       `}</style>
 
@@ -294,8 +304,9 @@ function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          {PILLARS.map((b) => (
-            <div key={b.label} className="mh-strip-item">
+          <div className="mh-strip-track">
+          {[...PILLARS, ...PILLARS].map((b, i) => (
+            <div key={i} className="mh-strip-item">
               <div style={{
                 width: 36, height: 36, borderRadius: 8,
                 background: "rgba(0,92,159,0.06)",
@@ -317,6 +328,7 @@ function HeroSection() {
               </div>
             </div>
           ))}
+          </div>
         </motion.div>
 
         {/* Marquee */}
@@ -607,7 +619,7 @@ function FeedbackReflectionSection() {
         </div>
 
         {/* Steps — white bg */}
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(4, minmax(0, 1fr))", gap: "1.5rem", marginBottom: "3rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(4, minmax(0, 1fr))", gap: "1.5rem", marginBottom: "3rem" }}>
           {REFLECTION_STEPS.map((step, i) => (
             <div key={step.num} style={{ position: "relative", padding: "2rem 1.5rem", background: "#ffffff", borderWidth: 1, borderStyle: "solid", borderColor: COLORS.border, borderRadius: RADIUS.card, boxShadow: SHADOWS.card, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)", transition: `opacity 0.6s ${i * 0.1 + 0.2}s ease, transform 0.6s ${i * 0.1 + 0.2}s ease` }}>
               {i < REFLECTION_STEPS.length - 1 && !isMobile && (

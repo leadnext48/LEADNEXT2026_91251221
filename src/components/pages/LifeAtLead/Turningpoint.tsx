@@ -126,7 +126,7 @@ function HeroSection() {
         .tp-strip-sub { display:block; font-size:clamp(.6rem,.75vw,.72rem); color:#777; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         .tp-hero-right { position:relative; align-self:flex-end; display:flex; align-items:flex-end; justify-content:center; height:100%; }
         .tp-thomman-img { position:relative; width:100%; height:100%; max-height:88svh; }
-        @media (max-width:767px) { .tp-hero { padding:5rem 1.25rem 2.5rem; height:auto; min-height:100svh; } .tp-hero-inner { grid-template-columns:1fr; } .tp-hero-right, .tp-hero-bg-text { display:none; } .tp-hero-strip { display:flex; flex-wrap:wrap; justify-content:center; gap:.9rem 1.1rem; } .tp-strip-item { padding:0; gap:8px; flex:0 1 auto; border-right:none; flex-direction:row; align-items:center; } .tp-strip-item:first-child { padding-left:0; } }
+        @media (max-width:767px) { .tp-hero { padding:5rem 1.25rem 2.5rem; height:auto; min-height:100svh; } .tp-hero-inner { grid-template-columns:1fr; } .tp-hero-right, .tp-hero-bg-text { display:none; } .tp-hero-strip { display:flex; flex-direction:column; align-items:flex-start; gap:.75rem; } .tp-strip-item { padding:0; gap:8px; flex:0 1 auto; border-right:none; flex-direction:row; align-items:center; } .tp-strip-item:first-child { padding-left:0; } }
         @media (min-width:768px) and (max-width:1100px) { .tp-hero { padding-left:3rem; padding-right:3rem; } }
       `}</style>
       <section className={`tp-hero ${cinzel.className}`}>

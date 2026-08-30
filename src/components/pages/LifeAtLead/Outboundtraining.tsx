@@ -206,12 +206,17 @@ function HeroSection(): React.JSX.Element {
         }
 
         @media (max-width: 767px) {
-          .obt-hero { padding: 5rem 1.25rem 0; height: auto; min-height: 100svh; }
+          .obt-hero { padding: 5rem 1.25rem 3rem; height: auto; min-height: 100svh; justify-content: flex-start; }
           .obt-hero-inner { grid-template-columns: 1fr; }
-          .obt-hero-right, .obt-hero-bg-text { display: none; }
-          .obt-hero-strip { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .25rem; }
-          .obt-strip-item { padding: 0 .4rem; gap: 6px; flex-direction: column; align-items: flex-start; }
+          .obt-hero-bg-text { display: none; }
+          /* Show the training photo on mobile too (page looked dry without it). */
+          .obt-hero-right { margin-top: 1.75rem; }
+          /* Stack the three tags one per row, left-aligned, full text (were
+             cramped into 3 columns so long labels overlapped the next card). */
+          .obt-hero-strip { grid-template-columns: 1fr; gap: .85rem; }
+          .obt-strip-item { padding: 0; gap: 10px; flex-direction: row; align-items: center; border-right: none; overflow: visible; }
           .obt-strip-item:first-child { padding-left: 0; }
+          .obt-strip-label, .obt-strip-sub { white-space: normal; overflow: visible; text-overflow: clip; }
         }
       `}</style>
 
