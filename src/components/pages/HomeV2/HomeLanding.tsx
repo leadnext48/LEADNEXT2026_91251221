@@ -474,8 +474,7 @@ const CSS = `
 .hv-feat{max-width:1240px;margin:0 auto;padding:clamp(2rem,4vw,3.4rem) clamp(1.15rem,4vw,3.2rem);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:stretch;}
 .hv-feat-rev .hv-feat-media{order:2;}
 .hv-feat-media{position:relative;}
-.hv-feat-img{position:relative;aspect-ratio:16/12;height:100%;border-radius:4px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(10,36,99,.5);}
-.hv-feat-copy{align-self:center;}
+.hv-feat-img{position:absolute;inset:0;border-radius:4px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(10,36,99,.5);}
 .hv-feat-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,36,99,0) 55%,rgba(10,36,99,.5));}
 .hv-feat-ghost{position:absolute;left:.4rem;bottom:-.15em;z-index:2;font-size:clamp(4rem,9vw,8rem);font-weight:900;line-height:1;color:rgba(255,255,255,.16);letter-spacing:-.04em;pointer-events:none;}
 .hv-feat-index{display:block;font-size:1.1rem;font-weight:700;color:var(--royal);letter-spacing:.1em;margin-bottom:.9rem;}
@@ -488,7 +487,7 @@ const CSS = `
 .hv-feat-cta{display:flex;flex-wrap:wrap;gap:.7rem;}
 @media(max-width:860px){
   .hv-feat{grid-template-columns:1fr;gap:1.6rem;padding-left:clamp(1.4rem,6vw,2.4rem);padding-right:clamp(1.4rem,6vw,2.4rem);}
-  .hv-feat-img{height:auto;}
+  .hv-feat-img{position:relative;inset:auto;aspect-ratio:16/12;height:auto;}
   .hv-feat-rev .hv-feat-media{order:0;}
   /* Mobile: centred, stacked, standard layout — not the laptop's left/right diagonal. */
   .hv-feat-copy{display:flex;flex-direction:column;align-items:center;text-align:center;}

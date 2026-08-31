@@ -70,7 +70,7 @@ function Hero() {
   return (
     <LazyMotion features={domAnimation} strict>
       <section
-        className="relative flex flex-col overflow-hidden bg-white min-h-screen"
+        className="relative flex flex-col overflow-hidden bg-white min-h-screen lg:min-h-[calc(100vh_-_64px)]"
         style={{
           // @ts-ignore
           animationTimeline: "scroll()",

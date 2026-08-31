@@ -36,24 +36,6 @@ export default function DhoniHero() {
         </div>
       </section>
 
-      <section className="dh-content">
-        <div className="dh-content-in">
-          <h2 className={`dh-h2 ${cinzel.className}`}>Exploring Dhoni</h2>
-          <p className={`dh-p ${playfair.className}`}>
-            Tucked amidst the emerald folds of the Western Ghats, Dhoni stands as a sanctuary
-            where nature reveals its timeless wonders in every breeze, trail, and cascade. Just a
-            short journey from Palakkad town, this forested haven celebrates the harmony of lush
-            greenery, whispering streams, and the invigorating rhythm of Dhoni Waterfalls, a
-            destination that has long captivated trekkers, explorers, and seekers of untouched
-            beauty.
-          </p>
-          <p className={`dh-p ${playfair.className}`}>
-            For the community of LEAD College, Dhoni is more than a scenic backdrop. It is a living
-            classroom, an inspiration for environmental stewardship, and an emblem of the balance
-            between human curiosity and nature&rsquo;s quiet strength.
-          </p>
-        </div>
-      </section>
     </>
   );
 }

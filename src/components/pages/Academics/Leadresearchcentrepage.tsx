@@ -155,7 +155,7 @@ function Hero() {
   return (
     <section
       ref={ref}
-      className="relative h-screen overflow-hidden flex flex-col"
+      className="relative h-screen lg:h-[calc(100vh_-_64px)] overflow-hidden flex flex-col"
       style={{ backgroundColor: NAVY }}
     >
       <div
