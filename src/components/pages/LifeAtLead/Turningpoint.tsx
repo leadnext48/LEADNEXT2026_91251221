@@ -112,8 +112,8 @@ function HeroSection() {
   return (
     <>
       <style>{`
-        html, body { overflow-x: hidden; }
-        .tp-hero { height: 100svh; background: #fff; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; box-sizing: border-box; padding: clamp(3rem,7vh,5rem) clamp(1.25rem,6vw,8rem) 0; width: 100%; }
+        html, body { overflow-x: clip; }
+        .tp-hero { height: calc(100svh - 64px); background: #fff; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; box-sizing: border-box; padding: clamp(1rem,3vh,2rem) clamp(1.25rem,6vw,8rem) 0; width: 100%; }
         .tp-hero::before { content:''; position:absolute; inset:0; background-image: linear-gradient(rgba(0,92,159,.04) 1px,transparent 1px), linear-gradient(90deg,rgba(0,92,159,.04) 1px,transparent 1px); background-size:80px 80px; pointer-events:none; z-index:0; }
         .tp-hero-bg-text { position:absolute; right:0; bottom:-0.12em; font-size:clamp(16rem,32vw,48rem); font-weight:800; line-height:1; letter-spacing:-0.06em; color:rgba(0,92,159,.03); pointer-events:none; user-select:none; z-index:0; white-space:nowrap; }
         .tp-hero-inner { position:relative; z-index:2; display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(1.5rem,3vw,3rem); align-items:stretch; flex:1; min-height:0; width:100%; min-width:0; }

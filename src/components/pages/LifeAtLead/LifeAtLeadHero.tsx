@@ -89,7 +89,7 @@ export default function LifeAtLeadHero({
     <>
       <style>{`
         .lal-hero {
-          height: 100vh;
+          height: calc(100vh - 64px);
           display: flex;
           flex-direction: column;
           justify-content: center;

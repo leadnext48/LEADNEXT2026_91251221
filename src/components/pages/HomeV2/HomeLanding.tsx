@@ -309,7 +309,7 @@ const CSS = `
 .hv{
   --navy:#0a2463; --royal:#005C9F; --blue:#1e3a8a; --ink:#0e1524; --muted:#5a6576;
   --line:#e5e9f0; --tintt:#f3f7fc; --tint:#eaf2fb;
-  background:#fff; color:var(--ink); overflow-x:hidden; line-height:1.6;
+  background:#fff; color:var(--ink); overflow-x:clip; line-height:1.6;
 }
 .hv *{box-sizing:border-box;}
 .hv-wrap{max-width:1240px;margin:0 auto;padding:0 clamp(1.15rem,4vw,3.2rem);}

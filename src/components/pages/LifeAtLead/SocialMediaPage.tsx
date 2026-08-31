@@ -90,8 +90,8 @@ function HeroSection() {
       <style>{`
         .social-hero {
           width: 100%;
-          height: 100vh;
-          min-height: 100vh;
+          height: calc(100vh - 64px);
+          min-height: calc(100vh - 64px);
           background: #ffffff;
           position: relative;
           overflow: hidden;

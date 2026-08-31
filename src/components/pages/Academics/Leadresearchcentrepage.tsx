@@ -243,9 +243,7 @@ function Hero() {
             >
               LEAD Research Centre, in collaboration with KUFOS, offers a fully-funded
               full-time Ph.D. programme designed for scholars who are serious about making
-              an impact. With a monthly stipend of ₹15,000, free on-campus accommodation,
-              access to research infrastructure, and mentorship from KUFOS-approved guides,
-              we remove every barrier between you and your research goals.
+              an impact.
             </motion.p>
             {/* Hero stat strip removed per request */}
           </div>
@@ -310,7 +308,7 @@ function About() {
               ].map(({ icon: Icon, label }, i) => (
                 <motion.div key={label} initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.5 + i * 0.07, ease: E }} className="flex items-center gap-3 px-4 py-3" style={{ border: `1px solid ${NAVY}0e`, backgroundColor: OFF }}>
                   <Icon size={13} strokeWidth={1.5} color={NAVY} />
-                  <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "12px", color: `${NAVY}80` }}>{label}</span>
+                  <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "14px", color: "#111", fontWeight: 600 }}>{label}</span>
                 </motion.div>
               ))}
             </div>
@@ -616,7 +614,7 @@ function Benefits() {
               <div className="w-8 h-8 flex items-center justify-center mb-3" style={{ backgroundColor: `${NAVY}07` }}>
                 <Icon size={13} strokeWidth={1.5} color={NAVY} />
               </div>
-              <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "12px", color: `${NAVY}60` }}>{label}</span>
+              <span className={`${cinzel.className} uppercase tracking-wider`} style={{ fontSize: "14px", color: "#111", fontWeight: 600 }}>{label}</span>
             </div>
           ))}
         </motion.div>

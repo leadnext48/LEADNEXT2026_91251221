@@ -130,7 +130,7 @@ function HeroSection() {
     <>
       <style>{`
         .mh-section {
-          height: 100svh;
+          height: calc(100svh - 64px);
           max-height: 100svh;
           background: #fff;
           display: flex;
@@ -138,7 +138,7 @@ function HeroSection() {
           justify-content: center;
           position: relative;
           overflow: hidden;
-          padding: clamp(4rem,8vh,6rem) clamp(1.5rem,10vw,9rem) 3.5rem;
+          padding: clamp(1rem,3vh,2rem) clamp(1.5rem,10vw,9rem) 3.5rem;
           box-sizing: border-box;
         }
         .mh-section::before {

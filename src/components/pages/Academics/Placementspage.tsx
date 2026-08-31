@@ -359,7 +359,7 @@ function HeroSection() {
     <section
       ref={ref as React.RefCallback<HTMLElement>}
       style={{
-        height: "100vh",
+        height: "calc(100vh - 64px)",
         maxHeight: "100vh",
         display: "flex",
         alignItems: "center",

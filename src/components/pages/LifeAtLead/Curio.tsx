@@ -117,7 +117,7 @@ function HeroSection(): React.JSX.Element {
     <>
       <style>{`
         .curio-hero {
-          height: 100svh;
+          height: calc(100svh - 64px);
           background: #fff;
           display: flex;
           flex-direction: column;
@@ -125,7 +125,7 @@ function HeroSection(): React.JSX.Element {
           position: relative;
           overflow: hidden;
           box-sizing: border-box;
-          padding: clamp(3rem,7vh,5rem) clamp(1.25rem,6vw,8rem) 0;
+          padding: clamp(1rem,3vh,2rem) clamp(1.25rem,6vw,8rem) 0;
           width: 100%;
         }
         .curio-hero::before {

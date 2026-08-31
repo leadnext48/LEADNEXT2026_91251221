@@ -99,16 +99,16 @@ function HeroSection() {
   return (
     <>
       <style>{`
-        html, body { overflow-x: hidden; }
+        html, body { overflow-x: clip; }
         .lot-hero {
-          height: 100svh;
+          height: calc(100svh - 64px);
           background: #fff;
           display: flex;
           flex-direction: column;
           justify-content: center;
           position: relative;
           overflow: hidden;
-          padding: clamp(3rem,7vh,5rem) clamp(1.25rem,6vw,8rem) 0;
+          padding: clamp(1rem,3vh,2rem) clamp(1.25rem,6vw,8rem) 0;
           width: 100%;
           box-sizing: border-box;
         }

@@ -125,11 +125,7 @@ function Hero() {
                 transition={{ type:"tween", duration:0.5, delay:0.5, ease:E }}>
                 LEADER is a peer-reviewed, open-access international journal dedicated to advancing
                 scholarly knowledge across business management, finance, economics, entrepreneurship,
-                and organizational studies. We serve as a rigorous platform for researchers,
-                academicians, and industry practitioners to disseminate original findings and
-                evidence-based insights that shape contemporary business thinking. Each submission
-                undergoes a thorough double-blind review process, ensuring that only methodologically
-                sound and intellectually significant work reaches our global readership.
+                and organizational studies.
               </m.p>
 
               {/* Stats + CTA — border-t removed */}
@@ -331,7 +327,7 @@ function ResearchAreas() {
                     <Icon size={13} strokeWidth={1.5} color="rgba(255,255,255,0.8)" />
                   </div>
                   <span className={`${cinzel.className} uppercase tracking-wider font-bold leading-tight`}
-                    style={{ fontSize:"clamp(11px,0.8vw,13px)", color:"white" }}>{title}</span>
+                    style={{ fontSize:"clamp(14px,1vw,16px)", color:"#fff" }}>{title}</span>
                 </div>
                 <div style={{ height:"1px", backgroundColor:"rgba(255,255,255,0.08)" }} />
                 <div className="flex flex-col gap-2">
@@ -339,7 +335,7 @@ function ResearchAreas() {
                     <div key={item} className="flex items-center gap-2.5">
                       <div className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor:"rgba(255,255,255,0.4)" }} />
                       <span className={`${playfair.className}`}
-                        style={{ fontSize:"clamp(11px,0.82vw,13px)", color:"rgba(255,255,255,0.7)", lineHeight:1.5 }}>{item}</span>
+                        style={{ fontSize:"clamp(13px,0.9vw,15px)", color:"rgba(255,255,255,0.95)", lineHeight:1.5 }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -394,8 +390,8 @@ function Guidelines() {
                   <Icon size={13} strokeWidth={1.5} color={NAVY} />
                 </div>
                 <div>
-                  <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize:"12px", color:MUTED }}>{label}</p>
-                  <p className={`${playfair.className} font-medium`} style={{ fontSize:"clamp(12px,0.9vw,15px)", color:NAVY }}>{value}</p>
+                  <p className={`${cinzel.className} uppercase tracking-widest mb-0.5`} style={{ fontSize:"13px", color:"#111" }}>{label}</p>
+                  <p className={`${playfair.className} font-medium`} style={{ fontSize:"clamp(14px,1vw,16px)", color:"#111" }}>{value}</p>
                 </div>
               </motion.div>
             ))}
